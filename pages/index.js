@@ -7,7 +7,6 @@ import TheresAPlace from '/components/HomepageComponents/SectionTheresAPlace/The
 import MeetPastors from '/components/HomepageComponents/SectionMeetOurPastors/MeetPastorsSection.jsx';
 import FollowJesusSection from '/components/HomepageComponents/SectionFollowJesusButton/FollowJesusSection.js';
 import WhatsNewSection from '/components/HomepageComponents/SectionWhatsNew/WhatsNewSection.js';
-import ToggleMenu from '../components/Navbar/ToggleMenu.js';
 
 const GridIndex = styled.div`
 	display: grid;

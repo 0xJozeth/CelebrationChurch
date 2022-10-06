@@ -16,7 +16,6 @@ import { MdOutlinePhoneAndroid } from 'react-icons/md';
 
 import { motion } from 'framer-motion';
 import GiveHero from '/public/give-hero.png';
-import HaveQuestionsComponent from './give2';
 
 import longArrow from '/public/arrow-long.svg';
 
