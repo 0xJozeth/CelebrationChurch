@@ -11,7 +11,7 @@ import media from '/public/yourimpact.png';
 import navigation from '/public/navigationbar-demo.svg';
 import legacy from '/public/give-legacy.png';
 import { SiBitcoin } from 'react-icons/si';
-import { FaPiggyBank, FaTicketAlt } from 'react-icons/Fa';
+// import { FaPiggyBank, FaTicketAlt } from 'react-icons/Fa';
 import { MdOutlinePhoneAndroid } from 'react-icons/md';
 
 import { motion } from 'framer-motion';
@@ -1274,14 +1274,10 @@ export default function Give() {
 							</div>
 						</div>
 						<div className='iconBg'>
-							<div className='iconWrapper'>
-								<FaPiggyBank />
-							</div>
+							<div className='iconWrapper'>{/* <FaPiggyBank /> */}</div>
 						</div>
 						<div className='iconBg'>
-							<div className='iconWrapper'>
-								<FaTicketAlt />
-							</div>
+							<div className='iconWrapper'>{/* <FaTicketAlt /> */}</div>
 						</div>
 						<div className='iconText'>
 							<h3>APP</h3>
