@@ -1,0 +1,12 @@
+.container {
+	max-width: 36rem;
+	padding: 0 1rem;
+	margin: 3rem auto 6rem;
+}
+
+.main {
+	/* display: flex; */
+	/* flex-direction: column; */
+	/* 🎩💫 Toggle this and /index.js' display: flex for horizontal scrolling! */
+	/* overflow: hidden; */
+}

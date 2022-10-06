@@ -1,0 +1,14 @@
+:root { 
+  --black: #000000;
+  --concord: #7c7c7c;
+  --white: #ffffff;
+ 
+  --font-size-s: 14px;
+  --font-size-xxl: 71px;
+ 
+  --font-family-helveticaneue-bold: "HelveticaNeue-Bold", Helvetica;
+  --font-family-keplerstd-mediumitalic_display: "KeplerStd-MediumItalic Display", Helvetica;
+  --font-family-neue_haas_grotesk_display_pro: "Neue Haas Grotesk Display Pro", Helvetica;
+  --font-family-neuehaas_grotesk_display_pro-55roman: "NeueHaas Grotesk Display Pro-55Roman", Helvetica;
+  --font-family-neuehaas_grotesk_display_pro-75bold: "NeueHaas Grotesk Display Pro-75Bold", Helvetica;
+}

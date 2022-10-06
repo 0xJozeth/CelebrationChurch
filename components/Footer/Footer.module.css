@@ -1,0 +1,70 @@
+.styledLink {
+	color: #000;
+	text-decoration: none;
+	padding: 0rem 2rem;
+	font-family: 'neue-haas-grotesk-display';
+	font-weight: 700;
+	font-size: 1.1rem;
+
+	animation: animate-enter-frames 1.6s ease 0s 1 normal forwards;
+	opacity: 100;
+	transform: translate(0, 25px);
+}
+
+.NavbarWrapper {
+	background: #f8f8f8;
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 0.5 em;
+	margin-right: 0.5 em;
+	padding-inline-start: 25px;
+	padding-inline-end: 25px;
+	gap: 1 rem;
+}
+
+.Navbar {
+	background: #f8f8f8;
+	height: 100vh;
+	width: 100vw;
+	height: 80px;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 5em;
+	padding-left: 2em;
+	margin-right: 8em;
+}
+
+.LinkWrapper {
+	background: #f8f8f8;
+	width: 50vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-grow: 1;
+	gap: 0.5 rem;
+	cursor: pointer;
+}
+
+.ImageWrapper {
+	padding: 0.5em;
+	background: #f8f8f8;
+	width: 222 px;
+	height: 62 px;
+	object-fit: cover;
+	display: block;
+	cursor: pointer;
+}
+
+.BurgerMenu {
+	background: #f8f8f8;
+}
+
+.animate-enter4 {
+	display: block;
+	animation: animate-enter4-frames 0.6s ease-in 0.6s 1 normal forwards;
+	opacity: 0;
+}
