@@ -3,13 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = styled.div`
-	/* display: inline-block; */
-	// justify-content: center;
-	// align-items: center;
-	// padding-left: 20px;
 	z-index: 99;
 	cursor: pointer;
-	/* background-color: #f8f8f8; */
 	border: none;
 `;
 

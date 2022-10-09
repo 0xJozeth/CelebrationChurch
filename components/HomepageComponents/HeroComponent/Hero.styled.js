@@ -35,7 +35,6 @@ export const MotionMaskContainer = styled.div`
 	grid-column: span 2/3;
 
 	color: rgba(255, 255, 255, 1);
-	text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 
 	// font-family: 'neue-haas-grotesk-display';
 	font-weight: 800;
@@ -152,7 +151,7 @@ export const StyledParagraph = styled.div`
 	justify-self: center;
 
 	margin-inline: 2em;
-	margin-top: 6em;
+	margin-top: -2em;
 
 	font-family: 'neue-haas-grotesk-display';
 

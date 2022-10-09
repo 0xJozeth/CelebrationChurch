@@ -5,6 +5,8 @@ import Footer from '/components/Footer/Footer.js';
 
 import styles from '/components/layout.module.css';
 
+import ToggleMenu from '/components/Navbar/ToggleMenu.js';
+
 export default function Layout({ children }) {
 	// const styles = {
 	// 	// display: 'flex',
@@ -23,6 +25,7 @@ export default function Layout({ children }) {
 	return (
 		<>
 			<Grid>
+				{/* <ToggleMenu /> */}
 				<Header />
 				{children}
 				<Footer />
