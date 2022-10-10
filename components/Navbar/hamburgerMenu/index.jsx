@@ -19,7 +19,7 @@ const MenuToggleWrapper = styled.div`
 	align-content: center;
 	/* margin-inline: 10em; */
 	/* background: red; */
-	/* z-index: 999; */
+	z-index: 999;
 
 	// @media screen and (max-width: 768px) {
 	// 	transition: 0.8s all ease;
