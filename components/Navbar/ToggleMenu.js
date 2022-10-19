@@ -2,16 +2,16 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import {
-	FaShoppingBag,
-	FaBible,
-	FaPrayingHands,
-	FaFacebook,
-	FaInstagram,
-	FaTwitter,
-	FaYoutube,
-	FaRegEnvelope,
-} from 'react-icons/Fa';
+// import {
+// 	FaShoppingBag,
+// 	FaBible,
+// 	FaPrayingHands,
+// 	FaFacebook,
+// 	FaInstagram,
+// 	FaTwitter,
+// 	FaYoutube,
+// 	FaRegEnvelope,
+// } from 'react-icons/Fa';
 import { CgScreen } from 'react-icons/cg';
 import { VscGlobe } from 'react-icons/vsc';
 import { IoCloseOutline } from 'react-icons/io5';
@@ -190,7 +190,7 @@ const ToggleMenu = () => {
 											role='img'
 											aria-label='shopping-bag'
 										>
-											<FaShoppingBag />
+											{/* <FaShoppingBag /> */}
 										</span>
 										<Link href='/shop' passHref={true}>
 											<a>SHOP</a>
@@ -198,7 +198,7 @@ const ToggleMenu = () => {
 									</li>
 									<li className='bible-reading-plan'>
 										<span className='icon-bible' role='img' aria-label='bible'>
-											<FaBible />
+											{/* <FaBible /> */}
 										</span>
 										<Link href='bible-reading-plan' passHref={true}>
 											<a>BIBLE READING PLAN</a>
@@ -210,7 +210,7 @@ const ToggleMenu = () => {
 											role='img'
 											aria-label='praying-hands'
 										>
-											<FaPrayingHands />
+											{/* <FaPrayingHands /> */}
 										</span>
 										<Link href='/celebration-worship' passHref={true}>
 											<a>CELEBRATION WORSHIP</a>
@@ -241,37 +241,27 @@ const ToggleMenu = () => {
 							<div className='social-icons'>
 								<span className='icon'>
 									<Link href='/' passHref={true}>
-										<a>
-											<FaFacebook />
-										</a>
+										<a>{/* <FaFacebook /> */}</a>
 									</Link>
 								</span>
 								<span className='icon'>
 									<Link href='/' passHref={true}>
-										<a>
-											<FaInstagram />
-										</a>
+										<a>{/* <FaInstagram /> */}</a>
 									</Link>
 								</span>
 								<span className='icon'>
 									<Link href='/' passHref={true}>
-										<a>
-											<FaTwitter />
-										</a>
+										<a>{/* <FaTwitter /> */}</a>
 									</Link>
 								</span>
 								<span className='icon'>
 									<Link href='/' passHref={true}>
-										<a>
-											<FaYoutube />
-										</a>
+										<a>{/* <FaYoutube /> */}</a>
 									</Link>
 								</span>
 								<span className='icon'>
 									<Link href='/' passHref={true}>
-										<a>
-											<FaRegEnvelope />
-										</a>
+										<a>{/* <FaRegEnvelope /> */}</a>
 									</Link>
 								</span>
 							</div>
