@@ -11,7 +11,8 @@ import media from '/public/yourimpact.png';
 import navigation from '/public/navigationbar-demo.svg';
 import legacy from '/public/give-legacy.png';
 import { SiBitcoin } from 'react-icons/si';
-// import { FaPiggyBank, FaTicketAlt } from 'react-icons/Fa';
+
+import piggyBank from '/public/give-images/piggy-bank.svg';
 import { MdOutlinePhoneAndroid } from 'react-icons/md';
 
 import { motion } from 'framer-motion';
@@ -189,90 +190,6 @@ const StyledImage = styled(Image)`
 	width: 50%;
 `;
 
-// const HeroWrapper = styled.div`
-// 	display: grid;
-// 	// grid-template-columns: minmax(150px, 50%) 1fr;
-// 	// grid-template-columns: 2fr 1fr;
-// 	margin-top: 5em;
-// 	margin-bottom: 5em;
-// 	margin-left: -20em;
-// 	// outline: 3px dotted teal;
-// `;
-
-// const MaskContainer = styled.div`
-// 	position: relative;
-
-// 	display: grid;
-// 	grid-column: span 1;
-// 	// justify-self: start;
-
-// 	font-family: 'neue-haas-grotesk-display';
-// 	font-weight: 800;
-// 	font-size: 12em;
-// 	line-height: 12rem;
-// `;
-
-// const MaskChild = styled.div`
-// 	position: relative;
-// 	// display: grid;
-// 	// place-self: end;
-// 	// justify-items: stretch;
-// `;
-
-// const MaskChildEffect = styled.div`
-// 	position: absolute;
-// 	// display: inline-flex;
-// 	top: 0px;
-// 	left: 0px;
-// 	// width: 100%;
-// 	opacity: 1;
-// 	color: rgba(255, 255, 255, 1);
-// 	mix-blend-mode: overlay;
-// 	z-index: 30;
-// 	pointer-events: none;
-// `;
-
-// const MaskSpan = styled.span`
-// 	// display: inline-flex;
-
-// 	font-family: 'kepler-std-display', serif;
-// 	font-style: italic;
-// 	font-weight: 500;
-// 	font-size: 1.15em;
-// 	padding-inline: 0.15em;
-// `;
-
-// const StyledVideoContainer = styled.div`
-// 	position: absolute;
-
-// 	padding-right: 5em;
-
-// 	top: 20em;
-// 	left: 32.5em;
-
-// 	display: grid; // 💫
-// 	justify-self: end; // 💫
-// 	place-items: center; // 💫
-// `;
-
-// const GiveNowButton = styled.button`
-// 	position: absolute;
-// 	display: flex;
-// 	align-items: center;
-// 	color: #f8f8f8;
-// 	font-size: 3em;
-// 	top: 8em;
-// 	right: 5em;
-// 	border-radius: 5px;
-// 	padding: 0.5em 2em 0.5em 2em;
-// 	z-index: 50;
-// 	background: transparent;
-// 	font-family: 'neue-haas-grotesk-display';
-
-// 	outline: 2px solid #f8f8f8;
-// 	border: none;
-// `;
-
 const WhyWeGiveSection = styled.div`
 	display: grid;
 
@@ -314,75 +231,6 @@ const WhyWeGiveSection = styled.div`
 		}
 	}
 `;
-
-// const WhyWeGiveHeading = styled.div``;
-
-// const WhyWeGiveTextSection = styled.div``;
-
-// const StyledParagraph = styled.div`
-// 	color: rgba(0, 0, 0, 0.55);
-
-// 	align-items: center;
-// 	margin-top: 1.5em;
-// 	margin-inline: 2em;
-// 	padding-inline: 6em;
-
-// 	font-weight: 500;
-// 	font-family: 'neue-haas-grotesk-display';
-// 	font-style: italic;
-// 	font-size: 1.75rem;
-// 	letter-spacing: 0;
-// 	line-height: 2rem;
-// `;
-
-// const LegacyStyledParagraph = styled.div`
-// 	display: grid;
-// 	// align-self: start;
-// 	color: rgba(0, 0, 0, 0.55);
-
-// 	// align-items: center;
-// 	// margin-top: 1.5em;
-// 	// margin-left: 0em;
-// 	margin-right: 20em;
-// 	// padding-inline: 12em;
-
-// 	font-weight: 500;
-// 	font-family: 'neue-haas-grotesk-display';
-// 	font-style: italic;
-// 	font-size: 1.75rem;
-// 	letter-spacing: 0;
-// 	line-height: 2rem;
-
-// 	width: 40%;
-
-// 	// outline: 3px dotted teal;
-// `;
-
-// const LinkButtonText = styled.div`
-// 	display: flex;
-// 	flex-direction: column;
-// 	justify-content: center;
-
-// 	text-decoration: none;
-// 	align-items: center;
-
-// 	font-family: 'neue-haas-grotesk-display';
-// 	font-weight: 400;
-// 	font-size: 0.15em;
-// 	// width: 100%;
-// 	// max-width: 10em;
-// 	// margin-inline: 2rem;
-// 	// // outline: 3px dotted teal;
-// `;
-
-// const ArrowBtnRotate = styled.div`
-// 	display: flex;
-// 	justify-content: center;
-// 	margin-top: -2.5em;
-// 	transform: rotate(-270deg) scale(0.5);
-// 	// // outline: 3px dotted salmon;
-// 	max-width: 2.5em;
-// `;
 
 const YourImpactSection = styled.div`
 	display: grid;
@@ -465,8 +313,6 @@ const YourImpactSection = styled.div`
 	}
 `;
 
-// const YourImpactHeading = styled.div``;
-
 const OnlineGivingSection = styled.div`
 	display: grid;
 	grid-template-columns: 1fr;
@@ -534,43 +380,6 @@ const OnlineGivingSection = styled.div`
 	}
 `;
 
-// const OnlineGivingHeading = styled.div``;
-
-// const SelectLocationSection = styled.div`
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: center;
-// 	padding: 2em;
-// 	// // outline: 3px dotted red;
-// 	width: 100vw;
-
-// 	font-family: 'neue-haas-grotesk-display';
-// 	font-weight: 800;
-// 	font-size: 4rem;
-// 	line-height: 8rem;
-// `;
-
-// const LocationAccordian = styled.div`
-// 	// // outline: 3px dotted blue;
-// `;
-
-// const Styledul = styled.div`
-// 	text-decoration: none;
-// 	font-weight: 600;
-// `;
-
-// const Styledli = styled.div`
-// 	text-decoration: none;
-// 	font-weight: 400;
-// 	font-size: 1.25em;
-// 	line-height: 1em;
-// 	height: auto;
-
-// 	cursor: pointer;
-// 	margin: 0.5em 0 0.5em 0;
-// 	// outline: 3px dotted teal;
-// `;
-
 const OtherWaysToGiveSection = styled.div`
 	display: grid;
 	grid-template-columns: 1fr;
@@ -617,7 +426,12 @@ const OtherWaysToGiveSection = styled.div`
 					font-size: 12.5vw;
 					margin: 2vw;
 
-					filter: invert(1);
+					/* filter: invert(1); */
+					div {
+						&.imageWrapper {
+							/* filter: invert(1); */
+						}
+					}
 				}
 			}
 		}
@@ -630,36 +444,6 @@ const OtherWaysToGiveSection = styled.div`
 		}
 	}
 `;
-
-// const OtherWaysToGiveHeading = styled.div``;
-
-// const OtherWaysIconsSection = styled.div`
-// 	display: flex;
-// 	justify-content: space-between;
-// 	align-items: center;
-// 	width: 100%;
-// 	place-items: center;
-
-// 	margin-top: 0.5em;
-// 	margin-top: 0.5em;
-// 	filter: invert(1);
-// `;
-
-// const IconsBg = styled.div`
-// 	position: relative;
-// 	display: flex;
-// 	flex-direction: column;
-// 	background-color: #f8f8f8;
-// 	border-radius: 1em;
-// 	padding: 0.15em;
-
-// 	font-family: 'neue-haas-grotesk-display';
-// 	font-weight: 400;
-// 	font-size: 1em;
-
-// 	// z-index: ;
-// 	// outline: 3px dotted salmon;
-// `;
 
 const LegacyTeamSection = styled.div`
 	display: grid;
@@ -740,84 +524,6 @@ const LegacyTeamSection = styled.div`
 	}
 `;
 
-// const LegacyTeamHeading = styled.div``;
-
-// const OtherWaysText = styled.div`
-// 	position: relative;
-// 	display: flex;
-// 	font-family: 'neue-haas-grotesk-display';
-// 	font-weight: 700;
-// 	font-size: 0.2em;
-// `;
-
-// const APPText = styled.div`
-// 	position: absolute;
-// 	top: -1.5em;
-// 	left: -13.75em;
-// `;
-
-// const CRYPTOText = styled.div`
-// 	position: absolute;
-// 	top: -1.5em;
-// 	left: -6.2em;
-// `;
-
-// const BANKText = styled.div`
-// 	position: absolute;
-// 	top: -1.5em;
-// 	left: 3em;
-// `;
-
-// const STOCKText = styled.div`
-// 	position: absolute;
-// 	top: -1.5em;
-// 	left: 11.25em;
-// `;
-
-// const LegacyImageContainer = styled.div`
-// 	position: absolute;
-// 	justify-content: flex-start;
-// 	// outline: 3px dotted salmon;
-
-// 	// padding-right: 5em;
-
-// 	top: 5em;
-// 	right: -5em;
-
-// 	display: grid; // 💫
-// 	// justify-self: end; // 💫
-// 	// place-items: center; // 💫
-// `;
-
-// const ContactLinkContainer = styled.div`
-// 	color: #070707;
-// 	display: flex;
-// 	font-size: 7em;
-// 	font-weight: 400;
-// 	font-style: normal;
-// 	justify-content: space-between;
-// 	width: 50%;
-// 	margin-top: 0.25em;
-// 	cursor: pointer;
-
-// 	// align-items: center;
-// 	// grid-template-columns: minmax(5em, 40%) 1fr;
-
-// 	// outline: 3px dotted teal;
-// `;
-
-// const ArrowBtn = styled.div`
-// 	display: flex;
-// 	padding-inline: 0.25em;
-// 	width: 20%;
-// 	align-items: center;
-// 	// justify-content: center;
-// 	// margin-top: -2.5em;
-// 	// transform: rotate(-270deg) scale(0.5);
-// 	// outline: 3px dotted salmon;
-// 	// max-width: 2.5em;
-// `;
-
 const BeginToTitheSection = styled.div`
 	display: grid;
 	grid-template-columns: 1fr;
@@ -873,76 +579,6 @@ const BeginToTitheSection = styled.div`
 		}
 	}
 `;
-
-// const BeginToTitheHeading = styled.div`
-// 	display: flex;
-// 	// grid-column: span 1;
-// 	justify-content: flex-start;
-
-// 	font-family: 'neue-haas-grotesk-display';
-// 	font-weight: 800;
-// 	font-size: 12em;
-// 	line-height: 12rem;
-// 	// outline: 3px dotted teal;
-// `;
-
-// const BeginToTitheParagraph = styled.div`
-// 	position: absolute;
-
-// 	top: 8em;
-// 	right: -8em;
-// 	// diplay: grid;
-// 	// align-self: start;
-// 	color: rgba(0, 0, 0, 0.55);
-
-// 	// align-items: center;
-// 	// margin-top: 1.5em;
-// 	// margin-left: 0em;
-// 	margin-right: 20em;
-// 	// padding-inline: 12em;
-
-// 	font-weight: 500;
-// 	font-family: 'neue-haas-grotesk-display';
-// 	font-style: italic;
-// 	font-size: 1.75rem;
-// 	letter-spacing: 0;
-// 	line-height: 2rem;
-
-// 	width: 40%;
-
-// 	// outline: 3px dotted teal;
-// `;
-
-// const TithingLinkContainer = styled.div`
-// 	color: #070707;
-// 	display: flex;
-// 	font-size: 7em;
-// 	font-family: 'neue-haas-grotesk-display';
-// 	font-style: normal;
-// 	font-weight: 100;
-// 	justify-content: flex-start;
-// 	width: 60%;
-// 	margin-top: 0.25em;
-// 	cursor: pointer;
-
-// 	// align-items: center;
-// 	// grid-template-columns: minmax(5em, 40%) 1fr;
-
-// 	// outline: 3px dotted teal;
-// `;
-
-// const TithingArrowBtn = styled.div`
-// 	display: flex;
-// 	padding-inline: 0.25em;
-// 	// width: 30%;
-// 	align-items: center;
-// 	transform: scale(0.75);
-// 	justify-content: flex-start;
-// 	// margin-top: -2.5em;
-// 	// transform: rotate(-270deg) scale(0.5);
-// 	// outline: 3px dotted salmon;
-// 	// max-width: 2.5em;
-// `;
 
 const HaveQuestionsSection = styled.div`
 	display: grid;
@@ -1007,81 +643,6 @@ const HaveQuestionsSection = styled.div`
 	}
 `;
 
-// const HeadingGrid = styled.div`
-// 	diplay: flex;
-// 	flex-direction: row;
-// 	// justify-content: center;
-// 	// align-items: center;
-// 	outline: 3px dotted plum;
-// `;
-
-// const HaveQuestionsHeading = styled.div`
-// 	display: flex;
-// 	// grid-column: span 1;
-// 	justify-content: flex-start;
-
-// 	font-family: 'neue-haas-grotesk-display';
-// 	font-weight: 800;
-// 	font-size: 3.25em;
-// 	line-height: 12rem;
-// 	outline: 3px dotted teal;
-// `;
-
-// const HaveQuestionsParagraph = styled.div`
-// 	// position: absolute;
-// 	// display: flex;
-// 	// flex: 1;
-
-// 	color: rgba(0, 0, 0, 0.55);
-// 	// top: 8em;
-// 	// right: -8em;
-
-// 	// margin-right: 20em;
-
-// 	// align-self: start;
-// 	// align-items: center;
-// 	// margin-top: 1.5em;
-// 	// margin-left: 0em;
-// 	// padding-inline: 12em;
-
-// 	font-weight: 500;
-// 	font-family: 'neue-haas-grotesk-display';
-// 	font-style: italic;
-// 	font-size: 1.75rem;
-// 	letter-spacing: 0;
-// 	line-height: 2rem;
-
-// 	width: 55%;
-
-// 	outline: 3px dotted teal;
-// `;
-
-// const QuestionsLinkWrapper = styled.div`
-// 	position: absolute;
-// 	top: 11em;
-// 	right: 20em;
-// 	font-size: 1.3em;
-// 	font-weight: 700;
-// `;
-
-// const QuestionsLinkContainer = styled.div`
-// 	color: #070707;
-// 	display: flex;
-// 	font-size: 7em;
-// 	font-family: 'neue-haas-grotesk-display';
-// 	font-style: normal;
-// 	font-weight: 100;
-// 	justify-content: flex-start;
-// 	width: 60%;
-// 	margin-top: 0.25em;
-// 	cursor: pointer;
-
-// 	// align-items: center;
-// 	// grid-template-columns: minmax(5em, 40%) 1fr;
-
-// 	outline: 3px dotted gold;
-// `;
-
 export default function Give() {
 	return (
 		<>
@@ -1110,6 +671,7 @@ export default function Give() {
 							layout='fixed'
 							height={587} // original: 783
 							width={1059} // original: 1413
+							priority={true}
 						/>
 
 						<div className='buttonContainer'>
@@ -1225,7 +787,7 @@ export default function Give() {
 									</button>
 								</div>
 
-								<div classNme='arrowImage'>
+								<div className='arrowImage'>
 									<Image
 										src={darkArrowRight}
 										alt='arrow-button'
@@ -1263,20 +825,32 @@ export default function Give() {
 						</OtherWaysText> */}
 						<div className='iconBg'>
 							<div className='iconWrapper'>
-								<MdOutlinePhoneAndroid />
+								<div className='imageWrapper'>
+									<Image src={piggyBank} alt='' />
+								</div>
 							</div>
 						</div>
 
 						<div className='iconBg'>
 							<div className='iconWrapper'>
-								<SiBitcoin />
+								<div className='imageWrapper'>
+									<Image src={piggyBank} alt='' />
+								</div>
 							</div>
 						</div>
 						<div className='iconBg'>
-							<div className='iconWrapper'>{/* <FaPiggyBank /> */}</div>
+							<div className='iconWrapper'>
+								<div className='imageWrapper'>
+									<Image src={piggyBank} alt='' />
+								</div>
+							</div>
 						</div>
 						<div className='iconBg'>
-							<div className='iconWrapper'>{/* <FaTicketAlt /> */}</div>
+							<div className='iconWrapper'>
+								<div className='imageWrapper'>
+									<Image src={piggyBank} alt='' />
+								</div>
+							</div>
 						</div>
 						<div className='iconText'>
 							<h3>APP</h3>
@@ -1288,7 +862,7 @@ export default function Give() {
 							<h3>BANK</h3>
 						</div>
 						<div className='iconText'>
-							<h3>STOCK</h3>
+							<h3>GIVT</h3>
 						</div>
 					</div>
 				</OtherWaysToGiveSection>

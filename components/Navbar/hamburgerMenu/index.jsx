@@ -2,17 +2,6 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import MenuToggle from './menuToggle';
 
-const HamburgerMenuContainer = styled.div`
-	// position: relative;
-	// display: flex;
-	// justify-content: flex-end;
-	// align-items: center;
-	// margin-top: 0.5rem;
-	// margin-inline: 1rem;
-	// padding: 0.25rem;
-	outline: 5px solid green;
-`;
-
 const MenuToggleWrapper = styled.div`
 	display: flex;
 	justify-content: center;
@@ -32,21 +21,19 @@ const MenuToggleWrapper = styled.div`
 export const HamburgerMenu = (props) => {
 	const [isOpen, setOpen] = useState(false);
 
-	const toggleMenu = () => {
+	const toggle = () => {
 		setOpen(!isOpen);
 	};
 
 	return (
-		// <HamburgerMenuContainer>
 		<>
 			<MenuToggleWrapper>
 				<MenuToggle
-					toggle={toggleMenu}
+					toggle={toggle}
 					isOpen={isOpen}
 					onClick={props.handleClick}
 				/>
 			</MenuToggleWrapper>
 		</>
-		// </HamburgerMenuContainer>
 	);
 };

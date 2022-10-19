@@ -63,6 +63,7 @@ export default function FollowJesusSection() {
 	}, [isInView]);
 	if (isInView) {
 		animation.start({
+			x: 0,
 			y: 0,
 			opacity: 1,
 			delay: 0,
@@ -70,7 +71,7 @@ export default function FollowJesusSection() {
 		});
 	}
 	if (!isInView) {
-		animation.start({ y: '100vw', opacity: 0 });
+		animation.start({ x: '-100vw', opacity: 0 });
 	}
 
 	return (

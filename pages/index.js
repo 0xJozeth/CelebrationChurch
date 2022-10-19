@@ -1,24 +1,26 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
-import Hero from '/components/HomepageComponents/HeroComponent/Hero.js';
-import FindALocation from '/components/HomepageComponents/SectionFindALocation/FindALocation.js';
-import TheresAPlace from '/components/HomepageComponents/SectionTheresAPlace/TheresAPlace.jsx';
-import MeetPastors from '/components/HomepageComponents/SectionMeetOurPastors/MeetPastorsSection.jsx';
+import Hero from '/components/HomepageComponents/HeroComponent/Hero2.js';
+import FindALocation from '/components/HomepageComponents/SectionFindALocation/FindALocation2.js';
+import TheresAPlace from '/components/HomepageComponents/SectionTheresAPlace/TheresAPlace2.js';
+import MeetPastors from '/components/HomepageComponents/SectionMeetOurPastors/MeetPastorsSection2.js';
 import FollowJesusSection from '/components/HomepageComponents/SectionFollowJesusButton/FollowJesusSection.js';
-import WhatsNewSection from '/components/HomepageComponents/SectionWhatsNew/WhatsNewSection.js';
+import WhatsNewSection from '/components/HomepageComponents/SectionWhatsNew/WhatsNewSection2.js';
+import WeHaveAGrace from '/components/HomepageComponents/SectionWeHaveAGrace/WeHaveAGrace.js';
 
 const GridIndex = styled.div`
 	display: grid;
-	grid-template-rows: repeat(5, 1fr);
-	grid-template-areas: 'hero' 'find' 'theresaplace' 'meetpastors' 'followjesus' 'whatsnew';
+	grid-template-rows: repeat(6, 1fr);
+	grid-template-areas: 'hero' 'find' 'wehaveagrace' 'theresaplace' 'meetpastors' 'followjesus' 'whatsnew';
 	grid-template-rows: min-content;
-	row-gap: 5em;
+	row-gap: 5vw;
 	align-items: center;
-	// place-items: center;
+	place-items: center;
+	width: 100%;
+
 	// overflow: hidden;
 	// display: flex; // 🎩💫
-	width: 100%;
 `;
 
 const Home = () => {
@@ -41,6 +43,7 @@ const Home = () => {
 			<GridIndex>
 				<Hero />
 				<FindALocation />
+				<WeHaveAGrace />
 				<TheresAPlace />
 				<MeetPastors />
 				<FollowJesusSection />

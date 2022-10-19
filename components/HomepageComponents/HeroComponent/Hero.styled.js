@@ -151,7 +151,7 @@ export const StyledParagraph = styled.div`
 	justify-self: center;
 
 	margin-inline: 2em;
-	margin-top: -2em;
+	margin-top: -12em;
 
 	font-family: 'neue-haas-grotesk-display';
 
