@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { CgArrowLongRight } from 'react-icons/cg';
 import Place from '/public/ministries-homepage@1x.png';
 import { useInView } from 'framer-motion';
-import {arrow} from  
+import arrow from '/public/arrow@1x.png';
 
 const Grid = styled.div`
 	display: grid;
