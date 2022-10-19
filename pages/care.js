@@ -227,7 +227,7 @@ function care() {
 				</div>
 			</div>
 			<div className='rowContainer'>
-				<div class='imageWrapper'>
+				<div className='imageWrapper'>
 					<Image src={telecare} alt='' />
 				</div>
 				<div className='contentGrid'>
