@@ -1,6 +1,15 @@
-import Head from 'next/head';
-import styled from 'styled-components';
+//IMPORT REACT SPECIFICS
 import { useState, useEffect } from 'react';
+
+// IMPORT NEXTJS SPECIFICS
+import Head from 'next/head';
+import Link from 'next/link';
+import Image from 'next/image';
+
+// IMPORT STYLING
+import styled from 'styled-components';
+
+// IMPORT SECTION MODULES
 import Hero from '/components/HomepageComponents/HeroComponent/Hero2.js';
 import FindALocation from '/components/HomepageComponents/SectionFindALocation/FindALocation2.js';
 import TheresAPlace from '/components/HomepageComponents/SectionTheresAPlace/TheresAPlace2.js';
@@ -24,12 +33,12 @@ const GridIndex = styled.div`
 `;
 
 const Home = () => {
-	const [isOpen, setIsOpen] = useState(false);
+	// const [isOpen, setIsOpen] = useState(false);
 
 	// // Create a function that updates the state
-	const toggle = () => {
-		setIsOpen(!isOpen);
-	};
+	// const toggle = () => {
+	// 	setIsOpen(!isOpen);
+	// };
 
 	return (
 		<>

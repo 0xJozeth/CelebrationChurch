@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import MenuToggle from './menuToggle';
-
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -8,16 +6,10 @@ import Link from 'next/link';
 import { CgScreen } from 'react-icons/cg';
 import { VscGlobe } from 'react-icons/vsc';
 import { IoCloseOutline } from 'react-icons/io5';
-
-const MenuToggleWrapper = styled.div`
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	z-index: 999;
-`;
+// import { HamburgerMenu } from './hamburgerMenu';
 
 export const ToggleMenuWrapper = styled(motion.div)`
-	position: fixed;
+	/* position: fixed; */
 
 	top: 0;
 	right: 0;
@@ -116,64 +108,18 @@ export const ToggleMenuWrapper = styled(motion.div)`
 	}
 `;
 
-export const HamburgerMenu = () => {
-	const [isOpen, setOpen] = useState(false);
+const ToggleMenu = (props) => {
+	const [showMenu, setShowMenu] = useState(false);
 
-	const toggle = () => {
-		setOpen(!isOpen);
-	};
-
-	// THIS FUNCTION OPENS THE TOGGLE MENU //
-
-	// useEffect(() => {
-	// 	console.log('The HamburgerMenu component useState is set to:', isOpen);
-	// }, [isOpen]);
-
-	// useEffect(() => {
-	// 	console.log('The HamburgerMenu component useState is set to:', isOpen);
-	// }, [isOpen]);
-	// if (isOpen) {
-	// 	return <ToggleMenu />;
-	// }
-	// if (!isOpen) {
-	// }
-	// THIS FUNCTION OPENS THE TOGGLE MENU //
+	useEffect(() => console.log(showMenu));
 
 	return (
 		<>
-			<MenuToggleWrapper>
-				<MenuToggle
-					toggle={toggle}
-					isOpen={isOpen}
-					// onClick={props.handleClick}
-				/>
-			</MenuToggleWrapper>
-		</>
-	);
-};
-
-const ToggleMenu = ({ props, toggle }) => {
-	const [isOpen, setIsOpen] = useState(() => (isOpen ? true : false));
-	// const contentClassname = isOpen
-	// 	? `'nav-open' 'ModalContainer'`
-	// 	: `'nav-closed' 'ModalContainer'`;
-
-	const handleToggle = () => {
-		setIsOpen(!isOpen);
-	};
-
-	useEffect(() => {
-		console.log('The ToggleMenu component useState is set to:', isOpen);
-	}, [isOpen]);
-
-	return (
-		<>
-			{/* {isOpen && ( */}
 			<ToggleMenuWrapper>
 				<div className='flex-container'>
 					<div className='grid-container'>
 						<div className='left-grid'>
-							<ul onClick={handleToggle}>
+							<ul>
 								<li className='about'>
 									<Link href='/about' passHref={true}>
 										<a>ABOUT</a>
@@ -197,7 +143,7 @@ const ToggleMenu = ({ props, toggle }) => {
 							</ul>
 						</div>
 						<div className='right-grid'>
-							<ul onClick={handleToggle}>
+							<ul>
 								<li className='ministries'>
 									<Link href='/ministries' passHref={true}>
 										<a>MINISTRIES</a>
@@ -216,7 +162,7 @@ const ToggleMenu = ({ props, toggle }) => {
 							</ul>
 						</div>
 						<div className='side-grid'>
-							<ul onClick={handleToggle}>
+							<ul>
 								<li className='shop'>
 									<span
 										className='icon-shopping-bag'
@@ -297,7 +243,8 @@ const ToggleMenu = ({ props, toggle }) => {
 					</div>
 				</div>
 			</ToggleMenuWrapper>
-			{/* )} */}
 		</>
 	);
 };
+
+export default ToggleMenu;

@@ -182,7 +182,7 @@ export default function FindALocation() {
 	const animation = useAnimation();
 
 	useEffect(() => {
-		console.log('use effect hook, inView = ', inView);
+		// console.log('use effect hook, inView = ', inView);
 	}, [inView]);
 	if (inView) {
 		animation.start({

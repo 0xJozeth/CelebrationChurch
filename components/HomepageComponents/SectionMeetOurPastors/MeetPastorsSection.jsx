@@ -162,7 +162,7 @@ export default function MeetPastors() {
 	const animation = useAnimation();
 
 	useEffect(() => {
-		console.log('use effect hook, isInView = ', isInView);
+		// console.log('use effect hook, isInView = ', isInView);
 	}, [isInView]);
 	if (isInView) {
 		animation.start({

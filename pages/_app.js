@@ -1,9 +1,8 @@
 import Head from 'next/head';
 import { Container } from 'next/app';
-import Layout from '/components/layout.js';
+import Layout from '/components/Layout/layout.js';
 import '../styles/globals.css';
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion';
-import Header from '../components/Header';
 import '/sass/main.scss';
 
 function App({ Component, pageProps, router }) {

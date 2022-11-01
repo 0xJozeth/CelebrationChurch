@@ -448,7 +448,7 @@ export default function About() {
 							<Link href='/follow-jesus' passHref>
 								<a>FOLLOW JESUS</a>
 							</Link>
-							<Link href='/follow-jesus' passHref>
+							<Link href='/follow-jesus'>
 								<StyledArrowImage
 									src={arrow}
 									width={102}
@@ -489,7 +489,7 @@ export default function About() {
 							<h2>COME VISIT US</h2>
 						</Link>
 
-						<Link href={'/visit'}>
+						<Link href='visit'>
 							<StyledArrowImage
 								src={longArrow}
 								width={483}

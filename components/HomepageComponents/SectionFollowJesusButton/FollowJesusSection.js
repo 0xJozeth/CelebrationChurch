@@ -59,7 +59,7 @@ export default function FollowJesusSection() {
 	const isInView = useInView(ref);
 
 	useEffect(() => {
-		console.log('use effect hook, isInView = ', isInView);
+		// console.log('use effect hook, isInView = ', isInView);
 	}, [isInView]);
 	if (isInView) {
 		animation.start({

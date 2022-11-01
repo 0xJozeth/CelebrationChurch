@@ -10,13 +10,17 @@ import celebrationLogo from '/public/cc-logo@1x.png';
 // ICONS IMPORTS
 import { RiArrowRightUpLine } from 'react-icons/ri';
 // COMPONENT IMPORTS
-import { HamburgerMenu } from './Navbar/hamburgerMenu';
+import MenuToggle from '/components/Navbar/hamburgerMenu/menuToggle.jsx';
+
+// ICONS IMPORT
+import { CgBlock } from 'react-icons/cg';
+import { HamburgerMenu } from '../Navbar/hamburgerMenu';
+// import ToggleMenu from '../Navbar/ToggleMenu';
 
 export const Grid = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
 	column-gap: 6vw;
-
 	background: hsl(0, 0, 0, 97%); //red;
 
 	margin-block: 1.5vw;
@@ -67,12 +71,19 @@ export const Grid = styled.div`
 
 		&.menuToggle {
 			display: grid;
+			z-index: 1000;
 		}
 	}
 `;
 
 const Header = ({ props }) => {
 	const [isOpen, setIsOpen] = useState(false);
+
+	useEffect(() => console.log(isOpen));
+
+	const toggle = () => {
+		setIsOpen(!isOpen);
+	};
 
 	return (
 		<>
@@ -120,7 +131,7 @@ const Header = ({ props }) => {
 					</ul>
 				</div>
 
-				<div className='menuToggle'>
+				<div className='menuToggle' onClick={() => setIsOpen(!isOpen)}>
 					<ul>
 						<motion.li
 							whileHover={{ scale: 1.08, transition: { duration: 0.15 } }}
@@ -145,11 +156,12 @@ const Header = ({ props }) => {
 								},
 							}}
 						>
-							<HamburgerMenu onClick={() => setIsOpen(!isOpen)} />
+							<HamburgerMenu />
 						</motion.li>
 					</ul>
 				</div>
 			</Grid>
+			{/* {isOpen && <ToggleMenu />} */}
 		</>
 	);
 };
