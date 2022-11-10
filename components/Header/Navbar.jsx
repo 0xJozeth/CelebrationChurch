@@ -161,15 +161,19 @@ function Navbar(props) {
 			<div
 				className='flex md:hidden justify-center items-center px-2' /* previously classname='navWrapperFlex w-aboveMenuZindex'*/
 			>
-				<Image
-					src={logomobile}
-					alt='logo-mobile'
-					width={38}
-					height={38}
-					// layout='intrinsic'
-					// objectFit='contain'
-					// priority
-				/>
+				<Link href='/' passHref>
+					<a aria-current='page' aria-label='home' className='cursor-pointer'>
+						<Image
+							src={logomobile}
+							alt='logo-mobile'
+							width={38}
+							height={38}
+							// layout='intrinsic'
+							// objectFit='contain'
+							// priority
+						/>
+					</a>
+				</Link>
 			</div>
 			{/* </Link> */}
 
