@@ -75,31 +75,36 @@ export default function WeHaveAGrace() {
 	return (
 		<>
 			<div
-				className='flex flex-col items-center
+				className='flex flex-col items-start
 				mx-auto 
-				mt-2
+				p-4
 				md:mt-16
-				md:pt-0
-				pt-16
 				w-full
 
-				min-w-[390px]
+				max-w-[326px]
 				md:min-w-[575px]
 				lg:min-w-[1024px]
 				xl:min-w-[1440px]
 				4k:min-w-[2560px]
 
-				min-h-[290px]
+				min-h-[200px]
 				md:min-h-[575px]
 				lg:min-h-[780px]
 				xl:min-h-[1024px]
+				bg-red-500
 			'
 			>
-				<div className='w-full lg:flex lg:flex-col lg:items-center'>
+				<div
+					className='flex flex-col
+					justify-start items-start
+					w-full
+
+				lg:items-center bg-blue-500'
+				>
 					<div className='flex'>
 						<h2
 							className='font-display 
-						text-[46px] md:text-[72px] lg:text-[136px] xl:text-[180px]
+						text-[34px] md:text-[72px] lg:text-[136px] xl:text-[180px]
 						font-bold'
 						>
 							WE HAVE A
@@ -136,7 +141,7 @@ export default function WeHaveAGrace() {
 						<h3
 							className='flex font-display 
 							min-h-[96px]
-						text-[46px] md:text-[64px] lg:text-[126px]
+						text-[34px] md:text-[64px] lg:text-[126px]
 						
 						font-bold 
 						my-1
@@ -148,7 +153,7 @@ export default function WeHaveAGrace() {
 							FOR &nbsp;
 						</h3>
 						<div
-							className='flex justify-start my-4 px-2 w-full 
+							className='flex justify-start md:my-5 px-1 md:px-4 w-full 
 						min-w-[260px]
 						md:max-w-[482px]
 						lg:min-w-[596px] lg:max-w-[635px]
@@ -157,7 +162,7 @@ export default function WeHaveAGrace() {
 						>
 							<Typed
 								className='font-kepler italic uppercase
-								text-[36px] md:text-[58px] lg:text-[98px] xl:text-[144px]
+								text-[32px] md:text-[58px] lg:text-[98px] xl:text-[144px]
 								'
 								strings={[
 									'Gathering.',
