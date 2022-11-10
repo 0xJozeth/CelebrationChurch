@@ -5,8 +5,13 @@ import Image from 'next/image';
 import arrow from '/public/link-arrow.svg';
 import { IoLocationSharp } from 'react-icons/io5';
 import { FaPhoneAlt } from 'react-icons/fa';
-import { BsClockFill } from 'react-icons/bs';
+import { BsFillArrowRightCircleFill, BsClockFill } from 'react-icons/bs';
 import { motion } from 'framer-motion';
+
+import React, { useEffect, useState } from 'react';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FaArrowCircleRight } from '/components/FontAwesome/fontawesome.js';
 
 const VisitWrapper = styled.div`
 	display: grid;
@@ -125,11 +130,12 @@ const ArrowBtn = styled.div`
 
 const SelectLocationSection = styled.div`
 	display: flex;
+	justify-content: center;
 	flex-direction: column;
 	align-items: center;
 	padding: 2em;
 	// // outline: 3px dotted red;
-	width: 100vw;
+	width: 100%;
 
 	font-family: 'neue-haas-grotesk-display';
 	font-weight: 800;
@@ -138,6 +144,8 @@ const SelectLocationSection = styled.div`
 `;
 
 const LocationAccordian = styled.div`
+	width: 100%;
+	justify-content: center;
 	// // outline: 3px dotted blue;
 `;
 
@@ -234,7 +242,31 @@ const ReachCardGrid = styled.div`
 	// // outline: 3px dotted salmon;
 `;
 
-export default function Visit() {
+export default function Visit(props) {
+	const [usa, setUsa] = useState(false);
+	const [international, setInternational] = useState(false);
+	const [global, setGlobal] = useState(false);
+
+	const handleUsa = () => {
+		setUsa(!usa);
+	};
+	const handleInternational = () => {
+		setInternational(!international);
+	};
+	const handleGlobal = () => {
+		setGlobal(!global);
+	};
+
+	useEffect(() => {
+		console.log('The Uua useState is set to:', usa);
+	});
+	useEffect(() => {
+		console.log('The international useState is set to:', international);
+	});
+	useEffect(() => {
+		console.log('The global useState is set to:', global);
+	});
+
 	return (
 		<>
 			<Head>
@@ -289,9 +321,185 @@ export default function Visit() {
 				<SelectLocationSection>
 					<LocationAccordian>
 						<Styledul>SELECT A LOCATION</Styledul>
-						<Styledli>USA &#43;</Styledli>
-						<Styledli>INTERNATIONAL &#43;</Styledli>
-						<Styledli>GLOBAL PARTNERS &#43;</Styledli>
+						<Styledli onClick={handleUsa}>
+							<div className='flex'>
+								USA &nbsp;
+								<li className={usa ? 'list-none hidden' : 'list-none block'}>
+									&#43;
+								</li>
+								<li className={usa ? 'list-none block' : 'list-none hidden'}>
+									&#45;
+								</li>
+							</div>
+							<div
+								className={
+									usa
+										? 'ml-40 w-full transition ease-in-out delay-200 translate-y-0 opacity-100 duration-300 block'
+										: 'ml-40 w-full transition ease-in-out delay-0 translate-y-[-100vh] opacity-25 hidden'
+								}
+							>
+								<ul className='flex-col items-center justify-center leading-normal'>
+									<Link href='#' passHref>
+										<li className='flex items-center'>
+											<a className='flex relative hover:bg-black hover:text-white p-2 m-2 ease-in items-center'>
+												<div className='hover:block hover:left-0'>
+													<BsFillArrowRightCircleFill size={60} />
+												</div>
+												&nbsp;JACKSONVILLE
+											</a>
+										</li>
+									</Link>
+									<Link href='#' passHref>
+										<li>
+											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
+												SOUTH FLORIDA
+											</a>
+										</li>
+									</Link>
+									<Link href='#' passHref>
+										<li>
+											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
+												ORLANDO
+											</a>
+										</li>
+									</Link>
+									<Link href='#' passHref>
+										<li>
+											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
+												WASHINGTON, D.C.
+											</a>
+										</li>
+									</Link>
+									<Link href='#' passHref>
+										<li>
+											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
+												CHRISTIAN FAITH CENTER, NC
+											</a>
+										</li>
+									</Link>
+								</ul>
+							</div>
+						</Styledli>
+						<Styledli onClick={handleInternational}>
+							<div className='flex'>
+								INTERNATIONAL &nbsp;
+								<li
+									className={
+										international ? 'list-none hidden' : 'list-none block'
+									}
+								>
+									&#43;
+								</li>
+								<li
+									className={
+										international ? 'list-none block' : 'list-none hidden'
+									}
+								>
+									&#45;
+								</li>
+							</div>
+							<div
+								className={
+									international
+										? 'ml-40 w-full transition ease-in-out translate-y-0 opacity-100 duration-300 block'
+										: 'ml-40 w-full transition ease-in-out delay-0 translate-y-[-100vh] opacity-25 hidden'
+								}
+							>
+								<ul className='flex-col items-center justify-center leading-normal'>
+									<Link href='#' passHref>
+										<li>
+											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
+												THE LIGHTHOUSE ANTWERP, BELGIUM
+											</a>
+										</li>
+									</Link>
+									<Link href='#' passHref>
+										<li>
+											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
+												NETHERLANDS
+											</a>
+										</li>
+									</Link>
+									<Link href='#' passHref>
+										<li>
+											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
+												PARIS
+											</a>
+										</li>
+									</Link>
+									<Link href='#' passHref>
+										<li>
+											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
+												MOKAPANE SOUTH AFRICA
+											</a>
+										</li>
+									</Link>
+									<Link href='#' passHref>
+										<li>
+											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
+												ZIMBABWE
+											</a>
+										</li>
+									</Link>
+								</ul>
+							</div>
+						</Styledli>
+						<Styledli onClick={handleGlobal}>
+							<div className='flex items-center'>
+								GLOBAL PARTNERS &nbsp;
+								<li className={global ? 'list-none hidden' : 'list-none block'}>
+									&#43;
+								</li>
+								<li className={global ? 'list-none block' : 'list-none hidden'}>
+									&#45;
+								</li>
+							</div>
+							<div
+								className={
+									global
+										? 'ml-40 w-full transition ease-in-out translate-y-0 opacity-100 duration-300 block'
+										: 'ml-40 w-full transition ease-in-out delay-0 translate-y-[-100vh] opacity-25 hidden'
+								}
+							>
+								<ul className='flex-col items-center justify-center leading-normal'>
+									<Link href='#' passHref>
+										<li>
+											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
+												THE LIGHTHOUSE ANTWERP, BELGIUM
+											</a>
+										</li>
+									</Link>
+									<Link href='#' passHref>
+										<li>
+											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
+												NETHERLANDS
+											</a>
+										</li>
+									</Link>
+									<Link href='#' passHref>
+										<li>
+											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
+												PARIS
+											</a>
+										</li>
+									</Link>
+									<Link href='#' passHref>
+										<li>
+											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
+												MOKAPANE SOUTH AFRICA
+											</a>
+										</li>
+									</Link>
+									<Link href='#' passHref>
+										<li>
+											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
+												ZIMBABWE
+											</a>
+										</li>
+									</Link>
+								</ul>
+							</div>
+						</Styledli>
 					</LocationAccordian>
 				</SelectLocationSection>
 

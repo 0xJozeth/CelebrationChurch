@@ -41,6 +41,8 @@
 
 .hamburgerMenu {
 	justify-content: end;
+	z-index: 9999;
+	color: #f8f8f8;
 }
 
 nav {
@@ -65,7 +67,7 @@ nav {
 
 	&.w-nav-link {
 		// position: relative;
-		display: inline-block;
+		// display: inline-block;
 		align-items: center;
 		justify-content: center;
 		a {
@@ -78,7 +80,6 @@ nav {
 	position: absolute;
 	top: 0;
 	right: 0;
-	z-index: 9999;
 	cursor: pointer;
 	border: none;
 	background-color: var(--bg);
@@ -95,21 +96,35 @@ nav {
 	z-index: 99999;
 }
 
+.w-aboveMenuZindex {
+	z-index: 2;
+}
+
 .displaynone {
 	display: none;
 }
 
 .ModalContainer {
 	// position: absolute;
-	left: -100vw;
+	// left: -100vw;
 }
 
 .nav-open {
+	display: block;
 	opacity: 100%;
-	transform: translate(0);
+
+	transition: ease-in;
+	transition-duration: 200ms;
+	z-index: 1;
 }
 
 .nav-closed {
+	// position: absolute;
+
+	display: none;
 	opacity: 0%;
-	transform: translate(100vw);
+	transition: ease-out;
+	transition-duration: 200ms;
+
+	left: -100vw;
 }

@@ -671,7 +671,7 @@ export default function Give() {
 							layout='fixed'
 							height={587} // original: 783
 							width={1059} // original: 1413
-							priority={true}
+							priority
 						/>
 
 						<div className='buttonContainer'>

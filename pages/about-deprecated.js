@@ -373,7 +373,7 @@ export default function About() {
 							width='1280'
 							height='720'
 							placeholder='blur'
-							priority='true'
+							priority
 						></iframe>
 					</div>
 				</VideoSection>

@@ -3,6 +3,13 @@ import { Container } from 'next/app';
 import Layout from '/components/Layout/layout.js';
 import '../styles/globals.css';
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion';
+
+import '@fortawesome/fontawesome-svg-core/styles.css';
+// config.autoAddCss = false;
+
+// import your fontawesome library
+import '/components/FontAwesome/fontawesome.js';
+
 import '/sass/main.scss';
 
 function App({ Component, pageProps, router }) {

@@ -155,7 +155,7 @@ export default function Hero() {
 					</h1>
 				</div>
 
-				<div className='paragraph'>
+				<div className='text-red-700'>
 					<p>
 						We’re so glad you’re here! At Celebration Church, we prioritize
 						Jesus’ mission to spread the gospel. We are a global house comprised

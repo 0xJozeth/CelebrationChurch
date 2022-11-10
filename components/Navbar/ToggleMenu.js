@@ -115,21 +115,14 @@ export const ToggleMenuWrapper = styled(motion.div)`
 
 // IMPORTS FOR OPEN/CLOSE FUNCTION //
 
-const ToggleMenu = ({ navbarOpen, setNavbarOpen }) => {
+const ToggleMenu = ({ nav, setNav, handleToggle }) => {
 	return (
 		<>
-			<ToggleMenuWrapper
-				className={`${navbarOpen ? 'nav-open' : 'nav-closed'}`}
-			>
+			<ToggleMenuWrapper>
 				<div className='flex-container'>
-					<div
-						className='grid-container'
-						onClick={() => {
-							setNavbarOpen(false);
-						}}
-					>
+					<div className='grid-container'>
 						<div className='left-grid'>
-							<ul>
+							<ul onClick={handleToggle}>
 								<li className='about'>
 									<Link href='/about' passHref={true}>
 										<a>ABOUT</a>
@@ -153,7 +146,7 @@ const ToggleMenu = ({ navbarOpen, setNavbarOpen }) => {
 							</ul>
 						</div>
 						<div className='right-grid'>
-							<ul>
+							<ul onClick={handleToggle}>
 								<li className='ministries'>
 									<Link href='/ministries' passHref={true}>
 										<a>MINISTRIES</a>

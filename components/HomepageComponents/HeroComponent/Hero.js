@@ -87,7 +87,7 @@ export default function Hero() {
 							width={810}
 							height={1438}
 							placeholder={'blur'}
-							priority='true'
+							priority
 						></iframe>
 					</motion.div>
 				</StyledVideoContainer>

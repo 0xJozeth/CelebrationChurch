@@ -168,7 +168,6 @@ const ToggleMenu = ({ props, toggle }) => {
 
 	return (
 		<>
-			{/* {isOpen && ( */}
 			<ToggleMenuWrapper>
 				<div className='flex-container'>
 					<div className='grid-container'>
@@ -297,7 +296,6 @@ const ToggleMenu = ({ props, toggle }) => {
 					</div>
 				</div>
 			</ToggleMenuWrapper>
-			{/* )} */}
 		</>
 	);
 };

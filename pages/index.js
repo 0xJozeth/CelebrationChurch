@@ -1,5 +1,5 @@
 //IMPORT REACT SPECIFICS
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // IMPORT NEXTJS SPECIFICS
 import Head from 'next/head';
@@ -18,6 +18,9 @@ import FollowJesusSection from '/components/HomepageComponents/SectionFollowJesu
 import WhatsNewSection from '/components/HomepageComponents/SectionWhatsNew/WhatsNewSection2.js';
 import WeHaveAGrace from '/components/HomepageComponents/SectionWeHaveAGrace/WeHaveAGrace.js';
 
+// TAILWIND STUFF
+import HeroTW from '/components/HomepageComponents/HeroComponent/Hero-tw.jsx';
+
 const GridIndex = styled.div`
 	display: grid;
 	grid-template-rows: repeat(6, 1fr);
@@ -26,20 +29,13 @@ const GridIndex = styled.div`
 	row-gap: 5vw;
 	align-items: center;
 	place-items: center;
-	width: 100%;
+	/* width: 100%; */
 
 	// overflow: hidden;
 	// display: flex; // 🎩💫
 `;
 
 const Home = () => {
-	// const [isOpen, setIsOpen] = useState(false);
-
-	// // Create a function that updates the state
-	// const toggle = () => {
-	// 	setIsOpen(!isOpen);
-	// };
-
 	return (
 		<>
 			<Head>
@@ -49,15 +45,19 @@ const Home = () => {
 				</title>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 			</Head>
-			<GridIndex>
-				<Hero />
-				<FindALocation />
-				<WeHaveAGrace />
-				<TheresAPlace />
-				<MeetPastors />
-				<FollowJesusSection />
-				<WhatsNewSection />
-			</GridIndex>
+			{/* <GridIndex> */}
+			{/* <Hero /> */}
+			{/* <FindALocation /> */}
+			{/* <WeHaveAGrace /> */}
+			{/* <TheresAPlace /> */}
+			{/* <MeetPastors /> */}
+			{/* <FollowJesusSection /> */}
+			{/* <WhatsNewSection /> */}
+			{/* </GridIndex> */}
+			<main>
+				<HeroTW />
+			</main>
+			{/* <FindALocation /> */}
 		</>
 	);
 };
