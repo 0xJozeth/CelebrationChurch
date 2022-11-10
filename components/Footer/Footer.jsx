@@ -11,7 +11,7 @@ import CookieConsent from 'react-cookie-consent';
 export default function Footer() {
 	return (
 		<>
-			<div className='flex md:hidden flex-col mx-auto pt-12 p-8 gap-y-8 border border-solid border-[#070707] overflow-hidden'>
+			<div className='flex md:hidden flex-col mx-auto pt-12 p-8 gap-y-8 border border-solid border-[#070707]'>
 				<div className='max-w-[58px] max-h-[58px]'>
 					<Image src={cclogo} alt='' />
 				</div>

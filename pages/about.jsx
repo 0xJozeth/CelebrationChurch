@@ -17,7 +17,7 @@ function about() {
 			<div
 				className='flex flex-col 
                 mx-auto items-center justify-center
-                max-w-[390px] md:max-w-[575px] lg:max-w-[1024px] xl:max-w-[1440px]
+                max-w-[375px] md:max-w-[575px] lg:max-w-[1024px] xl:max-w-[1440px]
                 w-full 
                 gap-y-4
                 lg:gap-y-20'
@@ -61,7 +61,7 @@ function about() {
 				</div>
 				<div
 					className='relative flex flex-col mx-auto mb-12 
-                max-w-[390px] 
+                max-w-[375px] 
                 md:max-w-[575px] lg:max-w-[1024px] 
                 font-display text-[#7C7C7C] 
                 text-[18px] md:text-[24px] lg:text-[42px]
@@ -93,7 +93,7 @@ function about() {
 				<div className='flex mx-auto'>
 					<WeHaveAGrace />
 				</div>
-				<div className='relative flex flex-col items-start min-w-[390px] min-h-[390px] px-4'>
+				<div className='relative flex flex-col items-start min-w-[375px] min-h-[375px] px-4'>
 					<div className='flex absolute top-0 right-0 z-[3] mix-blend-overlay'>
 						<h2 className='font-display font-bold text-[56px] text-[#f8f8f8]'>
 							WHAT WE&nbsp;
@@ -117,7 +117,7 @@ function about() {
 					</div>
 				</div>
 				<div
-					className='relative flex flex-col mx-auto my-12 mb-12 max-w-[390px] md:max-w-[575px] font-display text-[#7C7C7C] 
+					className='relative flex flex-col mx-auto my-12 mb-12 max-w-[375px] md:max-w-[575px] font-display text-[#7C7C7C] 
                                 text-[18px] md:text-[24px] lg:text-[30px]
 '
 				>
@@ -139,7 +139,7 @@ function about() {
 						</p>
 					</div>
 				</div>
-				<div className='flex flex-col px-8 items-start min-w-[390px] gap-y-12'>
+				<div className='flex flex-col px-8 items-start min-w-[375px] gap-y-12'>
 					<Link href='/' passHref>
 						<div className='flex gap-x-4'>
 							<a className='font-display capitalize text-[22px] gap-x-2'>
@@ -161,7 +161,7 @@ function about() {
 						</div>
 					</Link>
 				</div>
-				<div className='flex min-w-390px my-12'>
+				<div className='flex min-w-375px my-12'>
 					<h1 className='font-display text-[54px] md:text-[110px] lg:text-[196px] font-bold text-center'>
 						OUR&nbsp;
 						<br />
@@ -175,13 +175,13 @@ function about() {
 				<div className='flex mx-auto justify-center items-center my-4'>
 					<PartnersCarousel />
 				</div>
-				<div className='flex min-h-[51px] max-w-[351px] justify-center items-center mx-auto my-4'>
+				<div className='flex min-h-[51px] max-w-[326px] justify-center items-center mx-auto my-4 overflow-hidden'>
 					<Link href={'visit'}>
 						<button className='flex items-center border-2 border-solid border-[#070707] p-4 gap-x-4 mx-auto'>
 							<div className='flex min-w-[165px]'>
 								<a className='font-display text-[24px]'>COME VISIT US</a>
 							</div>
-							<div className='flex min-h-[12px] min-w-[145px]'>
+							<div className='flex min-h-[12px] max-w-[145px]'>
 								<Image src={longArrow} alt='' />
 							</div>
 						</button>

@@ -77,7 +77,9 @@ export default function WeHaveAGrace() {
 			<div
 				className='flex flex-col items-center
 				mx-auto 
-				mt-16
+				mt-2
+				md:mt-16
+				md:pt-0
 				pt-16
 				w-full
 
@@ -91,14 +93,13 @@ export default function WeHaveAGrace() {
 				md:min-h-[575px]
 				lg:min-h-[780px]
 				xl:min-h-[1024px]
-overflow-hidden
 			'
 			>
 				<div className='w-full lg:flex lg:flex-col lg:items-center'>
 					<div className='flex'>
 						<h2
 							className='font-display 
-						text-[53px] md:text-[72px] lg:text-[136px] xl:text-[180px]
+						text-[46px] md:text-[72px] lg:text-[136px] xl:text-[180px]
 						font-bold'
 						>
 							WE HAVE A
@@ -115,7 +116,7 @@ overflow-hidden
 					>
 						<div
 							className='
-							text-[110px]
+							text-[92px]
 							md:text-[170px]
 							lg:text-[306px]
 							xl:text-[344px]
@@ -135,10 +136,10 @@ overflow-hidden
 						<h3
 							className='flex font-display 
 							min-h-[96px]
-						text-[48px] md:text-[64px] lg:text-[126px]
+						text-[46px] md:text-[64px] lg:text-[126px]
 						
 						font-bold 
-						my-2
+						my-1
 						md:my-3
 						lg:my-4
 						mx-2 
