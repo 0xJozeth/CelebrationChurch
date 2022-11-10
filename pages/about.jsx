@@ -93,24 +93,24 @@ function about() {
 				<div className='flex mx-auto'>
 					<WeHaveAGrace />
 				</div>
-				<div className='relative flex flex-col items-start min-w-[375px] min-h-[375px] px-4'>
+				<div className='relative flex flex-col items-start min-w-[326px] min-h-[396px] px-4'>
 					<div className='flex absolute top-0 right-0 z-[3] mix-blend-overlay'>
-						<h2 className='font-display font-bold text-[56px] text-[#f8f8f8]'>
+						<h2 className='font-display font-bold text-[48px] text-[#f8f8f8]'>
 							WHAT WE&nbsp;
 							<br />
-							<span className='font-kepler text-[58px] md:text-[110px] lg:text-[196px] italic'>
+							<span className='font-kepler text-[50px] md:text-[110px] lg:text-[196px] italic'>
 								BELIEVE
 							</span>
 						</h2>
 					</div>
-					<div className='absolute top-9 w-[264px] h-[275px] z-[2]'>
+					<div className='absolute top-8 left-0 w-[264px] h-[275px] z-[2]'>
 						<Image className='' src={baptism} alt='' />
 					</div>
 					<div className='flex absolute top-0 right-0 z-[1]'>
-						<h2 className='font-display font-bold text-[56px]'>
+						<h2 className='font-display font-bold text-[48px]'>
 							WHAT WE&nbsp;
 							<br />
-							<span className='font-kepler text-[58px] md:text-[110px] lg:text-[196px] italic'>
+							<span className='font-kepler text-[50px] md:text-[110px] lg:text-[196px] italic'>
 								BELIEVE
 							</span>
 						</h2>

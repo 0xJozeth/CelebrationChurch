@@ -91,7 +91,7 @@ export default function WeHaveAGrace() {
 				md:min-h-[575px]
 				lg:min-h-[780px]
 				xl:min-h-[1024px]
-				bg-red-500
+
 			'
 			>
 				<div
@@ -99,7 +99,8 @@ export default function WeHaveAGrace() {
 					justify-start items-start
 					w-full
 
-				lg:items-center bg-blue-500'
+				lg:items-center 
+				'
 				>
 					<div className='flex'>
 						<h2
@@ -141,10 +142,10 @@ export default function WeHaveAGrace() {
 						<h3
 							className='flex font-display 
 							min-h-[96px]
-						text-[34px] md:text-[64px] lg:text-[126px]
+						text-[24px] md:text-[64px] lg:text-[126px]
 						
 						font-bold 
-						my-1
+						my-[2px]
 						md:my-3
 						lg:my-4
 						mx-2 
@@ -162,7 +163,7 @@ export default function WeHaveAGrace() {
 						>
 							<Typed
 								className='font-kepler italic uppercase
-								text-[32px] md:text-[58px] lg:text-[98px] xl:text-[144px]
+								text-[28px] md:text-[58px] lg:text-[98px] xl:text-[144px]
 								'
 								strings={[
 									'Gathering.',
