@@ -116,7 +116,7 @@ export default function WeHaveAGrace() {
 					>
 						<div
 							className='
-							text-[92px]
+							text-[72px]
 							md:text-[170px]
 							lg:text-[306px]
 							xl:text-[344px]

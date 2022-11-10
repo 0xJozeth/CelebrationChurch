@@ -24,7 +24,7 @@ function about() {
 			>
 				<div
 					className='relative 
-                w-[351px] h-[204px]
+                w-[316px] h-[176px]
                 md:w-[575px] md:h-[323px]
                 lg:w-[1024px] lg:h-[575px]
                 xl:w-[1440px] xl:h-[806px]
@@ -36,7 +36,7 @@ function about() {
 				>
 					<iframe
 						className='absolute top-0 left-0 right-0 bottom-0
-                        w-[326px] h-[182px]
+                        w-[326px] h-[176px]
                         md:w-[575px] md:h-[323px]
                         lg:w-[1024px] lg:h-[575px]
                         xl:w-[1440px] xl:h-[810px]
@@ -175,13 +175,13 @@ function about() {
 				<div className='flex mx-auto justify-center items-center my-4'>
 					<PartnersCarousel />
 				</div>
-				<div className='flex min-h-[51px] max-w-[326px] justify-center items-center mx-auto my-4 overflow-hidden'>
+				<div className='flex min-h-[51px] max-w-[256px] justify-center items-center mx-auto my-4 overflow-hidden'>
 					<Link href={'visit'}>
 						<button className='flex items-center border-2 border-solid border-[#070707] p-4 gap-x-4 mx-auto'>
-							<div className='flex min-w-[165px]'>
-								<a className='font-display text-[24px]'>COME VISIT US</a>
+							<div className='flex min-w-[126px]'>
+								<a className='font-display text-[18px]'>COME VISIT US</a>
 							</div>
-							<div className='flex min-h-[12px] max-w-[145px]'>
+							<div className='flex min-h-[36px] max-w-[144px]'>
 								<Image src={longArrow} alt='' />
 							</div>
 						</button>

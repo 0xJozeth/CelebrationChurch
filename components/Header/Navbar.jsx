@@ -217,7 +217,7 @@ function Navbar(props) {
 
 			{/* Hamburger Menu */}
 
-			<ul className='mx-16' onClick={handleToggle}>
+			<ul className='mx-2 md:mx-4 lg:mx-8 xl:mx-16' onClick={handleToggle}>
 				<HamburgerMenu />
 			</ul>
 
