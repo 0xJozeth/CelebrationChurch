@@ -91,7 +91,7 @@ export default function WeHaveAGrace() {
 				md:min-h-[575px]
 				lg:min-h-[780px]
 				xl:min-h-[1024px]
-
+overflow-hidden
 			'
 			>
 				<div className='w-full lg:flex lg:flex-col lg:items-center'>
