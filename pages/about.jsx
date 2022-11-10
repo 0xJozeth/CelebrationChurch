@@ -36,7 +36,7 @@ function about() {
 				>
 					<iframe
 						className='absolute top-0 left-0 right-0 bottom-0
-                        w-[351px] h-[204px]
+                        w-[326px] h-[182px]
                         md:w-[575px] md:h-[323px]
                         lg:w-[1024px] lg:h-[575px]
                         xl:w-[1440px] xl:h-[810px]
