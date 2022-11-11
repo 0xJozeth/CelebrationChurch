@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { CSSTransition } from 'react-transition-group';
 
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
@@ -13,17 +12,24 @@ import logomobile from '/public/celebration-logo@1x.png';
 import { CgScreen } from 'react-icons/cg';
 import { VscGlobe } from 'react-icons/vsc';
 import { MdEmail, MdMenuBook } from 'react-icons/md';
-import { RiShoppingBagFill } from 'react-icons/ri';
 import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from 'react-icons/bs';
-
-import { IoCloseOutline } from 'react-icons/io5';
-
-import ToggleMenu from '/components/Navbar/ToggleMenu.js';
 
 import { HamburgerMenu } from '/components/Navbar/hamburgerMenu/index.jsx';
 
 import NavbarSlider from '/components/NavbarSlider/NavbarSlider.jsx';
 import PartnersCarousel from '/components/PartnersCarousel/partnersCarousel.jsx';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+	faBagShopping,
+	faBible,
+	faPrayingHands,
+	faTelevision,
+} from '@fortawesome/free-solid-svg-icons';
+
+import { CSSTransition } from 'react-transition-group';
+
+import arrow from '/public/arrow@1x-white.svg';
 
 // export const ToggleMenuWrapper = styled(motion.div)`
 // 	position: fixed;
@@ -126,10 +132,15 @@ import PartnersCarousel from '/components/PartnersCarousel/partnersCarousel.jsx'
 
 function Navbar(props) {
 	const [nav, setNav] = useState(false);
+	const [slide, setSlide] = useState(false);
 	const [logoMobile, setLogoMobile] = useState(false);
 
 	const handleToggle = () => {
 		setNav(!nav);
+	};
+
+	const handleSlide = () => {
+		setSlide(!slide);
 	};
 
 	useEffect(() => {
@@ -225,151 +236,183 @@ function Navbar(props) {
 			>
 				{' '}
 				<PartnersCarousel />
-				{/* <div className='flex flex-col font-bold text-[44px] mt-20 md:mt-24 p-[24px] gap-y-4'>
-					<ul className='flex flex-col gap-y-4' onClick={handleToggle}>
-						<li className='about'>
-							<Link href='/about' passHref={true}>
-								<a className='text-[#f8f8f8]'>ABOUT</a>
-							</Link>
-						</li>
-						<li className='visit'>
-							<Link href='/visit' passHref={true}>
-								<a className='text-[#f8f8f8]'>VISIT</a>
-							</Link>
-						</li>
-						<li className='give'>
-							<Link href='/give' passHref={true}>
-								<a className='text-[#f8f8f8]'>GIVE</a>
-							</Link>
-						</li>
-						<li className='watch'>
-							<Link href='/watch' passHref>
-								<a className='text-[#f8f8f8]'>WATCH</a>
-							</Link>
-						</li>
-					</ul>
-
-					<ul
-						className='font-light flex flex-col gap-y-4'
-						onClick={handleToggle}
-					>
-						<li className='ministries'>
-							<Link href='/ministries' passHref>
-								<a className='text-[#f8f8f8]'>MINISTRIES</a>
-							</Link>
-						</li>
-						<li className='care'>
-							<Link href='/care' passHref>
-								<a className='text-[#f8f8f8]'>CARE</a>
-							</Link>
-						</li>
-						<li className='follow-jesus'>
-							<Link href='/follow-jesus' passHref>
-								<a className='text-[#f8f8f8]'>FOLLOW JESUS</a>
-							</Link>
-						</li>
-					</ul>
-				</div> */}
-				<div className='fixed bottom-20 flex flex-col justify-center items-center bg-[#0D0D0D] min-w-full min-h-[275px] '>
-					<ul className='flex flex-col gap-y-10' onClick={handleToggle}>
-						<li className='flex gap-x-2 text-[#f8f8f8]'>
-							<span
-								className='icon-shopping-bag'
-								role='img'
-								aria-label='shopping-bag'
-							>
-								<RiShoppingBagFill />
-								{/* <FaShoppingBag /> */}
-							</span>
-							<Link href='/shop' passHref>
-								<a className='text-[#f8f8f8]'>SHOP</a>
-							</Link>
-						</li>
-						<li className='flex gap-x-2 text-[#f8f8f8]'>
-							<span className='icon-bible' role='img' aria-label='bible'>
-								<MdMenuBook />
-								{/* <FaBible /> */}
-							</span>
-							<Link href='bible-reading-plan' passHref>
-								<a className='text-[#f8f8f8]'>BIBLE READING PLAN</a>
-							</Link>
-						</li>
-						<li className='flex gap-x-2'>
-							<span
-								className='icon-praying-hands'
-								role='img'
-								aria-label='praying-hands'
-							>
-								<VscGlobe />
-								{/* <FaPrayingHands /> */}
-							</span>
-							<Link href='/celebration-worship' passHref>
-								<a className='text-[#f8f8f8]'>CELEBRATION WORSHIP</a>
-							</Link>
-						</li>
-						<li className='flex gap-x-2'>
-							<span className='icon-screen' role='img' aria-label='screen'>
-								<CgScreen />
-							</span>
-							<Link href='tv-ministry' passHref>
-								<a className='text-[#f8f8f8]'>TV MINISTRY</a>
-							</Link>
-						</li>
-						<li className='flex gap-x-2'>
-							<span className='icon-globe' role='img' aria-label='globe'>
-								<VscGlobe />
-							</span>
-							<Link href='ckids-online' passHref>
-								<a className='text-[#f8f8f8]'>CKIDS ONLINE</a>
-							</Link>
-						</li>
-					</ul>
-				</div>
 				<div
-					className='fixed w-full flex justify-center items-center h-20 gap-x-12 bottom-0
-					text-[#f8f8f8] z-100 bg-purple-500'
-					onClick={handleToggle}
+					className={
+						slide
+							? 'flex overflow-y-auto top-5 fixed gap-x-24 bg-purple-400 min-w-[800px]'
+							: 'flex overflow-y-auto top-5 fixed gap-x-24 right-20 bg-purple-400 min-w-[800px]'
+					}
 				>
-					<span className='icon'>
-						<Link href='/' passHref>
-							<a className=' text-[#f8f8f8]'>
-								<BsFacebook />
-								{/* <FaFacebook /> */}
-							</a>
-						</Link>
-					</span>
-					<span className='flex'>
-						<Link href='/' passHref>
-							<a className='text-[#f8f8f8] '>
-								<BsInstagram />
-								{/* <FaInstagram /> */}
-							</a>
-						</Link>
-					</span>
-					<span className='flex'>
-						<Link href='/' passHref>
-							<a className='text-[#f8f8f8]'>
-								<BsTwitter />
-								{/* <FaTwitter /> */}
-							</a>
-						</Link>
-					</span>
-					<span className='flex'>
-						<Link href='/' passHref>
-							<a className='text-[#f8f8f8]'>
-								<BsYoutube />
-								{/* <FaYoutube /> */}
-							</a>
-						</Link>
-					</span>
-					<span className='flex'>
-						<Link href='/' passHref>
-							<a className='text-[#f8f8f8]'>
-								<MdEmail />
-								{/* <FaRegEnvelope /> */}
-							</a>
-						</Link>
-					</span>
+					<div className=' relative flex flex-col font-bold text-[44px] mt-20 md:mt-24 p-[24px] gap-y-4 h-[325px] bg-red-700'>
+						<ul className='flex flex-col gap-y-4' onClick={handleToggle}>
+							<li className='about'>
+								<Link href='/about' passHref={true}>
+									<a className='text-[#f8f8f8]'>ABOUT</a>
+								</Link>
+							</li>
+							<li className='visit'>
+								<Link href='/visit' passHref={true}>
+									<a className='text-[#f8f8f8]'>VISIT</a>
+								</Link>
+							</li>
+							<li className='give'>
+								<Link href='/give' passHref={true}>
+									<a className='text-[#f8f8f8]'>GIVE</a>
+								</Link>
+							</li>
+							<li className='watch'>
+								<Link href='/watch' passHref>
+									<a className='text-[#f8f8f8]'>WATCH</a>
+								</Link>
+							</li>
+						</ul>
+						<div className='flex absolute bottom-0' onClick={handleSlide}>
+							<Image src={arrow} alt='' />
+						</div>
+					</div>
+					<div className='relative flex flex-col items-end font-bold text-[44px] mt-20 md:mt-24 p-[24px] gap-y-4 bg-blue-700 w-[350px]'>
+						<ul
+							className={
+								slide
+									? 'absolute top-4 left-4 font-light flex flex-col gap-y-4'
+									: 'absolute top-4 left-52 font-light flex flex-col gap-y-4'
+							}
+							onClick={handleToggle}
+						>
+							<li className='ministries'>
+								<Link href='/ministries' passHref>
+									<a className='text-[#f8f8f8]'>MINISTRIES</a>
+								</Link>
+							</li>
+							<li className='care'>
+								<Link href='/care' passHref>
+									<a className='text-[#f8f8f8]'>CARE</a>
+								</Link>
+							</li>
+							<li className='follow-jesus flex min-w-[400px]'>
+								<Link href='/follow-jesus' passHref>
+									<a className='text-[#f8f8f8]'>FOLLOW JESUS</a>
+								</Link>
+							</li>
+						</ul>
+						<div
+							className='flex absolute bottom-0 justify-end rotate-180'
+							onClick={handleSlide}
+						>
+							<Image src={arrow} alt='' />
+						</div>
+						<div
+							className={
+								slide
+									? 'absolute top-48 left-7 w-full flex justify-center items-center h-20 gap-x-12 text-[#f8f8f8] text-[32px] z-100'
+									: 'absolute top-48 left-52 w-full flex justify-center items-center h-20 gap-x-12 text-[#f8f8f8] text-[32px] z-100'
+							}
+							onClick={handleToggle}
+						>
+							<span className='icon'>
+								<Link href='/' passHref>
+									<a className=' text-[#f8f8f8]'>
+										<BsFacebook />
+										{/* <FaFacebook /> */}
+									</a>
+								</Link>
+							</span>
+							<span className='flex'>
+								<Link href='/' passHref>
+									<a className='text-[#f8f8f8] '>
+										<BsInstagram />
+										{/* <FaInstagram /> */}
+									</a>
+								</Link>
+							</span>
+							<span className='flex'>
+								<Link href='/' passHref>
+									<a className='text-[#f8f8f8]'>
+										<BsTwitter />
+										{/* <FaTwitter /> */}
+									</a>
+								</Link>
+							</span>
+							<span className='flex'>
+								<Link href='/' passHref>
+									<a className='text-[#f8f8f8]'>
+										<BsYoutube />
+										{/* <FaYoutube /> */}
+									</a>
+								</Link>
+							</span>
+							<span className='flex'>
+								<Link href='/' passHref>
+									<a className='text-[#f8f8f8]'>
+										<MdEmail />
+										{/* <FaRegEnvelope /> */}
+									</a>
+								</Link>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div className='fixed bottom-0 flex flex-col justify-center items-center bg-[#0D0D0D] min-w-full min-h-[320px] '>
+					<ul className='flex flex-col gap-y-10' onClick={handleToggle}>
+						<li>
+							<Link href='/shop' passHref>
+								<div className='flex gap-x-2 text-[#F8F8F8]  text-[20px]'>
+									<span
+										className='icon-shopping-bag'
+										role='img'
+										aria-label='shopping-bag'
+									>
+										<FontAwesomeIcon icon={faBagShopping} />
+									</span>
+									<a className='text-[#F8F8F8]'>SHOP</a>
+								</div>
+							</Link>
+						</li>
+						<li>
+							<Link href='bible-reading-plan' passHref>
+								<div className='flex gap-x-2 text-[#F8F8F8] text-[20px]'>
+									<span className='icon-bible' role='img' aria-label='bible'>
+										<FontAwesomeIcon icon={faBible} />
+									</span>
+									<a className='text-[#F8F8F8]'>BIBLE READING PLAN</a>
+								</div>
+							</Link>
+						</li>
+						<li className='flex gap-x-2'>
+							<Link href='/celebration-worship' passHref>
+								<div className='flex gap-x-2 text-[#F8F8F8] text-[20px]'>
+									<span
+										className='icon-praying-hands'
+										role='img'
+										aria-label='praying-hands'
+									>
+										<FontAwesomeIcon icon={faPrayingHands} />
+									</span>
+									<a className='text-[#F8F8F8]'>CELEBRATION WORSHIP</a>
+								</div>
+							</Link>
+						</li>
+						<li className='flex gap-x-2'>
+							<Link href='tv-ministry' passHref>
+								<div className='flex gap-x-2 text-[#F8F8F8] text-[20px]'>
+									<span className='icon-screen' role='img' aria-label='screen'>
+										<FontAwesomeIcon icon={faTelevision} />
+									</span>
+									<a className='text-[#F8F8F8]'>TV MINISTRY</a>
+								</div>
+							</Link>
+						</li>
+						<li className='flex gap-x-2'>
+							<Link href='ckids-online' passHref>
+								<div className='flex gap-x-2 text-[#F8F8F8] text-[20px]'>
+									<span className='icon-globe' role='img' aria-label='globe'>
+										<VscGlobe />
+									</span>
+									<a className='text-[#F8F8F8]'>CKIDS ONLINE</a>
+								</div>
+							</Link>
+						</li>
+					</ul>
 				</div>
 			</div>
 
