@@ -118,8 +118,7 @@ function about() {
 				</div>
 				<div
 					className='relative flex flex-col mx-auto my-12 mb-12 max-w-[375px] md:max-w-[575px] font-display text-[#7C7C7C] 
-                                text-[18px] md:text-[24px] lg:text-[30px]
-'
+                                text-[18px] md:text-[24px] lg:text-[30px]'
 				>
 					<div className='flex flex-col px-8 mx-auto gap-y-4'>
 						<p>
