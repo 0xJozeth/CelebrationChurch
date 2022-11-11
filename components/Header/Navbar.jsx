@@ -12,11 +12,18 @@ import logomobile from '/public/celebration-logo@1x.png';
 
 import { CgScreen } from 'react-icons/cg';
 import { VscGlobe } from 'react-icons/vsc';
+import { MdEmail, MdMenuBook } from 'react-icons/md';
+import { RiShoppingBagFill } from 'react-icons/ri';
+import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from 'react-icons/bs';
+
 import { IoCloseOutline } from 'react-icons/io5';
 
 import ToggleMenu from '/components/Navbar/ToggleMenu.js';
 
 import { HamburgerMenu } from '/components/Navbar/hamburgerMenu/index.jsx';
+
+import NavbarSlider from '/components/NavbarSlider/NavbarSlider.jsx';
+import PartnersCarousel from '/components/PartnersCarousel/partnersCarousel.jsx';
 
 // export const ToggleMenuWrapper = styled(motion.div)`
 // 	position: fixed;
@@ -131,17 +138,15 @@ function Navbar(props) {
 
 	return (
 		<nav
-			className='relative flex justify-between items-center h-20 md:h-24 mx-auto 
-			my-4 
-			px-4
-			xl:max-w-[1440px]
-			' /* previously classname='navWrapperFlex'*/
+			className={
+				nav
+					? 'relative flex justify-between items-center h-20 md:h-24 mx-auto my-4 px-4 xl:max-w-[1440px]'
+					: 'static flex justify-between items-center h-20 md:h-24 mx-auto my-4 px-4 xl:max-w-[1440px]'
+			}
 		>
 			{/* Logo */}
 
-			<div
-				className='hidden relative md:flex justify-center items-center px-2' /* previously classname='navWrapperFlex w-aboveMenuZindex'*/
-			>
+			<div className='hidden relative md:flex justify-center items-center px-2'>
 				<Link href='/' passHref>
 					<a aria-current='page' aria-label='home' className='cursor-pointer'>
 						<Image
@@ -218,7 +223,9 @@ function Navbar(props) {
 						: 'hidden'
 				}
 			>
-				<div className='flex flex-col font-bold text-[44px] mt-20 md:mt-24 p-[24px] gap-y-4'>
+				{' '}
+				<PartnersCarousel />
+				{/* <div className='flex flex-col font-bold text-[44px] mt-20 md:mt-24 p-[24px] gap-y-4'>
 					<ul className='flex flex-col gap-y-4' onClick={handleToggle}>
 						<li className='about'>
 							<Link href='/about' passHref={true}>
@@ -262,8 +269,8 @@ function Navbar(props) {
 							</Link>
 						</li>
 					</ul>
-				</div>
-				<div className='flex flex-col justify-center items-center bg-red-700 min-w-full min-h-[275px]'>
+				</div> */}
+				<div className='fixed bottom-20 flex flex-col justify-center items-center bg-[#0D0D0D] min-w-full min-h-[275px] '>
 					<ul className='flex flex-col gap-y-10' onClick={handleToggle}>
 						<li className='flex gap-x-2 text-[#f8f8f8]'>
 							<span
@@ -271,16 +278,16 @@ function Navbar(props) {
 								role='img'
 								aria-label='shopping-bag'
 							>
-								<VscGlobe />
+								<RiShoppingBagFill />
 								{/* <FaShoppingBag /> */}
 							</span>
 							<Link href='/shop' passHref>
 								<a className='text-[#f8f8f8]'>SHOP</a>
 							</Link>
 						</li>
-						<li className='flex gap-x-2'>
+						<li className='flex gap-x-2 text-[#f8f8f8]'>
 							<span className='icon-bible' role='img' aria-label='bible'>
-								<VscGlobe />
+								<MdMenuBook />
 								{/* <FaBible /> */}
 							</span>
 							<Link href='bible-reading-plan' passHref>
@@ -318,11 +325,15 @@ function Navbar(props) {
 						</li>
 					</ul>
 				</div>
-				<div className='flex text-[#f8f8f8] z-100' onClick={handleToggle}>
+				<div
+					className='fixed w-full flex justify-center items-center h-20 gap-x-12 bottom-0
+					text-[#f8f8f8] z-100 bg-purple-500'
+					onClick={handleToggle}
+				>
 					<span className='icon'>
 						<Link href='/' passHref>
 							<a className=' text-[#f8f8f8]'>
-								<VscGlobe />
+								<BsFacebook />
 								{/* <FaFacebook /> */}
 							</a>
 						</Link>
@@ -330,7 +341,7 @@ function Navbar(props) {
 					<span className='flex'>
 						<Link href='/' passHref>
 							<a className='text-[#f8f8f8] '>
-								<VscGlobe />
+								<BsInstagram />
 								{/* <FaInstagram /> */}
 							</a>
 						</Link>
@@ -338,7 +349,7 @@ function Navbar(props) {
 					<span className='flex'>
 						<Link href='/' passHref>
 							<a className='text-[#f8f8f8]'>
-								<VscGlobe />
+								<BsTwitter />
 								{/* <FaTwitter /> */}
 							</a>
 						</Link>
@@ -346,7 +357,7 @@ function Navbar(props) {
 					<span className='flex'>
 						<Link href='/' passHref>
 							<a className='text-[#f8f8f8]'>
-								<VscGlobe />
+								<BsYoutube />
 								{/* <FaYoutube /> */}
 							</a>
 						</Link>
@@ -354,7 +365,7 @@ function Navbar(props) {
 					<span className='flex'>
 						<Link href='/' passHref>
 							<a className='text-[#f8f8f8]'>
-								<VscGlobe />
+								<MdEmail />
 								{/* <FaRegEnvelope /> */}
 							</a>
 						</Link>
