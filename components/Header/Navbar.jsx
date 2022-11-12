@@ -157,7 +157,7 @@ function Navbar(props) {
 			className={
 				nav
 					? 'relative flex justify-between items-center h-20 md:h-24 mx-auto my-4 px-4 xl:max-w-[1440px]'
-					: 'static flex justify-between items-center h-20 md:h-24 mx-auto my-4 px-4 xl:max-w-[1440px]'
+					: 'flex justify-between items-center h-20 md:h-24 mx-auto my-4 px-4 xl:max-w-[1440px]'
 			}
 		>
 			{/* Logo */}
@@ -295,14 +295,7 @@ function Navbar(props) {
 								</Link>
 							</li>
 						</ul>
-						<div className='flex items-center justify-between w-full bg-green-500'>
-							<div
-								className={slide ? 'flex ' : 'flex  rotate-180'}
-								onClick={handleSlide}
-							>
-								<Image src={arrow} alt='' />
-							</div>
-						</div>
+
 						<div
 							className={
 								slide
@@ -354,15 +347,27 @@ function Navbar(props) {
 						</div>
 					</div>
 				</div>
-				<div
-					className={
-						slide ? 'flex justify-center' : 'flex justify-center rotate-180'
-					}
-				>
-					<Image src={pagination} alt='' />
+				<div className='flex items-center justify-between'>
+					<div className='flex items-center justify-end'>
+						<div className={slide ? 'flex ' : 'flex'} onClick={handleSlide}>
+							<Image src={arrow} alt='' />
+						</div>
+					</div>
+					<div
+						className={
+							slide ? 'flex justify-center' : 'flex justify-center rotate-180'
+						}
+					>
+						<Image src={pagination} alt='' />
+					</div>
+					<div className='flex items-center justify-between'>
+						<div className={'flex  rotate-180'} onClick={handleSlide}>
+							<Image src={arrow} alt='' />
+						</div>
+					</div>
 				</div>
-				<div className='flex justify-center items-end bg-[#0D0D0D] min-w-full min-h-[320px] z-[1002]'>
-					<ul className='flex flex-col gap-y-10' onClick={handleToggle}>
+				<div className='flex justify-center items-center p-4 bg-[#0D0D0D] min-w-full min-h-[320px] z-[1002]'>
+					<ul className='flex flex-col gap-y-4' onClick={handleToggle}>
 						<li>
 							<Link href='/shop' passHref>
 								<div className='flex gap-x-2 text-[#F8F8F8]  text-[20px]'>
