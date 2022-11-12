@@ -279,7 +279,7 @@ function Navbar(props) {
 							</li>
 						</ul>
 					</div>
-					<div className='relative flex flex-col items-start font-bold text-[38px] mt-20 md:mt-24 w-full gap-y-4'>
+					<div className='relative flex flex-col items-start font-bold text-[38px] mx-auto mt-20 md:mt-24 w-full gap-y-4 mr-12'>
 						<ul
 							className={
 								slide
@@ -298,7 +298,7 @@ function Navbar(props) {
 									<a className='text-[#f8f8f8]'>CARE</a>
 								</Link>
 							</li>
-							<li className='follow-jesus flex min-w-[400px]'>
+							<li className='follow-jesus flex min-w-[280px]'>
 								<Link href='/follow-jesus' passHref>
 									<a className='text-[#f8f8f8]'>FOLLOW JESUS</a>
 								</Link>
