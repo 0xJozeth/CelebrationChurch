@@ -437,17 +437,18 @@ function Navbar(props) {
 						</li>
 					</ul>
 				</div>
-				<div className='flex flex-col mx-auto px-4 justify-between items-center my-6 text-[#7C7C7C] gap-y-4'>
+				<div className='flex flex-col mx-auto px-4 justify-center items-center my-6 text-[#7C7C7C] gap-y-1'>
 					<div className='flex p-2'>
-						<p className='uppercase text-[10px] font-display'>
-							© {new Date().getFullYear()} Celebration Church. All Rights
-							Reserved
+						<p className='uppercase text-[9px] font-display text-center'>
+							© {new Date().getFullYear()} Celebration Church.
+							<br />
+							All Rights Reserved
 						</p>
 					</div>
 
 					<div className='flex mx-auto px-4 justify-between items-center w-[200px] '>
 						<div>
-							<p className='uppercase text-[10px] font-display'>
+							<p className='uppercase text-[9px] font-display'>
 								<Link href={'#'}>
 									<a className='text-[#7C7C7C] hover:text-[#070707]'>
 										Terms of Use
@@ -459,7 +460,7 @@ function Navbar(props) {
 							<p className='flex'>•</p>
 						</div>
 						<div>
-							<p className='uppercase text-[10px] font-display'>
+							<p className='uppercase text-[9px] font-display'>
 								<Link href={'#'}>
 									<a className='text-[#7C7C7C] hover:text-[#070707]'>
 										Privacy Policy
