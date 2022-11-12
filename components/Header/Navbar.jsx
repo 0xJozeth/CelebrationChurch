@@ -251,11 +251,11 @@ function Navbar(props) {
 				<div
 					className={
 						slide
-							? 'flex overflow-y-auto gap-x-28'
-							: 'flex overflow-y-auto gap-x-28 w-[-100%]'
+							? 'flex overflow-y-auto gap-x-20'
+							: 'flex overflow-y-auto gap-x-20'
 					}
 				>
-					<div className=' relative flex flex-col font-bold text-[38px] mt-20 md:mt-24 gap-y-4 h-[325px]'>
+					<div className='relative flex flex-col font-bold text-[38px] mt-20 md:mt-24 gap-y-2 h-[256px]'>
 						<ul className='flex flex-col gap-y-4' onClick={handleToggle}>
 							<li className='about'>
 								<Link href='/about' passHref={true}>
@@ -279,7 +279,7 @@ function Navbar(props) {
 							</li>
 						</ul>
 					</div>
-					<div className='relative flex flex-col items-end justify-between font-bold text-[38px] mt-20 md:mt-24 gap-y-4'>
+					<div className='relative flex flex-col items-start font-bold text-[38px] mt-20 md:mt-24 w-full gap-y-4'>
 						<ul
 							className={
 								slide
@@ -308,8 +308,8 @@ function Navbar(props) {
 						<div
 							className={
 								slide
-									? 'absolute top-48 w-full flex justify-center items-center h-20 gap-x-8 text-[#f8f8f8] text-[24px]  z-100'
-									: 'absolute top-48 w-full flex justify-center items-center h-20 gap-x-8 text-[#f8f8f8] text-[24px] bg-slate-600 z-100'
+									? 'flex items-center h-20 gap-x-8 text-[#f8f8f8] text-[24px] z-100'
+									: 'flex items-center h-20 gap-x-8 text-[#f8f8f8] text-[24px] z-100'
 							}
 							onClick={handleToggle}
 						>
@@ -375,11 +375,8 @@ function Navbar(props) {
 						</div>
 					</div>
 				</div>
-				<div className='flex justify-center items-center p-4 bg-[#0D0D0D] min-w-full min-h-[320px] z-[1002] '>
-					<ul
-						className='flex flex-col gap-y-8 overflow-y-auto'
-						onClick={handleToggle}
-					>
+				<div className='flex justify-center items-center p-4 mt-10 bg-[#0D0D0D] min-w-full min-h-[290px] z-[1002] '>
+					<ul className='flex flex-col gap-y-8' onClick={handleToggle}>
 						<li>
 							<Link href='/shop' passHref>
 								<div className='flex gap-x-2 text-[#F8F8F8]  text-[18px]'>
@@ -439,6 +436,38 @@ function Navbar(props) {
 							</Link>
 						</li>
 					</ul>
+				</div>
+				<div className='flex flex-col mx-auto px-4 justify-between items-center my-6 text-[#7C7C7C] gap-y-4'>
+					<div className='flex p-2'>
+						<p className='uppercase text-[10px] font-display'>
+							© {new Date().getFullYear()} Celebration Church. All Rights
+							Reserved
+						</p>
+					</div>
+
+					<div className='flex mx-auto px-4 justify-between items-center w-[200px] '>
+						<div>
+							<p className='uppercase text-[10px] font-display'>
+								<Link href={'#'}>
+									<a className='text-[#7C7C7C] hover:text-[#070707]'>
+										Terms of Use
+									</a>
+								</Link>
+							</p>
+						</div>
+						<div>
+							<p className='flex'>•</p>
+						</div>
+						<div>
+							<p className='uppercase text-[10px] font-display'>
+								<Link href={'#'}>
+									<a className='text-[#7C7C7C] hover:text-[#070707]'>
+										Privacy Policy
+									</a>
+								</Link>
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 
