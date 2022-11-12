@@ -30,6 +30,7 @@ import {
 import { CSSTransition } from 'react-transition-group';
 
 import arrow from '/public/arrow@1x-white.svg';
+import pagination from '/public/slider-pagination.svg';
 
 // export const ToggleMenuWrapper = styled(motion.div)`
 // 	position: fixed;
@@ -147,6 +148,10 @@ function Navbar(props) {
 		console.log('The setNav function is now ', nav);
 	}, [nav]);
 
+	useEffect(() => {
+		console.log('The setSlide function is now:', slide);
+	}, [slide]);
+
 	return (
 		<nav
 			className={
@@ -230,20 +235,18 @@ function Navbar(props) {
 			<div
 				className={
 					nav
-						? 'fixed bg-[#070707] font-display opacity-[100%] top-0 left-0 right-0 bottom-0 w-full h-full z-50'
+						? 'fixed top-0 bottom-0 left-0 right-0 bg-[#070707] font-display opacity-[100%] z-[1003]'
 						: 'hidden'
 				}
 			>
-				{' '}
-				<PartnersCarousel />
 				<div
 					className={
 						slide
-							? 'flex overflow-y-auto top-5 fixed gap-x-24 bg-purple-400 min-w-[800px]'
-							: 'flex overflow-y-auto top-5 fixed gap-x-24 right-20 bg-purple-400 min-w-[800px]'
+							? 'flex overflow-y-auto gap-x-28'
+							: 'flex overflow-y-auto gap-x-28 w-[-100%]'
 					}
 				>
-					<div className=' relative flex flex-col font-bold text-[44px] mt-20 md:mt-24 p-[24px] gap-y-4 h-[325px] bg-red-700'>
+					<div className=' relative flex flex-col font-bold text-[44px] mt-20 md:mt-24 gap-y-4 h-[325px]'>
 						<ul className='flex flex-col gap-y-4' onClick={handleToggle}>
 							<li className='about'>
 								<Link href='/about' passHref={true}>
@@ -266,16 +269,13 @@ function Navbar(props) {
 								</Link>
 							</li>
 						</ul>
-						<div className='flex absolute bottom-0' onClick={handleSlide}>
-							<Image src={arrow} alt='' />
-						</div>
 					</div>
-					<div className='relative flex flex-col items-end font-bold text-[44px] mt-20 md:mt-24 p-[24px] gap-y-4 bg-blue-700 w-[350px]'>
+					<div className='relative flex flex-col items-end justify-between font-bold text-[44px] mt-20 md:mt-24 gap-y-4'>
 						<ul
 							className={
 								slide
-									? 'absolute top-4 left-4 font-light flex flex-col gap-y-4'
-									: 'absolute top-4 left-52 font-light flex flex-col gap-y-4'
+									? 'font-light flex flex-col gap-y-4'
+									: 'font-light flex flex-col gap-y-4'
 							}
 							onClick={handleToggle}
 						>
@@ -295,17 +295,19 @@ function Navbar(props) {
 								</Link>
 							</li>
 						</ul>
-						<div
-							className='flex absolute bottom-0 justify-end rotate-180'
-							onClick={handleSlide}
-						>
-							<Image src={arrow} alt='' />
+						<div className='flex items-center justify-between w-full bg-green-500'>
+							<div
+								className={slide ? 'flex ' : 'flex  rotate-180'}
+								onClick={handleSlide}
+							>
+								<Image src={arrow} alt='' />
+							</div>
 						</div>
 						<div
 							className={
 								slide
-									? 'absolute top-48 left-7 w-full flex justify-center items-center h-20 gap-x-12 text-[#f8f8f8] text-[32px] z-100'
-									: 'absolute top-48 left-52 w-full flex justify-center items-center h-20 gap-x-12 text-[#f8f8f8] text-[32px] z-100'
+									? 'absolute top-48 w-full flex justify-center items-center h-20 gap-x-12 text-[#f8f8f8] text-[32px] z-100'
+									: 'absolute top-48 w-full flex justify-center items-center h-20 gap-x-12 text-[#f8f8f8] text-[32px] z-100'
 							}
 							onClick={handleToggle}
 						>
@@ -352,7 +354,14 @@ function Navbar(props) {
 						</div>
 					</div>
 				</div>
-				<div className='fixed bottom-0 flex flex-col justify-center items-center bg-[#0D0D0D] min-w-full min-h-[320px] '>
+				<div
+					className={
+						slide ? 'flex justify-center' : 'flex justify-center rotate-180'
+					}
+				>
+					<Image src={pagination} alt='' />
+				</div>
+				<div className='flex justify-center items-end bg-[#0D0D0D] min-w-full min-h-[320px] z-[1002]'>
 					<ul className='flex flex-col gap-y-10' onClick={handleToggle}>
 						<li>
 							<Link href='/shop' passHref>

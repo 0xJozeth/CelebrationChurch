@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import arrow from '/public/arrow@1x.png';
 
+import { handleToggle, handleSlide } from '/components/Header/Navbar.jsx';
+
 // IMPORT ITERATIVE MAPPING DATA
 import { linkText, vimeoHeroVideo } from './heroData';
 
@@ -65,7 +67,6 @@ function HeroTW() {
 								width={375}
 								height={667}
 								placeholder={'blur'}
-								priority
 							></iframe>
 						</div>
 					</div>
@@ -137,7 +138,6 @@ function HeroTW() {
 							src={vimeoHeroVideo}
 							frameBorder='0'
 							placeholder={'blur'}
-							priority
 						></iframe>
 					))}
 				</div>
