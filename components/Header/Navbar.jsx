@@ -144,6 +144,15 @@ function Navbar(props) {
 		setSlide(!slide);
 	};
 
+	const handleScroll = () => {
+		console.log('scroll event', window.scrollY);
+	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	});
+
 	useEffect(() => {
 		console.log('The setNav function is now ', nav);
 	}, [nav]);
@@ -197,7 +206,7 @@ function Navbar(props) {
 			<ul
 				className='hidden md:flex 
 			text-[12px] md:text-[16px] lg:text-[28px] 
-			justify-center items-center font-display'
+			justify-center items-center font-display '
 			>
 				<li className='p-2 font-bold'>
 					<Link href='about' passHref>
@@ -235,7 +244,7 @@ function Navbar(props) {
 			<div
 				className={
 					nav
-						? 'fixed top-0 bottom-0 left-0 right-0 bg-[#070707] font-display opacity-[100%] z-[1003]'
+						? 'fixed p-4 top-0 bottom-0 left-0 right-0 bg-[#070707] font-display opacity-[100%] z-[1003]'
 						: 'hidden'
 				}
 			>
@@ -299,8 +308,8 @@ function Navbar(props) {
 						<div
 							className={
 								slide
-									? 'absolute top-48 w-full flex justify-center items-center h-20 gap-x-12 text-[#f8f8f8] text-[32px] z-100'
-									: 'absolute top-48 w-full flex justify-center items-center h-20 gap-x-12 text-[#f8f8f8] text-[32px] z-100'
+									? 'absolute top-48 w-full flex justify-center items-center h-20 gap-x-8 text-[#f8f8f8] text-[24px]  z-100'
+									: 'absolute top-48 w-full flex justify-center items-center h-20 gap-x-8 text-[#f8f8f8] text-[24px] bg-slate-600 z-100'
 							}
 							onClick={handleToggle}
 						>
@@ -347,9 +356,9 @@ function Navbar(props) {
 						</div>
 					</div>
 				</div>
-				<div className='flex items-center justify-between'>
-					<div className='flex items-center justify-end'>
-						<div className={slide ? 'flex ' : 'flex'} onClick={handleSlide}>
+				<div className='flex items-center justify-between my-2'>
+					<div className='flex items-center justify-end ml-12'>
+						<div className={'flex w-14'} onClick={handleSlide}>
 							<Image src={arrow} alt='' />
 						</div>
 					</div>
@@ -360,17 +369,17 @@ function Navbar(props) {
 					>
 						<Image src={pagination} alt='' />
 					</div>
-					<div className='flex items-center justify-between'>
-						<div className={'flex  rotate-180'} onClick={handleSlide}>
+					<div className='flex items-center justify-center mr-12'>
+						<div className={'flex rotate-180 w-14'} onClick={handleSlide}>
 							<Image src={arrow} alt='' />
 						</div>
 					</div>
 				</div>
-				<div className='flex justify-center items-center p-4 bg-[#0D0D0D] min-w-full min-h-[320px] z-[1002]'>
+				<div className='flex justify-center items-start p-4 bg-[#0D0D0D] min-w-full min-h-[320px] z-[1002]'>
 					<ul className='flex flex-col gap-y-4' onClick={handleToggle}>
 						<li>
 							<Link href='/shop' passHref>
-								<div className='flex gap-x-2 text-[#F8F8F8]  text-[20px]'>
+								<div className='flex gap-x-2 text-[#F8F8F8]  text-[14px]'>
 									<span
 										className='icon-shopping-bag'
 										role='img'
@@ -384,7 +393,7 @@ function Navbar(props) {
 						</li>
 						<li>
 							<Link href='bible-reading-plan' passHref>
-								<div className='flex gap-x-2 text-[#F8F8F8] text-[20px]'>
+								<div className='flex gap-x-2 text-[#F8F8F8] text-[14px]'>
 									<span className='icon-bible' role='img' aria-label='bible'>
 										<FontAwesomeIcon icon={faBible} />
 									</span>
@@ -394,7 +403,7 @@ function Navbar(props) {
 						</li>
 						<li className='flex gap-x-2'>
 							<Link href='/celebration-worship' passHref>
-								<div className='flex gap-x-2 text-[#F8F8F8] text-[20px]'>
+								<div className='flex gap-x-2 text-[#F8F8F8] text-[14px]'>
 									<span
 										className='icon-praying-hands'
 										role='img'
@@ -408,7 +417,7 @@ function Navbar(props) {
 						</li>
 						<li className='flex gap-x-2'>
 							<Link href='tv-ministry' passHref>
-								<div className='flex gap-x-2 text-[#F8F8F8] text-[20px]'>
+								<div className='flex gap-x-2 text-[#F8F8F8] text-[14px]'>
 									<span className='icon-screen' role='img' aria-label='screen'>
 										<FontAwesomeIcon icon={faTelevision} />
 									</span>
@@ -418,7 +427,7 @@ function Navbar(props) {
 						</li>
 						<li className='flex gap-x-2'>
 							<Link href='ckids-online' passHref>
-								<div className='flex gap-x-2 text-[#F8F8F8] text-[20px]'>
+								<div className='flex gap-x-2 text-[#F8F8F8] text-[14px]'>
 									<span className='icon-globe' role='img' aria-label='globe'>
 										<VscGlobe />
 									</span>
