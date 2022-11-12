@@ -165,7 +165,7 @@ function Navbar(props) {
 		<nav
 			className={
 				nav
-					? 'relative flex justify-between items-center h-20 md:h-24 mx-auto my-4 px-4 xl:max-w-[1440px]'
+					? 'fixed right-2 flex justify-between items-center h-20 md:h-24 mx-auto my-4 px-4 xl:max-w-[1440px] z-[1004]'
 					: 'flex justify-between items-center h-20 md:h-24 mx-auto my-4 px-4 xl:max-w-[1440px]'
 			}
 		>
@@ -244,7 +244,7 @@ function Navbar(props) {
 			<div
 				className={
 					nav
-						? 'fixed p-4 top-0 bottom-0 left-0 right-0 bg-[#070707] font-display opacity-[100%] z-[1003]'
+						? 'fixed p-4 top-0 bottom-[-40px] left-0 right-0 bg-[#070707] font-display opacity-[100%] z-[1003] overflow-y-auto'
 						: 'hidden'
 				}
 			>
@@ -255,7 +255,7 @@ function Navbar(props) {
 							: 'flex overflow-y-auto gap-x-28 w-[-100%]'
 					}
 				>
-					<div className=' relative flex flex-col font-bold text-[44px] mt-20 md:mt-24 gap-y-4 h-[325px]'>
+					<div className=' relative flex flex-col font-bold text-[38px] mt-20 md:mt-24 gap-y-4 h-[325px]'>
 						<ul className='flex flex-col gap-y-4' onClick={handleToggle}>
 							<li className='about'>
 								<Link href='/about' passHref={true}>
@@ -279,7 +279,7 @@ function Navbar(props) {
 							</li>
 						</ul>
 					</div>
-					<div className='relative flex flex-col items-end justify-between font-bold text-[44px] mt-20 md:mt-24 gap-y-4'>
+					<div className='relative flex flex-col items-end justify-between font-bold text-[38px] mt-20 md:mt-24 gap-y-4'>
 						<ul
 							className={
 								slide
@@ -375,11 +375,14 @@ function Navbar(props) {
 						</div>
 					</div>
 				</div>
-				<div className='flex justify-center items-start p-4 bg-[#0D0D0D] min-w-full min-h-[320px] z-[1002]'>
-					<ul className='flex flex-col gap-y-4' onClick={handleToggle}>
+				<div className='flex justify-center items-center p-4 bg-[#0D0D0D] min-w-full min-h-[320px] z-[1002] '>
+					<ul
+						className='flex flex-col gap-y-8 overflow-y-auto'
+						onClick={handleToggle}
+					>
 						<li>
 							<Link href='/shop' passHref>
-								<div className='flex gap-x-2 text-[#F8F8F8]  text-[14px]'>
+								<div className='flex gap-x-2 text-[#F8F8F8]  text-[18px]'>
 									<span
 										className='icon-shopping-bag'
 										role='img'
@@ -393,7 +396,7 @@ function Navbar(props) {
 						</li>
 						<li>
 							<Link href='bible-reading-plan' passHref>
-								<div className='flex gap-x-2 text-[#F8F8F8] text-[14px]'>
+								<div className='flex gap-x-2 text-[#F8F8F8] text-[18px]'>
 									<span className='icon-bible' role='img' aria-label='bible'>
 										<FontAwesomeIcon icon={faBible} />
 									</span>
@@ -403,7 +406,7 @@ function Navbar(props) {
 						</li>
 						<li className='flex gap-x-2'>
 							<Link href='/celebration-worship' passHref>
-								<div className='flex gap-x-2 text-[#F8F8F8] text-[14px]'>
+								<div className='flex gap-x-2 text-[#F8F8F8] text-[18px]'>
 									<span
 										className='icon-praying-hands'
 										role='img'
@@ -417,7 +420,7 @@ function Navbar(props) {
 						</li>
 						<li className='flex gap-x-2'>
 							<Link href='tv-ministry' passHref>
-								<div className='flex gap-x-2 text-[#F8F8F8] text-[14px]'>
+								<div className='flex gap-x-2 text-[#F8F8F8] text-[18px]'>
 									<span className='icon-screen' role='img' aria-label='screen'>
 										<FontAwesomeIcon icon={faTelevision} />
 									</span>
@@ -427,7 +430,7 @@ function Navbar(props) {
 						</li>
 						<li className='flex gap-x-2'>
 							<Link href='ckids-online' passHref>
-								<div className='flex gap-x-2 text-[#F8F8F8] text-[14px]'>
+								<div className='flex gap-x-2 text-[#F8F8F8] text-[18px]'>
 									<span className='icon-globe' role='img' aria-label='globe'>
 										<VscGlobe />
 									</span>
