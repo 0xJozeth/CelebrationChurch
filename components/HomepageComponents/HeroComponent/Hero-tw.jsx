@@ -12,9 +12,9 @@ import { linkText, vimeoHeroVideo } from './heroData';
 function HeroTW() {
 	return (
 		<>
-			<div className='flex flex-col w-[355px] mx-auto'>
+			<div className='flex flex-col max-gitw-[355px] mx-auto overflow-hidden'>
 				<div className='flex relative justify-center items-center'>
-					<div className='absolute top-0 left-0 right-0 z-30 mix-blend-overlay text-[#f8f8f8] max-w-min bg-blue-300 mx-auto'>
+					<div className='absolute top-0 left-0 right-0 z-30 mix-blend-overlay text-[#f8f8f8] max-w-min mx-auto'>
 						<h1 className='font-display font-bold text-[44px]'>
 							WELCOME&nbsp;
 							<span className='font-kepler italic text-[1.1em] font-light'>
@@ -25,16 +25,16 @@ function HeroTW() {
 							CELEBRATION
 						</h1>
 					</div>
-					<div className='flex justify-center z-20 mt-8 lg:hidden'>
+					<div className='flex justify-center items-center z-20 mt-2 lg:hidden'>
 						<iframe
 							src='https://player.vimeo.com/video/744290982?h=26579d8c5a&controls=0&badge=0&autoplay=1&muted=1&loop=1&autopause=0&player_id=0&app_id=58479'
 							frameBorder='0'
-							width={375}
+							width={305}
 							height={667}
 							placeholder={'blur'}
 						></iframe>
 					</div>
-					<div className='absolute top-0 left-0 right-0 z-0 max-w-min mx-auto bg-red-300'>
+					<div className='absolute top-0 left-0 right-0 z-0 max-w-min mx-auto '>
 						<h1 className='font-display font-bold text-[44px]'>
 							WELCOME&nbsp;
 							<span className=' font-kepler italic text-[1.1em] font-light'>
