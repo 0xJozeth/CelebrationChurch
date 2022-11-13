@@ -12,9 +12,9 @@ import { linkText, vimeoHeroVideo } from './heroData';
 function HeroTW() {
 	return (
 		<>
-			<div className='flex flex-col max-w-[355px] mx-auto'>
-				<div className='flex flex-col relative items-center'>
-					<div className='absolute top-0 left-0 right-0 z-30 mix-blend-overlay text-[#f8f8f8]'>
+			<div className='flex flex-col w-[355px] mx-auto'>
+				<div className='flex relative justify-center items-center'>
+					<div className='absolute top-0 left-0 right-0 z-30 mix-blend-overlay text-[#f8f8f8] max-w-min bg-blue-300 mx-auto'>
 						<h1 className='font-display font-bold text-[44px]'>
 							WELCOME&nbsp;
 							<span className='font-kepler italic text-[1.1em] font-light'>
@@ -34,8 +34,8 @@ function HeroTW() {
 							placeholder={'blur'}
 						></iframe>
 					</div>
-					<div className='z-0 w-[355px]'>
-						<h1 className='absolute top-0 left-0 right-0 font-display font-bold text-[44px]'>
+					<div className='absolute top-0 left-0 right-0 z-0 max-w-min mx-auto bg-red-300'>
+						<h1 className='font-display font-bold text-[44px]'>
 							WELCOME&nbsp;
 							<span className=' font-kepler italic text-[1.1em] font-light'>
 								TO
@@ -45,15 +45,15 @@ function HeroTW() {
 							CELEBRATION
 						</h1>
 					</div>
-					<div className='flex my-12 lg:hidden place-self-center'>
-						<p className=' font-display text-xl lg:text-4xl text-[#7C7C7C] px-4 max-w-[355px] lg:max-w-2xl z-10'>
-							We’re so glad you’re here! At <strong>Celebration Church</strong>,
-							we prioritize Jesus’ mission to spread the gospel. We are a global
-							house comprised of many rooms around the world, with headquarters
-							residing in Jacksonville, Florida. We’d love to connect with you
-							online or at a location near you!
-						</p>
-					</div>
+				</div>
+				<div className='flex my-12 lg:hidden place-self-center'>
+					<p className=' font-display text-xl lg:text-4xl text-[#7C7C7C] px-4 max-w-[355px] lg:max-w-2xl z-10'>
+						We’re so glad you’re here! At <strong>Celebration Church</strong>,
+						we prioritize Jesus’ mission to spread the gospel. We are a global
+						house comprised of many rooms around the world, with headquarters
+						residing in Jacksonville, Florida. We’d love to connect with you
+						online or at a location near you!
+					</p>
 				</div>
 			</div>
 			<div className='lg:grid grid-cols-2 grid-row lg:grid-rows-2 '>
