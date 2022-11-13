@@ -11,6 +11,7 @@ import { handleToggle, handleSlide } from '/components/Header/Navbar.jsx';
 import { linkText, vimeoHeroVideo } from './heroData';
 
 import WeHaveAGrace from '../SectionWeHaveAGrace/WeHaveAGrace';
+import ministries from '/public/ministries-homepage@1x.png';
 
 function HeroTW() {
 	return (
@@ -118,9 +119,41 @@ function HeroTW() {
 				<div className='max-w-[355px]'>
 					<WeHaveAGrace />
 				</div>
+
+				<div className='relative flex flex-col max-w-[355px] mb-16 '>
+					<div className='flex flex-col'>
+						<div className='w-[355px] items-center z-10'>
+							<Image src={ministries} alt='' />
+						</div>
+						<div className='flex justify-center'>
+							<div className='absolute top-[160px] mix-blend-overlay text-[#f8f8f8] max-w-min justify-center z-30 '>
+								<h1 className='font-display font-bold text-[44px]'>
+									THERES
+									<br />
+									A&nbsp;PLACE
+									<br />
+									<span className='font-kepler italic text-[1.1em] font-light'>
+										FOR YOU
+									</span>
+								</h1>
+							</div>
+							<div className='absolute top-[160px] max-w-min z-0 '>
+								<h1 className='flex flex-col items-center justify-center font-display font-bold text-[44px] '>
+									THERES
+									<br />
+									A&nbsp;PLACE
+									<br />
+									<span className=' font-kepler italic text-[1.1em] font-light'>
+										FOR YOU
+									</span>
+								</h1>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
-			<div className='lg:grid grid-cols-2 grid-row lg:grid-rows-2 '>
+			<div className=' hidden lg:grid grid-cols-2 grid-row lg:grid-rows-2 '>
 				<div className='flex flex-col items-center lg:justify-evenly lg:items-start lg:col-span-2 lg:col-start-1 lg:row-start-1 max-w-[1536px]'>
 					<div className='flex flex-col mx-4 text-[3.15rem] font-display font-black'>
 						<div className='lg:hidden relative'>
