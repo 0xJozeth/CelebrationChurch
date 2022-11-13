@@ -4,9 +4,14 @@ import Link from 'next/link';
 import cclogo from '/public/celebration-logo@1x.png';
 import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
+import arrow from '/public/arrow@1x.png';
 
 //IMPORT REACT COOKIE CONSENT PLUGIN
 import CookieConsent from 'react-cookie-consent';
+
+///
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Footer() {
 	return (
@@ -107,25 +112,39 @@ export default function Footer() {
 					<h6 className='font-bold text-[12px] my-4'>DOWNLOAD OUR APP</h6>
 					<div className='columns-2'>
 						<div className='flex'>
-							<ul className='flex flex-col text-[16px] gap-y-2'>
+							<ul className='flex flex-col text-[14px] gap-y-1'>
 								<li>
 									<Link
 										href='https://apps.apple.com/us/app/the-celebration-app/id1210190693'
 										passHref
 									>
-										<a>Apple App Store</a>
+										<div className='flex justify-between'>
+											<div className='flex'>
+												<a>Apple App Store</a>
+											</div>
+											<div className='flex px-4'>
+												<FontAwesomeIcon icon={faSquareArrowUpRight} />
+											</div>
+										</div>
 									</Link>
 								</li>
 							</ul>
 						</div>
 						<div className='flex'>
-							<ul>
+							<ul className='flex flex-col text-[14px] gap-y-1'>
 								<li>
 									<Link
 										href='https://play.google.com/store/apps/details?id=com.echurchapps.celebrationchapp&hl=en_US&gl=US'
 										passHref
 									>
-										<a>Google Play Store</a>
+										<div className='flex justify-between'>
+											<div className='flex'>
+												<a>Google Play Store</a>
+											</div>
+											<div className='flex px-4'>
+												<FontAwesomeIcon icon={faSquareArrowUpRight} />
+											</div>
+										</div>
 									</Link>
 								</li>
 							</ul>
@@ -226,7 +245,17 @@ export default function Footer() {
 									href='https://apps.apple.com/us/app/the-celebration-app/id1210190693'
 									passHref
 								>
-									<a>Apple App Store</a>
+									<div className='flex justify-center items-center'>
+										<a>Apple App Store</a>
+										<div className='flex mx-4 h-6 w-14'>
+											<Image
+												src={arrow}
+												// height={22}
+												// width={50}
+												alt='watch-the-latest-message'
+											/>
+										</div>
+									</div>
 								</Link>
 							</li>
 							<li>
@@ -234,7 +263,17 @@ export default function Footer() {
 									href='https://play.google.com/store/apps/details?id=com.echurchapps.celebrationchapp&hl=en_US&gl=US'
 									passHref
 								>
-									<a>Google Play Store</a>
+									<div className=''>
+										<a>Google Play Store</a>
+										<div className='flex mx-4 h-6 w-14'>
+											<Image
+												src={arrow}
+												// height={22}
+												// width={50}
+												alt='watch-the-latest-message'
+											/>
+										</div>
+									</div>
 								</Link>
 							</li>
 						</ul>

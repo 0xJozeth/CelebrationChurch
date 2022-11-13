@@ -16,7 +16,7 @@ import ministries from '/public/ministries-homepage@1x.png';
 function HeroTW() {
 	return (
 		<>
-			<div className='flex flex-col w-[355px] max-w-[355px] mx-auto gap-y-8'>
+			<div className='flex flex-col max-w-[355px] mx-auto overflow-hidden '>
 				<div className='flex relative justify-center items-center'>
 					<div className='absolute top-0 left-0 right-0 z-30 mix-blend-overlay text-[#f8f8f8] max-w-min mx-auto'>
 						<h1 className='font-display font-bold text-[44px]'>
@@ -29,24 +29,15 @@ function HeroTW() {
 							CELEBRATION
 						</h1>
 					</div>
-
-					<a
-						href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
-						alt=''
-					>
-						<div className='relative z-20'>
-							<iframe
-								className='bg-green-500 mt-8'
-								src='https://player.vimeo.com/video/744290982?h=26579d8c5a&controls=0&badge=0&autoplay=1&muted=1&loop=1&autopause=0&player_id=0&app_id=58479'
-								frameBorder='0'
-								width={355}
-								height={631}
-								placeholder={'blur'}
-							></iframe>
-							<div className='playButtton '></div>
-						</div>
-					</a>
-
+					<div className='flex justify-center items-center z-20 mt-2 lg:hidden'>
+						<iframe
+							src='https://player.vimeo.com/video/744290982?h=26579d8c5a&controls=0&badge=0&autoplay=1&muted=1&loop=1&autopause=0&player_id=0&app_id=58479'
+							frameBorder='0'
+							width={305}
+							height={567}
+							placeholder={'blur'}
+						></iframe>
+					</div>
 					<div className='absolute top-0 left-0 right-0 z-0 max-w-min mx-auto '>
 						<h1 className='font-display font-bold text-[44px]'>
 							WELCOME&nbsp;
@@ -59,7 +50,6 @@ function HeroTW() {
 						</h1>
 					</div>
 				</div>
-
 				<div className='flex flex-col py-4'>
 					<div className='flex lg:hidden place-self-center'>
 						<p className=' font-display text-[18px] lg:text-4xl text-[#7C7C7C] px-4 max-w-[355px] lg:max-w-2xl z-10'>
@@ -70,8 +60,8 @@ function HeroTW() {
 							online or at a location near you!
 						</p>
 					</div>
-					<div className='block my-4 lg:hidden bg-red-400 mx-w-[355px]'>
-						<button className='flex mx-auto py-4 items-center font-display text-[16px] font-medium cursor-pointer z-10 lg:text-[1.5vw] col-span-2 place-self-center'>
+					<div className='block my-4 lg:hidden'>
+						<button className='flex mx-auto items-center font-display text-[14px] font-semibold cursor-pointer z-10 lg:text-[1.5vw] col-span-2 place-self-center'>
 							WATCH THE LATEST MESSAGE
 							<div className='flex mx-4 h-6 w-14'>
 								<Image
@@ -84,7 +74,6 @@ function HeroTW() {
 						</button>
 					</div>
 				</div>
-
 				<div className='flex flex-col max-w-[355px] my-8'>
 					<div className='relative flex flex-col '>
 						<div className='absolute top-0 left-0 right-0 flex font-bold font-display text-[44px] justify-end text-[#f8f8f8] mix-blend-overlay z-30'>
@@ -107,15 +96,13 @@ function HeroTW() {
 								NEAR YOU
 							</h2>
 						</div>
-						<div className='flex justify-start items-center mt-16 z-20'>
-							<div className='w-[268px] h-auto'>
-								<Image src={group} alt='' />
-							</div>
+						<div className='flex justify-start mt-16 z-20'>
+							<Image src={group} alt='' width={268} height={258} />
 						</div>
 					</div>
-					<div className='flex my-4 px-4 justify-end'>
+					<div className='flex my-4 justify-end'>
 						<button className='flex items-center cursor-pointer z-10'>
-							<p className='font-display text-[16px] font-medium'>
+							<p className='font-display text-[14px] font-semibold'>
 								COME VISIT US
 							</p>
 							<div className='flex mx-4 h-6 w-14'>
@@ -129,12 +116,11 @@ function HeroTW() {
 						</button>
 					</div>
 				</div>
-
-				<div className='max-w-[355px] bg-blue-500'>
+				<div className='max-w-[355px]'>
 					<WeHaveAGrace />
 				</div>
 
-				<div className='relative flex flex-col max-w-[355px] h-[300px] bg-red-300'>
+				<div className='relative flex flex-col max-w-[355px] mb-16 '>
 					<div className='flex flex-col'>
 						<div className='w-[355px] items-center z-10'>
 							<Image src={ministries} alt='' />
@@ -165,8 +151,6 @@ function HeroTW() {
 						</div>
 					</div>
 				</div>
-
-				<div className='max-w-[200px] h-[300px] bg-green-400'></div>
 			</div>
 
 			<div className=' hidden lg:grid grid-cols-2 grid-row lg:grid-rows-2 '>
