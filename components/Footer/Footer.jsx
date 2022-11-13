@@ -12,6 +12,10 @@ import CookieConsent from 'react-cookie-consent';
 ///
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
+import {
+	faAppStoreIos,
+	faGooglePlay,
+} from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
 	return (
@@ -123,7 +127,7 @@ export default function Footer() {
 												<a>Apple App Store</a>
 											</div>
 											<div className='flex px-4'>
-												<FontAwesomeIcon icon={faSquareArrowUpRight} />
+												<FontAwesomeIcon icon={faAppStoreIos} />
 											</div>
 										</div>
 									</Link>
@@ -142,7 +146,7 @@ export default function Footer() {
 												<a>Google Play Store</a>
 											</div>
 											<div className='flex px-4'>
-												<FontAwesomeIcon icon={faSquareArrowUpRight} />
+												<FontAwesomeIcon icon={faGooglePlay} />
 											</div>
 										</div>
 									</Link>
@@ -247,6 +251,7 @@ export default function Footer() {
 								>
 									<div className='flex justify-center items-center'>
 										<a>Apple App Store</a>
+
 										<div className='flex mx-4 h-6 w-14'>
 											<Image
 												src={arrow}
