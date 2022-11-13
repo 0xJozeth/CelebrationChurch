@@ -12,7 +12,51 @@ import { linkText, vimeoHeroVideo } from './heroData';
 function HeroTW() {
 	return (
 		<>
-			<div className='lg:grid grid-cols-2 grid-row lg:grid-rows-2'>
+			<div className='flex flex-col max-w-[355px] mx-auto'>
+				<div className='flex flex-col relative items-center'>
+					<div className='absolute top-0 left-0 right-0 z-30 mix-blend-overlay text-[#f8f8f8]'>
+						<h1 className='font-display font-bold text-[44px]'>
+							WELCOME&nbsp;
+							<span className='font-kepler italic text-[1.1em] font-light'>
+								TO
+							</span>
+							&nbsp;
+							<br />
+							CELEBRATION
+						</h1>
+					</div>
+					<div className='flex justify-center z-20 mt-8 lg:hidden'>
+						<iframe
+							src='https://player.vimeo.com/video/744290982?h=26579d8c5a&controls=0&badge=0&autoplay=1&muted=1&loop=1&autopause=0&player_id=0&app_id=58479'
+							frameBorder='0'
+							width={375}
+							height={667}
+							placeholder={'blur'}
+						></iframe>
+					</div>
+					<div className='z-0 w-[355px]'>
+						<h1 className='absolute top-0 left-0 right-0 font-display font-bold text-[44px]'>
+							WELCOME&nbsp;
+							<span className=' font-kepler italic text-[1.1em] font-light'>
+								TO
+							</span>
+							&nbsp;
+							<br />
+							CELEBRATION
+						</h1>
+					</div>
+					<div className='flex my-12 lg:hidden place-self-center'>
+						<p className=' font-display text-xl lg:text-4xl text-[#7C7C7C] px-4 max-w-[355px] lg:max-w-2xl z-10'>
+							We’re so glad you’re here! At <strong>Celebration Church</strong>,
+							we prioritize Jesus’ mission to spread the gospel. We are a global
+							house comprised of many rooms around the world, with headquarters
+							residing in Jacksonville, Florida. We’d love to connect with you
+							online or at a location near you!
+						</p>
+					</div>
+				</div>
+			</div>
+			<div className='lg:grid grid-cols-2 grid-row lg:grid-rows-2 '>
 				<div className='flex flex-col items-center lg:justify-evenly lg:items-start lg:col-span-2 lg:col-start-1 lg:row-start-1 max-w-[1536px]'>
 					<div className='flex flex-col mx-4 text-[3.15rem] font-display font-black'>
 						<div className='lg:hidden relative'>

@@ -244,15 +244,15 @@ function Navbar(props) {
 			<div
 				className={
 					nav
-						? 'fixed p-4 top-0 bottom-[-40px] left-0 right-0 bg-[#070707] font-display opacity-[100%] z-[1003] overflow-y-auto'
+						? 'fixed p-4 top-0 bottom-[-40px] left-0 right-0 bg-[#070707] font-display opacity-[100%] z-[1003] overflow-y-scroll'
 						: 'hidden'
 				}
 			>
 				<div
 					className={
 						slide
-							? 'flex overflow-y-auto gap-x-20'
-							: 'flex overflow-y-auto gap-x-20'
+							? 'flex overflow-y-scroll gap-x-20'
+							: 'flex overflow-y-scroll gap-x-20'
 					}
 				>
 					<div className='relative flex flex-col font-bold text-[38px] mt-20 md:mt-24 gap-y-2 h-[256px]'>
@@ -436,39 +436,6 @@ function Navbar(props) {
 							</Link>
 						</li>
 					</ul>
-				</div>
-				<div className='flex flex-col mx-auto px-4 justify-center items-center my-6 text-[#7C7C7C] gap-y-1'>
-					<div className='flex p-2'>
-						<p className='uppercase text-[9px] font-display text-center'>
-							© {new Date().getFullYear()} Celebration Church.
-							<br />
-							All Rights Reserved
-						</p>
-					</div>
-
-					<div className='flex mx-auto px-4 justify-between items-center w-[200px] '>
-						<div>
-							<p className='uppercase text-[9px] font-display'>
-								<Link href={'#'}>
-									<a className='text-[#7C7C7C] hover:text-[#070707]'>
-										Terms of Use
-									</a>
-								</Link>
-							</p>
-						</div>
-						<div>
-							<p className='flex'>•</p>
-						</div>
-						<div>
-							<p className='uppercase text-[9px] font-display'>
-								<Link href={'#'}>
-									<a className='text-[#7C7C7C] hover:text-[#070707]'>
-										Privacy Policy
-									</a>
-								</Link>
-							</p>
-						</div>
-					</div>
 				</div>
 			</div>
 
