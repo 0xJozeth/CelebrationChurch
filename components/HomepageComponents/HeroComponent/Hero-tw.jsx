@@ -12,6 +12,7 @@ import { linkText, vimeoHeroVideo } from './heroData';
 
 import WeHaveAGrace from '../SectionWeHaveAGrace/WeHaveAGrace';
 import ministries from '/public/ministries-homepage@1x.png';
+import whatsnew from '/public/home-whatsnew@1x.png';
 
 function HeroTW() {
 	return (
@@ -134,13 +135,13 @@ function HeroTW() {
 					<WeHaveAGrace />
 				</div>
 
-				<div className='relative flex flex-col max-w-[355px] h-[300px] '>
+				<div className='relative flex flex-col max-w-[355px] h-[300px]'>
 					<div className='flex flex-col'>
 						<div className='items-center z-10'>
 							<Image src={ministries} alt='' />
 						</div>
 						<div className='flex justify-center'>
-							<div className='absolute top-[125px] mix-blend-overlay text-[#f8f8f8] max-w-min justify-center z-30 '>
+							<div className='absolute top-[125px] mix-blend-overlay text-[#f8f8f8] max-w-min justify-center z-30'>
 								<h1 className='font-display font-bold text-[44px]'>
 									THERES
 									<br />
@@ -166,7 +167,68 @@ function HeroTW() {
 					</div>
 				</div>
 
-				<div className='max-w-[200px] h-[300px]'></div>
+				<div className='relative flex flex-col max-w-[355px] h-[500px]'>
+					<div className='flex flex-col'>
+						<div className='flex flex-col justify-center items-center'>
+							<div className='absolute top-[-20px] mix-blend-overlay text-[#f8f8f8] max-w-min justify-center z-30'>
+								<h1 className='font-display font-bold text-[44px]'>
+									WHATS&nbsp;
+									<span className='font-kepler italic text-[1.1em] font-light'>
+										NEW
+									</span>
+								</h1>
+							</div>
+							<div className='absolute top-[-20px] max-w-min z-0 '>
+								<h1 className='flex items-center justify-center font-display font-bold text-[44px] '>
+									WHATS&nbsp;
+									<span className=' font-kepler italic text-[1.1em] font-light'>
+										NEW
+									</span>
+								</h1>
+							</div>
+							<div className='items-center z-10'>
+								<Image src={whatsnew} alt='' />
+							</div>
+							<div className='flex flex-col my-4 justify-center items-start'>
+								<ul className='flex flex-col justify-center items-start gap-y-4 w-full'>
+									<li className='flex uppercase font-display text-[16px] gap-x-2 items-center'>
+										New Series
+										<div className='flex mx-auto h-6 w-14'>
+											<Image
+												src={arrow}
+												// height={22}
+												// width={50}
+												alt='watch-the-latest-message'
+											/>
+										</div>
+									</li>
+									<li className='flex uppercase font-display text-[16px] gap-x-2 items-center'>
+										Future Conference 2022
+										<div className='flex mx-auto h-6 w-14'>
+											<Image
+												src={arrow}
+												// height={22}
+												// width={50}
+												alt='watch-the-latest-message'
+											/>
+										</div>
+									</li>
+									<li className='flex uppercase font-display text-[16px] gap-x-2 items-center'>
+										Groups
+										<div className='flex mx-auto h-6 w-14'>
+											<Image
+												src={arrow}
+												// height={22}
+												// width={50}
+												alt='watch-the-latest-message'
+											/>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</>
 	);
