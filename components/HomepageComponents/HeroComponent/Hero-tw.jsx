@@ -36,7 +36,7 @@ function HeroTW() {
 					>
 						<div className='relative z-20 mt-4 max-w-[355px] mx-auto'>
 							<iframe
-								className='bg-green-500 mx-auto'
+								className='mx-auto'
 								src='https://player.vimeo.com/video/744290982?h=26579d8c5a&controls=0&badge=0&autoplay=1&muted=1&loop=1&autopause=0&player_id=0&app_id=58479'
 								frameBorder='0'
 								width={355}
@@ -70,7 +70,7 @@ function HeroTW() {
 							online or at a location near you!
 						</p>
 					</div>
-					<div className='block my-4 lg:hidden bg-red-400 mx-w-[355px]'>
+					<div className='block my-4 lg:hidden mx-w-[355px]'>
 						<button className='flex mx-auto py-4 items-center font-display text-[16px] font-medium cursor-pointer z-10 lg:text-[1.5vw] col-span-2 place-self-center'>
 							WATCH THE LATEST MESSAGE
 							<div className='flex mx-4 h-6 w-14'>
@@ -130,11 +130,11 @@ function HeroTW() {
 					</div>
 				</div>
 
-				<div className='max-w-[355px] bg-blue-500'>
+				<div className='max-w-[355px]'>
 					<WeHaveAGrace />
 				</div>
 
-				<div className='relative flex flex-col max-w-[355px] h-[300px] bg-red-300'>
+				<div className='relative flex flex-col max-w-[355px] h-[300px] '>
 					<div className='flex flex-col'>
 						<div className='items-center z-10'>
 							<Image src={ministries} alt='' />
@@ -166,7 +166,7 @@ function HeroTW() {
 					</div>
 				</div>
 
-				<div className='max-w-[200px] h-[300px] bg-green-400'></div>
+				<div className='max-w-[200px] h-[300px]'></div>
 			</div>
 		</>
 	);

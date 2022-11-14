@@ -13,36 +13,6 @@ import Banner from '/components/Banner/GraceBanner.js';
 
 import Typed from 'react-typed';
 
-// const Grid = styled.div`
-// 	display: grid;
-// 	grid-template-columns: 1fr;
-
-// 	margin-block: 3vw;
-
-// 	div {
-// 		&.mainContainer {
-// 			display: grid;
-// 			grid-template-columns: 1fr;
-// 			grid-auto-rows: fit-content;
-// 			place-self: center;
-// 		}
-
-// 		&.grace {
-// 			justify-content: center;
-// 			width: min-content;
-// 			margin-right: 3vw;
-
-// 			h2 {
-// 				font-family: 'kepler-std-display';
-// 				font-size: 18.5vw;
-// 				-webkit-text-fill-color: transparent;
-// 				-webkit-text-stroke: 1px;
-// 				letter-spacing: 1vw;
-// 			}
-// 		}
-// 	}
-// `;
-
 const Grace = styled.h2`
 	font-family: 'kepler-std-display';
 	font-weight: 900;
@@ -57,19 +27,7 @@ const For = styled.div`
 	h3 {
 		font-size: clamp(36px, 18.5vw, 42px);
 	}
-
-	/* @media screen and (min-width: 1024px) {
-		min-width: 400px;
-		position: absolute;
-		top: 0;
-		right: 100px;
-	} */
 `;
-
-// min-w-[390px]
-// 				md:min-w-[575px]
-// 				lg:min-w-[1024px]
-// 				2xl:min-w-[1536px]
 
 export default function WeHaveAGrace() {
 	return (
@@ -166,14 +124,14 @@ export default function WeHaveAGrace() {
 								text-[28px] md:text-[58px] lg:text-[98px] xl:text-[144px]
 								'
 								strings={[
-									// 'Gathering.',
-									// 'Small Groups.',
+									'Gathering.',
+									'Small Groups.',
 									'Serving the generations.',
-									// 'Generosity.',
-									// 'Growing.',
-									// 'Creativity.',
-									// 'Worship.',
-									// 'Diversity.',
+									'Generosity.',
+									'Growing.',
+									'Creativity.',
+									'Worship.',
+									'Diversity.',
 								]}
 								typeSpeed={35} //70
 								backDelay={2400} //2400
