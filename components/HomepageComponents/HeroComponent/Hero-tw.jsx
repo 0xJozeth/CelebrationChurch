@@ -19,7 +19,7 @@ function HeroTW() {
 			<div className='flex flex-col w-[355px] max-w-[355px] mx-auto gap-y-8'>
 				<div className='flex relative justify-center items-center'>
 					<div className='absolute top-0 left-0 right-0 z-30 mix-blend-overlay text-[#f8f8f8] max-w-min mx-auto'>
-						<h1 className='font-display font-bold text-[44px]'>
+						<h1 className='font-display font-bold text-[39px]'>
 							WELCOME&nbsp;
 							<span className='font-kepler italic text-[1.1em] font-light'>
 								TO
@@ -34,9 +34,9 @@ function HeroTW() {
 						href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
 						alt=''
 					>
-						<div className='relative z-20 max-w-[355px] mx-auto'>
+						<div className='relative z-20 mt-4 max-w-[355px] mx-auto'>
 							<iframe
-								className='bg-green-500 mt-8 mx-auto'
+								className='bg-green-500 mx-auto'
 								src='https://player.vimeo.com/video/744290982?h=26579d8c5a&controls=0&badge=0&autoplay=1&muted=1&loop=1&autopause=0&player_id=0&app_id=58479'
 								frameBorder='0'
 								width={355}
@@ -48,7 +48,7 @@ function HeroTW() {
 					</a>
 
 					<div className='absolute top-0 left-0 right-0 z-0 max-w-min mx-auto '>
-						<h1 className='font-display font-bold text-[44px]'>
+						<h1 className='font-display font-bold text-[39px]'>
 							WELCOME&nbsp;
 							<span className=' font-kepler italic text-[1.1em] font-light'>
 								TO
@@ -136,7 +136,7 @@ function HeroTW() {
 
 				<div className='relative flex flex-col max-w-[355px] h-[300px] bg-red-300'>
 					<div className='flex flex-col'>
-						<div className='w-[355px] items-center z-10'>
+						<div className='items-center z-10'>
 							<Image src={ministries} alt='' />
 						</div>
 						<div className='flex justify-center'>
