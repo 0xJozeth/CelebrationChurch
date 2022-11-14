@@ -34,9 +34,9 @@ function HeroTW() {
 						href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
 						alt=''
 					>
-						<div className='relative z-20 max-w-[355px]'>
+						<div className='relative z-20 max-w-[355px] mx-auto'>
 							<iframe
-								className='bg-green-500 mt-8'
+								className='bg-green-500 mt-8 mx-auto'
 								src='https://player.vimeo.com/video/744290982?h=26579d8c5a&controls=0&badge=0&autoplay=1&muted=1&loop=1&autopause=0&player_id=0&app_id=58479'
 								frameBorder='0'
 								width={355}
