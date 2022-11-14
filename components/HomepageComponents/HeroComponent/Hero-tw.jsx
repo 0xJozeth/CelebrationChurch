@@ -140,7 +140,7 @@ function HeroTW() {
 							<Image src={ministries} alt='' />
 						</div>
 						<div className='flex justify-center'>
-							<div className='absolute top-[160px] mix-blend-overlay text-[#f8f8f8] max-w-min justify-center z-30 '>
+							<div className='absolute top-[125px] mix-blend-overlay text-[#f8f8f8] max-w-min justify-center z-30 '>
 								<h1 className='font-display font-bold text-[44px]'>
 									THERES
 									<br />
@@ -151,7 +151,7 @@ function HeroTW() {
 									</span>
 								</h1>
 							</div>
-							<div className='absolute top-[160px] max-w-min z-0 '>
+							<div className='absolute top-[125px] max-w-min z-0 '>
 								<h1 className='flex flex-col items-center justify-center font-display font-bold text-[44px] '>
 									THERES
 									<br />

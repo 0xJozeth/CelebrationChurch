@@ -155,7 +155,7 @@ export default function WeHaveAGrace() {
 						</h3>
 						<div
 							className='flex justify-start md:my-5 px-1 md:px-4 w-full 
-						min-w-[260px]
+						min-w-[200px]
 						md:max-w-[482px]
 						lg:min-w-[596px] lg:max-w-[635px]
 
@@ -166,14 +166,14 @@ export default function WeHaveAGrace() {
 								text-[28px] md:text-[58px] lg:text-[98px] xl:text-[144px]
 								'
 								strings={[
-									'Gathering.',
-									'Small Groups.',
+									// 'Gathering.',
+									// 'Small Groups.',
 									'Serving the generations.',
-									'Generosity.',
-									'Growing.',
-									'Creativity.',
-									'Worship.',
-									'Diversity.',
+									// 'Generosity.',
+									// 'Growing.',
+									// 'Creativity.',
+									// 'Worship.',
+									// 'Diversity.',
 								]}
 								typeSpeed={35} //70
 								backDelay={2400} //2400
