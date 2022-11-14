@@ -16,7 +16,7 @@ import ministries from '/public/ministries-homepage@1x.png';
 function HeroTW() {
 	return (
 		<>
-			<div className='flex flex-col w-[355px] max-w-[355px] mx-auto gap-y-8'>
+			<div className='flex flex-col w-[325px] max-w-[355px] p-4 mx-auto gap-y-8'>
 				<div className='flex relative justify-center items-center'>
 					<div className='absolute top-0 left-0 right-0 z-30 mix-blend-overlay text-[#f8f8f8] max-w-min mx-auto'>
 						<h1 className='font-display font-bold text-[39px]'>
