@@ -27,14 +27,19 @@ function HeroTW() {
 			xl:bg-red-300 xl:max-w-[1440px] xl:w-[1440px]'
 			>
 				<div className='flex flex-col relative justify-center items-center'>
-					<div className='playButtton absolute flex justify-center items-center top-[180px] text-[#f8f8f8] mix-blend-overlay z-40'>
-						<a
-							href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							<IoPlayCircleOutline size={100} />
-						</a>
+					<div className='playButtton absolute flex justify-center items-center top-[180px]  mix-blend-overlay z-40'>
+						<div>
+							<a
+								href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								<IoPlayCircleOutline
+									className='z-100 cursor-pointer text-[#f8f8f8]'
+									size={100}
+								/>
+							</a>
+						</div>
 					</div>
 					<div className='absolute top-0 left-0 right-0 z-30 mix-blend-overlay text-[#f8f8f8] max-w-min mx-auto'>
 						<h1 className='font-display font-bold text-[39px]'>
