@@ -165,8 +165,8 @@ function Navbar(props) {
 		<nav
 			className={
 				nav
-					? 'fixed right-2 flex justify-between items-center h-14 mt-2 md:h-24 mx-auto my-1 px-4 xl:max-w-[1440px] z-[1004]'
-					: 'flex justify-between items-center h-14 mt-2 md:h-24 mx-auto px-4 xl:max-w-[1440px]'
+					? 'fixed right-2 flex justify-between items-center h-14 mt-2 md:h-24 mx-auto my-1 p-4 xl:max-w-[1440px] z-[1004]'
+					: 'flex justify-between items-center h-14 mt-2 md:h-24 mx-auto p-4 my-4 xl:max-w-[1440px]'
 			}
 		>
 			{/* Logo */}
@@ -191,12 +191,18 @@ function Navbar(props) {
 				className={
 					nav
 						? 'invert flex md:hidden justify-center items-center h-20 md:h-24 my-4 px-4 xl:max-w-[1440px] z-[100]'
-						: 'flex md:hidden justify-center items-center h-20 md:h-24 my-4 px-4 xl:max-w-[1440px] z-[100]'
+						: 'flex md:hidden justify-center items-center h-20 md:h-24 my-4 px-1 xl:max-w-[1440px] z-[100]'
 				}
 			>
 				<Link href='/' passHref>
 					<a aria-current='page' aria-label='home' className='cursor-pointer'>
-						<Image src={logomobile} alt='logo-mobile' width={38} height={38} />
+						<Image
+							src={logomobile}
+							alt='logo-mobile'
+							width={38}
+							height={38}
+							priority
+						/>
 					</a>
 				</Link>
 			</div>

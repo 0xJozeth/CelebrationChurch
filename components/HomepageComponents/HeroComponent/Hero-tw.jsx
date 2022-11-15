@@ -14,17 +14,22 @@ import WeHaveAGrace from '../SectionWeHaveAGrace/WeHaveAGrace';
 import ministries from '/public/ministries-homepage@1x.png';
 import whatsnew from '/public/home-whatsnew@1x.png';
 
+import { IoPlayCircleOutline } from 'react-icons/io5';
+
 function HeroTW() {
 	return (
 		<>
 			<div
 				className='flex flex-col justify-center items-center
-		  max-w-[355px] w-[355px] px-4 mx-auto gap-y-8
+		   max-w-[355px] w-[355px] px-4 mx-auto gap-y-8
 			md:bg-purple-300 md:max-w-[768px] md:w-[768px]
 			lg:bg-green-300 lg:max-w-[1024px] lg:w-[1024px]
 			xl:bg-red-300 xl:max-w-[1440px] xl:w-[1440px]'
 			>
-				<div className='flex relative justify-center items-center'>
+				<div className='flex flex-col relative justify-center items-center'>
+					<div className='playButtton absolute flex justify-center items-center top-[180px] text-[#f8f8f8] mix-blend-overlay z-40'>
+						<IoPlayCircleOutline size={100} />
+					</div>
 					<div className='absolute top-0 left-0 right-0 z-30 mix-blend-overlay text-[#f8f8f8] max-w-min mx-auto'>
 						<h1 className='font-display font-bold text-[39px]'>
 							WELCOME&nbsp;
@@ -50,7 +55,6 @@ function HeroTW() {
 								height={631}
 								placeholder={'blur'}
 							></iframe>
-							<div className='playButtton'></div>
 						</div>
 					</a>
 
