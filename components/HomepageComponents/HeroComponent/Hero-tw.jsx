@@ -21,7 +21,7 @@ function HeroTW() {
 		<>
 			<div
 				className='flex flex-col justify-center items-center
-		   max-w-[355px] w-[355px] px-4 mx-auto gap-y-8
+		   bg-blue-300 max-w-[355px] w-[355px] px-4 mx-auto gap-y-8
 			md:bg-purple-300 md:max-w-[768px] md:w-[768px]
 			lg:bg-green-300 lg:max-w-[1024px] lg:w-[1024px]
 			xl:bg-red-300 xl:max-w-[1440px] xl:w-[1440px]'
@@ -57,9 +57,9 @@ function HeroTW() {
 						href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
 						alt=''
 					>
-						<div className='relative z-20 mt-4 max-w-[355px] mx-auto'>
+						<div className='relative z-20 mt-[-10px] max-w-[355px] mx-auto'>
 							<iframe
-								className='mx-auto'
+								className='mx-auto p-4'
 								src='https://player.vimeo.com/video/744290982?h=26579d8c5a&controls=0&badge=0&autoplay=1&muted=1&loop=1&autopause=0&player_id=0&app_id=58479'
 								frameBorder='0'
 								width={355}
