@@ -181,7 +181,6 @@ function Navbar(props) {
 							height={47}
 							layout='intrinsic'
 							objectFit='contain'
-							priority
 						/>
 					</a>
 				</Link>
