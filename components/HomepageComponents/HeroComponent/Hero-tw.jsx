@@ -28,7 +28,9 @@ function HeroTW() {
 			>
 				<div className='flex flex-col relative justify-center items-center'>
 					<div className='playButtton absolute flex justify-center items-center top-[180px] text-[#f8f8f8] mix-blend-overlay z-40'>
-						<IoPlayCircleOutline size={100} />
+						<a href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'>
+							<IoPlayCircleOutline size={100} />
+						</a>
 					</div>
 					<div className='absolute top-0 left-0 right-0 z-30 mix-blend-overlay text-[#f8f8f8] max-w-min mx-auto'>
 						<h1 className='font-display font-bold text-[39px]'>
