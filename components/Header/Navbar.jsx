@@ -165,8 +165,8 @@ function Navbar(props) {
 		<nav
 			className={
 				nav
-					? 'fixed right-2 flex justify-between items-center h-20 md:h-24 mx-auto my-1 px-4 xl:max-w-[1440px] z-[1004]'
-					: 'flex justify-between items-center h-20 md:h-24 mx-auto px-4 xl:max-w-[1440px]'
+					? 'fixed right-2 flex justify-between items-center h-14 mt-2 md:h-24 mx-auto my-1 px-4 xl:max-w-[1440px] z-[1004]'
+					: 'flex justify-between items-center h-14 mt-2 md:h-24 mx-auto px-4 xl:max-w-[1440px]'
 			}
 		>
 			{/* Logo */}
