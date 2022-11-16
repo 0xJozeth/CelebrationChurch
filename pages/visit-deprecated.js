@@ -242,7 +242,7 @@ const ReachCardGrid = styled.div`
 	// // outline: 3px dotted salmon;
 `;
 
-export default function Visit(props) {
+export default function VisitDesktop(props) {
 	const [usa, setUsa] = useState(false);
 	const [international, setInternational] = useState(false);
 	const [global, setGlobal] = useState(false);

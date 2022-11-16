@@ -45,17 +45,22 @@ const Home = () => {
 				</title>
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 			</Head>
-			{/* <GridIndex> */}
-			{/* <Hero /> */}
-			{/* <FindALocation /> */}
-			{/* <WeHaveAGrace /> */}
-			{/* <TheresAPlace /> */}
-			{/* <MeetPastors /> */}
-			{/* <FollowJesusSection /> */}
-			{/* <WhatsNewSection /> */}
-			{/* </GridIndex> */}
+
 			<main>
-				<HeroTW />
+				<div className='block md:hidden'>
+					<HeroTW />
+				</div>
+				<div className='hidden md:block'>
+					<GridIndex>
+						<Hero />
+						<FindALocation />
+						<WeHaveAGrace />
+						<TheresAPlace />
+						<MeetPastors />
+						<FollowJesusSection />
+						<WhatsNewSection />
+					</GridIndex>
+				</div>
 			</main>
 			{/* <FindALocation /> */}
 		</>

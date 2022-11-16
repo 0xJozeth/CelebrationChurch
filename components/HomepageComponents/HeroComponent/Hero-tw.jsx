@@ -21,10 +21,10 @@ function HeroTW() {
 		<>
 			<div
 				className='flex flex-col justify-center items-center
-		   bg-blue-300 max-w-[355px] w-[355px] px-4 mx-auto gap-y-8
-			md:bg-purple-300 md:max-w-[768px] md:w-[768px]
-			lg:bg-green-300 lg:max-w-[1024px] lg:w-[1024px]
-			xl:bg-red-300 xl:max-w-[1440px] xl:w-[1440px]'
+						  max-w-[355px] w-[355px] px-4 mx-auto gap-y-8
+				md:bg-purple-300 md:max-w-[768px] md:w-[768px]
+				lg:bg-green-300 lg:max-w-[1024px] lg:w-[1024px]
+				xl:bg-red-300 xl:max-w-[1440px] xl:w-[1440px]'
 			>
 				<div className='flex flex-col relative justify-center items-center'>
 					<div className='playButtton absolute flex justify-center items-center top-[180px]  mix-blend-overlay z-40'>
@@ -52,7 +52,6 @@ function HeroTW() {
 							CELEBRATION
 						</h1>
 					</div>
-
 					<a
 						href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
 						alt=''
@@ -68,7 +67,6 @@ function HeroTW() {
 							></iframe>
 						</div>
 					</a>
-
 					<div className='absolute top-0 left-0 right-0 z-0 max-w-min mx-auto '>
 						<h1 className='font-display font-bold text-[39px]'>
 							WELCOME&nbsp;
@@ -81,7 +79,6 @@ function HeroTW() {
 						</h1>
 					</div>
 				</div>
-
 				<div className='flex flex-col p-4 bg-[#f8f8f8] mt-[-225px] min-w-[375px] h-full z-30 justify-center items-center'>
 					<div className='flex justify-center lg:hidden'>
 						<p className=' font-display text-[18px] lg:text-4xl text-[#7C7C7C] px-4 max-w-[355px] lg:max-w-2xl z-10'>
@@ -106,7 +103,6 @@ function HeroTW() {
 						</button>
 					</div>
 				</div>
-
 				<div className='flex flex-col max-w-[355px] my-8'>
 					<div className='relative flex flex-col '>
 						<div className='absolute top-0 left-0 right-0 flex font-bold font-display text-[44px] justify-end text-[#f8f8f8] mix-blend-overlay z-30'>
@@ -151,11 +147,9 @@ function HeroTW() {
 						</button>
 					</div>
 				</div>
-
 				<div className='max-w-[355px]'>
 					<WeHaveAGrace />
 				</div>
-
 				<div className='relative flex flex-col max-w-[355px] h-[300px]'>
 					<div className='flex flex-col'>
 						<div className='items-center z-10'>
@@ -187,7 +181,6 @@ function HeroTW() {
 						</div>
 					</div>
 				</div>
-
 				<div className='relative flex flex-col max-w-[355px] h-[500px]'>
 					<div className='flex flex-col'>
 						<div className='flex flex-col justify-center items-center'>
