@@ -32,8 +32,8 @@ function give() {
             items-center'
 		>
 			<div className='relative flex flex-col items-center justify-start w-full'>
-				<div className='z-30 mix-blend-overlay pl-6'>
-					<h1 className='font-display font-bold text-[54px] text-[#f8f8f8] '>
+				<div className='flex w-full justify-center pr-[90px] z-30 mix-blend-overlay'>
+					<h1 className='font-display font-bold text-[44px] text-[#f8f8f8] '>
 						WE&nbsp;LOVE&nbsp;
 						<br />
 						<span className='font-kepler italic text-[1.1em]'>
@@ -41,7 +41,7 @@ function give() {
 						</span>
 					</h1>
 				</div>
-				<div className='relative z-20 mt-[-80px]'>
+				<div className='relative z-20 mt-[-65px]'>
 					<Image src={GiveHeroMobile} alt='give-hero' />
 					<div className='flex items-center absolute z-40 bottom-[140px] right-[20px] border-2 border-solid border-[#f8f8f8] p-2 rounded-[4px] w-auto gap-x-2'>
 						<div className='flex justify-center items-center p-2 '>
@@ -54,8 +54,8 @@ function give() {
 						</div>
 					</div>
 				</div>
-				<div className='absolute z-10 pl-6'>
-					<h1 className='font-display font-bold text-[54px]'>
+				<div className='flex w-full justify-center pr-[90px] absolute z-10'>
+					<h1 className='font-display font-bold text-[44px]'>
 						WE&nbsp;LOVE&nbsp;
 						<br />
 						<span className='font-kepler italic text-[1.1em]'>
@@ -65,7 +65,7 @@ function give() {
 				</div>
 			</div>
 			<div className='relative flex flex-col items-center justify-start w-full'>
-				<div className='font-display font-bold text-[54px] text-center'>
+				<div className='font-display font-bold text-[44px] text-center'>
 					WHY&nbsp;WE&nbsp;
 					<br />
 					<span className='font-kepler italic text-[1.1em]'>GIVE</span>
@@ -99,7 +99,7 @@ function give() {
 				</div>
 			</div>
 			<div className='relative flex flex-col items-center justify-start w-full bg-green-500'>
-				<div className='font-display font-bold text-[54px] text-center'>
+				<div className='font-display font-bold text-[44px] text-center'>
 					YOUR
 					<br />
 					<span className='font-kepler italic text-[1.1em]'>IMPACT</span>
