@@ -643,7 +643,7 @@ const HaveQuestionsSection = styled.div`
 	}
 `;
 
-export default function Give() {
+export default function GiveDesktop() {
 	return (
 		<>
 			<Grid>
