@@ -370,27 +370,27 @@ function Give(props) {
 					<span className='font-kepler italic text-[1.1em]'>TO&nbsp;GIVE</span>
 				</div>
 				<div className='flex flex-col justify-center items-center gap-y-8'>
-					<div className='flex justify-evenly items-center p-4 gap-x-16'>
+					<div className='flex justify-center items-center p-4 gap-x-8 w-full'>
 						<div className='flex flex-col justify-center'>
-							<div className='bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-full'>
-								<FontAwesomeIcon icon={faBitcoin} className='' />
+							<div className='flex bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-[140px] h-[140px]'>
+								<FontAwesomeIcon icon={faMobile} className='' />
 							</div>
 							<div className='flex justify-center w-full p-2 my-2'>
 								<p className='font-display font-semibold text-[22px]'>APP</p>
 							</div>
 						</div>
 						<div className='flex flex-col justify-center'>
-							<div className='bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-full'>
-								<FontAwesomeIcon icon={faMoneyBillTrendUp} className='' />
+							<div className='flex bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-[140px] h-[140px]'>
+								<FontAwesomeIcon icon={faBitcoin} className='' />
 							</div>
 							<div className='flex justify-center w-full p-2 my-2'>
 								<p className='font-display font-semibold text-[22px]'>CRYPTO</p>
 							</div>
 						</div>
 					</div>
-					<div className='flex justify-evenly items-center p-4 gap-x-16'>
+					<div className='flex justify-center items-center p-4 gap-x-8 w-full'>
 						<div className='flex flex-col justify-center'>
-							<div className='bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-full'>
+							<div className='flex bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-[140px] h-[140px]'>
 								<FontAwesomeIcon icon={faPiggyBank} className='' />
 							</div>
 							<div className='flex justify-center w-full p-2 my-2'>
@@ -398,8 +398,8 @@ function Give(props) {
 							</div>
 						</div>
 						<div className='flex flex-col justify-center'>
-							<div className='bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-full'>
-								<FontAwesomeIcon icon={faMobile} className='' />
+							<div className='flex bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-[140px] h-[140px]'>
+								<FontAwesomeIcon icon={faMoneyBillTrendUp} className='' />
 							</div>
 							<div className='flex justify-center w-full p-2 my-2'>
 								<p className='font-display font-semibold text-[22px]'>STOCK</p>
@@ -409,7 +409,11 @@ function Give(props) {
 				</div>
 			</div>
 			<div className='relative flex flex-col items-center justify-start w-full'>
-				TEAM LEGACY
+				<div className='font-display font-bold text-[44px] text-center'>
+					LEGACY
+					<br />
+					<span className='font-kepler italic text-[1.1em]'>TEAM</span>
+				</div>
 			</div>
 			<div className='relative flex flex-col items-center justify-start w-full'>
 				BEGIN TO TITHE
