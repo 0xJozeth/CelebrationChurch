@@ -21,7 +21,32 @@ import GiveHeroMobile from '/public/GiveHeroMobile.png';
 
 import longArrow from '/public/arrow-long.svg';
 
-function give() {
+import { faBitcoin } from '@fortawesome/free-brands-svg-icons';
+import {
+	faPiggyBank,
+	faMobile,
+	faMoneyBillTrendUp,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+function Give(props) {
+	const [usa, setUsa] = useState(false);
+	const [international, setInternational] = useState(false);
+
+	const handleUsa = () => {
+		setUsa(!usa);
+	};
+	const handleInternational = () => {
+		setInternational(!international);
+	};
+
+	useEffect(() => {
+		console.log('The usa useState is set to:', usa);
+	});
+	useEffect(() => {
+		console.log('The international useState is set to:', international);
+	});
+
 	return (
 		<div
 			className='flex flex-col w-[100vw]
@@ -32,7 +57,7 @@ function give() {
             items-center'
 		>
 			<div className='relative flex flex-col items-center justify-start w-full'>
-				<div className='flex w-full justify-center pr-[90px] z-30 mix-blend-overlay'>
+				<div className='flex w-full justify-center pr-4 z-30 mix-blend-overlay'>
 					<h1 className='font-display font-bold text-[44px] text-[#f8f8f8] '>
 						WE&nbsp;LOVE&nbsp;
 						<br />
@@ -54,7 +79,7 @@ function give() {
 						</div>
 					</div>
 				</div>
-				<div className='flex w-full justify-center pr-[90px] absolute z-10'>
+				<div className='flex w-full justify-center pr-4 absolute z-10'>
 					<h1 className='font-display font-bold text-[44px]'>
 						WE&nbsp;LOVE&nbsp;
 						<br />
@@ -120,10 +145,268 @@ function give() {
 				</div>
 			</div>
 			<div className='relative flex flex-col items-center justify-start w-full'>
-				ONLINE GIVING
+				<div className='font-display font-bold text-[44px] text-center'>
+					ONLINE <br />
+					<span className='font-kepler italic text-[1.1em]'>GIVING</span>
+				</div>
+				<div
+					className='
+			flex flex-col gap-4 
+			max-w-[298px!important] md:max-w-[1024px!important] 
+			mx-auto 
+			my-12 lg:my-24
+			'
+				>
+					<div className='flex flex-col justify-start max-w-[298px!important] md:max-w-[1024px!important] md:mx-auto'>
+						<h2 className='font-display text-[24px] md:text-[48px] lg:text-[82px] font-bold my-4 p-4'>
+							SELECT A LOCATION
+						</h2>
+						{/* </div> */}
+						<div
+							className='flex flex-col md:flex-row 
+					justify-start
+					max-w-[298px!important] md:max-w-[1024px!important] 
+					lg:w-[828.39px] lg:p-4
+					mx-auto'
+						>
+							<ul
+								className='flex flex-col items-start
+						
+						font-display text-[20px] md:text-[40px] lg:text-[68px] gap-y-4'
+							>
+								<ul
+									className='flex text-[28px] md:text-[56px] items-center'
+									onClick={handleUsa}
+								>
+									<div
+										className={
+											usa
+												? 'flex underline underline-offset-2 font-semibold bg-[#070707] text-[#f8f8f8] p-2'
+												: 'flex underline-offset-2 p-2'
+										}
+									>
+										USA
+									</div>
+									&nbsp;
+									<li className={usa ? 'list-none hidden' : 'list-none block'}>
+										&#43;
+									</li>
+									<li className={usa ? 'list-none block' : 'list-none hidden'}>
+										&#45;
+									</li>
+								</ul>
+								<div
+									className={
+										usa
+											? ' w-full delay-200 translate-y-0 opacity-100 duration-300 flex flex-col gap-x-20'
+											: ' w-full delay-0 translate-y-[-100vh] opacity-25 hidden'
+									}
+								>
+									<ul className='flex flex-col gap-y-4 ml-12'>
+										<li className='flex items-center'>
+											<a
+												className='flex relative hover:bg-black hover:text-white ease-in items-center cursor-pointer'
+												href='https://celebrationjax.org/'
+												target='_blank'
+												rel='noopener noreferrer'
+											>
+												JACKSONVILLE
+											</a>
+										</li>
+
+										<li>
+											<a
+												className='hover:bg-black hover:text-white ease-in cursor-pointer'
+												href='https://celebrationsfl.org/'
+												target='_blank'
+												rel='noopener noreferrer'
+											>
+												SOUTH FLORIDA
+											</a>
+										</li>
+
+										<li>
+											<a
+												className='hover:bg-black hover:text-white ease-in cursor-pointer'
+												href='http://celebrationorl.org/'
+												target='_blank'
+												rel='noopener noreferrer'
+											>
+												ORLANDO
+											</a>
+										</li>
+
+										<li>
+											<a
+												className='hover:bg-black hover:text-white ease-in cursor-pointer'
+												href='http://metrochurch.com/'
+												target='_blank'
+												rel='noopener noreferrer'
+											>
+												WASHINGTON, D.C.
+											</a>
+										</li>
+
+										<li>
+											<a
+												className='hover:bg-black hover:text-white ease-in cursor-pointer'
+												href='http://www.christianfaithcenternc.com/'
+												target='_blank'
+												rel='noopener noreferrer'
+											>
+												CHRISTIAN FAITH CENTER, NC
+											</a>
+										</li>
+									</ul>
+								</div>
+								<ul
+									className='flex items-center text-[28px] md:text-[56px]'
+									onClick={handleInternational}
+								>
+									<div
+										className={
+											international
+												? 'flex underline underline-offset-2 font-semibold bg-[#070707] text-[#f8f8f8] p-2'
+												: 'flex underline-offset-2 p-2'
+										}
+									>
+										INTERNATIONAL
+									</div>{' '}
+									&nbsp;
+									<li
+										className={
+											international ? 'list-none hidden' : 'list-none block'
+										}
+									>
+										&#43;
+									</li>
+									<li
+										className={
+											international ? 'list-none block' : 'list-none hidden'
+										}
+									>
+										&#45;
+									</li>
+								</ul>
+								<div
+									className={
+										international
+											? ' w-full delay-200 translate-y-0 opacity-100 duration-300 flex flex-col gap-x-20'
+											: ' w-full delay-0 translate-y-[-100vh] opacity-25 hidden'
+									}
+								>
+									<ul className='flex flex-col gap-y-4 ml-12'>
+										<li className='flex items-center'>
+											<a className='flex relative hover:bg-black hover:text-white ease-in items-center cursor-pointer'>
+												THE LIGHTHOUSE ANTWERP, BELGIUM
+											</a>
+										</li>
+
+										<li>
+											<a
+												className='hover:bg-black hover:text-white ease-in'
+												href=''
+												target='_blank'
+												rel='noopener noreferrer'
+											>
+												NETHERLANDS
+											</a>
+										</li>
+
+										<li>
+											<a
+												className='hover:bg-black hover:text-white ease-in cursor-pointer'
+												href=''
+												target='_blank'
+												rel='noopener noreferrer'
+											>
+												PARIS
+											</a>
+										</li>
+
+										<li>
+											<a
+												className='hover:bg-black hover:text-white ease-in cursor-pointer'
+												href=''
+												target='_blank'
+												rel='noopener noreferrer'
+											>
+												MOKAPANE SOUTH AFRICA
+											</a>
+										</li>
+
+										<li>
+											<a
+												className='hover:bg-black hover:text-white ease-in cursor-pointer'
+												href=''
+												target='_blank'
+												rel='noopener noreferrer'
+											>
+												ZIMBABWE
+											</a>
+										</li>
+									</ul>
+								</div>
+
+								<ul className='flex text-[28px] md:text-[56px]'>
+									<a
+										className='p-2 hover:bg-black hover:text-white ease-in cursor-pointer'
+										href='' //WAITING ON HYPERLINK
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										TV MINISTRIES
+									</a>
+								</ul>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div className='relative flex flex-col items-center justify-start w-full'>
-				OTHER WAYS TO GIVE
+			<div className='relative flex flex-col items-center justify-start w-full gap-y-8'>
+				<div className='font-display font-bold text-[44px] text-center'>
+					OTHER&nbsp;WAYS
+					<br />
+					<span className='font-kepler italic text-[1.1em]'>TO&nbsp;GIVE</span>
+				</div>
+				<div className='flex flex-col justify-center items-center gap-y-8'>
+					<div className='flex justify-evenly items-center p-4 gap-x-16'>
+						<div className='flex flex-col justify-center'>
+							<div className='bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-full'>
+								<FontAwesomeIcon icon={faBitcoin} className='' />
+							</div>
+							<div className='flex justify-center w-full p-2 my-2'>
+								<p className='font-display font-semibold text-[22px]'>APP</p>
+							</div>
+						</div>
+						<div className='flex flex-col justify-center'>
+							<div className='bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-full'>
+								<FontAwesomeIcon icon={faMoneyBillTrendUp} className='' />
+							</div>
+							<div className='flex justify-center w-full p-2 my-2'>
+								<p className='font-display font-semibold text-[22px]'>CRYPTO</p>
+							</div>
+						</div>
+					</div>
+					<div className='flex justify-evenly items-center p-4 gap-x-16'>
+						<div className='flex flex-col justify-center'>
+							<div className='bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-full'>
+								<FontAwesomeIcon icon={faPiggyBank} className='' />
+							</div>
+							<div className='flex justify-center w-full p-2 my-2'>
+								<p className='font-display font-semibold text-[22px]'>BANK</p>
+							</div>
+						</div>
+						<div className='flex flex-col justify-center'>
+							<div className='bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-full'>
+								<FontAwesomeIcon icon={faMobile} className='' />
+							</div>
+							<div className='flex justify-center w-full p-2 my-2'>
+								<p className='font-display font-semibold text-[22px]'>STOCK</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div className='relative flex flex-col items-center justify-start w-full'>
 				TEAM LEGACY
@@ -139,4 +422,4 @@ function give() {
 	);
 }
 
-export default give;
+export default Give;
