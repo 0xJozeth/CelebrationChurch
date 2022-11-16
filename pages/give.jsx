@@ -408,11 +408,26 @@ function Give(props) {
 					</div>
 				</div>
 			</div>
-			<div className='relative flex flex-col items-center justify-start w-full'>
-				<div className='font-display font-bold text-[44px] text-center'>
-					LEGACY
-					<br />
-					<span className='font-kepler italic text-[1.1em]'>TEAM</span>
+			<div className='relative flex flex-col w-full p-8'>
+				<div className='relative  flex flex-col'>
+					<div className='font-display font-bold text-[44px] text-center'>
+						<h1 className='text-[#f8f8f8] mix-blend-overlay'>
+							LEGACY
+							<br />
+							<span className='font-kepler italic text-[1.1em]'>TEAM</span>
+						</h1>
+					</div>
+
+					<div className='font-display font-bold text-[44px] text-center'>
+						<h1 className=''>
+							LEGACY
+							<br />
+							<span className='font-kepler italic text-[1.1em]'>TEAM</span>
+						</h1>
+					</div>
+					<div>
+						<Image src={legacy} alt='' />
+					</div>
 				</div>
 			</div>
 			<div className='relative flex flex-col items-center justify-start w-full'>
