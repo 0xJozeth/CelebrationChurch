@@ -116,18 +116,18 @@ function Give(props) {
 								</p>
 							</div>
 						</div>
-						<div className='flex flex-col items-center justify-center h-20 w-full my-2 bg-red-200'>
+						<div className='flex flex-col items-center justify-center h-20 w-full my-2'>
 							<div className='flex flex-col items-center gap-y-4'>
 								<div className='text-[19px]'>
 									<button className='font-display uppercase'>Learn More</button>
 								</div>
-								<div className='flex flex-col items-center justify-center w-[28px] bg-blue-500'>
+								<div className='flex flex-col items-center justify-center w-[28px] '>
 									<Image src={arrowdown} alt='' />
 								</div>
 							</div>
 						</div>
 					</div>
-					<div className='relative flex flex-col items-center justify-start w-full bg-green-500'>
+					<div className='relative flex flex-col items-center justify-start w-full '>
 						<div className='font-display font-bold text-[44px] text-center'>
 							YOUR
 							<br />
@@ -453,15 +453,15 @@ function Give(props) {
 							</h3>
 						</div>
 						<div className='py-4'>
-							<p className='font-display text-[#7C&=7C7C]'>
+							<p className='font-display text-[#7C7C7C]'>
 								If you have additional questions concerning giving or donations,
 								please call Celebration Church Giving Office at (904) 737-1121
 								or contact us.
 							</p>
 						</div>
-						<div className='flex flex-row w-full'>
+						<div className='flex flex-row w-full justify-center items-center'>
 							<div className='flex w-full justify-between'>
-								<div className='flex w-full justify-center items-center'>
+								<div className='flex w-full justify-between items-center'>
 									<p className='font-display font-semibold text-[20px]'>
 										GIVING&nbsp;FAQs
 									</p>
@@ -482,7 +482,6 @@ function Give(props) {
 							</div>
 						</div>
 					</div>
-					<div className='relative flex flex-col items-center justify-start w-full'></div>
 				</div>
 			</div>
 			<div className='hidden md:block'>
