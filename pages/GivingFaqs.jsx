@@ -5,8 +5,8 @@ function GivingFAQs() {
 		<>
 			<div className='flex flex-col items-center w-[100vw] '>
 				<div className='flex flex-col w-full max-w-[768px] p-16'>
-					<div className='flex w-full justify-start items-center my-4 mb-16'>
-						<h1 className='font-display font-semibold text-[86px] md:text-[140px] text-[#070707]'>
+					<div className='flex w-full justify-center md:justify-start items-center my-4 mb-16'>
+						<h1 className='font-display font-semibold text-[74px] md:text-[140px] text-[#070707]'>
 							GIVING
 							<br />
 							<span className='font-kepler italic text-[1.1em]'>FAQs</span>
