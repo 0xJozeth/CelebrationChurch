@@ -27,8 +27,8 @@ module.exports = {
 		},
 		extend: {
 			fontFamily: {
-				body: ['neue-haas-grotesk-display', 'san-serif'],
-				display: ['neue-haas-grotesk-display', 'san-serif'],
+				body: ['neue-haas-grotesk-display', 'sans-serif'],
+				display: ['neue-haas-grotesk-display', 'sans-serif'],
 				kepler: ['kepler-std-display', 'serif'],
 			},
 		},
