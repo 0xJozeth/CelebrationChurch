@@ -43,11 +43,13 @@ function give() {
 				</div>
 				<div className='relative z-20 mt-[-80px]'>
 					<Image src={GiveHeroMobile} alt='give-hero' />
-					<div className='flex items-center absolute z-40 bottom-[210px] right-[20px] border-2 border-solid border-[#f8f8f8] p-2 rounded-[4px] w-[240px]'>
-						<button className='flex justify-center items-center p-2 font-display text-[20px] text-[#f8f8f8]'>
-							GIVE NOW
-						</button>
-						<div className=''>
+					<div className='flex items-center absolute z-40 bottom-[140px] right-[20px] border-2 border-solid border-[#f8f8f8] p-2 rounded-[4px] w-auto gap-x-2'>
+						<div className='flex justify-center items-center p-2 '>
+							<button className='font-display text-[20px] text-[#f8f8f8]'>
+								GIVE NOW
+							</button>
+						</div>
+						<div className='flex w-[120px]'>
 							<Image src={arrow} alt='' />
 						</div>
 					</div>
