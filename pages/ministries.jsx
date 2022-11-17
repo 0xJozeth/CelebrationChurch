@@ -24,7 +24,7 @@ function ministries() {
 	return (
 		<>
 			<div className='flex justify-center w-[100vw]'>
-				<div className='flex flex-col items-center w-full max-w-[325px] gap-y-8'>
+				<div className='flex flex-col items-center w-full max-w-[325px] p-8 mb-12 gap-y-8'>
 					<div className='relative w-full h-[486px]'>
 						<div className='absolute top-[20px] left-[20px] mix-blend-overlay z-30 '>
 							<h1 className='font-display font-bold text-[#f8f8f8]   text-[44px]'>
