@@ -4,7 +4,7 @@ function GivingFAQs() {
 	return (
 		<>
 			<div className='flex flex-col items-center w-[100vw] '>
-				<div className='flex flex-col w-full max-w-[768px] p-16'>
+				<div className='flex flex-col w-full max-w-[768px] p-8'>
 					<div className='flex w-full justify-center md:justify-start items-center my-4 mb-16'>
 						<h1 className='font-display font-semibold text-[74px] md:text-[140px] text-[#070707]'>
 							GIVING
@@ -14,7 +14,7 @@ function GivingFAQs() {
 					</div>
 					<div className='flex flex-col gap-y-4 mb-8'>
 						<div className='mt-2'>
-							<h2 className='font-display font-semibold text-[24px] text-[#070707] uppercase'>
+							<h2 className='font-display font-semibold text-[20px] md:text-[26px] text-[#070707] uppercase'>
 								Why should I give?
 							</h2>
 						</div>
@@ -35,7 +35,7 @@ function GivingFAQs() {
 					</div>
 					<div className='flex flex-col gap-y-4 mb-8'>
 						<div className='mt-2'>
-							<h2 className='font-display font-semibold text-[24px] text-[#070707] uppercase'>
+							<h2 className='font-display font-semibold text-[20px] md:text-[26px] text-[#070707] uppercase'>
 								HOW DO I KNOW THAT MY GIVING IS BEING USED FOR KINGDOM PURPOSES?
 							</h2>
 						</div>
@@ -51,7 +51,7 @@ function GivingFAQs() {
 					</div>
 					<div className='flex flex-col gap-y-4 mb-8'>
 						<div className='mt-2'>
-							<h2 className='font-display font-semibold text-[24px] text-[#070707] uppercase'>
+							<h2 className='font-display font-semibold text-[20px] md:text-[26px] text-[#070707] uppercase'>
 								WHERE CAN I GET INFORMATION ON FINANCIAL AND PRACTICAL CARE?
 							</h2>
 						</div>
@@ -66,7 +66,7 @@ function GivingFAQs() {
 					</div>
 					<div className='flex flex-col gap-y-4 mb-8'>
 						<div className='mt-2'>
-							<h2 className='font-display font-semibold text-[24px] text-[#070707] uppercase'>
+							<h2 className='font-display font-semibold text-[20px] md:text-[26px] text-[#070707] uppercase'>
 								HOW SECURE IS MY ONLINE OR MOBILE GIVING?
 							</h2>
 						</div>
@@ -82,7 +82,7 @@ function GivingFAQs() {
 					</div>
 					<div className='flex flex-col gap-y-4 mb-8'>
 						<div className='mt-2'>
-							<h2 className='font-display font-semibold text-[24px] text-[#070707] uppercase'>
+							<h2 className='font-display font-semibold text-[20px] md:text-[26px] text-[#070707] uppercase'>
 								I ACCIDENTALLY SUBMITTED A TITHE TWICE. HOW DO I CORRECT THIS
 								ERROR?
 							</h2>
@@ -96,7 +96,7 @@ function GivingFAQs() {
 					</div>
 					<div className='flex flex-col gap-y-4 mb-8'>
 						<div className='mt-2'>
-							<h2 className='font-display font-semibold text-[24px] text-[#070707] uppercase'>
+							<h2 className='font-display font-semibold text-[20px] md:text-[26px] text-[#070707] uppercase'>
 								WHAT DO I DO IF MY TITHE/OFFERING CHECK HAS NOT CLEARED?
 							</h2>
 						</div>
@@ -111,7 +111,7 @@ function GivingFAQs() {
 					</div>
 					<div className='flex flex-col gap-y-4 mb-8'>
 						<div className='mt-2'>
-							<h2 className='font-display font-semibold text-[24px] text-[#070707] uppercase'>
+							<h2 className='font-display font-semibold text-[20px] md:text-[26px] text-[#070707] uppercase'>
 								WHAT IS THE BEST WAY TO GIVE TO A SPECIFIC MISSION TRIP?
 							</h2>
 						</div>
@@ -147,7 +147,7 @@ function GivingFAQs() {
 					</div>
 					<div className='flex flex-col gap-y-4 mb-8'>
 						<div className='mt-2'>
-							<h2 className='font-display font-semibold text-[24px] text-[#070707] uppercase'>
+							<h2 className='font-display font-semibold text-[20px] md:text-[26px] text-[#070707] uppercase'>
 								HOW CAN I GET A COPY OF THE ANNUAL AUDITED FINANCIALS?
 							</h2>
 						</div>
