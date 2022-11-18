@@ -76,11 +76,11 @@ const Grid = styled.div`
 	h2 {
 		font-family: 'neue-haas-grotesk-display';
 		font-weight: 800;
-		font-size: 10vw;
+		font-size: 114px;
 		line-height: auto;
 		span {
 			font-family: 'kepler-std-display', serif;
-			font-size: auto;
+			font-size: 1.1em;
 			font-weight: 400;
 			font-style: italic;
 		}
@@ -116,8 +116,8 @@ export default function FindALocation() {
 
 	return (
 		<>
-			<Grid>
-				<div className='image'>
+			<Grid className='mt-[100px]'>
+				<div className='image '>
 					<Image
 						src={GroupImage}
 						alt='find-a-location'

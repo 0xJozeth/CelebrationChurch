@@ -166,7 +166,7 @@ function Navbar(props) {
 			className={
 				nav
 					? 'fixed right-2 flex justify-between items-center h-14 mt-2 md:h-24 mx-auto my-1 p-4 xl:max-w-[1440px] z-[1004]'
-					: 'flex justify-between items-center h-14 mt-2 md:h-24 mx-auto p-4 my-4 xl:max-w-[1440px]'
+					: 'flex justify-between items-center h-14 mt-2 max-w-[1000px] md:h-24 mx-auto p-4 my-4 xl:max-w-[1440px]'
 			}
 		>
 			{/* Logo */}
@@ -210,7 +210,7 @@ function Navbar(props) {
 
 			<ul
 				className='hidden md:flex 
-			text-[12px] md:text-[16px] lg:text-[28px] 
+			text-[12px] md:text-[16px] lg:text-[16px] 
 			justify-center items-center font-display '
 			>
 				<li className='p-2 font-bold'>

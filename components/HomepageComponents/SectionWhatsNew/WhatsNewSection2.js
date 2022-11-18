@@ -130,7 +130,7 @@ const WhatsNewSection = () => {
 	}
 	return (
 		<>
-			<Grid>
+			<Grid className='mb-[125px]'>
 				<div className='heading'>
 					<h2 className='maskEffect'>
 						WHATS &nbsp;

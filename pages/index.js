@@ -20,6 +20,7 @@ import WeHaveAGrace from '/components/HomepageComponents/SectionWeHaveAGrace/WeH
 
 // TAILWIND STUFF
 import HeroTW from '/components/HomepageComponents/HeroComponent/Hero-tw.jsx';
+import HomeDesktop from './HomeDesktop';
 
 const GridIndex = styled.div`
 	display: grid;
@@ -38,20 +39,13 @@ const GridIndex = styled.div`
 const Home = () => {
 	return (
 		<>
-			<Head>
-				<title>
-					Celebration Church | Jacksonville, FL Church | Pastor Tim Timberlake
-					&amp; Jen Timberlake
-				</title>
-				<meta name='viewport' content='width=device-width, initial-scale=1' />
-			</Head>
-
+			{' '}
 			<main>
 				<div className='block md:hidden'>
 					<HeroTW />
 				</div>
 				<div className='hidden md:block'>
-					<GridIndex>
+					{/* <GridIndex>
 						<Hero />
 						<FindALocation />
 						<WeHaveAGrace />
@@ -59,7 +53,18 @@ const Home = () => {
 						<MeetPastors />
 						<FollowJesusSection />
 						<WhatsNewSection />
-					</GridIndex>
+					</GridIndex> */}
+					<HomeDesktop />
+					<div className='flex justify-center w-[100vw]'>
+						<div className='flex flex-col w-full max-w-[1000px] gap-y-16 items-center'>
+							<FindALocation />
+							<WeHaveAGrace />
+							<TheresAPlace />
+							{/* <MeetPastors /> */}
+							<FollowJesusSection />
+							<WhatsNewSection />
+						</div>
+					</div>
 				</div>
 			</main>
 			{/* <FindALocation /> */}

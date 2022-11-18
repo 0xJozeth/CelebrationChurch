@@ -3,7 +3,6 @@ import { Container } from 'next/app';
 import Layout from '/components/Layout/layout.js';
 import '../styles/globals.css';
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion';
-
 import '@fortawesome/fontawesome-svg-core/styles.css';
 // config.autoAddCss = false;
 
@@ -34,6 +33,16 @@ function App({ Component, pageProps, router }) {
 						},
 					}}
 				>
+					<Head>
+						<title>
+							Celebration Church | Jacksonville, FL Church | Pastor Tim
+							Timberlake&nbsp;&amp;&nbsp;Jen Timberlake
+						</title>
+						<meta
+							name='viewport'
+							content='width=device-width, initial-scale=1 maximum-scale=1'
+						/>
+					</Head>
 					<Component {...pageProps} />
 				</motion.div>
 			</Layout>
