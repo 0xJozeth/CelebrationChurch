@@ -12,6 +12,9 @@ import { linkText, vimeoHeroVideo } from './heroData';
 
 import WeHaveAGrace from '../SectionWeHaveAGrace/WeHaveAGrace';
 import ministries from '/public/ministries-homepage@1x.png';
+import TimAndJen from '/public/pastor-tim-and-jen-timberlake@1x.png';
+import longArrow from '/public/arrow-long.svg';
+
 import whatsnew from '/public/home-whatsnew@1x.png';
 
 import { IoPlayCircleOutline } from 'react-icons/io5';
@@ -21,7 +24,8 @@ function HeroTW() {
 		<>
 			<div
 				className='flex flex-col justify-center items-center
-						  max-w-[355px] w-[355px] px-4 mx-auto gap-y-8
+						  max-w-[355px] w-[355px] px-4 mx-auto gap-y-8 overflow-hidden
+
 				md:bg-purple-300 md:max-w-[768px] md:w-[768px]
 				lg:bg-green-300 lg:max-w-[1024px] lg:w-[1024px]
 				xl:bg-red-300 xl:max-w-[1440px] xl:w-[1440px]'
@@ -103,8 +107,9 @@ function HeroTW() {
 						</button>
 					</div>
 				</div>
-				<div className='flex flex-col max-w-[355px] my-8'>
-					<div className='relative flex flex-col '>
+
+				<div className='flex flex-col max-w-[355px] my-8 w-full'>
+					<div className='relative flex flex-col w-full '>
 						<div className='absolute top-0 left-0 right-0 flex font-bold font-display text-[44px] justify-end text-[#f8f8f8] mix-blend-overlay z-30'>
 							<h2 className=''>
 								FIND A&nbsp;
@@ -125,7 +130,7 @@ function HeroTW() {
 								NEAR YOU
 							</h2>
 						</div>
-						<div className='flex justify-start items-center mt-16 z-20'>
+						<div className='flex justify-start items-center mt-16 z-20 bg-red-400 w-full'>
 							<div className='w-[268px] h-auto'>
 								<Image src={group} alt='' />
 							</div>
@@ -150,13 +155,13 @@ function HeroTW() {
 				<div className='max-w-[355px]'>
 					<WeHaveAGrace />
 				</div>
-				<div className='relative flex flex-col max-w-[355px] h-[300px]'>
+				<div className='relative flex flex-col justify-between max-w-[355px] h-[350px] bg-red-400'>
 					<div className='flex flex-col'>
 						<div className='items-center z-10'>
 							<Image src={ministries} alt='' />
 						</div>
 						<div className='flex justify-center'>
-							<div className='absolute top-[125px] mix-blend-overlay text-[#f8f8f8] max-w-min justify-center z-30'>
+							<div className='absolute top-[150px] mix-blend-overlay text-[#f8f8f8] max-w-min justify-center z-30'>
 								<h1 className='font-display font-bold text-[44px]'>
 									THERES
 									<br />
@@ -167,7 +172,7 @@ function HeroTW() {
 									</span>
 								</h1>
 							</div>
-							<div className='absolute top-[125px] max-w-min z-0 '>
+							<div className='absolute top-[150px] max-w-min z-0 '>
 								<h1 className='flex flex-col items-center justify-center font-display font-bold text-[44px] '>
 									THERES
 									<br />
@@ -180,8 +185,88 @@ function HeroTW() {
 							</div>
 						</div>
 					</div>
+					<div className='flex w-full justify-around  p-2 mt-4 cursor-pointer z-40 bg-green-500'>
+						<Link href='visit'>
+							<div
+								className='flex gap-x-4
+									text-[18px] md:text-[24px] lg:text-[28px] xl:text-[36px]'
+							>
+								<div className='flex bg-purple-200'>
+									<a className='font-display'>
+										LEARN&nbsp;MORE&nbsp;ABOUT
+										<br />
+										OUR&nbsp;MINISTRIES
+									</a>
+								</div>
+								<div className='flex w-16 items-center bg-blue-900'>
+									<Image src={arrow} alt='' />
+								</div>
+							</div>
+						</Link>
+					</div>
 				</div>
-				<div className='relative flex flex-col max-w-[355px] h-[500px]'>
+
+				<div className='flex flex-col max-w-[355px] my-8'>
+					<div className='relative flex flex-col '>
+						<div className='absolute top-0 left-0 right-0 flex font-bold font-display text-[44px] justify-end text-[#f8f8f8] mix-blend-overlay z-30'>
+							<h2 className=''>
+								MEET&nbsp;OUR
+								<br />
+								<span className='font-kepler italic font-thin text-[1.1em] '>
+									PASTORS
+								</span>
+							</h2>
+						</div>
+						<div className='absolute top-0 left-0 right-0 flex font-bold font-display text-[44px] justify-end z-20'>
+							<h2 className=''>
+								MEET&nbsp;OUR
+								<br />
+								<span className='font-kepler italic font-thin text-[1.1em] '>
+									PASTORS
+								</span>
+							</h2>
+						</div>
+						<div className='flex justify-end items-center mt-16 z-20'>
+							<div className='w-[268px] h-auto'>
+								<Image src={TimAndJen} alt='' />
+							</div>
+						</div>
+						<div className='flex w-full mx-auto pt-8'>
+							<p className=' font-display text-[18px] lg:text-4xl text-[#7C7C7C] px-4 max-w-[355px] lg:max-w-2xl z-10'>
+								<strong>
+									Tim and Jen Timberlake serve as the Senior Pastors of
+									Celebration Church in Jacksonville, Florida.
+								</strong>{' '}
+								<br />
+								<br />
+								Pastors Tim and Jen have a heart for God’s people and equipping
+								them with the tools to transform their lives from the inside
+								out. They feel most alive when they are pouring back into
+								others, and they seek to glorify God through their lives and
+								family.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div className='flex justify-center items-center w-full min-w-full'>
+					<div className='flex min-w-[355px] justify-center items-center my-4 '>
+						<Link href={'follow-jesus'}>
+							<button className='flex w-full justify-between items-center border-2 border-solid border-[#070707] p-4 gap-x-4 mx-[80px]'>
+								<div className='flex w-full'>
+									<a className='font-display text-[20px] md:text-[44px] lg:text-[64px] xl:text-[88px] '>
+										FOLLOW&nbsp;JESUS
+									</a>
+								</div>
+								<div className='flex items-center w-20'>
+									<Image src={longArrow} alt='' />
+								</div>
+							</button>
+						</Link>
+					</div>
+				</div>
+
+				<div className='relative flex flex-col mt-8 max-w-[355px] h-[500px]'>
 					<div className='flex flex-col'>
 						<div className='flex flex-col justify-center items-center'>
 							<div className='absolute top-[-20px] mix-blend-overlay text-[#f8f8f8] max-w-min justify-center z-30'>

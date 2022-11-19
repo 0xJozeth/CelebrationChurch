@@ -55,16 +55,16 @@ const Home = () => {
 						<WhatsNewSection />
 					</GridIndex> */}
 					<HomeDesktop />
-					<div className='flex justify-center w-[100vw]'>
-						<div className='flex flex-col w-full max-w-[1000px] gap-y-16 items-center'>
-							<FindALocation />
-							<WeHaveAGrace />
-							<TheresAPlace />
-							{/* <MeetPastors /> */}
-							<FollowJesusSection />
-							<WhatsNewSection />
-						</div>
-					</div>
+					{/* <div className='flex justify-center w-[100vw]'> */}
+					{/* <div className='flex flex-col w-full max-w-[1536px] gap-y-16 items-center'> */}
+					{/* <FindALocation /> */}
+					{/* <WeHaveAGrace /> */}
+					{/* <TheresAPlace /> */}
+					{/* <MeetPastors /> */}
+					{/* <FollowJesusSection /> */}
+					{/* <WhatsNewSection /> */}
+					{/* </div> */}
+					{/* </div> */}
 				</div>
 			</main>
 			{/* <FindALocation /> */}

@@ -112,7 +112,7 @@ export default function WeHaveAGrace() {
 							FOR &nbsp;
 						</h3>
 						<div
-							className='flex justify-start md:my-5 px-1 md:px-4 w-full 
+							className='flex justify-start md:my-4 px-1 md:px-4 w-full 
 						min-w-[200px]
 						md:max-w-[482px]
 						lg:min-w-[596px] lg:max-w-[635px]
@@ -121,7 +121,7 @@ export default function WeHaveAGrace() {
 						>
 							<Typed
 								className='font-kepler italic uppercase
-								text-[28px] md:text-[58px] lg:text-[98px] xl:text-[144px]
+								text-[28px] md:text-[64px] lg:text-[114x] xl:text-[144px]
 								'
 								strings={[
 									'Gathering.',
