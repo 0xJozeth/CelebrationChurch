@@ -34,27 +34,12 @@ export default function WeHaveAGrace() {
 		<>
 			<div
 				className='flex flex-col items-start
-				mx-auto 
-				p-4
-				md:mt-16
-				w-full
-
-				max-w-[326px]
-				md:min-w-[575px]
-				lg:min-w-[1024px]
-				xl:min-w-[1440px]
-				4k:min-w-[2560px]
-
-				min-h-[200px]
-				md:min-h-[575px]
-				lg:min-h-[780px]
-				xl:min-h-[1024px]
-
-			'
+				mx-auto p-4
+				w-[100vw]'
 			>
 				<div
 					className='flex flex-col
-					justify-start items-start
+					justify-start items-center
 					w-full
 
 				lg:items-center 
@@ -63,44 +48,33 @@ export default function WeHaveAGrace() {
 					<div className='flex'>
 						<h2
 							className='font-display 
-						text-[34px] md:text-[72px] lg:text-[136px] xl:text-[180px]
+						text-[58px] md:text-[96px] lg:text-[136px] xl:text-[180px]
 						font-bold'
 						>
-							WE HAVE A
+							WE&nbsp;HAVE&nbsp;A
 						</h2>
 					</div>
-					<div
-						className='flex mx-auto
-							max-w-[390px]
-							md:max-w-[575px]
-							lg:max-w-[1024px]
-							2xl:max-w-[1536px]
-							min-w-full
-							justify-center'
-					>
+					<div className='flex mx-auto max-w-[390px] md:max-w-[575px] lg:max-w-[1024px] 2xl:max-w-[1536px] min-w-full justify-center'>
 						<div
-							className='
-							text-[72px]
+							className=' 
+							text-[96px]
 							md:text-[170px]
 							lg:text-[306px]
-							xl:text-[344px]
-'
+							xl:text-[344px]'
 						>
 							<Grace>GRACE</Grace>
 						</div>
 					</div>
 					<div
-						className='flex 
-					justify-center items-start 
-					md:relative 
-					lg:min-w-[1024px]
-					xl:min-w-[1440px]
-					'
+						className='flex mx-auto
+					justify-center w-full items-start 
+					md:relative md:h-[600px]
+					lg:min-w-[1024px] xl:min-w-[1440px] bg-red-400'
 					>
 						<h3
 							className='flex font-display 
 							min-h-[96px]
-						text-[24px] md:text-[64px] lg:text-[126px]
+						text-[24px] md:text-[96px] lg:text-[126px]
 						
 						font-bold 
 						my-[2px]
@@ -121,7 +95,7 @@ export default function WeHaveAGrace() {
 						>
 							<Typed
 								className='font-kepler italic uppercase
-								text-[28px] md:text-[64px] lg:text-[114x] xl:text-[144px]
+								text-[28px] md:text-[136px] lg:text-[114x] xl:text-[144px]
 								'
 								strings={[
 									'Gathering.',

@@ -108,9 +108,9 @@ function HeroTW() {
 					</div>
 				</div>
 
-				<div className='flex flex-col max-w-[355px] my-8 w-full'>
+				<div className='flex flex-col max-w-[355px] p-4 w-full'>
 					<div className='relative flex flex-col w-full '>
-						<div className='absolute top-0 left-0 right-0 flex font-bold font-display text-[44px] justify-end text-[#f8f8f8] mix-blend-overlay z-30'>
+						<div className='absolute top-0 left-0 right-0 flex font-bold font-display text-[58px] justify-end text-[#f8f8f8] mix-blend-overlay z-30'>
 							<h2 className=''>
 								FIND A&nbsp;
 								<br />
@@ -120,7 +120,7 @@ function HeroTW() {
 								NEAR YOU
 							</h2>
 						</div>
-						<div className='absolute top-0 left-0 right-0 flex font-bold font-display text-[44px] justify-end z-20'>
+						<div className='absolute top-0 left-0 right-0 flex font-bold font-display text-[58px] justify-end z-20'>
 							<h2 className=''>
 								FIND A&nbsp;
 								<br />
@@ -155,14 +155,14 @@ function HeroTW() {
 				<div className='flex w-full max-w-[355px]'>
 					<WeHaveAGrace />
 				</div>
-				<div className='relative flex flex-col justify-between w-full max-w-[355px] h-[350px] bg-red-400'>
+				<div className='relative flex flex-col justify-between p-4 w-full max-w-[355px] h-[400px] bg-red-400'>
 					<div className='flex flex-col'>
 						<div className='flex justify-center items-center z-10'>
 							<Image src={ministries} alt='' />
 						</div>
 						<div className='flex justify-center'>
 							<div className='absolute top-[150px] mix-blend-overlay text-[#f8f8f8] max-w-min justify-center z-30'>
-								<h1 className='font-display font-bold text-[44px]'>
+								<h1 className='font-display font-bold text-[58px]'>
 									THERES
 									<br />
 									A&nbsp;PLACE
@@ -173,7 +173,7 @@ function HeroTW() {
 								</h1>
 							</div>
 							<div className='absolute top-[150px] max-w-min z-0 '>
-								<h1 className='flex flex-col items-center justify-center font-display font-bold text-[44px] '>
+								<h1 className='flex flex-col items-center justify-center font-display font-bold text-[58px] '>
 									THERES
 									<br />
 									A&nbsp;PLACE
@@ -208,7 +208,7 @@ function HeroTW() {
 
 				<div className='flex flex-col max-w-[355px] my-8'>
 					<div className='relative flex flex-col '>
-						<div className='absolute top-0 left-0 right-0 flex font-bold font-display text-[44px] justify-end text-[#f8f8f8] mix-blend-overlay z-30'>
+						<div className='absolute top-0 left-0 pl-4 flex font-bold font-display text-[58px] justify-end text-[#f8f8f8] mix-blend-overlay z-30'>
 							<h2 className=''>
 								MEET&nbsp;OUR
 								<br />
@@ -217,7 +217,7 @@ function HeroTW() {
 								</span>
 							</h2>
 						</div>
-						<div className='absolute top-0 left-0 right-0 flex font-bold font-display text-[44px] justify-end z-20'>
+						<div className='absolute top-0 left-0 pl-4 flex font-bold font-display text-[58px] justify-end z-20'>
 							<h2 className=''>
 								MEET&nbsp;OUR
 								<br />
@@ -252,13 +252,13 @@ function HeroTW() {
 				<div className='flex justify-center items-center w-full min-w-full'>
 					<div className='flex min-w-[355px] justify-center items-center my-4 '>
 						<Link href={'follow-jesus'}>
-							<button className='flex w-full justify-between items-center border-2 border-solid border-[#070707] p-4 gap-x-4 mx-[80px]'>
-								<div className='flex w-full'>
-									<a className='font-display text-[20px] md:text-[44px] lg:text-[64px] xl:text-[88px] '>
+							<button className='flex w-full items-center border-2 border-solid border-[#070707] gap-x-4 p-4 mx-2'>
+								<div className='flex justify-center w-min'>
+									<a className='font-display text-[20px] md:text-[58px] lg:text-[64px] xl:text-[88px] '>
 										FOLLOW&nbsp;JESUS
 									</a>
 								</div>
-								<div className='flex items-center w-20'>
+								<div className='flex justify-center w-36'>
 									<Image src={longArrow} alt='' />
 								</div>
 							</button>
@@ -270,7 +270,7 @@ function HeroTW() {
 					<div className='flex flex-col'>
 						<div className='flex flex-col justify-center items-center'>
 							<div className='absolute top-[-20px] mix-blend-overlay text-[#f8f8f8] max-w-min justify-center z-30'>
-								<h1 className='font-display font-bold text-[44px]'>
+								<h1 className='font-display font-bold text-[58px]'>
 									WHATS&nbsp;
 									<span className='font-kepler italic text-[1.1em] font-light'>
 										NEW
@@ -278,14 +278,14 @@ function HeroTW() {
 								</h1>
 							</div>
 							<div className='absolute top-[-20px] max-w-min z-0 '>
-								<h1 className='flex items-center justify-center font-display font-bold text-[44px] '>
+								<h1 className='flex items-center justify-center font-display font-bold text-[58px] '>
 									WHATS&nbsp;
 									<span className=' font-kepler italic text-[1.1em] font-light'>
 										NEW
 									</span>
 								</h1>
 							</div>
-							<div className='items-center z-10'>
+							<div className='items-center w-[273px] mt-4 mb-2'>
 								<Image src={whatsnew} alt='' />
 							</div>
 							<div className='flex flex-col my-4 justify-center items-start'>
