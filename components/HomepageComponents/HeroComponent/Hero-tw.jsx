@@ -152,12 +152,12 @@ function HeroTW() {
 						</button>
 					</div>
 				</div>
-				<div className='max-w-[355px]'>
+				<div className='flex w-full max-w-[355px]'>
 					<WeHaveAGrace />
 				</div>
-				<div className='relative flex flex-col justify-between max-w-[355px] h-[350px] bg-red-400'>
+				<div className='relative flex flex-col justify-between w-full max-w-[355px] h-[350px] bg-red-400'>
 					<div className='flex flex-col'>
-						<div className='items-center z-10'>
+						<div className='flex justify-center items-center z-10'>
 							<Image src={ministries} alt='' />
 						</div>
 						<div className='flex justify-center'>
