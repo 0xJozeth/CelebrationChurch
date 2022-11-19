@@ -24,13 +24,13 @@ function HeroTW() {
 		<>
 			<div
 				className='flex flex-col items-center place-items-center
-						  max-w-[355px] w-[355px] mx-auto gap-y-8
+						  w-[100vw] gap-y-8
 
 				bg-purple-300 md:max-w-[768px] md:w-[768px]
 				lg:bg-green-300 lg:max-w-[1024px] lg:w-[1024px]
 				xl:bg-red-300 xl:max-w-[1440px] xl:w-[1440px]'
 			>
-				<div className='flex flex-col relative justify-center items-center'>
+				<div className='flex flex-col relative justify-center items-center max-w-[355px] w-full'>
 					<div className='playButtton absolute flex justify-center items-center top-[180px]  mix-blend-overlay z-40'>
 						<div>
 							<a
@@ -93,7 +93,7 @@ function HeroTW() {
 							online or at a location near you!
 						</p>
 					</div>
-					<div className='block my-4 lg:hidden mx-w-[355px]'>
+					<div className='block my-4 lg:hidden max-w-[355px]'>
 						<button className='flex mx-auto py-4 items-center font-display text-[16px] font-medium cursor-pointer z-10 lg:text-[1.5vw] col-span-2 place-self-center'>
 							WATCH THE LATEST MESSAGE
 							<div className='flex mx-4 h-6 w-14'>
