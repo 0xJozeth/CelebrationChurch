@@ -23,10 +23,10 @@ function HeroTW() {
 	return (
 		<>
 			<div
-				className='flex flex-col justify-center items-center
-						  max-w-[355px] w-[355px] px-4 mx-auto gap-y-8 overflow-hidden
+				className='flex flex-col items-center place-items-center
+						  max-w-[355px] w-[355px] mx-auto gap-y-8
 
-				md:bg-purple-300 md:max-w-[768px] md:w-[768px]
+				bg-purple-300 md:max-w-[768px] md:w-[768px]
 				lg:bg-green-300 lg:max-w-[1024px] lg:w-[1024px]
 				xl:bg-red-300 xl:max-w-[1440px] xl:w-[1440px]'
 			>
@@ -83,7 +83,7 @@ function HeroTW() {
 						</h1>
 					</div>
 				</div>
-				<div className='flex flex-col p-4 bg-[#f8f8f8] mt-[-225px] min-w-[375px] h-full z-30 justify-center items-center'>
+				<div className='flex flex-col p-4 bg-[#f8f8f8] mt-[-225px] h-full z-30 justify-center items-center'>
 					<div className='flex justify-center lg:hidden'>
 						<p className=' font-display text-[18px] lg:text-4xl text-[#7C7C7C] px-4 max-w-[355px] lg:max-w-2xl z-10'>
 							We’re so glad you’re here! At <strong>Celebration Church</strong>,
