@@ -67,28 +67,28 @@ export default function WeHaveAGrace() {
 				</div>
 			</div>
 
-			<div className='md:hidden flex w-[100vw] place-self-center '>
+			<div className='md:hidden flex w-[100vw] place-self-center'>
 				<div className='grid grid-rows-3 w-full'>
 					<div className='flex justify-center items-end p-2'>
 						<h2 className='font-display text-[48px] font-bold'>
 							WE&nbsp;HAVE&nbsp;A
 						</h2>
 					</div>
-					<div className='flex place-self-center '>
+					<div className='flex place-self-center'>
 						<div className='text-[88px] m-0 p-0'>
 							<Grace>GRACE</Grace>
 						</div>
 					</div>
-					<div className='flex '>
+					<div className='flex'>
 						<div className='grid grid-cols-minmax2 gap-1'>
-							<div className='flex justify-end p-2 '>
+							<div className='flex justify-end p-2'>
 								<h3 className='font-display font-bold text-[28px]'>
 									FOR&nbsp;
 								</h3>
 							</div>
 							<div className='flex justify-start p-2'>
 								<Typed
-									className='font-kepler italic uppercase text-[28px] '
+									className='font-kepler italic uppercase text-[28px]'
 									strings={[
 										'Gathering.',
 										'Small Groups.',
