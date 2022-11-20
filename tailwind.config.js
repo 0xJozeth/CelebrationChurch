@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+	mode: 'jit',
 	content: [
 		'./app/**/*.{js,ts,jsx,tsx}',
 		'./pages/**/*.{js,ts,jsx,tsx}',
@@ -30,6 +31,9 @@ module.exports = {
 				body: ['neue-haas-grotesk-display', 'sans-serif'],
 				display: ['neue-haas-grotesk-display', 'sans-serif'],
 				kepler: ['kepler-std-display', 'serif'],
+			},
+			gridTemplateColumns: {
+				minmax2: '80px 200px',
 			},
 		},
 		fontWeight: {

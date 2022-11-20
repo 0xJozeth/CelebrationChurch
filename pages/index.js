@@ -20,7 +20,8 @@ import WeHaveAGrace from '/components/HomepageComponents/SectionWeHaveAGrace/WeH
 
 // TAILWIND STUFF
 import HeroTW from '/components/HomepageComponents/HeroComponent/Hero-tw.jsx';
-import HomeDesktop from './HomeDesktop';
+import HomeDesktop from '../components/HomepageComponents/HeroComponent/HomeDesktop';
+import HomeTablet from '../components/HomepageComponents/HeroComponent/HomeTablet';
 
 const Home = () => {
 	return (
@@ -28,16 +29,10 @@ const Home = () => {
 			<div className='block md:hidden'>
 				<HeroTW />
 			</div>
+			{/* <div className='hidden md:block lg:hidden'>
+				<HomeTablet />
+			</div> */}
 			<div className='hidden md:block'>
-				{/* <GridIndex>
-						<Hero />
-						<FindALocation />
-						<WeHaveAGrace />
-						<TheresAPlace />
-						<MeetPastors />
-						<FollowJesusSection />
-						<WhatsNewSection />
-					</GridIndex> */}
 				<HomeDesktop />
 			</div>
 		</>
