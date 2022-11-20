@@ -69,7 +69,7 @@ export default function WeHaveAGrace() {
 						className='flex mx-auto
 					justify-center w-full items-start 
 					md:relative md:h-[600px]
-					lg:min-w-[1024px] xl:min-w-[1440px] bg-red-400'
+					lg:min-w-[1024px] xl:min-w-[1440px] '
 					>
 						<h3
 							className='flex font-display 

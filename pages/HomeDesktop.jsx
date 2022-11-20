@@ -51,7 +51,7 @@ function HomeDesktop() {
 									</div>
 								</div>
 							</div>
-							<div className='flex flex-col h-[900px] w-[864px] mt-[350px] z-40'>
+							<div className='flex flex-col h-[900px] w-full mt-[350px] z-40 bg-red-400'>
 								<div className='flex justify-center p-16 '>
 									<p className='font-display text-[34px] text-[#7c7c7c]'>
 										We’re so glad you’re here! At Celebration Church, we
@@ -73,16 +73,17 @@ function HomeDesktop() {
 								</div>
 							</div>
 						</div>
-						<div className='absolute z-20 right-0'>
-							<div className=''>
+						<div className='z-20'>
+							<div
+								className='
+								md:w-[536px] md:h-[952px]
+								lg:w-[756px] lg:h-[1343px]'
+							>
 								<iframe
-									className=''
+									className='w-full h-full'
 									src='https://player.vimeo.com/video/744290982?h=26579d8c5a&controls=0&badge=0&autoplay=1&muted=1&loop=1&autopause=0&player_id=0&app_id=58479'
 									frameBorder='0'
-									width={756}
-									height={1343}
 									placeholder={'blur'}
-									priority
 								></iframe>
 							</div>
 						</div>

@@ -26,7 +26,7 @@ function HeroTW() {
 				className='flex flex-col items-center place-items-center
 						  w-[100vw] gap-y-8
 
-				bg-purple-300 md:max-w-[768px] md:w-[768px]
+				md:bg-purple-300 md:max-w-[768px] md:w-[768px]
 				lg:bg-green-300 lg:max-w-[1024px] lg:w-[1024px]
 				xl:bg-red-300 xl:max-w-[1440px] xl:w-[1440px]'
 			>
@@ -130,7 +130,7 @@ function HeroTW() {
 								NEAR YOU
 							</h2>
 						</div>
-						<div className='flex justify-start items-center mt-16 z-20 bg-red-400 w-full'>
+						<div className='flex justify-start items-center mt-16 z-20  w-full'>
 							<div className='w-[268px] h-auto'>
 								<Image src={group} alt='' />
 							</div>
@@ -155,7 +155,7 @@ function HeroTW() {
 				<div className='flex w-full max-w-[355px]'>
 					<WeHaveAGrace />
 				</div>
-				<div className='relative flex flex-col justify-between p-4 w-full max-w-[355px] h-[400px] bg-red-400'>
+				<div className='relative flex flex-col justify-between p-4 w-full max-w-[355px] h-[400px] '>
 					<div className='flex flex-col'>
 						<div className='flex justify-center items-center z-10'>
 							<Image src={ministries} alt='' />
@@ -185,20 +185,20 @@ function HeroTW() {
 							</div>
 						</div>
 					</div>
-					<div className='flex w-full justify-around  p-2 mt-4 cursor-pointer z-40 bg-green-500'>
+					<div className='flex w-full justify-around  p-2 mt-4 cursor-pointer z-40 '>
 						<Link href='visit'>
 							<div
 								className='flex gap-x-4
 									text-[18px] md:text-[24px] lg:text-[28px] xl:text-[36px]'
 							>
-								<div className='flex bg-purple-200'>
+								<div className='flex '>
 									<a className='font-display'>
 										LEARN&nbsp;MORE&nbsp;ABOUT
 										<br />
 										OUR&nbsp;MINISTRIES
 									</a>
 								</div>
-								<div className='flex w-16 items-center bg-blue-900'>
+								<div className='flex w-16 items-center '>
 									<Image src={arrow} alt='' />
 								</div>
 							</div>

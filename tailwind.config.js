@@ -46,5 +46,8 @@ module.exports = {
 			black: 900,
 		},
 	},
-	plugins: [],
+	corePlugins: {
+		aspectRatio: false,
+	},
+	plugins: [require('@tailwindcss/aspect-ratio')],
 };
