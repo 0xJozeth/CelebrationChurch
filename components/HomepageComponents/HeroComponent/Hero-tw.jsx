@@ -85,7 +85,7 @@ function HeroTW() {
 				</div>
 				<div className='flex flex-col p-4 bg-[#f8f8f8] mt-[-225px] h-full z-30 justify-center items-center'>
 					<div className='flex justify-center pt-4'>
-						<p className=' font-display text-[22px] lg:text-4xl text-[#7C7C7C] px-4 max-w-[355px] lg:max-w-2xl z-10'>
+						<p className=' font-display text-[18px] lg:text-4xl text-[#7C7C7C] px-4 max-w-[355px] lg:max-w-2xl z-10'>
 							We’re so glad you’re here!&nbsp;
 							<strong>
 								At Celebration Church, we prioritize Jesus’ mission to spread
@@ -136,28 +136,30 @@ function HeroTW() {
 							</h2>
 						</div>
 						<div className='relative -top-[80px] flex flex-col z-20 w-full  '>
-							<div className='flex justify-center max-w-[268px] h-auto '>
+							<div className='flex justify-center max-w-[226px] h-auto '>
 								<Image src={group} alt='' />
 							</div>
 							<div className='flex my-4 px-4 justify-end'>
-								<button className='flex items-center cursor-pointer z-10'>
-									<p className='font-display text-[16px] font-medium'>
-										COME VISIT US
-									</p>
-									<div className='flex mx-4 h-6 w-14'>
-										<Image
-											src={arrow}
-											// height={22}
-											// width={50}
-											alt='watch-the-latest-message'
-										/>
-									</div>
-								</button>
+								<Link href='visit'>
+									<button className='flex items-center cursor-pointer z-10'>
+										<p className='font-display text-[16px] font-medium'>
+											COME VISIT US
+										</p>
+										<div className='flex mx-4 h-6 w-14'>
+											<Image
+												src={arrow}
+												// height={22}
+												// width={50}
+												alt='watch-the-latest-message'
+											/>
+										</div>
+									</button>
+								</Link>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div className='flex w-full max-w-[355px]'>
+				<div className='relative -top-[25px] flex w-full max-w-[355px]'>
 					<WeHaveAGrace />
 				</div>
 				<div className='relative flex flex-col justify-between p-4 w-full max-w-[355px] h-[400px] '>
@@ -275,7 +277,7 @@ function HeroTW() {
 					<div className='flex flex-col'>
 						<div className='flex flex-col justify-center items-center'>
 							<div className='absolute top-[-20px] mix-blend-overlay text-[#f8f8f8] max-w-min justify-center z-30'>
-								<h1 className='font-display font-bold text-[56px]'>
+								<h1 className='font-display font-bold text-[50px]'>
 									WHATS&nbsp;
 									<span className='font-kepler italic text-[1.1em] font-light'>
 										NEW
@@ -283,7 +285,7 @@ function HeroTW() {
 								</h1>
 							</div>
 							<div className='absolute top-[-20px] max-w-min z-0 '>
-								<h1 className='flex items-center justify-center font-display font-bold text-[56px] '>
+								<h1 className='flex items-center justify-center font-display font-bold text-[50px] '>
 									WHATS&nbsp;
 									<span className=' font-kepler italic text-[1.1em] font-light'>
 										NEW
@@ -295,39 +297,36 @@ function HeroTW() {
 							</div>
 							<div className='flex flex-col my-4 justify-center items-start'>
 								<ul className='flex flex-col justify-center items-start gap-y-4 w-full'>
-									<li className='flex uppercase font-display text-[16px] gap-x-2 items-center'>
-										New Series
-										<div className='flex mx-auto h-6 w-14'>
-											<Image
-												src={arrow}
-												// height={22}
-												// width={50}
-												alt='watch-the-latest-message'
-											/>
-										</div>
-									</li>
-									<li className='flex uppercase font-display text-[16px] gap-x-2 items-center'>
-										Future Conference 2022
-										<div className='flex mx-auto h-6 w-14'>
-											<Image
-												src={arrow}
-												// height={22}
-												// width={50}
-												alt='watch-the-latest-message'
-											/>
-										</div>
-									</li>
-									<li className='flex uppercase font-display text-[16px] gap-x-2 items-center'>
-										Groups
-										<div className='flex mx-auto h-6 w-14'>
-											<Image
-												src={arrow}
-												// height={22}
-												// width={50}
-												alt='watch-the-latest-message'
-											/>
-										</div>
-									</li>
+									<div className=''>
+										<Link href='new-series'>
+											<li className='flex uppercase font-display text-[16px] gap-x-2 items-center'>
+												New Series
+												<div className='flex mx-auto h-6 w-14'>
+													<Image src={arrow} alt='watch-the-latest-message' />
+												</div>
+											</li>
+										</Link>
+									</div>
+									<div className=''>
+										<Link href='future-conference'>
+											<li className='flex uppercase font-display text-[16px] gap-x-2 items-center'>
+												Future Conference 2022
+												<div className='flex mx-auto h-6 w-14'>
+													<Image src={arrow} alt='watch-the-latest-message' />
+												</div>
+											</li>
+										</Link>
+									</div>
+									<div className=''>
+										<Link href='groups'>
+											<li className='flex uppercase font-display text-[16px] gap-x-2 items-center'>
+												Groups
+												<div className='flex mx-auto h-6 w-14'>
+													<Image src={arrow} alt='watch-the-latest-message' />
+												</div>
+											</li>
+										</Link>
+									</div>
 								</ul>
 							</div>
 						</div>

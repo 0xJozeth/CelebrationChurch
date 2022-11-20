@@ -80,7 +80,7 @@ export default function WeHaveAGrace() {
 						</div>
 					</div>
 					<div className='flex'>
-						<div className='grid grid-cols-minmax2 gap-1'>
+						<div className='grid grid-cols-minmax2 gap-0'>
 							<div className='flex justify-end p-2'>
 								<h3 className='font-display font-bold text-[28px]'>
 									FOR&nbsp;
