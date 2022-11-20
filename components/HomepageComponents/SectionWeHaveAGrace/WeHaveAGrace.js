@@ -23,12 +23,6 @@ const Grace = styled.h2`
 	letter-spacing: 1vw;
 `;
 
-const For = styled.div`
-	h3 {
-		font-size: clamp(36px, 18.5vw, 42px);
-	}
-`;
-
 export default function WeHaveAGrace() {
 	return (
 		<>
@@ -76,12 +70,12 @@ export default function WeHaveAGrace() {
 			<div className='md:hidden flex w-[100vw] place-self-center bg-red-900'>
 				<div className='grid grid-rows-3 w-full'>
 					<div className='flex justify-center items-end p-2'>
-						<h2 className='font-display text-[58px] font-bold'>
+						<h2 className='font-display text-[48px] font-bold'>
 							WE&nbsp;HAVE&nbsp;A
 						</h2>
 					</div>
 					<div className='flex place-self-center bg-blue-300'>
-						<div className='text-[96px] m-0 p-0'>
+						<div className='text-[88px] m-0 p-0'>
 							<Grace>GRACE</Grace>
 						</div>
 					</div>

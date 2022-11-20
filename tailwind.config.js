@@ -33,7 +33,7 @@ module.exports = {
 				kepler: ['kepler-std-display', 'serif'],
 			},
 			gridTemplateColumns: {
-				minmax2: '80px 200px',
+				minmax2: '120px 200px',
 			},
 		},
 		fontWeight: {
