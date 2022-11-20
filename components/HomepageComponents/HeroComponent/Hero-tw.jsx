@@ -110,7 +110,7 @@ function HeroTW() {
 
 				<div className='flex flex-col max-w-[355px] p-4 w-full'>
 					<div className='relative flex flex-col w-full '>
-						<div className='absolute top-0 left-0 right-0 flex font-bold font-display text-[58px] justify-end text-[#f8f8f8] mix-blend-overlay z-30'>
+						<div className='absolute top-0 left-0 right-0 flex font-bold font-display text-[48px] justify-end text-[#f8f8f8] mix-blend-overlay z-30'>
 							<h2 className=''>
 								FIND A&nbsp;
 								<br />
@@ -120,7 +120,7 @@ function HeroTW() {
 								NEAR YOU
 							</h2>
 						</div>
-						<div className='absolute top-0 left-0 right-0 flex font-bold font-display text-[58px] justify-end z-20'>
+						<div className='absolute top-0 left-0 right-0 flex font-bold font-display text-[48px] justify-end z-20'>
 							<h2 className=''>
 								FIND A&nbsp;
 								<br />
@@ -162,7 +162,7 @@ function HeroTW() {
 						</div>
 						<div className='flex justify-center'>
 							<div className='absolute top-[150px] mix-blend-overlay text-[#f8f8f8] max-w-min justify-center z-30'>
-								<h1 className='font-display font-bold text-[58px]'>
+								<h1 className='font-display font-bold text-[48px]'>
 									THERES
 									<br />
 									A&nbsp;PLACE
@@ -173,7 +173,7 @@ function HeroTW() {
 								</h1>
 							</div>
 							<div className='absolute top-[150px] max-w-min z-0 '>
-								<h1 className='flex flex-col items-center justify-center font-display font-bold text-[58px] '>
+								<h1 className='flex flex-col items-center justify-center font-display font-bold text-[48px] '>
 									THERES
 									<br />
 									A&nbsp;PLACE
@@ -208,7 +208,7 @@ function HeroTW() {
 
 				<div className='flex flex-col max-w-[355px] my-8'>
 					<div className='relative flex flex-col '>
-						<div className='absolute top-0 left-0 pl-4 flex font-bold font-display text-[58px] justify-end text-[#f8f8f8] mix-blend-overlay z-30'>
+						<div className='absolute top-0 left-0 pl-4 flex font-bold font-display text-[48px] justify-end text-[#f8f8f8] mix-blend-overlay z-30'>
 							<h2 className=''>
 								MEET&nbsp;OUR
 								<br />
@@ -217,7 +217,7 @@ function HeroTW() {
 								</span>
 							</h2>
 						</div>
-						<div className='absolute top-0 left-0 pl-4 flex font-bold font-display text-[58px] justify-end z-20'>
+						<div className='absolute top-0 left-0 pl-4 flex font-bold font-display text-[48px] justify-end z-20'>
 							<h2 className=''>
 								MEET&nbsp;OUR
 								<br />
@@ -252,13 +252,13 @@ function HeroTW() {
 				<div className='flex justify-center items-center w-full min-w-full'>
 					<div className='flex min-w-[355px] justify-center items-center my-4 '>
 						<Link href={'follow-jesus'}>
-							<button className='flex w-full items-center border-2 border-solid border-[#070707] gap-x-4 p-4 mx-2'>
+							<button className='flex w-full items-center border-2 border-solid border-[#070707] gap-x-4 p-4 mx-8'>
 								<div className='flex justify-center w-min'>
-									<a className='font-display text-[20px] md:text-[58px] lg:text-[64px] xl:text-[88px] '>
+									<a className='font-display text-[20px] md:text-[48px] lg:text-[64px] xl:text-[88px] '>
 										FOLLOW&nbsp;JESUS
 									</a>
 								</div>
-								<div className='flex justify-center w-36'>
+								<div className='flex justify-center w-28'>
 									<Image src={longArrow} alt='' />
 								</div>
 							</button>
@@ -270,7 +270,7 @@ function HeroTW() {
 					<div className='flex flex-col'>
 						<div className='flex flex-col justify-center items-center'>
 							<div className='absolute top-[-20px] mix-blend-overlay text-[#f8f8f8] max-w-min justify-center z-30'>
-								<h1 className='font-display font-bold text-[58px]'>
+								<h1 className='font-display font-bold text-[48px]'>
 									WHATS&nbsp;
 									<span className='font-kepler italic text-[1.1em] font-light'>
 										NEW
@@ -278,7 +278,7 @@ function HeroTW() {
 								</h1>
 							</div>
 							<div className='absolute top-[-20px] max-w-min z-0 '>
-								<h1 className='flex items-center justify-center font-display font-bold text-[58px] '>
+								<h1 className='flex items-center justify-center font-display font-bold text-[48px] '>
 									WHATS&nbsp;
 									<span className=' font-kepler italic text-[1.1em] font-light'>
 										NEW
