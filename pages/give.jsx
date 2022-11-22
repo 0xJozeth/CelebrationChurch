@@ -477,7 +477,7 @@ function Give(props) {
 									</p>
 								</div>
 								<div className='invert w-8 '>
-									<Image src={arrow} alt='' />
+									<Image src={arrow} alt='arrow' />
 								</div>
 							</div>
 						</div>
