@@ -2,6 +2,8 @@
 module.exports = {
 	mode: 'jit',
 	content: [
+		'./src/**/*.{html,js,jsx,tsx}',
+		'./node_modules/tw-elements/dist/js/**/*.{html,js,jsx,tsx}',
 		'./app/**/*.{js,ts,jsx,tsx}',
 		'./pages/**/*.{js,ts,jsx,tsx}',
 		'./components/**/*.{js,ts,jsx,tsx}',
@@ -53,5 +55,8 @@ module.exports = {
 	corePlugins: {
 		aspectRatio: false,
 	},
-	plugins: [require('@tailwindcss/aspect-ratio')],
+	plugins: [
+		require('@tailwindcss/aspect-ratio'),
+		require('tw-elements/dist/plugin'),
+	],
 };

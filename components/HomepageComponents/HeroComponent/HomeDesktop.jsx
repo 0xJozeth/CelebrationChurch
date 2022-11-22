@@ -62,8 +62,10 @@ function HomeDesktop() {
 										WATCH&nbsp;THE LATEST&nbsp;MESSAGE
 									</p>
 								</div>
-								<div className='flex w-14 min-w-[56px] items-center'>
-									<Image src={arrow} alt='' />
+								<div className=''>
+									<div className='flex w-14 min-w-[56px] items-center'>
+										<Image src={arrow} alt='' />
+									</div>
 								</div>
 							</div>
 						</div>

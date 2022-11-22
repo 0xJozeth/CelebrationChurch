@@ -22,7 +22,7 @@ import longArrow from '/public/arrow-long.svg';
 
 const Grid = styled.div`
 	display: grid;
-	width: 100%;
+	width: 100vw;
 	grid-template-columns: 1fr;
 
 	grid-template-rows: repeat(8, minmax(auto-fit, 1fr));
