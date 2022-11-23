@@ -55,8 +55,5 @@ module.exports = {
 	corePlugins: {
 		aspectRatio: false,
 	},
-	plugins: [
-		require('@tailwindcss/aspect-ratio'),
-		require('tw-elements/dist/plugin'),
-	],
+	plugins: [require('tw-elements/dist/plugin')],
 };
