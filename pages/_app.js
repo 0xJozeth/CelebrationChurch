@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { Container } from 'next/app';
 import Layout from '/components/Layout/layout.js';
 import '../styles/globals.css';
+import Script from 'next/script';
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 // config.autoAddCss = false;
@@ -10,7 +11,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import '/components/FontAwesome/fontawesome.js';
 
 import '/sass/main.scss';
-// import 'tw-elements';
+import 'tw-elements';
 
 function App({ Component, pageProps, router }) {
 	return (
@@ -43,11 +44,9 @@ function App({ Component, pageProps, router }) {
 							name='viewport'
 							content='width=device-width, initial-scale=1 maximum-scale=1'
 						/>
-						<script
-							async
-							src='/node_modules/tw-elements/dist/js/index.min.js'
-						></script>
+						<Script src='/node_modules/tw-elements/dist/js/index.min.js' />
 					</Head>
+
 					<Component {...pageProps} />
 				</motion.div>
 			</Layout>
