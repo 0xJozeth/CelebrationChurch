@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Script from 'next/script';
 import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -58,6 +59,7 @@ function Give(props) {
 
 	return (
 		<>
+			<Script async src='/node_modules/tw-elements/dist/js/index.min.js' />;
 			<div className='md:hidden flex w-[100vw] p-8 bg-red-200'>
 				<div className='relative flex flex-col items-center w-full mx-auto bg-blue-300'>
 					<div className='flex justify-center w-full bg-green-200 z-30 mix-blend-overlay'>
