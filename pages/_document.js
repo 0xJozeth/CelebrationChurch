@@ -37,7 +37,7 @@ export default class MyDocument extends Document {
 				</Head>
 				<body>
 					<Main />
-					<NextScript />
+					<NextScript src='/node_modules/tw-elements/dist/js/index.min.js' />
 				</body>
 			</Html>
 		);
