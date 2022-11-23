@@ -4,6 +4,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
 
+import collage from '/public/ministries-collage.png';
+import circle from '/public/small-black-circle.svg';
+
 import image1 from '/public/ministries-images/image1.png';
 import image2 from '/public/ministries-images/image2.png';
 import image3 from '/public/ministries-images/image3.png';
@@ -23,8 +26,8 @@ import React from 'react';
 function ministries() {
 	return (
 		<>
-			<div className='flex justify-center w-[100vw]'>
-				<div className='flex flex-col items-center w-full max-w-[325px] p-8 mb-12 gap-y-8'>
+			<div className='flex md:hidden justify-center w-[100vw]'>
+				<div className='flex flex-col items-center w-full max-w-[475px] p-8 mb-12 gap-y-4'>
 					<div className='relative w-full h-[486px] mb-[64px]'>
 						<div className='absolute top-[20px] left-[20px] mix-blend-overlay z-30 '>
 							<h1 className='font-display font-bold text-[#f8f8f8]   text-[44px]'>
@@ -190,6 +193,118 @@ function ministries() {
 								</div>
 								<div className='flex w-14 items-center'>
 									<Image src={arrow} alt='' />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div className='hidden md:flex flex-col items-center w-[100vw]'>
+				<div className='flex flex-col w-full max-w-[1728px] mx-auto'>
+					<div className='flex w-full'>
+						<div className='flex flex-col w-full'>
+							<div className='relative w-full z-20'>
+								<Image src={collage} alt='' />
+							</div>
+							<div className='flex items-center justify-end my-2'>
+								<div className='flex w-[584px] justify-between'>
+									<div className='flex p-2 mx-2'>
+										<p className='font-display font-normal text-[#070707] text-[16px]'>
+											CKIDS
+										</p>
+									</div>
+									<div className='flex mx-2 w-[8px]'>
+										<Image src={circle} alt='' />
+									</div>
+									<div className='flex p-2 mx-2'>
+										<p className='font-display font-normal text-[#070707] text-[16px]'>
+											YOUTH
+										</p>
+									</div>
+									<div className='flex mx-2 w-[8px]'>
+										<Image src={circle} alt='' />
+									</div>
+									<div className='flex p-2 mx-2'>
+										<p className='font-display font-normal text-[#070707] text-[16px]'>
+											YOUNG ADULTS
+										</p>
+									</div>
+									<div className='flex mx-2 w-[8px]'>
+										<Image src={circle} alt='' />
+									</div>
+									<div className='flex p-2 mx-2'>
+										<p className='font-display font-normal text-[#070707] text-[16px]'>
+											WORSHIP
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className='relative flex flex-col top-[0px] -left-[150px] font-display font-bold text-[192px]'>
+							<div className='absolute top-0 left-0 text-[#f8f8f8] mix-blend-overlay z-30'>
+								THERE&#39;S
+								<br />
+								A&nbsp;PLACE
+								<br />
+								<span className='font-kepler italic font-thin text-[1.1em] '>
+									FOR&nbsp;YOU
+								</span>
+							</div>
+							<div className='relative z-0'>
+								THERE&#39;S
+								<br />
+								A&nbsp;PLACE
+								<br />
+								<span className='font-kepler italic font-thin text-[1.1em] '>
+									FOR&nbsp;YOU
+								</span>
+							</div>
+							<div className='flex relative left-[200px] p-8 w-[579px]'>
+								<p className='font-display font-normal text-[30px] text-[#7c7c7c]'>
+									Here at Celebration, our heart is to equip you and your family
+									with a safe space to grow your relationship with Jesus while
+									cultivating the type of community that stewards God’s
+									intention for fellowship with one another. <br />
+									<br /> We believe that true life change happens in real,
+									authentic relationships! At each Celebration location, we have
+									various ministries available for all different age ranges that
+									help create these places for growth and community!
+								</p>
+							</div>
+						</div>
+					</div>
+					<div className='flex w-full mx-auto gap-x-16'>
+						<div className='flex flex-col gap-y-16 my-4'>
+							<div className='flex w-full gap-x-16 container'>
+								<div className='w-full max-w-[812px]'>
+									<Image src={image1} alt='' />
+								</div>
+								<div>
+									<div>CKIDS</div>
+									<div>
+										At Celebration, we believe that children are a heritage from
+										the Lord and should be trained to be “Like arrows in the
+										hand of a warrior…” (Psalms 127:4). Because of that, our
+										cKids services utilize curriculums that will teach your kids
+										the Word of God in a creative, fun, and age-appropriate way.
+										We value safety as a top priority and have crafted engaging
+										environments that will help your child grow in wisdom,
+										stature, and in favor with both God and man. If you are a
+										new parent to Celebration and would like more additional
+										information about the cKids services at your specific
+										location download our app.
+									</div>
+									<div>LINK</div>
+								</div>
+							</div>
+							<div className='flex w-full gap-x-16 container'>
+								<div className='max-w-[812px]'>
+									<Image src={image1} alt='' />
+								</div>
+								<div>
+									<div>Heading</div>
+									<div>BODYPARAGRAPH</div>
+									<div>LINK</div>
 								</div>
 							</div>
 						</div>
