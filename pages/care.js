@@ -60,9 +60,14 @@ function care() {
 					<div className='flex flex-col w-full p-4 items-center'>
 						<div className='flex w-full justify-start gap-x-4'>
 							<div className='flex items-center'>
-								<p className='font-display font-semibold text-[20px]'>
+								<a
+									className='font-display font-semibold text-[20px]'
+									href='https://podio.com/webforms/25046911/1842022'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
 									CONTACT&nbsp;CARE
-								</p>
+								</a>
 							</div>
 							<div className='w-16 '>
 								<Image src={arrow} alt='' />
@@ -70,12 +75,49 @@ function care() {
 						</div>
 						<div className='flex w-full justify-start gap-x-4'>
 							<div className='flex justify-center items-center'>
-								<p className='font-display font-semibold text-[20px]'>
+								<a
+									className='font-display font-semibold text-[20px]'
+									href='https://podio.com/webforms/25046911/1842022'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
 									CARE&nbsp;GUIDE
-								</p>
+								</a>
 							</div>
 							<div className='w-16 '>
 								<Image src={arrow} alt='' />
+							</div>
+						</div>
+					</div>
+					<div className='flex flex-col w-full p-4 items-center'>
+						<div className=''>
+							<Image src={telecare} alt='' />
+						</div>
+						<div className='flex flex-col gap-y-4 mt-4'>
+							<h3 className='font-display text-[20px] font-bold'>TELECARE</h3>
+							<p className='font-display text-[18px] text-[#7c7c7c]'>
+								We partner with Honey Lake Clinic to provide individual and
+								group therapy with licensed Christian therapists for those that
+								are struggling to reclaim their lives and achieve their God
+								given potential. We envision Honey Lake Clinic as a refuge for
+								those in need of Freedom and mental health care. For those that
+								are seeking to walk in wholeness for themselves and their
+								family, register below.
+							</p>
+							<div className='flex items-center justify-start gap-x-4'>
+								<div>
+									<a
+										className='font-display font-semibold text-[20px]'
+										href='https://podio.com/webforms/25046911/1842022'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										INDIVIDUAL THERAPY
+									</a>
+								</div>
+								<div className='w-16'>
+									<Image src={arrow} alt='' />
+								</div>
 							</div>
 						</div>
 					</div>
