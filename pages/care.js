@@ -12,9 +12,9 @@ import CareDesktop from '/pages/care-desktop.jsx';
 function care() {
 	return (
 		<>
-			<div className='md:hidden flex justify-center w-[100vw] bg-green-200'>
-				<div className='flex flex-col items-center w-full gap-y-8 bg-red-200'>
-					<div className='relative w-full bg-blue-200'>
+			<div className='md:hidden flex justify-center w-[100vw]'>
+				<div className='flex flex-col items-center w-full gap-y-4 mb-16'>
+					<div className='relative w-full'>
 						<div className='absolute top-[20px] left-[20px] mix-blend-overlay z-30 '>
 							<h1 className='font-display font-bold text-[#f8f8f8]   text-[44px]'>
 								SUPPORTING
@@ -41,7 +41,7 @@ function care() {
 								</span>
 							</h1>
 						</div>
-						<div className='flex justify-end items-end p-4 mt-16 z-20 bg-purple-300'>
+						<div className='flex justify-end items-end p-4 mt-16 z-20'>
 							<div className='flex w-[187.5px]'>
 								<Image src={stage} alt='' />
 							</div>
@@ -57,7 +57,7 @@ function care() {
 							wholeness.
 						</p>
 					</div>
-					<div className='flex flex-col w-full p-4 items-center'>
+					<div className='flex flex-col w-full p-4 items-center gap-y-4'>
 						<div className='flex w-full justify-start gap-x-4'>
 							<div className='flex items-center'>
 								<a
@@ -90,7 +90,7 @@ function care() {
 						</div>
 					</div>
 					<div className='flex flex-col w-full p-4 items-center'>
-						<div className=''>
+						<div className='w-[351px]'>
 							<Image src={telecare} alt='' />
 						</div>
 						<div className='flex flex-col gap-y-4 mt-4'>
