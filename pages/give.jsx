@@ -10,8 +10,8 @@ import leftnav from '/public/navleft.svg';
 import rightnav from '/public/navleft.svg';
 
 // IMPORT 'YOUR IMPACT' SLIDER CONTENT
-import serve from '/public/yourimpact.png';
-import oneChild from '/public/give-images/GiveSliderImages/OneChild.png';
+import serve from 'public/give-images/GiveSliderImages/serve.png';
+import oneChild from '/public/give-images/GiveSliderImages/oneChild.png';
 import relief from '/public/give-images/GiveSliderImages/DisasterReliefEfforts.png';
 
 import navigation from '/public/navigationbar-demo.svg';
