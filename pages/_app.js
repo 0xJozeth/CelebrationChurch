@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 import { Container } from 'next/app';
 import Layout from '/components/Layout/layout.js';
