@@ -34,7 +34,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-// import 'tw-elements';
+import 'tw-elements';
 
 import GiveDesktop from './give-old';
 
