@@ -52,8 +52,5 @@ module.exports = {
 			black: 900,
 		},
 	},
-	corePlugins: {
-		aspectRatio: false,
-	},
 	plugins: [require('tw-elements/dist/plugin')],
 };
