@@ -44,8 +44,8 @@ function App({ Component, pageProps, router }) {
 							name='viewport'
 							content='width=device-width, initial-scale=1 maximum-scale=1'
 						/>
-						<Script src='/node_modules/tw-elements/dist/js/index.min.js' />
 					</Head>
+					<Script src='/node_modules/tw-elements/dist/js/index.min.js' />
 
 					<Component {...pageProps} />
 				</motion.div>
