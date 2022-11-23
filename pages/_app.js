@@ -11,9 +11,15 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import '/components/FontAwesome/fontawesome.js';
 
 import '/sass/main.scss';
-import 'tw-elements';
 
 function App({ Component, pageProps, router }) {
+	useEffect(() => {
+		const use = async () => {
+			(await import('tw-elements')).default;
+		};
+		use();
+	}, []);
+
 	return (
 		<AnimatePresence>
 			<Layout>
