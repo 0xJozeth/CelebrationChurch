@@ -10,6 +10,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import '/components/FontAwesome/fontawesome.js';
 
 import '/sass/main.scss';
+// import 'tw-elements';
 
 function App({ Component, pageProps, router }) {
 	return (
