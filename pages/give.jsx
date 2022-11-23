@@ -10,9 +10,9 @@ import leftnav from '/public/navleft.svg';
 import rightnav from '/public/navleft.svg';
 
 // IMPORT 'YOUR IMPACT' SLIDER CONTENT
-import serve from 'public/give-images/GiveSliderImages/serve.png';
-import oneChild from '/public/give-images/GiveSliderImages/oneChild.png';
-import relief from '/public/give-images/GiveSliderImages/DisasterReliefEfforts.png';
+import serve from '/public/serve.png';
+import oneChild from '/public/oneChild.png';
+import relief from '/public/DisasterReliefEfforts.png';
 
 import navigation from '/public/navigationbar-demo.svg';
 import legacy from '/public/give-legacy.png';
