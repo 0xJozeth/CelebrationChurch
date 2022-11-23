@@ -34,10 +34,6 @@ export default class MyDocument extends Document {
 			<Html lang='en'>
 				<Head>
 					<link href='https://use.typekit.net/ezq3zbz.css' rel='stylesheet' />
-					<script
-						async
-						src='/node_modules/tw-elements/dist/js/index.min.js'
-					></script>
 				</Head>
 				<body>
 					<Main />
