@@ -14,6 +14,7 @@ import '/components/FontAwesome/fontawesome.js';
 import '/sass/main.scss';
 
 function App({ Component, pageProps, router }) {
+	// NOTE: This useEffect is essential for tw-elements to run properly
 	useEffect(() => {
 		const use = async () => {
 			(await import('tw-elements')).default;
