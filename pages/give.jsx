@@ -61,7 +61,7 @@ function Give(props) {
 	return (
 		<>
 			<div className='md:hidden flex w-[100vw] p-2'>
-				<div className='relative flex flex-col items-center w-full mx-auto bg-purple-300'>
+				<div className='relative flex flex-col items-center w-full mx-auto -mt-[75px]'>
 					<div className='flex relative top-[80px] justify-center w-full  z-30 mix-blend-overlay'>
 						<h1 className='font-display font-bold text-[52px] text-[#f8f8f8]'>
 							WE&nbsp;LOVE&nbsp;
@@ -80,14 +80,14 @@ function Give(props) {
 							</span>
 						</h1>
 					</div>
-					<div className='relative flex flex-col justify-center w-full z-20 bg-green-300'>
+					<div className='relative flex flex-col justify-center w-full z-20'>
 						<div className='flex justify-center w-full'>
 							<Image src={GiveHeroMobile} alt='give-hero' />
 						</div>
 					</div>
 
-					<div className='relative -top-[225px] left-[50px] flex justify-center items-center z-40 border-2 border-solid border-[#f8f8f8] p-2 w-[200px] gap-x-2 bg-red-300'>
-						<div className='flex justify-center items-center p-2 '>
+					<div className='relative -top-[225px] left-[50px] flex justify-center items-center z-40 border-2 border-solid border-[#f8f8f8] p-2 w-[200px] gap-x-2'>
+						<div className='flex justify-center items-center p-2'>
 							<button className='font-display text-[16px] text-[#f8f8f8]'>
 								GIVE NOW
 							</button>
@@ -97,7 +97,7 @@ function Give(props) {
 						</div>
 					</div>
 
-					<div className='relative flex flex-col items-center justify-start w-full mt-[80px]'>
+					<div className='relative flex flex-col items-center justify-start w-full max-w-[375px]'>
 						<div className='font-display font-bold text-[52px] text-center'>
 							WHY&nbsp;WE&nbsp;
 							<br />
@@ -182,7 +182,7 @@ function Give(props) {
 										<h5 className='font-display font-bold text-[#070707] text-[36px] py-4 uppercase'>
 											Orange Park Food Pantry
 										</h5>
-										<p className='font-display font-normal text-[18px] text-[#070707]'>
+										<p className='font-display font-normal text-[18px] max-w-[375px] text-[#070707]'>
 											Our Orange Park location is making a tremendous impact in
 											their local community through their weekly food pantry
 											ministry – which served 95,312 Clay County residents this
@@ -207,7 +207,7 @@ function Give(props) {
 										<h5 className='font-display font-bold text-[#070707] text-[36px] py-4'>
 											OneChild
 										</h5>
-										<p className='font-display font-normal text-[18px] text-[#070707]'>
+										<p className='font-display font-normal text-[18px] max-w-[375px] text-[#070707]'>
 											Your generosity is helping the lives of thousands of
 											children from our Celebration Zimbabwe location! Through
 											partnership with OneChild, our congregation is sponsoring
@@ -232,7 +232,7 @@ function Give(props) {
 										<h5 className='font-display font-bold text-[#070707] text-[36px] py-4'>
 											Disaster Relief Efforts
 										</h5>
-										<p className='font-display font-normal text-[18px] text-[#070707]'>
+										<p className='font-display font-normal text-[18px] max-w-[375px] text-[#070707]'>
 											One of Celebration’s deepest desires is to operate as the
 											hands and feet of Jesus, especially when people are in
 											need the most. We partner with{' '}
@@ -254,22 +254,22 @@ function Give(props) {
 								</div>
 							</div>
 							<button
-								className='carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0'
+								className='carousel-control-prev w-[50px] absolute top-0 bottom-0 left-0 flex items-center justify-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline'
 								type='button'
 								data-bs-target='#carouselExampleCaptions'
 								data-bs-slide='prev'
 							>
-								<div className='flex relative -top-[200px] p-2 w-[100px]'>
+								<div className='flex relative -top-[200px] p-2 max-w-[100px]'>
 									<Image src={leftnav} alt='' />
 								</div>
 							</button>
 							<button
-								className='carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0'
+								className='carousel-control-next w-[50px] absolute top-0 bottom-0 right-0 flex items-center justify-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline '
 								type='button'
 								data-bs-target='#carouselExampleCaptions'
 								data-bs-slide='next'
 							>
-								<div className='flex relative -top-[200px] p-2 w-[100px] rotate-180'>
+								<div className='flex relative -top-[200px] p-2 max-w-[100px] rotate-180'>
 									<Image src={rightnav} alt='' />
 								</div>
 							</button>
@@ -550,24 +550,24 @@ function Give(props) {
 							</div>
 						</div>
 					</div>
-					<div className='relative flex flex-col w-full p-8 bg-green-300'>
+					<div className='relative flex flex-col w-full bg-green-300'>
 						<div className='relative flex flex-col w-full bg-blue-300'>
-							<div className='font-display font-bold text-[52px] text-center w-full'>
-								<h1 className='text-[#f8f8f8] mix-blend-overlay'>
+							<div className='font-display font-bold text-[52px] text-left mix-blend-overlay w-full z-30'>
+								<h1 className='text-[#f8f8f8]'>
 									LEGACY
 									<br />
 									<span className='font-kepler italic text-[1.1em]'>TEAM</span>
 								</h1>
 							</div>
-							<div className='absolute top-0 font-display font-bold text-[52px] text-center w-full'>
+							<div className='absolute top-0 font-display font-bold text-[52px] text-left w-full z-10'>
 								<h1 className=''>
 									LEGACY
 									<br />
 									<span className='font-kepler italic text-[1.1em]'>TEAM</span>
 								</h1>
 							</div>
-							<div className='flex justify w-[310px] h-[189px] bg-red-400'>
-								<div className='flex w-full h-full bg-green-300'>
+							<div className='flex relative -top-[80px] h-[120px] justify-end z-20'>
+								<div className='flex w-[310px] h-[189px] bg-green-300'>
 									<Image className='flex bg-purple-500' src={legacy} alt='' />
 								</div>
 							</div>
