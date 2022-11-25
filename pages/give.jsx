@@ -503,7 +503,7 @@ function Give(props) {
 						>
 							<div className='flex justify-center items-center p-4 gap-x-8 w-full'>
 								<div className='flex flex-col justify-center items-center w-full p-4 bg-red-300'>
-									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-[140px] h-[140px]'>
+									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
 										<FontAwesomeIcon icon={faMobile} className='' />
 									</div>
 									<div className='flex justify-center w-full p-2 my-2'>
@@ -516,7 +516,7 @@ function Give(props) {
 									</div>
 								</div>
 								<div className='flex flex-col justify-center items-center w-full p-4 bg-red-300'>
-									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-[140px] h-[140px]'>
+									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
 										<FontAwesomeIcon icon={faBitcoin} className='' />
 									</div>
 									<div className='flex justify-center w-full p-2 my-2'>
@@ -528,7 +528,7 @@ function Give(props) {
 							</div>
 							<div className='flex justify-center items-center p-4 gap-x-8 w-full'>
 								<div className='flex w-full flex-col justify-center items-center p-4 bg-red-300'>
-									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-[140px] h-[140px]'>
+									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
 										<FontAwesomeIcon icon={faPiggyBank} className='' />
 									</div>
 									<div className='flex justify-center w-full p-2 my-2'>
@@ -538,7 +538,7 @@ function Give(props) {
 									</div>
 								</div>
 								<div className='flex w-full flex-col justify-center items-center p-4 bg-red-300'>
-									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-[140px] h-[140px]'>
+									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
 										<FontAwesomeIcon icon={faMoneyBillTrendUp} className='' />
 									</div>
 									<div className='flex justify-center w-full p-2 my-2'>
@@ -583,7 +583,7 @@ function Give(props) {
 										Drew King.
 									</p>
 								</div>
-								<div className='flex w-full items-center gap-x-4'>
+								<div className='flex w-full items-center gap-x-4 my-4 text-[18px]'>
 									<div className='flex justify-center items-center'>
 										<p className='font-display font-semibold text-[20px]'>
 											CONTACT
@@ -611,7 +611,7 @@ function Give(props) {
 							</h3>
 						</div>
 						<div className='py-4'>
-							<p className='font-display text-[#7C7C7C]'>
+							<p className='font-display  text-[#070707]'>
 								If you have additional questions concerning giving or donations,
 								please call Celebration Church Giving Office at (904) 737-1121
 								or contact us.
