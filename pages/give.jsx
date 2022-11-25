@@ -36,6 +36,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import GiveDesktop from './give-old';
+import WaysToGiveModal from '../components/GiveComponents/WaysToGiveModal';
 
 // import 'tw-elements';
 
@@ -59,10 +60,9 @@ function Give(props) {
 
 	return (
 		<>
-			<Script src='/node_modules/tw-elements/dist/js/index.min.js' />;
-			<div className='md:hidden flex w-[100vw] p-8 '>
-				<div className='relative flex flex-col items-center w-full mx-auto '>
-					<div className='flex justify-center w-full  z-30 mix-blend-overlay'>
+			<div className='md:hidden flex w-[100vw] p-8'>
+				<div className='relative flex flex-col items-center w-full mx-auto bg-purple-300'>
+					<div className='flex relative top-[80px] justify-center w-full  z-30 mix-blend-overlay'>
 						<h1 className='font-display font-bold text-[52px] text-[#f8f8f8]'>
 							WE&nbsp;LOVE&nbsp;
 							<br />
@@ -71,7 +71,7 @@ function Give(props) {
 							</span>
 						</h1>
 					</div>
-					<div className='flex absolute top-0  w-full justify-center z-10'>
+					<div className='flex absolute top-[80px] w-full justify-center z-10'>
 						<h1 className='font-display font-bold text-[52px]'>
 							WE&nbsp;LOVE&nbsp;
 							<br />
@@ -80,11 +80,13 @@ function Give(props) {
 							</span>
 						</h1>
 					</div>
-					<div className='relative flex justify-center -top-[80px] w-full z-20'>
-						<Image src={GiveHeroMobile} alt='give-hero' />
+					<div className='relative flex flex-col justify-center w-full z-20 bg-green-300'>
+						<div className='flex justify-center w-full'>
+							<Image src={GiveHeroMobile} alt='give-hero' />
+						</div>
 					</div>
 
-					<div className='absolute flex justify-center top-[180px] right-[20px] items-center z-40 border-2 border-solid border-[#f8f8f8] p-2 w-auto gap-x-2'>
+					<div className='relative -top-[225px] left-[50px] flex justify-center items-center z-40 border-2 border-solid border-[#f8f8f8] p-2 w-[200px] gap-x-2 bg-red-300'>
 						<div className='flex justify-center items-center p-2 '>
 							<button className='font-display text-[16px] text-[#f8f8f8]'>
 								GIVE NOW
@@ -95,7 +97,7 @@ function Give(props) {
 						</div>
 					</div>
 
-					<div className='relative flex flex-col items-center justify-start w-full'>
+					<div className='relative flex flex-col items-center justify-start w-full mt-[80px]'>
 						<div className='font-display font-bold text-[52px] text-center'>
 							WHY&nbsp;WE&nbsp;
 							<br />
@@ -118,7 +120,7 @@ function Give(props) {
 								</p>
 							</div>
 						</div>
-						<div className='flex flex-col items-center justify-center h-20 w-full my-2'>
+						<div className='flex flex-col items-center justify-center h-20 w-full my-2 mb-[60px]'>
 							<div className='flex flex-col items-center gap-y-4'>
 								<div className='text-[19px]'>
 									<button className='font-display uppercase'>Learn More</button>
@@ -138,7 +140,7 @@ function Give(props) {
 						</div>
 						<div
 							id='carouselExampleCaptions'
-							className='carousel slide relative h-[775px] py-8'
+							className='carousel slide relative h-[775px] py-8 carousel-dark'
 							data-bs-ride='carousel'
 						>
 							<div className='carousel-indicators absolute right-0 bottom-5 left-0 flex justify-center p-0 mb-4'>
@@ -233,12 +235,20 @@ function Give(props) {
 										<p className='font-display font-normal text-[18px] text-[#070707]'>
 											One of Celebration’s deepest desires is to operate as the
 											hands and feet of Jesus, especially when people are in
-											need the most. We partner with Convoy of Hope [hyper link
-											“Convoy of Hope” to https://convoyofhope.org/] on numerous
-											occasions throughout the year to help meet tangible needs
-											of those struck with natural disasters, war, or various
-											other tragedies. To join the impact that these amazing
-											partners are making daily, you can give here.
+											need the most. We partner with{' '}
+											<a
+												className='font-semibold cursor-pointer'
+												href='https://convoyofhope.org'
+												target='blank'
+												rel='noopener noreferrer'
+											>
+												Convoy of Hope{' '}
+											</a>
+											on numerous occasions throughout the year to help meet
+											tangible needs of those struck with natural disasters,
+											war, or various other tragedies. To join the impact that
+											these amazing partners are making daily, you can give
+											here.
 										</p>
 									</div>
 								</div>
@@ -267,7 +277,7 @@ function Give(props) {
 					</div>
 
 					<div className='relative flex flex-col items-center justify-start w-full'>
-						<div className='font-display font-bold text-[52px] text-center'>
+						<div className='font-display font-bold text-[52px] text-center w-full'>
 							ONLINE <br />
 							<span className='font-kepler italic text-[1.1em]'>GIVING</span>
 						</div>
@@ -479,15 +489,20 @@ function Give(props) {
 					</div>
 					<div className='relative flex flex-col items-center justify-start w-full gap-y-8'>
 						<div className='font-display font-bold text-[52px] text-center'>
-							OTHER&nbsp;WAYS
+							OTHER WAYS
 							<br />
 							<span className='font-kepler italic text-[1.1em]'>
 								TO&nbsp;GIVE
 							</span>
 						</div>
-						<div className='flex flex-col justify-center items-center gap-y-8'>
+						<div
+							className='flex flex-col justify-center items-center w-full gap-y-8'
+							type='button'
+							data-bs-toggle='modal'
+							data-bs-target='#exampleModal'
+						>
 							<div className='flex justify-center items-center p-4 gap-x-8 w-full'>
-								<div className='flex flex-col justify-center'>
+								<div className='flex flex-col justify-center items-center w-full p-4 bg-red-300'>
 									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-[140px] h-[140px]'>
 										<FontAwesomeIcon icon={faMobile} className='' />
 									</div>
@@ -496,8 +511,11 @@ function Give(props) {
 											APP
 										</p>
 									</div>
+									<div className='fixed top-0 left-0'>
+										<WaysToGiveModal />
+									</div>
 								</div>
-								<div className='flex flex-col justify-center'>
+								<div className='flex flex-col justify-center items-center w-full p-4 bg-red-300'>
 									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-[140px] h-[140px]'>
 										<FontAwesomeIcon icon={faBitcoin} className='' />
 									</div>
@@ -509,7 +527,7 @@ function Give(props) {
 								</div>
 							</div>
 							<div className='flex justify-center items-center p-4 gap-x-8 w-full'>
-								<div className='flex flex-col justify-center'>
+								<div className='flex w-full flex-col justify-center items-center p-4 bg-red-300'>
 									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-[140px] h-[140px]'>
 										<FontAwesomeIcon icon={faPiggyBank} className='' />
 									</div>
@@ -519,7 +537,7 @@ function Give(props) {
 										</p>
 									</div>
 								</div>
-								<div className='flex flex-col justify-center'>
+								<div className='flex w-full flex-col justify-center items-center p-4 bg-red-300'>
 									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-[50%] text-[70px] text-[#f8f8f8] w-[140px] h-[140px]'>
 										<FontAwesomeIcon icon={faMoneyBillTrendUp} className='' />
 									</div>
@@ -532,24 +550,49 @@ function Give(props) {
 							</div>
 						</div>
 					</div>
-					<div className='relative flex flex-col w-full p-8'>
-						<div className='relative  flex flex-col'>
-							<div className='font-display font-bold text-[52px] text-center'>
+					<div className='relative flex flex-col w-full p-8 bg-green-300'>
+						<div className='relative flex flex-col w-full bg-blue-300'>
+							<div className='font-display font-bold text-[52px] text-center w-full'>
 								<h1 className='text-[#f8f8f8] mix-blend-overlay'>
 									LEGACY
 									<br />
 									<span className='font-kepler italic text-[1.1em]'>TEAM</span>
 								</h1>
 							</div>
-							<div className='font-display font-bold text-[52px] text-center'>
+							<div className='absolute top-0 font-display font-bold text-[52px] text-center w-full'>
 								<h1 className=''>
 									LEGACY
 									<br />
 									<span className='font-kepler italic text-[1.1em]'>TEAM</span>
 								</h1>
 							</div>
-							<div>
-								<Image src={legacy} alt='' />
+							<div className='flex justify w-[310px] h-[189px] bg-red-400'>
+								<div className='flex w-full h-full bg-green-300'>
+									<Image className='flex bg-purple-500' src={legacy} alt='' />
+								</div>
+							</div>
+							<div className='flex flex-col  p-4'>
+								<div className='flex justify-center items-center'>
+									<p className='font-display font-normal text-[18px] text-[#070707]'>
+										Our Legacy Team gives influence, resources, and time as a
+										local church ministry expression to advance the cause of
+										Christ. Each member prayerfully commits to give over and
+										above their tithe to impact eternity for generations to
+										come—to leave a legacy. If you have any questions or would
+										like to be a part of the Legacy Team, please email Pastor
+										Drew King.
+									</p>
+								</div>
+								<div className='flex w-full items-center gap-x-4'>
+									<div className='flex justify-center items-center'>
+										<p className='font-display font-semibold text-[20px]'>
+											CONTACT
+										</p>
+									</div>
+									<div className='flex justify-center items-center invert w-12 '>
+										<Image src={arrow} alt='arrow' />
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -583,16 +626,6 @@ function Give(props) {
 								</div>
 								<div className='invert w-8 '>
 									<Image src={arrow} alt='' />
-								</div>
-							</div>
-							<div className='flex w-full justify-between'>
-								<div className='flex w-full justify-center items-center'>
-									<p className='font-display font-semibold text-[20px]'>
-										CONTACT
-									</p>
-								</div>
-								<div className='invert w-8 '>
-									<Image src={arrow} alt='arrow' />
 								</div>
 							</div>
 						</div>
