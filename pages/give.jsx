@@ -60,7 +60,7 @@ function Give(props) {
 
 	return (
 		<>
-			<div className='md:hidden flex w-[100vw] p-8'>
+			<div className='md:hidden flex w-[100vw] p-2'>
 				<div className='relative flex flex-col items-center w-full mx-auto bg-purple-300'>
 					<div className='flex relative top-[80px] justify-center w-full  z-30 mix-blend-overlay'>
 						<h1 className='font-display font-bold text-[52px] text-[#f8f8f8]'>
