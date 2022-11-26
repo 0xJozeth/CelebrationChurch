@@ -200,7 +200,7 @@ function ministries() {
 				</div>
 			</div>
 			<div className='hidden md:flex flex-col items-center w-[100vw]'>
-				<div className='flex flex-col w-full max-w-[1728px] mx-auto'>
+				<div className='flex flex-col items-center w-full max-w-[1728px] mx-auto'>
 					<div className='flex w-full'>
 						<div className='flex flex-col w-full'>
 							<div className='relative w-full z-20'>
@@ -273,40 +273,289 @@ function ministries() {
 							</div>
 						</div>
 					</div>
-					<div className='flex w-full mx-auto gap-x-16'>
-						<div className='flex flex-col gap-y-16 my-4'>
-							<div className='flex w-full gap-x-16 container'>
-								<div className='w-full max-w-[812px]'>
-									<Image src={image1} alt='' />
+					<div className='flex gap-x-16 w-full py-[100px]'>
+						<div className='flex flex-col w-full gap-y-16 my-4 '>
+							<div className='flex w-full gap-8'>
+								<div className='flex'>
+									<Image src={ckids} alt='' objectFit='cover' />
 								</div>
-								<div>
-									<div>CKIDS</div>
-									<div>
-										At Celebration, we believe that children are a heritage from
-										the Lord and should be trained to be “Like arrows in the
-										hand of a warrior…” (Psalms 127:4). Because of that, our
-										cKids services utilize curriculums that will teach your kids
-										the Word of God in a creative, fun, and age-appropriate way.
-										We value safety as a top priority and have crafted engaging
-										environments that will help your child grow in wisdom,
-										stature, and in favor with both God and man. If you are a
-										new parent to Celebration and would like more additional
-										information about the cKids services at your specific
-										location download our app.
+								<div className='flex flex-col gap-y-8 px-16 max-w-[905px]'>
+									<div className='font-display font-bold text-[48px]'>
+										CKIDS
 									</div>
-									<div>LINK</div>
+									<div className='flex justify-center '>
+										<p className='font-display text-[24px] text-[#7c7c7c]'>
+											At Celebration, we believe that children are a heritage
+											from the Lord and should be trained to be “Like arrows in
+											the hand of a warrior…” (Psalms 127:4). Because of that,
+											our cKids services utilize curriculums that will teach
+											your kids the Word of God in a creative, fun, and
+											age-appropriate way. <br />
+											<br />
+											We value safety as a top priority and have crafted
+											engaging environments that will help your child grow in
+											wisdom, stature, and in favor with both God and man.
+											<br />
+											<br /> If you are a new parent to Celebration and would
+											like more additional information about the cKids services
+											at your specific location{' '}
+											<a href='' className='font-semibold text-[#7c7c7c]'>
+												download our app.
+											</a>
+										</p>
+									</div>
+									<div>
+										<Link href=''>
+											<div className='flex justify-start items-center gap-x-4'>
+												<div>
+													<a className='cursor-pointer font-display font-normal text-[26px] uppercase'>
+														Find ckids near you
+													</a>
+												</div>
+												<div className='w-16'>
+													<Image src={arrow} alt='' />
+												</div>
+											</div>
+										</Link>
+									</div>
 								</div>
 							</div>
-							<div className='flex w-full gap-x-16 container'>
-								<div className='max-w-[812px]'>
-									<Image src={image1} alt='' />
+							<div className='flex w-full gap-8'>
+								<div className='flex'>
+									<Image src={celebrationYouth} alt='' objectFit='cover' />
 								</div>
-								<div>
-									<div>Heading</div>
-									<div>BODYPARAGRAPH</div>
-									<div>LINK</div>
+								<div className='flex flex-col gap-y-8 px-16 max-w-[905px]'>
+									<div className='font-display font-bold text-[48px]'>
+										CELEBRATION YOUTH
+									</div>
+									<div className='flex justify-center '>
+										<p className='font-display text-[24px] text-[#7c7c7c]'>
+											Celebration Youth is our Middle and High School ministry
+											for students! With weekly gatherings and events happening
+											throughout the year, Celebration Youth’s heart is to
+											steward and sow into the next generation through
+											relationship and community.
+											<br />
+											<br /> For more specific information on the events
+											happening at your local location,
+											<a href='' className='font-semibold text-[#7c7c7c]'>
+												visit the Celebration App.
+											</a>
+										</p>
+									</div>
+									<div>
+										<Link href=''>
+											<div className='flex justify-start items-center gap-x-4'>
+												<div>
+													<a className='cursor-pointer font-display font-normal text-[26px] uppercase'>
+														GET CONNECTED{' '}
+													</a>
+												</div>
+												<div className='w-16'>
+													<Image src={arrow} alt='' />
+												</div>
+											</div>
+										</Link>
+									</div>
 								</div>
 							</div>
+							<div className='flex w-full gap-8'>
+								<div className='flex'>
+									<Image src={youngAdults} alt='' objectFit='cover' />
+								</div>
+								<div className='flex flex-col gap-y-8 px-16 max-w-[905px]'>
+									<div className='font-display font-bold text-[48px]'>
+										CELEBRATION YOUNG ADULTS
+									</div>
+									<div className='flex justify-center '>
+										<p className='font-display text-[24px] text-[#7c7c7c]'>
+											Celebration Young Adults is designed to serve the Young
+											Adults community of Celebration Church through worship
+											gatherings, small communities, and other fellowship
+											opportunities. At CYA, we believe that we can go further
+											together!
+											<br />
+											<br /> If you’d like to get more information on events,
+											small groups, and more for your Celebration location,{' '}
+											<a href='' className='font-semibold text-[#7c7c7c]'>
+												download our other Celebration App.
+											</a>
+										</p>
+									</div>
+									<div>
+										<Link href=''>
+											<div className='flex justify-start items-center gap-x-4'>
+												<div>
+													<a className='cursor-pointer font-display font-normal text-[26px] uppercase'>
+														GET CONNECTED{' '}
+													</a>
+												</div>
+												<div className='w-16'>
+													<Image src={arrow} alt='' />
+												</div>
+											</div>
+										</Link>
+									</div>
+								</div>
+							</div>
+							<div className='flex w-full gap-8'>
+								<div className='flex'>
+									<Image src={celebrationWorship} alt='' objectFit='cover' />
+								</div>
+								<div className='flex flex-col gap-y-8 px-16 max-w-[905px]'>
+									<div className='font-display font-bold text-[48px]'>
+										CELEBRATION WORSHIP{' '}
+									</div>
+									<div className='flex justify-center '>
+										<p className='font-display text-[24px] text-[#7c7c7c]'>
+											Celebration Worship is the worship expression of
+											Celebration Church. It’s made up of a dedicated team of
+											worshippers whose heart and desire is to usher in the
+											presence of God so that people can experience a touch from
+											our Heavenly Father. At Celebration, we believe that as we
+											come together as a people, we get to experience God’s
+											sacred space, and worship plays a pivotal part in this.
+										</p>
+									</div>
+									<div>
+										<Link href=''>
+											<div className='flex justify-start items-center gap-x-4'>
+												<div>
+													<a className='cursor-pointer font-display font-normal text-[26px] uppercase'>
+														GET CONNECTED{' '}
+													</a>
+												</div>
+												<div className='w-16'>
+													<Image src={arrow} alt='' />
+												</div>
+											</div>
+										</Link>
+									</div>
+								</div>
+							</div>
+							{/* <div className='flex w-full gap-x-16 container '>
+								<div className='flex w-[1050px]'>
+									<Image src={celebrationYouth} alt='' />
+								</div>
+								<div className='flex flex-col gap-y-8'>
+									<div className='font-display font-bold text-[48px]'>
+										CELEBRATION YOUTH
+									</div>
+									<div className='flex w-[905px]'>
+										<p className='font-display text-[24px] text-[#7c7c7c]'>
+											Celebration Youth is our Middle and High School ministry
+											for students! With weekly gatherings and events happening
+											throughout the year, Celebration Youth’s heart is to
+											steward and sow into the next generation through
+											relationship and community.
+											<br />
+											<br /> For more specific information on the events
+											happening at your local location,
+											<a href='' className='font-semibold text-[#7c7c7c]'>
+												visit the Celebration App.
+											</a>
+										</p>
+									</div>
+									<div>
+										<Link href=''>
+											<div className='flex justify-start items-center gap-x-4'>
+												<div>
+													<a className='font-display font-normal text-[26px] uppercase'>
+														GET CONNECTED{' '}
+													</a>
+												</div>
+												<div className='w-16'>
+													<Image src={arrow} alt='' />
+												</div>
+											</div>
+										</Link>
+									</div>
+								</div>
+							</div>
+							<div className='flex w-full gap-x-16 container '>
+								<div className='flex w-[1050px]'>
+									<Image src={youngAdults} alt='' />
+								</div>
+								<div className='flex flex-col gap-y-8'>
+									<div className='font-display font-bold text-[48px]'>
+										CELEBRATION YOUNG ADULTS
+									</div>
+									<div className='flex w-[905px]'>
+										<p className='font-display text-[24px] text-[#7c7c7c]'>
+											Celebration Young Adults is designed to serve the Young
+											Adults community of Celebration Church through worship
+											gatherings, small communities, and other fellowship
+											opportunities. At CYA, we believe that we can go further
+											together!
+											<br />
+											<br /> If you’d like to get more information on events,
+											small groups, and more for your Celebration location,{' '}
+											<a href='' className='font-semibold text-[#7c7c7c]'>
+												download our other Celebration App.
+											</a>
+										</p>
+									</div>
+									<div>
+										<Link href=''>
+											<div className='flex justify-start items-center gap-x-4'>
+												<div>
+													<a className='font-display font-normal text-[26px] uppercase'>
+														GET CONNECTED
+													</a>
+												</div>
+												<div className='w-16'>
+													<Image src={arrow} alt='' />
+												</div>
+											</div>
+										</Link>
+									</div>
+								</div>
+							</div>
+							<div className='flex w-full gap-x-16 container '>
+								<div className='flex w-[1050px]'>
+									<Image src={celebrationWorship} alt='' />
+								</div>
+								<div className='flex flex-col gap-y-8'>
+									<div className='font-display font-bold text-[48px]'>
+										CELEBRATION WORSHIP
+									</div>
+									<div className='flex w-[905px]'>
+										<p className='font-display text-[24px] text-[#7c7c7c]'>
+											At Celebration, we believe that children are a heritage
+											from the Lord and should be trained to be “Like arrows in
+											the hand of a warrior…” (Psalms 127:4). Because of that,
+											our cKids services utilize curriculums that will teach
+											your kids the Word of God in a creative, fun, and
+											age-appropriate way. <br />
+											<br />
+											We value safety as a top priority and have crafted
+											engaging environments that will help your child grow in
+											wisdom, stature, and in favor with both God and man.
+											<br />
+											<br /> If you are a new parent to Celebration and would
+											like more additional information about the cKids services
+											at your specific location{' '}
+											<a href='' className='font-semibold text-[#7c7c7c]'>
+												download our app.
+											</a>
+										</p>
+									</div>
+									<div>
+										<Link href=''>
+											<div className='flex justify-start items-center gap-x-4'>
+												<div>
+													<a className='font-display font-normal text-[26px] uppercase'>
+														GET CONNECTED
+													</a>
+												</div>
+												<div className='w-16'>
+													<Image src={arrow} alt='' />
+												</div>
+											</div>
+										</Link>
+									</div>
+								</div>
+							</div> */}
 						</div>
 					</div>
 				</div>

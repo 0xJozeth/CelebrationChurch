@@ -17,12 +17,12 @@ function about() {
 			<div
 				className='flex flex-col 
                 mx-auto items-center justify-center w-[100vw]
-            md:max-w-[575px] lg:max-w-[1024px] xl:max-w-[1440px]gap-y-4 
+            md:max-w-[575px] lg:max-w-[1024px] xl:max-w-[1440px] gap-y-4 
 				lg:gap-y-20'
 			>
 				<div
 					className='relative 
-                w-[316px] h-[176px]
+                w-[350px] h-[280px]
                 md:w-[575px] md:h-[323px]
                 lg:w-[1024px] lg:h-[575px]
                 xl:w-[1440px] xl:h-[806px]
@@ -33,7 +33,7 @@ function about() {
 				>
 					<iframe
 						className='absolute top-0 left-0 right-0 bottom-0
-                        w-[326px] h-[176px]
+                        w-[350px] h-[280px]
                         md:w-[575px] md:h-[323px]
                         lg:w-[1024px] lg:h-[575px]
                         xl:w-[1440px] xl:h-[810px]
@@ -47,11 +47,11 @@ function about() {
 						placeholder='blur'
 					></iframe>
 				</div>
-				<div className='flex flex-col md:flex-row mx-auto my-12 items-center'>
-					<h1 className='font-display text-[54px] md:text-[110px] lg:text-[196px] font-bold'>
+				<div className='flex flex-col md:flex-row mx-auto mt-6 items-center'>
+					<h1 className='font-display text-[54px] md:text-[110px] lg:text-[192px] font-bold'>
 						MEET OUR
 						<br />
-						<span className='font-kepler italic text-[62px] md:text-[126px] lg:text-[252px] font-semibold'>
+						<span className='font-kepler italic text-[1.1em] font-semibold'>
 							PASTORS
 						</span>
 					</h1>
@@ -61,7 +61,8 @@ function about() {
                 max-w-[375px] 
                 md:max-w-[575px] lg:max-w-[1024px] 
                 font-display text-[#7C7C7C] 
-                text-[18px] md:text-[24px] lg:text-[42px]
+                text-[18px] md:text-[24px] lg:text-[34px]
+				p-8
                 '
 				>
 					<div className='flex flex-col px-8 mx-auto gap-y-4'>
@@ -90,7 +91,7 @@ function about() {
 				<div className='flex mx-auto'>
 					<WeHaveAGrace />
 				</div>
-				<div className='relative flex flex-col items-start min-w-[326px] min-h-[396px] px-4'>
+				<div className='relative flex lg:hidden flex-col items-start min-w-[326px] min-h-[396px] px-4'>
 					<div className='flex absolute top-0 right-0 z-[3] mix-blend-overlay'>
 						<h2 className='font-display font-bold text-[48px] text-[#f8f8f8]'>
 							WHAT WE&nbsp;
@@ -113,8 +114,83 @@ function about() {
 						</h2>
 					</div>
 				</div>
+				<div className='hidden lg:flex relative w-full h-[1200px] '>
+					<div className='flex relative w-full gap-x-8'>
+						<div className='relative flex top-0 left-0 z-20 w-full overflow-hidden'>
+							<Image className='' src={baptism} alt='' objectFit='cover' />
+						</div>
+						<div className='relative w-[1226px] '>
+							<div className='w-full lg:h-[250px] xl:h-[400px] '>
+								<div className='flex absolute top-0 -left-[60px] mix-blend-overlay z-30'>
+									<h2 className='font-display font-bold xl:text-[192px] lg:text-[126px] text-[#f8f8f8]'>
+										WHAT&nbsp;WE&nbsp;
+										<br />
+										<span className='font-kepler text-[1.1em] italic'>
+											BELIEVE
+										</span>
+									</h2>
+								</div>
+								<div className='flex absolute top-0 -left-[60px] z-10'>
+									<h2 className='font-display font-bold xl:text-[192px] lg:text-[126px]'>
+										WHAT&nbsp;WE&nbsp;
+										<br />
+										<span className='font-kepler text-[1.1em] italic'>
+											BELIEVE
+										</span>
+									</h2>
+								</div>
+							</div>
+							<div
+								className='relative flex flex-col mx-auto my-12 mb-12 max-w-[375px] md:max-w-[575px] font-display text-[#7C7C7C] 
+                                text-[18px] md:text-[24px] lg:text-[30px]'
+							>
+								<div className='flex flex-col px-8 mx-auto gap-y-4'>
+									<p>
+										At Celebration Church, we stand firm in the ways of Christ,
+										the values of the kingdom of God, and the teachings of the
+										Bible.{' '}
+									</p>
+									<p>
+										As such, we acknowledge scripture as the inspired word of
+										God, written through humanity, to provide a worldview
+										through a relationship in which the church can function as
+										an expression of the kingdom.
+									</p>
+									<p>
+										Click the link below to access the specifics of what we
+										believe at Celebration Church as it relates to topics such
+										as the trinity, Jesus, the Bible, and our role as the
+										church.
+									</p>
+								</div>
+								<div className='flex flex-col px-8 items-start min-w-[375px] my-12 gap-y-12'>
+									<Link href='/' passHref>
+										<div className='flex gap-x-4 cursor-pointer'>
+											<a className='font-display capitalize text-[36px] gap-x-2'>
+												READ MORE
+											</a>
+											<div className='flex w-[102px] h-[42] '>
+												<Image src={arrow} alt='arrow' />
+											</div>
+										</div>
+									</Link>
+									<Link href='/' passHref>
+										<div className='flex gap-x-4'>
+											<a className='font-display capitalize text-[36px] gap-x-2'>
+												FOLLOW JESUS
+											</a>
+											<div className='flex w-[102px] h-[42] '>
+												<Image src={arrow} alt='arrow' />
+											</div>
+										</div>
+									</Link>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div
-					className='relative flex flex-col mx-auto my-12 mb-12 max-w-[375px] md:max-w-[575px] font-display text-[#7C7C7C] 
+					className='relative flex md:hidden flex-col mx-auto my-12 mb-12 max-w-[375px] md:max-w-[575px] font-display text-[#7C7C7C] 
                                 text-[18px] md:text-[24px] lg:text-[30px]'
 				>
 					<div className='flex flex-col px-8 mx-auto gap-y-4'>
@@ -135,7 +211,7 @@ function about() {
 						</p>
 					</div>
 				</div>
-				<div className='flex flex-col px-8 items-start min-w-[375px] gap-y-12'>
+				<div className='flex md:hidden flex-col px-8 items-start min-w-[375px] gap-y-12'>
 					<Link href='/' passHref>
 						<div className='flex gap-x-4'>
 							<a className='font-display capitalize text-[22px] gap-x-2'>
@@ -171,7 +247,7 @@ function about() {
 				<div className='flex mx-auto justify-center items-center my-4'>
 					<PartnersCarousel />
 				</div>
-				<div className='flex min-h-[51px] max-w-[256px] justify-center items-center mx-auto my-4 overflow-hidden'>
+				<div className='flex min-h-[51px] max-w-[256px] justify-center items-center mx-auto my-8 mb-16 overflow-hidden'>
 					<Link href={'visit'}>
 						<button className='flex items-center border-2 border-solid border-[#070707] p-4 gap-x-4 mx-auto'>
 							<div className='flex min-w-[126px]'>

@@ -123,10 +123,10 @@ export default function Footer() {
 										passHref
 									>
 										<div className='flex justify-between'>
-											<div className='flex'>
+											<div className='flex h-full'>
 												<a>Apple App Store</a>
 											</div>
-											<div className='flex px-4'>
+											<div className='flex px-4 h-full'>
 												<FontAwesomeIcon icon={faAppStoreIos} />
 											</div>
 										</div>
@@ -141,11 +141,11 @@ export default function Footer() {
 										href='https://play.google.com/store/apps/details?id=com.echurchapps.celebrationchapp&hl=en_US&gl=US'
 										passHref
 									>
-										<div className='flex justify-between'>
+										<div className='flex justify-between h-full'>
 											<div className='flex'>
 												<a>Google Play Store</a>
 											</div>
-											<div className='flex px-4'>
+											<div className='flex px-4 h-full'>
 												<FontAwesomeIcon icon={faGooglePlay} />
 											</div>
 										</div>
@@ -249,8 +249,10 @@ export default function Footer() {
 									href='https://apps.apple.com/us/app/the-celebration-app/id1210190693'
 									passHref
 								>
-									<div className='flex justify-center items-center'>
-										<a>Apple App Store</a>
+									<div className='flex justify-start items-center'>
+										<div className='flex'>
+											<a>Apple App Store</a>
+										</div>
 
 										<div className='flex mx-4 h-6 w-14'>
 											<Image
@@ -268,8 +270,10 @@ export default function Footer() {
 									href='https://play.google.com/store/apps/details?id=com.echurchapps.celebrationchapp&hl=en_US&gl=US'
 									passHref
 								>
-									<div className=''>
-										<a>Google Play Store</a>
+									<div className='flex justify-start'>
+										<div className='flex'>
+											<a>Google Play Store</a>
+										</div>
 										<div className='flex mx-4 h-6 w-14'>
 											<Image
 												src={arrow}
