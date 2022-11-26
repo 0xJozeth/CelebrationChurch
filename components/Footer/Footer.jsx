@@ -115,7 +115,7 @@ export default function Footer() {
 				<div className='flex flex-col justify-between font-display mb-4'>
 					<h6 className='font-bold text-[12px] my-4'>DOWNLOAD OUR APP</h6>
 					<div className='columns-2'>
-						<div className='flex'>
+						<div className='flex justify-start items-centerh-[20px]'>
 							<ul className='flex flex-col text-[14px] gap-y-1'>
 								<li>
 									<Link
@@ -134,7 +134,7 @@ export default function Footer() {
 								</li>
 							</ul>
 						</div>
-						<div className='flex'>
+						<div className='flex justify-start items-center h-[20px]'>
 							<ul className='flex flex-col text-[14px] gap-y-1'>
 								<li>
 									<Link

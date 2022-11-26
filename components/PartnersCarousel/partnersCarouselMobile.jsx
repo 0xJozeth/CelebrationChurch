@@ -32,25 +32,25 @@ import Autoplay from 'embla-carousel-autoplay';
 const options = { delay: 500 };
 const autoplay = Autoplay(options);
 
-function PartnersCarousel() {
+function PartnersCarouselMobile() {
 	const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 
 	return (
 		<>
 			<div
-				className='embla md:flex hidden overflow-hidden w-full mx-auto justify-center'
+				className='embla overflow-hidden w-full mx-auto justify-center'
 				ref={emblaRef}
 			>
-				<div className='embla__container flex items-center gap-x-[200px] mx-auto'>
+				<div className='embla__container flex items-center gap-x-[64px]'>
 					<div className='embla__slide relative min-w-fit'>
-						<div className='embla__slide__inner relative overflow-hidden '>
+						<div className='embla__slide__inner relative overflow-hidden'>
 							<Image
 								className='absolute top-1/2 left-1/2 w-auto min-h-full min-w-fit max-w-none'
 								src={Arc}
 								alt=''
-								width={260}
-								height={115}
-								objectFit='cover'
+								width={136}
+								height={56}
+								objectFit='contain'
 							/>
 						</div>
 					</div>
@@ -60,9 +60,9 @@ function PartnersCarousel() {
 								className='absolute top-1/2 left-1/2 w-auto min-h-full min-w-fit max-w-none'
 								src={City}
 								alt=''
-								width={214}
-								height={207}
-								objectFit='cover'
+								width={73}
+								height={71}
+								objectFit='contain'
 							/>
 						</div>
 					</div>
@@ -72,21 +72,21 @@ function PartnersCarousel() {
 								className='absolute top-1/2 left-1/2 w-auto min-h-full min-w-fit max-w-none'
 								src={Convoy}
 								alt=''
-								width={396}
-								height={163}
-								objectFit='cover'
+								width={136}
+								height={56}
+								objectFit='contain'
 							/>
 						</div>
 					</div>
 					<div className='embla__slide relative min-w-fit'>
 						<div className='embla__slide__inner relative overflow-hidden'>
 							<Image
-								className='absolute top-1/2 left-1/2 w-auto min-h-full min-w-fit max-w-none'
+								className='absolute top-1/2 left-1/2 w-auto min-h-full max-w-none'
 								src={OneHope}
 								alt=''
-								width={340}
-								height={92}
-								objectFit='cover'
+								width={140}
+								height={52}
+								objectFit='contain'
 							/>
 						</div>
 					</div>
@@ -96,20 +96,20 @@ function PartnersCarousel() {
 								className='absolute top-1/2 left-1/2 w-auto min-h-full min-w-fit max-w-none'
 								src={p42}
 								alt=''
-								width={342}
-								height={120}
+								width={122}
+								height={50}
 								objectFit='contain'
 							/>
 						</div>
 					</div>
 					<div className='embla__slide relative min-w-fit'>
-						<div className='embla__slide__inner relative overflow-hidden mx-[100px]'>
+						<div className='embla__slide__inner relative overflow-hidden mx-4'>
 							<Image
 								className='absolute top-1/2 left-1/2 w-auto min-h-full min-w-fit max-w-none'
 								src={reaching}
 								alt=''
-								width={312}
-								height={96}
+								width={112}
+								height={56}
 								objectFit='contain'
 							/>
 						</div>
@@ -120,4 +120,4 @@ function PartnersCarousel() {
 	);
 }
 
-export default PartnersCarousel;
+export default PartnersCarouselMobile;

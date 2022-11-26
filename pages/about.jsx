@@ -10,6 +10,7 @@ import baptism from '/public/baptism.png';
 import React, { useState, useEffect } from 'react';
 import WeHaveAGrace from '../components/HomepageComponents/SectionWeHaveAGrace/WeHaveAGrace';
 import PartnersCarousel from '../components/PartnersCarousel/partnersCarousel';
+import PartnersCarouselMobile from '../components/PartnersCarousel/partnersCarouselMobile';
 
 function about() {
 	return (
@@ -233,7 +234,7 @@ function about() {
 						</div>
 					</Link>
 				</div>
-				<div className='flex min-w-375px my-12'>
+				<div className='hidden md:flex min-w-375px my-12'>
 					<h1 className='font-display text-[54px] md:text-[110px] lg:text-[196px] font-bold text-center'>
 						OUR&nbsp;
 						<br />
@@ -244,16 +245,25 @@ function about() {
 						</span>
 					</h1>
 				</div>
-				<div className='flex mx-auto justify-center items-center my-4'>
+				<div className='hidden md:flex mx-auto justify-center items-center my-4'>
 					<PartnersCarousel />
 				</div>
-				<div className='flex min-h-[51px] max-w-[256px] justify-center items-center mx-auto my-8 mb-16 overflow-hidden'>
+				<div className='flex md:hidden mx-auto justify-center items-center my-4'>
+					<PartnersCarouselMobile />
+				</div>
+				<div
+					className='flex w-full min-h-[51px] lg:h-[200px]
+				max-w-[256px] md:max-w-[1440px]
+				 justify-center items-center mx-auto my-8 mb-16 overflow-hidden'
+				>
 					<Link href={'visit'}>
-						<button className='flex items-center border-2 border-solid border-[#070707] p-4 gap-x-4 mx-auto'>
+						<button className='flex justify-center items-center border-2 border-solid border-[#070707] w-full h-full p-4 gap-x-4 lg:gap-x-[140px] md:px-[50px] mx-auto'>
 							<div className='flex min-w-[126px]'>
-								<a className='font-display text-[18px]'>COME VISIT US</a>
+								<a className='font-display text-[18px] md:text-[44px] lg:text-[90px]'>
+									COME&nbsp;VISIT&nbsp;US
+								</a>
 							</div>
-							<div className='flex min-h-[36px] max-w-[144px]'>
+							<div className='flex min-h-[36px] max-w-[144px] w-[300px] lg:max-w-[444px]'>
 								<Image src={longArrow} alt='' />
 							</div>
 						</button>
