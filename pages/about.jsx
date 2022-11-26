@@ -48,7 +48,7 @@ function about() {
 						placeholder='blur'
 					></iframe>
 				</div>
-				<div className='flex flex-col md:flex-row mx-auto mt-6 items-center'>
+				<div className='flex flex-col md:flex-row mx-auto items-center'>
 					<h1 className='font-display text-[54px] md:text-[110px] lg:text-[192px] font-bold'>
 						MEET OUR
 						<br />
@@ -63,7 +63,6 @@ function about() {
                 md:max-w-[575px] lg:max-w-[1024px] 
                 font-display text-[#7C7C7C] 
                 text-[18px] md:text-[24px] lg:text-[34px]
-				p-8
                 '
 				>
 					<div className='flex flex-col px-8 mx-auto gap-y-4'>
@@ -89,7 +88,7 @@ function about() {
 						</p>
 					</div>
 				</div>
-				<div className='flex mx-auto'>
+				<div className='flex mx-auto -mt-[80px] md:-mt-[0px]'>
 					<WeHaveAGrace />
 				</div>
 				<div className='relative flex lg:hidden flex-col items-start min-w-[326px] min-h-[396px] px-4'>
@@ -122,7 +121,7 @@ function about() {
 						</div>
 						<div className='relative w-[1226px] '>
 							<div className='w-full lg:h-[250px] xl:h-[400px] '>
-								<div className='flex absolute top-0 -left-[60px] mix-blend-overlay z-30'>
+								<div className='flex absolute top-0 -left-[160px] mix-blend-overlay z-30'>
 									<h2 className='font-display font-bold xl:text-[192px] lg:text-[126px] text-[#f8f8f8]'>
 										WHAT&nbsp;WE&nbsp;
 										<br />
@@ -131,7 +130,7 @@ function about() {
 										</span>
 									</h2>
 								</div>
-								<div className='flex absolute top-0 -left-[60px] z-10'>
+								<div className='flex absolute top-0 -left-[160px] z-10'>
 									<h2 className='font-display font-bold xl:text-[192px] lg:text-[126px]'>
 										WHAT&nbsp;WE&nbsp;
 										<br />
@@ -191,7 +190,7 @@ function about() {
 					</div>
 				</div>
 				<div
-					className='relative flex md:hidden flex-col mx-auto my-12 mb-12 max-w-[375px] md:max-w-[575px] font-display text-[#7C7C7C] 
+					className='relative flex md:hidden flex-col mx-auto my-12 mb-12 -mt-[15px] max-w-[375px] md:max-w-[575px] font-display text-[#7C7C7C] 
                                 text-[18px] md:text-[24px] lg:text-[30px]'
 				>
 					<div className='flex flex-col px-8 mx-auto gap-y-4'>
@@ -254,7 +253,7 @@ function about() {
 				<div
 					className='flex w-full min-h-[51px] lg:h-[200px]
 				max-w-[256px] md:max-w-[1440px]
-				 justify-center items-center mx-auto my-8 mb-16 overflow-hidden'
+				 justify-center items-center mx-auto my-8 mb-[200px] overflow-hidden'
 				>
 					<Link href={'visit'}>
 						<button className='flex justify-center items-center border-2 border-solid border-[#070707] w-full h-full p-4 gap-x-4 lg:gap-x-[140px] md:px-[50px] mx-auto'>

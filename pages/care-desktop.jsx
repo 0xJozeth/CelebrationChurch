@@ -175,95 +175,171 @@ const Grid = styled.div`
 
 function CareDesktop() {
 	return (
-		<Grid>
-			<div className='rowContainer'>
-				<div className='imageContainer'>
-					<Image src={stage} alt='' />
-				</div>
-				<div className='text'>
-					<h1 className='maskEffect'>
-						SUPPORTING <br />
-						YOU ON YOUR <br />
-						PATH TO <br />
-						<span>WHOLENESS</span>
-					</h1>
-					<h1 className='noEffect'>
-						SUPPORTING <br />
-						YOU ON YOUR <br />
-						PATH TO <br />
-						<span>WHOLENESS</span>
-					</h1>
-					<div className='paragraph'>
-						<p>
-							Our Care Ministry supports and guides individuals, couples, and
-							families with life-giving care as they navigate through change in
-							every season of life. Our experienced pastors and highly-trained
-							Care Partners are available to listen, help you identify potential
-							solutions, and access practical resources to move you towards
-							wholeness.
-						</p>
-						<div className='linkContainer'>
-							<a
-								href='https://celebration.wufoo.com/forms/r1y73bnj1r5g2sn/'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								CONTACT CARE
-							</a>
-							<Image src={arrow} alt='arrow' />
+		<>
+			<div className='flex flex-col items-center '>
+				<div className='flex flex-col  h-[1600px] max-w-[1440px]'>
+					<div className='flex w-full'>
+						<div className='absolute top-[300px] w-full z-20'>
+							<Image src={stage} alt='' />
 						</div>
-
-						<div className='linkContainer'>
-							<a
-								href='https://s3.amazonaws.com/downloads.celebration.org/2022/webdownloads/care_guide_dec.2021.pdf'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								CARE GUIDE
-							</a>
-							<Image src={arrow} alt='arrow' />
+						<div className='flex relative flex-col items-center w-full'>
+							<div className='absolute right-0 mix-blend-overlay z-30'>
+								<h1 className='font-display font-bold text-[192px] text-[#f8f8f8]'>
+									SUPPORTING <br />
+									YOU ON YOUR <br />
+									PATH TO <br />
+									<span className='font-kepler italic text-[1.1em]'>
+										WHOLENESS
+									</span>
+								</h1>
+							</div>
+							<div className='flex justify-end w-full z-10'>
+								<h1 className='font-display font-bold text-[192px]'>
+									SUPPORTING <br />
+									YOU ON YOUR <br />
+									PATH TO <br />
+									<span className='font-kepler italic text-[1.1em]'>
+										WHOLENESS
+									</span>
+								</h1>
+							</div>
+							<div className='flex flex-col relative left-[500px] w-[550px] mt-8 my-[80px]'>
+								<p className='font-display text-[34px]'>
+									Our Care Ministry supports and guides individuals, couples,
+									and families with life-giving care as they navigate through
+									change in every season of life. Our experienced pastors and
+									highly-trained Care Partners are available to listen, help you
+									identify potential solutions, and access practical resources
+									to move you towards wholeness.
+								</p>
+								<div className='flex flex-col my-[80px] gap-y-[24px]'>
+									<div className='flex justify-start items-center gap-x-8'>
+										<div>
+											<a
+												href='https://celebration.wufoo.com/forms/r1y73bnj1r5g2sn/'
+												target='_blank'
+												rel='noopener noreferrer'
+												className='font-display text-[38px]'
+											>
+												CONTACT CARE
+											</a>
+										</div>
+										<div>
+											<Image src={arrow} alt='arrow' />
+										</div>
+									</div>
+									<div className='flex justify-start items-center gap-x-8'>
+										<div>
+											<a
+												href='https://s3.amazonaws.com/downloads.celebration.org/2022/webdownloads/care_guide_dec.2021.pdf'
+												target='_blank'
+												rel='noopener noreferrer'
+												className='font-display text-[38px]'
+											>
+												CARE GUIDE
+											</a>
+										</div>
+										<div>
+											<Image src={arrow} alt='arrow' />
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className='rowContainer'>
-				<div className='imageWrapper'>
-					<Image src={telecare} alt='' />
-				</div>
-				<div className='contentGrid'>
-					<h3>TELECARE</h3>
-					<p>
-						We partner with Honey Lake Clinic to provide individual and group
-						therapy with licensed Christian therapists for those that are
-						struggling to reclaim their lives and achieve their God given
-						potential. We envision Honey Lake Clinic as a refuge for those in
-						need of Freedom and mental health care. For those that are seeking
-						to walk in wholeness for themselves and their family, register
-						below.
-					</p>
-					<div className='linkContainer'>
-						<a
-							href='https://podio.com/webforms/25046911/1842022'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							INDIVIDUAL THERAPY
-						</a>
-						<Image src={arrow} alt='' />
-					</div>
-				</div>
-			</div>
-			<div className='rowContainer'>
-				<div className='followJesusButton'>
-					<Link href='visit'>
-						<div className='linkContainer'>
-							<a>FOLLOW JESUS</a>
-							<Image src={longArrow} alt='' />
+			{/* <div className='hidden'>
+				<Grid>
+					<div className='rowContainer'>
+						<div className='imageContainer'>
+							<Image src={stage} alt='' />
 						</div>
-					</Link>
-				</div>
-			</div>
-		</Grid>
+						<div className='text'>
+							<h1 className='maskEffect'>
+								SUPPORTING <br />
+								YOU ON YOUR <br />
+								PATH TO <br />
+								<span>WHOLENESS</span>
+							</h1>
+							<h1 className='noEffect'>
+								SUPPORTING <br />
+								YOU ON YOUR <br />
+								PATH TO <br />
+								<span>WHOLENESS</span>
+							</h1>
+							<div className='paragraph'>
+								<p>
+									Our Care Ministry supports and guides individuals, couples,
+									and families with life-giving care as they navigate through
+									change in every season of life. Our experienced pastors and
+									highly-trained Care Partners are available to listen, help you
+									identify potential solutions, and access practical resources
+									to move you towards wholeness.
+								</p>
+								<div className='linkContainer'>
+									<a
+										href='https://celebration.wufoo.com/forms/r1y73bnj1r5g2sn/'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										CONTACT CARE
+									</a>
+									<Image src={arrow} alt='arrow' />
+								</div>
+								<div className='linkContainer'>
+									<a
+										href='https://s3.amazonaws.com/downloads.celebration.org/2022/webdownloads/care_guide_dec.2021.pdf'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										CARE GUIDE
+									</a>
+									<Image src={arrow} alt='arrow' />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className='rowContainer'>
+						<div className='imageWrapper'>
+							<Image src={telecare} alt='' />
+						</div>
+						<div className='contentGrid'>
+							<h3>TELECARE</h3>
+							<p>
+								We partner with Honey Lake Clinic to provide individual and
+								group therapy with licensed Christian therapists for those that
+								are struggling to reclaim their lives and achieve their God
+								given potential. We envision Honey Lake Clinic as a refuge for
+								those in need of Freedom and mental health care. For those that
+								are seeking to walk in wholeness for themselves and their
+								family, register below.
+							</p>
+							<div className='linkContainer'>
+								<a
+									href='https://podio.com/webforms/25046911/1842022'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									INDIVIDUAL THERAPY
+								</a>
+								<Image src={arrow} alt='' />
+							</div>
+						</div>
+					</div>
+					<div className='rowContainer'>
+						<div className='followJesusButton'>
+							<Link href='visit'>
+								<div className='linkContainer'>
+									<a>FOLLOW JESUS</a>
+									<Image src={longArrow} alt='' />
+								</div>
+							</Link>
+						</div>
+					</div>
+				</Grid>
+			</div> */}
+		</>
 	);
 }
 
