@@ -16,11 +16,9 @@ function about() {
 		<>
 			<div
 				className='flex flex-col 
-                mx-auto items-center justify-center
-                max-w-[375px] md:max-w-[575px] lg:max-w-[1024px] xl:max-w-[1440px]
-                w-full 
-                gap-y-4
-                lg:gap-y-20'
+                mx-auto items-center justify-center w-[100vw]
+            md:max-w-[575px] lg:max-w-[1024px] xl:max-w-[1440px]gap-y-4 
+				lg:gap-y-20'
 			>
 				<div
 					className='relative 
@@ -31,8 +29,7 @@ function about() {
 
 
                 items-center justify-center 
-                overflow-hidden
-'
+                overflow-hidden'
 				>
 					<iframe
 						className='absolute top-0 left-0 right-0 bottom-0

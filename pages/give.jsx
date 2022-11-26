@@ -182,15 +182,18 @@ function Give(props) {
 										<h5 className='font-display font-bold text-[#070707] text-[36px] py-4 uppercase'>
 											Orange Park Food Pantry
 										</h5>
-										<p className='font-display font-normal text-[18px] max-w-[375px] text-[#070707]'>
-											Our Orange Park location is making a tremendous impact in
-											their local community through their weekly food pantry
-											ministry – which served 95,312 Clay County residents this
-											past year. Because of your generosity, not only were we
-											able to meet the tangible needs, but they were also able
-											to open a 4,000 square foot space dedicated to helping
-											further their food pantry and outreach efforts.
-										</p>
+										<div className='w-[375px]'>
+											<p className='font-display font-normal text-[18px] text-[#070707]'>
+												Our Orange Park location is making a tremendous impact
+												in their local community through their weekly food
+												pantry ministry – which served 95,312 Clay County
+												residents this past year. Because of your generosity,
+												not only were we able to meet the tangible needs, but
+												they were also able to open a 4,000 square foot space
+												dedicated to helping further their food pantry and
+												outreach efforts.
+											</p>
+										</div>
 									</div>
 								</div>
 								<div className='carousel-item relative float-left w-full'>
@@ -207,15 +210,17 @@ function Give(props) {
 										<h5 className='font-display font-bold text-[#070707] text-[36px] py-4'>
 											OneChild
 										</h5>
-										<p className='font-display font-normal text-[18px] max-w-[375px] text-[#070707]'>
-											Your generosity is helping the lives of thousands of
-											children from our Celebration Zimbabwe location! Through
-											partnership with OneChild, our congregation is sponsoring
-											numerous kids in Zimbabwe and helping meet the physical,
-											emotional, and spiritual needs of them and their families.
-											If you are interested in contributing to this Kingdom
-											impact, sponsor a child in need today.
-										</p>
+										<div className='w-[375px]'>
+											<p className='font-display font-normal text-[18px] text-[#070707]'>
+												Your generosity is helping the lives of thousands of
+												children from our Celebration Zimbabwe location! Through
+												partnership with OneChild, our congregation is
+												sponsoring numerous kids in Zimbabwe and helping meet
+												the physical, emotional, and spiritual needs of them and
+												their families. If you are interested in contributing to
+												this Kingdom impact, sponsor a child in need today.
+											</p>
+										</div>
 									</div>
 								</div>
 								<div className='carousel-item relative float-left w-full'>
@@ -232,24 +237,26 @@ function Give(props) {
 										<h5 className='font-display font-bold text-[#070707] text-[36px] py-4'>
 											Disaster Relief Efforts
 										</h5>
-										<p className='font-display font-normal text-[18px] max-w-[375px] text-[#070707]'>
-											One of Celebration’s deepest desires is to operate as the
-											hands and feet of Jesus, especially when people are in
-											need the most. We partner with{' '}
-											<a
-												className='font-semibold cursor-pointer'
-												href='https://convoyofhope.org'
-												target='blank'
-												rel='noopener noreferrer'
-											>
-												Convoy of Hope{' '}
-											</a>
-											on numerous occasions throughout the year to help meet
-											tangible needs of those struck with natural disasters,
-											war, or various other tragedies. To join the impact that
-											these amazing partners are making daily, you can give
-											here.
-										</p>
+										<div className='flex w-[375px] justify-center'>
+											<p className='font-display font-normal text-[18px] text-[#070707]'>
+												One of Celebration’s deepest desires is to operate as
+												the hands and feet of Jesus, especially when people are
+												in need the most. We partner with&nbsp;
+												<a
+													className='font-semibold cursor-pointer'
+													href='https://convoyofhope.org'
+													target='blank'
+													rel='noopener noreferrer'
+												>
+													Convoy of Hope{' '}
+												</a>
+												on numerous occasions throughout the year to help meet
+												tangible needs of those struck with natural disasters,
+												war, or various other tragedies. To join the impact that
+												these amazing partners are making daily, you can give
+												here.
+											</p>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -502,7 +509,7 @@ function Give(props) {
 							data-bs-target='#exampleModal'
 						>
 							<div className='flex justify-center items-center p-4 gap-x-8 w-full'>
-								<div className='flex flex-col justify-center items-center w-full p-4 bg-red-300'>
+								<div className='flex flex-col justify-center items-center w-full p-4'>
 									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
 										<FontAwesomeIcon icon={faMobile} className='' />
 									</div>
@@ -515,7 +522,7 @@ function Give(props) {
 										<WaysToGiveModal />
 									</div>
 								</div>
-								<div className='flex flex-col justify-center items-center w-full p-4 bg-red-300'>
+								<div className='flex flex-col justify-center items-center w-full p-4'>
 									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
 										<FontAwesomeIcon icon={faBitcoin} className='' />
 									</div>
@@ -527,7 +534,7 @@ function Give(props) {
 								</div>
 							</div>
 							<div className='flex justify-center items-center p-4 gap-x-8 w-full'>
-								<div className='flex w-full flex-col justify-center items-center p-4 bg-red-300'>
+								<div className='flex w-full flex-col justify-center items-center p-4'>
 									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
 										<FontAwesomeIcon icon={faPiggyBank} className='' />
 									</div>
@@ -537,7 +544,7 @@ function Give(props) {
 										</p>
 									</div>
 								</div>
-								<div className='flex w-full flex-col justify-center items-center p-4 bg-red-300'>
+								<div className='flex w-full flex-col justify-center items-center p-4'>
 									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
 										<FontAwesomeIcon icon={faMoneyBillTrendUp} className='' />
 									</div>
