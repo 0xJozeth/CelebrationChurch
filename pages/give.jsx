@@ -178,12 +178,12 @@ function Give(props) {
 											/>
 										</div>
 									</div>
-									<div className='carousel-caption block text-center p-4'>
+									<div className='carousel-caption text-center p-4 flex flex-col items-center'>
 										<h5 className='font-display font-bold text-[#070707] text-[36px] py-4 uppercase'>
 											Orange Park Food Pantry
 										</h5>
-										<div className='w-[375px]'>
-											<p className='font-display font-normal text-[18px] text-[#070707]'>
+										<div className='flex justify-center w-[375px]'>
+											<p className='flex justify-center font-display font-normal text-[18px] text-[#070707]'>
 												Our Orange Park location is making a tremendous impact
 												in their local community through their weekly food
 												pantry ministry – which served 95,312 Clay County
@@ -557,8 +557,8 @@ function Give(props) {
 							</div>
 						</div>
 					</div>
-					<div className='relative flex flex-col w-full bg-green-300'>
-						<div className='relative flex flex-col w-full bg-blue-300'>
+					<div className='relative flex flex-col w-full max-w-[425px] my-[60px]'>
+						<div className='relative flex flex-col w-full'>
 							<div className='font-display font-bold text-[52px] text-left mix-blend-overlay w-full z-30'>
 								<h1 className='text-[#f8f8f8]'>
 									LEGACY
@@ -624,11 +624,21 @@ function Give(props) {
 								or contact us.
 							</p>
 						</div>
-						<div className='flex flex-row w-full justify-center items-center'>
+						<div className='flex flex-col w-full max-w-[425px] justify-center items-center'>
 							<div className='flex w-full justify-between'>
 								<div className='flex w-full justify-between items-center'>
 									<p className='font-display font-semibold text-[20px]'>
 										GIVING&nbsp;FAQs
+									</p>
+								</div>
+								<div className='invert w-8 '>
+									<Image src={arrow} alt='' />
+								</div>
+							</div>
+							<div className='flex w-full justify-between'>
+								<div className='flex w-full justify-between items-center'>
+									<p className='font-display font-semibold text-[20px]'>
+										CONTACT&nbsp;US
 									</p>
 								</div>
 								<div className='invert w-8 '>
