@@ -489,8 +489,8 @@ function Navbar(props) {
 						<div
 							className={
 								slide
-									? 'flex h-full overflow-y-scroll gap-x-20 ml-[100px]'
-									: 'flex h-full overflow-y-scroll gap-x-20 ml-[100px]'
+									? 'flex h-full overflow-y-scroll gap-x-20 ml-[275px]'
+									: 'flex h-full overflow-y-scroll gap-x-20 ml-[275px]'
 							}
 						>
 							<div className='flex  items-center '>
@@ -514,9 +514,14 @@ function Navbar(props) {
 										</Link>
 									</li>
 									<li className='watch'>
-										<Link href='/watch' passHref>
-											<a className='text-[#f8f8f8]'>WATCH</a>
-										</Link>
+										<a
+											href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
+											target='_blank'
+											rel='noopener noreferrer'
+											className='text-[#f8f8f8]'
+										>
+											WATCH
+										</a>
 									</li>
 								</ul>
 							</div>
@@ -629,39 +634,54 @@ function Navbar(props) {
 									onClick={handleToggle}
 								>
 									<span className='icon'>
-										<Link href='/' passHref>
-											<a className=' text-[#f8f8f8]'>
-												<BsFacebook />
-											</a>
-										</Link>
+										<a
+											href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
+											target='_blank'
+											rel='noopener noreferrer'
+											className=' text-[#f8f8f8]'
+										>
+											<BsFacebook />
+										</a>
 									</span>
 									<span className='flex'>
-										<Link href='/' passHref>
-											<a className='text-[#f8f8f8] '>
-												<BsInstagram />
-											</a>
-										</Link>
+										<a
+											href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
+											target='_blank'
+											rel='noopener noreferrer'
+											className='text-[#f8f8f8] '
+										>
+											<BsInstagram />
+										</a>
 									</span>
 									<span className='flex'>
-										<Link href='/' passHref>
-											<a className='text-[#f8f8f8]'>
-												<BsTwitter />
-											</a>
-										</Link>
+										<a
+											href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
+											target='_blank'
+											rel='noopener noreferrer'
+											className='text-[#f8f8f8]'
+										>
+											<BsTwitter />
+										</a>
 									</span>
 									<span className='flex'>
-										<Link href='/' passHref>
-											<a className='text-[#f8f8f8]'>
-												<BsYoutube />
-											</a>
-										</Link>
+										<a
+											href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
+											target='_blank'
+											rel='noopener noreferrer'
+											className='text-[#f8f8f8]'
+										>
+											<BsYoutube />
+										</a>
 									</span>
 									<span className='flex'>
-										<Link href='/' passHref>
-											<a className='text-[#f8f8f8]'>
-												<MdEmail />
-											</a>
-										</Link>
+										<a
+											href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
+											target='_blank'
+											rel='noopener noreferrer'
+											className='text-[#f8f8f8]'
+										>
+											<MdEmail />
+										</a>
 									</span>
 								</div>
 							</div>

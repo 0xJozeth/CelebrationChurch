@@ -248,6 +248,56 @@ function CareDesktop() {
 						</div>
 					</div>
 				</div>
+				<div className='flex w-full gap-8'>
+					<div className='flex flex-col gap-y-8 px-16 max-w-[905px]'>
+						<div className='font-display font-bold text-[48px]'>TELECARE</div>
+						<div className='flex justify-center '>
+							<p className='font-display text-[24px] leading-7 text-[#7c7c7c]'>
+								We partner with Honey Lake Clinic to provide individual and
+								group therapy with licensed Christian therapists for those that
+								are struggling to reclaim their lives and achieve their God
+								given potential. We envision Honey Lake Clinic as a refuge for
+								those in need of Freedom and mental health care. For those that
+								are seeking to walk in wholeness for themselves and their
+								family, register below.
+							</p>
+						</div>
+						<div>
+							<Link href=''>
+								<div className='flex justify-start items-center gap-x-4'>
+									<div>
+										<a className='cursor-pointer font-display font-normal text-[26px] uppercase'>
+											INDIVIDUAL THERAPY{' '}
+										</a>
+									</div>
+									<div className='w-16'>
+										<Image src={arrow} alt='' />
+									</div>
+								</div>
+							</Link>
+						</div>
+					</div>
+					<div className='flex'>
+						<Image src={telecare} alt='' objectFit='cover' />
+					</div>
+				</div>
+
+				<div className='flex justify-center items-center w-full mx-auto my-[160px]'>
+					<div className='flex min-h-[152px] max-w-[256px] md:max-w-full w-full justify-center items-center mx-auto my-4 overflow-hidden '>
+						<Link href={'follow-jesus'}>
+							<button className='flex h-[152px] w-full justify-around items-center border-2 border-solid border-[#070707] p-4 gap-x-4 mx-[80px]'>
+								<div className='flex min-w-[126px]'>
+									<a className='font-display text-[36px] md:text-[44px] lg:text-[64px] xl:text-[88px] '>
+										FOLLOW JESUS
+									</a>
+								</div>
+								<div className='flex min-h-[36px] max-w-[150px] md:max-w-[150px] lg:max-w-[250px] xl:max-w-[350px]'>
+									<Image src={longArrow} alt='' />
+								</div>
+							</button>
+						</Link>
+					</div>
+				</div>
 			</div>
 			{/* <div className='hidden'>
 				<Grid>
