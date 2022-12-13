@@ -27,6 +27,11 @@ import {
 	faTelevision,
 } from '@fortawesome/free-solid-svg-icons';
 
+import {
+	faAppStoreIos,
+	faGooglePlay,
+} from '@fortawesome/free-brands-svg-icons';
+
 import { CSSTransition } from 'react-transition-group';
 
 import arrow from '/public/arrow@1x-white.svg';
@@ -219,7 +224,7 @@ function Navbar(props) {
 				<ul
 					className='hidden md:flex
 				text-[12px] md:text-[16px] lg:text-[16px]
-				justify-center items-center font-display '
+				justify-center items-center font-display w-full'
 				>
 					<li className='p-2 font-bold'>
 						<Link href='about' passHref>
@@ -392,7 +397,7 @@ function Navbar(props) {
 						<div className='flex justify-center items-center p-4 mt-10 bg-[#0D0D0D] min-w-full min-h-[290px] z-[1002] '>
 							<ul className='flex flex-col' onClick={handleToggle}>
 								<div className='flex flex-col gap-16'>
-									<div>
+									{/* <div>
 										<li>
 											<Link href='/shop' passHref>
 												<div className='flex gap-x-2 text-[#F8F8F8]  text-[18px]'>
@@ -407,7 +412,7 @@ function Navbar(props) {
 												</div>
 											</Link>
 										</li>
-									</div>
+									</div> */}
 									<div>
 										<li>
 											<Link href='bible-reading-plan' passHref>
@@ -465,9 +470,27 @@ function Navbar(props) {
 														role='img'
 														aria-label='globe'
 													>
-														<VscGlobe />
+														<FontAwesomeIcon icon={faAppStoreIos} />
 													</span>
-													<a className='text-[#F8F8F8]'>CKIDS ONLINE</a>
+													<a className='text-[#F8F8F8]'>APPLE APP STORE APP</a>
+												</div>
+											</Link>
+										</li>
+									</div>
+									<div>
+										<li className='flex gap-x-2'>
+											<Link href='ckids-online' passHref>
+												<div className='flex gap-x-2 text-[#F8F8F8] text-[18px]'>
+													<span
+														className='icon-globe'
+														role='img'
+														aria-label='globe'
+													>
+														<FontAwesomeIcon icon={faGooglePlay} />
+													</span>
+													<a className='text-[#F8F8F8]'>
+														GOOGLE PLAY STORE APP
+													</a>
 												</div>
 											</Link>
 										</li>
@@ -553,7 +576,7 @@ function Navbar(props) {
 										className='flex flex-col gap-y-[40px] mt-[215px]'
 										onClick={handleToggle}
 									>
-										<li>
+										{/* <li>
 											<Link href='/shop' passHref>
 												<div className='flex gap-x-2 cursor-pointer text-[#F8F8F8]  font-display font-normal text-[30px]'>
 													<span
@@ -566,7 +589,7 @@ function Navbar(props) {
 													<a className='text-[#F8F8F8]'>SHOP</a>
 												</div>
 											</Link>
-										</li>
+										</li> */}
 										<li>
 											<Link href='bible-reading-plan' passHref>
 												<div className='flex gap-x-2 cursor-pointer text-[#F8F8F8] font-display font-normal text-[30px]'>
@@ -613,7 +636,7 @@ function Navbar(props) {
 												</div>
 											</Link>
 										</li>
-										<li className='flex gap-x-2'>
+										{/* <li className='flex gap-x-2'>
 											<Link href='ckids-online' passHref>
 												<div className='flex gap-x-2 cursor-pointer text-[#F8F8F8] font-display font-normal text-[30px]'>
 													<span
@@ -626,7 +649,7 @@ function Navbar(props) {
 													<a className='text-[#F8F8F8]'>CKIDS&nbsp;ONLINE</a>
 												</div>
 											</Link>
-										</li>
+										</li> */}
 									</ul>
 								</div>
 								<div

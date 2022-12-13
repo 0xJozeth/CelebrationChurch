@@ -82,11 +82,11 @@ export default function Footer() {
 									<a>Bible Reading Plan</a>
 								</Link>
 							</li>
-							<li>
+							{/* <li>
 								<Link href='/cKids-Online' passHref>
 									<a>cKids Online</a>
 								</Link>
-							</li>
+							</li> */}
 							<li>
 								<Link href='/shop' passHref>
 									<a>Shop</a>
@@ -214,11 +214,11 @@ export default function Footer() {
 									<a>Bible Reading Plan</a>
 								</Link>
 							</li>
-							<li>
+							{/* <li>
 								<Link href='/cKids-Online' passHref>
 									<a>cKids Online</a>
 								</Link>
-							</li>
+							</li> */}
 							<li>
 								<Link href='/shop' passHref>
 									<a>Shop</a>

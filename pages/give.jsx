@@ -27,15 +27,16 @@ import GiveHeroMobile from '/public/GiveHeroMobile.png';
 
 import longArrow from '/public/arrow-long.svg';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBitcoin } from '@fortawesome/free-brands-svg-icons';
 import {
 	faPiggyBank,
 	faMobile,
 	faMoneyBillTrendUp,
+	faArrowUpRightFromSquare,
 } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import GiveDesktop from './give-old';
+import GiveDesktop from './give-desktop';
 import WaysToGiveModal from '../components/GiveComponents/WaysToGiveModal';
 
 // import 'tw-elements';
@@ -395,90 +396,23 @@ function Give(props) {
 												</li>
 											</ul>
 										</div>
-										<ul
-											className='flex items-center text-[28px] md:text-[56px]'
-											onClick={handleInternational}
-										>
-											<div
-												className={
-													international
-														? 'flex underline underline-offset-2 font-semibold bg-[#070707] text-[#f8f8f8] p-2'
-														: 'flex underline-offset-2 p-2'
-												}
+										<ul className='flex items-center text-[28px] md:text-[56px]'>
+											<Link
+												href='https://pushpay.com/g/ccglobal?src=hpp'
+												passHref
 											>
-												INTERNATIONAL
-											</div>{' '}
-											&nbsp;
-											<li
-												className={
-													international ? 'list-none hidden' : 'list-none block'
-												}
-											>
-												&#43;
-											</li>
-											<li
-												className={
-													international ? 'list-none block' : 'list-none hidden'
-												}
-											>
-												&#45;
-											</li>
+												<a className='flex items-center'>
+													<div className='flex text-[#070707] p-2'>
+														INTERNATIONAL
+													</div>
+													&nbsp;
+													<li className='text-[16px]'>
+														<FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+													</li>
+												</a>
+											</Link>
 										</ul>
-										<div
-											className={
-												international
-													? ' w-full delay-200 translate-y-0 opacity-100 duration-300 flex flex-col gap-x-20'
-													: ' w-full delay-0 translate-y-[-100vh] opacity-25 hidden'
-											}
-										>
-											<ul className='flex flex-col gap-y-4 ml-12'>
-												<li className='flex items-center'>
-													<a className='flex relative hover:bg-black hover:text-white ease-in items-center cursor-pointer'>
-														THE LIGHTHOUSE ANTWERP, BELGIUM
-													</a>
-												</li>
-												<li>
-													<a
-														className='hover:bg-black hover:text-white ease-in'
-														href=''
-														target='_blank'
-														rel='noopener noreferrer'
-													>
-														NETHERLANDS
-													</a>
-												</li>
-												<li>
-													<a
-														className='hover:bg-black hover:text-white ease-in cursor-pointer'
-														href=''
-														target='_blank'
-														rel='noopener noreferrer'
-													>
-														PARIS
-													</a>
-												</li>
-												<li>
-													<a
-														className='hover:bg-black hover:text-white ease-in cursor-pointer'
-														href=''
-														target='_blank'
-														rel='noopener noreferrer'
-													>
-														MOKAPANE SOUTH AFRICA
-													</a>
-												</li>
-												<li>
-													<a
-														className='hover:bg-black hover:text-white ease-in cursor-pointer'
-														href=''
-														target='_blank'
-														rel='noopener noreferrer'
-													>
-														ZIMBABWE
-													</a>
-												</li>
-											</ul>
-										</div>
+
 										<ul className='flex text-[28px] md:text-[56px]'>
 											<a
 												className='p-2 hover:bg-black hover:text-white ease-in cursor-pointer'

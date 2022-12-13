@@ -20,8 +20,6 @@ import { SiBitcoin } from 'react-icons/si';
 
 import piggyBank from '/public/give-images/piggy-bank.svg';
 import { MdOutlinePhoneAndroid } from 'react-icons/md';
-
-import { motion } from 'framer-motion';
 import GiveHero from '/public/give-hero.png';
 
 import longArrow from '/public/arrow-long.svg';
@@ -32,8 +30,13 @@ import {
 	faPiggyBank,
 	faMobile,
 	faMoneyBillTrendUp,
+	faArrowCircleUp,
+	faArrowUpRightFromSquare,
 } from '@fortawesome/free-solid-svg-icons';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Grid = styled.div`
 	display: grid;
@@ -780,15 +783,18 @@ export default function GiveDesktop() {
 					</div>
 					<div className='flex flex-col items-center w-full overflow-hidden '>
 						<div className='relative flex flex-col items-center justify-start w-full '>
-							<div className='flex justify-center items-center w-full'>
+							{/* <div className='flex justify-center items-center w-full'>
 								<h2 className='font-display font-bold text-center md:text-[126px] lg:text-[192px]'>
 									YOUR&nbsp;
 									<span className='font-kepler font-thin italic  text-[1.1em]'>
 										IMPACT
 									</span>
 								</h2>
-							</div>
-							<div id='yourImpactSection' className='w-full '>
+							</div> */}
+
+							{/* <Carousel /> */}
+
+							{/* <div id='yourImpactSection' className='w-full '>
 								<div className='flex relative w-full p-4  overflow-hidden'>
 									<div className='flex z-50 '>
 										<button
@@ -802,7 +808,7 @@ export default function GiveDesktop() {
 											</div>
 										</button>
 									</div>
-									<div className='w-[4000px]'>
+									{/* <div className=''>
 										<div className='overflow-y-auto w-full'>
 											<div className='flex justify-between p-4  w-[1244px]'>
 												<div className='flex relative justify-center w-1/2 '>
@@ -934,8 +940,8 @@ export default function GiveDesktop() {
 												</div>
 											</div>
 										</div>
-									</div>
-									<div className='flex '>
+									</div> */}
+							{/* <div className='flex '>
 										<button
 											className='w-[50px] flex items-center justify-center border-0 '
 											type='button'
@@ -947,8 +953,8 @@ export default function GiveDesktop() {
 											</div>
 										</button>
 									</div>
-								</div>
-							</div>
+								</div> */}
+							{/* </div>  */}
 						</div>
 					</div>
 					<div className='flex flex-col items-center w-full overflow-hidden '>
@@ -1070,89 +1076,37 @@ export default function GiveDesktop() {
 												</li>
 											</ul>
 										</div>
-										<ul
-											className='flex items-center text-[28px] md:text-[56px]'
-											onClick={handleInternational}
-										>
-											<div
-												className={
-													international
-														? 'flex underline underline-offset-2 font-semibold bg-[#070707] text-[#f8f8f8] p-2 cursor-pointer'
-														: 'flex underline-offset-2 p-2 cursor-pointer'
-												}
+										<div className='flex items-center text-[28px] md:text-[56px]'>
+											<a
+												href='https://pushpay.com/g/ccglobal?src=hpp'
+												target='_blank'
+												rel='noopener noreferrer'
+												className='flex items-center'
 											>
-												INTERNATIONAL
-											</div>{' '}
-											&nbsp;
-											<li
-												className={
-													international ? 'list-none hidden' : 'list-none block'
-												}
+												<div className='flex text-[#070707] p-2 cursor-pointer'>
+													INTERNATIONAL
+												</div>{' '}
+												&nbsp;
+												<li className='text-[24px]'>
+													<FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+												</li>
+											</a>
+										</div>
+										<div className='flex items-center text-[28px] md:text-[56px]'>
+											<a
+												href='https://pushpay.com/g/cconline?r=monthly'
+												target='_blank'
+												rel='noopener noreferrer'
+												className='flex items-center'
 											>
-												&#43;
-											</li>
-											<li
-												className={
-													international ? 'list-none block' : 'list-none hidden'
-												}
-											>
-												&#45;
-											</li>
-										</ul>
-										<div
-											className={
-												international
-													? ' w-full delay-200 translate-y-0 opacity-100 duration-300 flex flex-col gap-x-20'
-													: ' w-full delay-0 translate-y-[-100vh] opacity-25 hidden'
-											}
-										>
-											<ul className='flex flex-col gap-y-4 ml-12'>
-												<li className='flex items-center'>
-													<a className='flex relative hover:bg-black hover:text-white ease-in items-center cursor-pointer'>
-														THE LIGHTHOUSE ANTWERP, BELGIUM
-													</a>
+												<div className='flex text-[#070707] p-2 cursor-pointer'>
+													CHURCH ONLINE
+												</div>{' '}
+												&nbsp;
+												<li className='text-[24px]'>
+													<FontAwesomeIcon icon={faArrowUpRightFromSquare} />
 												</li>
-												<li>
-													<a
-														className='hover:bg-black hover:text-white ease-in'
-														href=''
-														target='_blank'
-														rel='noopener noreferrer'
-													>
-														NETHERLANDS
-													</a>
-												</li>
-												<li>
-													<a
-														className='hover:bg-black hover:text-white ease-in cursor-pointer'
-														href=''
-														target='_blank'
-														rel='noopener noreferrer'
-													>
-														PARIS
-													</a>
-												</li>
-												<li>
-													<a
-														className='hover:bg-black hover:text-white ease-in cursor-pointer'
-														href=''
-														target='_blank'
-														rel='noopener noreferrer'
-													>
-														MOKAPANE SOUTH AFRICA
-													</a>
-												</li>
-												<li>
-													<a
-														className='hover:bg-black hover:text-white ease-in cursor-pointer'
-														href=''
-														target='_blank'
-														rel='noopener noreferrer'
-													>
-														ZIMBABWE
-													</a>
-												</li>
-											</ul>
+											</a>
 										</div>
 										<ul
 											className='flex text-[28px] md:text-[56px]'
@@ -1626,7 +1580,7 @@ export default function GiveDesktop() {
 							</div>
 							<div className='text'>
 								<h3>ORANGE PARK FOOD PANTRY</h3>
-								<p>
+								<p className=''>
 									Our Orange Park location is making a tremendous impact in
 									their local community through their weekly food pantry
 									ministry – which served 95,312 Clay County residents this past

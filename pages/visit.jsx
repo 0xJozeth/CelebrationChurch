@@ -8,6 +8,8 @@ import { IoLocationSharp } from 'react-icons/io5';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { BsFillArrowRightCircleFill, BsClockFill } from 'react-icons/bs';
 import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAt } from '@fortawesome/free-solid-svg-icons';
 
 import React, { useEffect, useState } from 'react';
 import VisitDesktop from './visit-deprecated';
@@ -222,11 +224,11 @@ function VisitTW(props) {
 									}
 								>
 									<ul className='flex flex-col gap-y-4 ml-12'>
-										<li className='flex items-center'>
+										{/* <li className='flex items-center'>
 											<a className='flex relative hover:bg-black hover:text-white ease-in items-center cursor-pointer'>
 												THE LIGHTHOUSE ANTWERP, BELGIUM
 											</a>
-										</li>
+										</li> */}
 										<li>
 											<a
 												className='hover:bg-black hover:text-white ease-in'
@@ -309,7 +311,7 @@ function VisitTW(props) {
 												target='_blank'
 												rel='noopener noreferrer'
 											>
-												ST. JOHNS DISCIPLINE COMMUNITY CHURCH{' '}
+												ST. JOHNS DISCIPLESHIP COMMUNITY CHURCH{' '}
 											</a>
 										</li>
 										<li>
@@ -700,11 +702,11 @@ function VisitTW(props) {
 									}
 								>
 									<ul className='flex flex-col gap-y-4 ml-12'>
-										<li className='flex items-center'>
+										{/* <li className='flex items-center'>
 											<a className='flex relative hover:bg-black hover:text-white ease-in items-center cursor-pointer'>
 												THE LIGHTHOUSE ANTWERP, BELGIUM
 											</a>
-										</li>
+										</li> */}
 										<li>
 											<a
 												className='hover:bg-black hover:text-white ease-in'
@@ -787,7 +789,7 @@ function VisitTW(props) {
 												target='_blank'
 												rel='noopener noreferrer'
 											>
-												ST. JOHNS DISCIPLINE COMMUNITY CHURCH{' '}
+												ST. JOHNS DISCIPLESHIP COMMUNITY CHURCH{' '}
 											</a>
 										</li>
 										<li>
@@ -925,16 +927,33 @@ function VisitTW(props) {
 									</div>
 								</div>
 								<div className='flex gap-x-4 items-center'>
-									<div className='flex md:hidden items-start mt-4'>
-										<FaPhoneAlt size={22} />
-									</div>
-									<div className='hidden md:flex items-start p-4'>
-										<FaPhoneAlt size={36} />
-									</div>
-									<div className='flex font-display text-[24px] md:text-[48px] font-light my-4'>
-										<h4 className='cursor-pointer'>
-											<a href='tel:+9047371121'>(904) 737-1121</a>
-										</h4>
+									<div className='flex flex-col gap-y-8 font-display text-[24px] md:text-[48px] font-light my-4'>
+										<div className='flex items-center'>
+											<div className='flex md:hidden items-start mt-4'>
+												<FaPhoneAlt size={22} />
+											</div>
+											<div className='hidden md:flex items-start p-4'>
+												<FaPhoneAlt size={36} />
+											</div>
+											<h4 className='cursor-pointer'>
+												<a href='tel:+9047371121'>(904) 737-1121</a>
+											</h4>
+										</div>
+										<div className='flex items-center'>
+											<div className='flex md:hidden items-start mt-4'>
+												{/* <FaPhoneAlt size={22} /> */}
+												<FontAwesomeIcon size={22} icon={faAt} />
+											</div>
+											<div className='hidden md:flex items-start p-4'>
+												{/* <FaPhoneAlt size={36} /> */}
+												<FontAwesomeIcon size={36} icon={faAt} />
+											</div>
+											<h4 className='cursor-pointer'>
+												<a href='mailto:info@celebration.org'>
+													info@celebration.org
+												</a>
+											</h4>
+										</div>
 									</div>
 								</div>
 							</div>
