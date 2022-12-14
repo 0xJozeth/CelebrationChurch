@@ -21,6 +21,7 @@ import PartnersCarousel from '/components/PartnersCarousel/partnersCarousel.jsx'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+	faArrowUpRightFromSquare,
 	faBagShopping,
 	faBible,
 	faPrayingHands,
@@ -243,9 +244,27 @@ function Navbar(props) {
 						<p>/</p>
 					</li>
 					<li className='p-2 font-bold'>
-						<Link href='watch' passHref>
-							<a>WATCH</a>
-						</Link>
+						<div className='flex items-center gap-x-2 cursor-pointer'>
+							<a
+								href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='flex'
+							>
+								WATCH
+							</a>
+							<a
+								href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
+								target='_blank'
+								rel='noopener noreferrer'
+								className='flex'
+							>
+								<FontAwesomeIcon
+									icon={faArrowUpRightFromSquare}
+									className='text-[12px]'
+								/>
+							</a>
+						</div>
 					</li>
 					<li className='p-2 font-bold'>
 						<p>/</p>
