@@ -57,16 +57,23 @@ function HomeDesktop() {
 								</p>
 							</div>
 							<div className='flex px-16 my-8 gap-x-4 z-40'>
-								<div className='flex justify-end items-center '>
-									<p className='font-display font-normal text-[28px]'>
-										WATCH&nbsp;THE LATEST&nbsp;MESSAGE
-									</p>
-								</div>
-								<div className=''>
-									<div className='flex w-14 min-w-[56px] items-center'>
-										<Image src={arrow} alt='' />
+								<a
+									href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='flex items-center gap-x-4 '
+								>
+									<div className='flex justify-end items-center '>
+										<p className='font-display font-normal text-[28px]'>
+											WATCH&nbsp;THE LATEST&nbsp;MESSAGE
+										</p>
 									</div>
-								</div>
+									<div className=''>
+										<div className='flex w-14 min-w-[56px] items-center'>
+											<Image src={arrow} alt='' />
+										</div>
+									</div>
+								</a>
 							</div>
 						</div>
 						<div className='relative z-20'>
@@ -116,7 +123,7 @@ function HomeDesktop() {
 							</div>
 						</div>
 						<div className='flex  justify-end px-16 cursor-pointer z-40 '>
-							<Link href='vidit'>
+							<Link href='visit'>
 								<div
 									className='flex justify-center items-center 
 								text-[22px] md:text-[24px] lg:text-[28px] xl:text-[36px]
