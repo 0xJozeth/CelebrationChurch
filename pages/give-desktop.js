@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -685,6 +685,186 @@ export default function GiveDesktop() {
 	useEffect(() => {
 		console.log('The global useState is set to:', global);
 	});
+
+	//////////////////
+
+	//////////////////
+
+	const Carousel = (props) => {
+		// State to track the current image
+		const [currentImage, setCurrentImage] = useState(0);
+
+		// List of images to display in the carousel
+
+		const images = [
+			{
+				src: serve,
+				alt: 'Image 1',
+				heading: ['Orange Park Food Pantry'],
+				paragraph:
+					'Our Orange Park location is making a tremendous impact in their local community through their weekly food pantry ministry – which served 95,312 Clay County residents this past year. Because of your generosity, not only were we able to meet the tangible needs, but they were also able to open a 4,000 square foot space dedicated to helping further their food pantry and outreach efforts.',
+				link: 'Partner With Us',
+			},
+			{
+				src: oneChild,
+				alt: 'ONECHILD',
+				heading: 'ONECHILD',
+				paragraph:
+					'Your generosity is helping the lives of thousands of children from our Celebration Zimbabwe location! Through partnership with OneChild, our congregation is sponsoring numerous kids in Zimbabwe and helping meet the physical, emotional, and spiritual needs of them and their families. If you are interested in contributing to this Kingdom impact, sponsor a child in need today.',
+				link: 'Partner With Us',
+			},
+			{
+				src: relief,
+				alt: 'DISASTER RELIEF EFFORTS',
+				heading: 'DISASTER RELIEF EFFORTS',
+				paragraph:
+					'One of Celebration’s deepest desires is to operate as the hands and feet of Jesus, especially when people are in need the most. We partner with Convoy of Hope on numerous occasions throughout the year to help meet tangible needs of those struck with natural disasters, war, or various other tragedies. To join the impact that these amazing partners are making daily, you can give here.',
+				link: 'Partner With Us',
+			},
+			// Add more images here...
+		];
+
+		// Use the useMemo hook to memoize the images array
+		const memoizedImages = useMemo(() => images, [images]);
+
+		// Function to go to the previous image
+		const goToPreviousImage = () => {
+			// If the current image is the first image, go to the last image
+			if (currentImage === 0) {
+				setCurrentImage(images.length - 1);
+			} else {
+				setCurrentImage(currentImage - 1);
+			}
+		};
+
+		// Function to go to the next image
+		const goToNextImage = () => {
+			// If the current image is the last image, go to the first image
+			if (currentImage === images.length - 1) {
+				setCurrentImage(0);
+			} else {
+				setCurrentImage(currentImage + 1);
+			}
+		};
+
+		useEffect(() => {
+			// Function to go to the next image after a specified interval
+			const goToNextImage = () => {
+				// If the current image is the last image, go to the first image
+				if (currentImage === images.length - 1) {
+					setCurrentImage(0);
+				} else {
+					setCurrentImage(currentImage + 1);
+				}
+			};
+
+			// // Set a interval to go to the next image every 5 seconds
+			// const interval = setInterval(goToNextImage, 10000);
+
+			// // Clear the interval when the component is unmounted
+			// return () => clearInterval(interval);
+		}, []);
+
+		const container = {
+			hidden: { opacity: 0 },
+			show: {
+				opacity: 1,
+				transition: {
+					staggerChildren: 0.5,
+				},
+			},
+		};
+
+		const item = {
+			hidden: { opacity: 0 },
+			show: { opacity: 1 },
+		};
+
+		return (
+			<>
+				<div className='flex w-full h-full'>
+					<button onClick={goToPreviousImage} className='w-[10%] px-2 py-1'>
+						<Image src={leftnav} alt='previous image' />
+					</button>
+					<motion.div
+						variants={container}
+						initial='hidden'
+						animate='show'
+						className='flex justify-center p-4 '
+					>
+						<div className=' flex w-2/5 p-4 '>
+							<animatePresence>
+								<motion.div
+									key={currentImage}
+									variants={item}
+									initial={{ opacity: 0, x: '100%' }}
+									animate={{ opacity: 1, x: 0 }}
+									exit={{ opacity: 0, x: '-100%' }}
+									transition={{ ease: 'easeInOut', duration: 1, delay: 0.6 }}
+									className=''
+								>
+									<Image
+										src={images[currentImage].src}
+										className='w-1/2 p-8'
+										alt={images[currentImage].alt}
+									/>
+								</motion.div>
+							</animatePresence>
+						</div>
+						<div className='w-1/2 px-8 mx-4 pt-16 '>
+							<animatePresence>
+								<motion.h1
+									key={currentImage}
+									variants={item}
+									initial={{ opacity: 0, x: '100%' }}
+									animate={{ opacity: 1, x: 0 }}
+									exit={{ opacity: 0, x: '-100%' }}
+									transition={{ ease: 'easeInOut', duration: 1, delay: 0.6 }}
+									className='font-display font-bold text-[#070707] text-[54px] py-4 pb-8 uppercase'
+								>
+									{images[currentImage].heading}
+								</motion.h1>
+							</animatePresence>
+							<animatePresence>
+								<motion.p
+									key={currentImage}
+									variants={item}
+									initial={{ opacity: 0, x: '100%' }}
+									animate={{ opacity: 1, x: 0 }}
+									exit={{ opacity: 0, x: '-100%' }}
+									transition={{ ease: 'easeInOut', duration: 1, delay: 0.6 }}
+									className='flexjustify-center font-display font-normal text-left text-[20px] leading-7 text-[#7c7c7c]'
+								>
+									{images[currentImage].paragraph}
+								</motion.p>
+							</animatePresence>
+							{/* <animatePresence>
+								<motion.div
+									key={currentImage}
+									variants={item}
+									initial={{ opacity: 0, x: '100%' }}
+									animate={{ opacity: 1, x: 0 }}
+									exit={{ opacity: 0, x: '-100%' }}
+									transition={{ ease: 'easeInOut', duration: 1, delay: 0.6 }}
+									className='flex justify-start mt-16 gap-8 font-display font-normal text-left text-[28px] leading-7 uppercase text-[#070707]'
+								>
+									{images[currentImage].link}
+									<Image src={arrow} alt='' className='invert' />
+								</motion.div>
+							</animatePresence> */}
+						</div>
+					</motion.div>
+					<button
+						onClick={goToNextImage}
+						className='w-[10%] px-2 py-1 rotate-180'
+					>
+						<Image src={rightnav} alt='next image' />
+					</button>
+				</div>
+			</>
+		);
+	};
+
 	return (
 		<>
 			<div className='flex justify-center w-[100vw] '>
@@ -740,7 +920,7 @@ export default function GiveDesktop() {
 							</h2>
 						</div>
 						<div className='flex justify-center  p-8 mx-8 my-16'>
-							<p className='font-display md:text-[18px] lg:text-[24px]'>
+							<p className='font-display md:text-[18px] lg:text-[24px] leading-relaxed'>
 								Here at Celebration, we believe that God calls us to partake in
 								the act of generosity, and that tithing is an act of worship and
 								obedience to Jesus. When you give back to the Lord through
@@ -783,16 +963,16 @@ export default function GiveDesktop() {
 					</div>
 					<div className='flex flex-col items-center w-full overflow-hidden '>
 						<div className='relative flex flex-col items-center justify-start w-full '>
-							{/* <div className='flex justify-center items-center w-full'>
+							<div className='flex justify-center items-center w-full'>
 								<h2 className='font-display font-bold text-center md:text-[126px] lg:text-[192px]'>
 									YOUR&nbsp;
 									<span className='font-kepler font-thin italic  text-[1.1em]'>
 										IMPACT
 									</span>
 								</h2>
-							</div> */}
+							</div>
 
-							{/* <Carousel /> */}
+							<Carousel />
 
 							{/* <div id='yourImpactSection' className='w-full '>
 								<div className='flex relative w-full p-4  overflow-hidden'>
