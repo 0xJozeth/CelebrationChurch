@@ -137,7 +137,7 @@ function HomeDesktop() {
 						</div>
 					</div>
 
-					<div className='flex flex-col mt-[125px] w-full '>
+					<div className='flex flex-col w-full '>
 						<div className='relative flex justify-start w-full z-20 '>
 							<div className='left-0 w-full'>
 								<Image src={place} alt='' />

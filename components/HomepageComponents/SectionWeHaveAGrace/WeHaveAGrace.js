@@ -26,7 +26,7 @@ const Grace = styled.h2`
 export default function WeHaveAGrace() {
 	return (
 		<>
-			<div className='hidden md:flex flex-col items-start mx-auto p-4 w-full md:h-[700px] lg:h-[900px]'>
+			<div className='hidden md:flex flex-col items-start mx-auto p-4 w-full md:h-[700px] lg:h-[900px] '>
 				<div className='relative flex flex-col items-center w-full'>
 					<div className='flex w-full justify-center'>
 						<h2 className='font-display text-[46px] md:text-[88px] lg:text-[136px] xl:text-[180px] font-bold'>
@@ -46,6 +46,7 @@ export default function WeHaveAGrace() {
 							className='absolute md:my-4 px-1 md:px-4 
 						w-full min-w-[200px] md:max-w-[482px] lg:min-w-[596px] lg:max-w-[900px]
 						  md:top-[120px] lg:top-[100px] xl:-top-[35px]
+						  md:bottom-[120px] lg:bottom-[100px] xl:-bottom-[35px]
 						  md:left-[100px] 
 						  lg:right-[100px] 
 						  xl:left-[450px]  

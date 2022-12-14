@@ -394,9 +394,9 @@ function Navbar(props) {
 								</div>
 							</div>
 						</div>
-						<div className='flex justify-center items-center p-4 mt-10 bg-[#0D0D0D] min-w-full min-h-[290px] z-[1002] '>
+						<div className='flex justify-center items-center py-16 p-4 mt-10 bg-[#0D0D0D] min-w-full min-h-[290px] z-[1002] '>
 							<ul className='flex flex-col' onClick={handleToggle}>
-								<div className='flex flex-col gap-16'>
+								<div className='flex flex-col gap-10'>
 									{/* <div>
 										<li>
 											<Link href='/shop' passHref>
@@ -416,7 +416,7 @@ function Navbar(props) {
 									<div>
 										<li>
 											<Link href='bible-reading-plan' passHref>
-												<div className='flex gap-x-2 text-[#F8F8F8] text-[18px]'>
+												<div className='flex gap-x-4 text-[#F8F8F8] text-[18px]'>
 													<span
 														className='icon-bible'
 														role='img'
@@ -430,9 +430,9 @@ function Navbar(props) {
 										</li>
 									</div>
 									<div>
-										<li className='flex gap-x-2'>
+										<li className='flex gap-x-4'>
 											<Link href='/celebration-worship' passHref>
-												<div className='flex gap-x-2 text-[#F8F8F8] text-[18px]'>
+												<div className='flex gap-x-4 text-[#F8F8F8] text-[18px]'>
 													<span
 														className='icon-praying-hands'
 														role='img'
@@ -446,9 +446,9 @@ function Navbar(props) {
 										</li>
 									</div>
 									<div>
-										<li className='flex gap-x-2'>
+										<li className='flex gap-x-4'>
 											<Link href='tv-ministry' passHref>
-												<div className='flex gap-x-2 text-[#F8F8F8] text-[18px]'>
+												<div className='flex gap-x-4 text-[#F8F8F8] text-[18px]'>
 													<span
 														className='icon-screen'
 														role='img'
@@ -462,38 +462,44 @@ function Navbar(props) {
 										</li>
 									</div>
 									<div>
-										<li className='flex gap-x-2'>
-											<Link href='ckids-online' passHref>
-												<div className='flex gap-x-2 text-[#F8F8F8] text-[18px]'>
-													<span
-														className='icon-globe'
-														role='img'
-														aria-label='globe'
-													>
-														<FontAwesomeIcon icon={faAppStoreIos} />
-													</span>
-													<a className='text-[#F8F8F8]'>APPLE APP STORE APP</a>
-												</div>
-											</Link>
-										</li>
+										<div className='flex gap-x-4'>
+											<span
+												className='icon-globe'
+												role='img'
+												aria-label='globe'
+											>
+												<a
+													href='https://apps.apple.com/us/app/the-celebration-app/id1210190693
+'
+													target='_blank'
+													rel='noopener noreferrer'
+													className='flex gap-x-4 text-[#F8F8F8] text-[18px]'
+												>
+													<FontAwesomeIcon icon={faAppStoreIos} />
+												</a>
+											</span>
+											<p className='text-[#F8F8F8]'>APPLE APP STORE APP</p>
+										</div>
 									</div>
 									<div>
-										<li className='flex gap-x-2'>
-											<Link href='ckids-online' passHref>
-												<div className='flex gap-x-2 text-[#F8F8F8] text-[18px]'>
-													<span
-														className='icon-globe'
-														role='img'
-														aria-label='globe'
-													>
-														<FontAwesomeIcon icon={faGooglePlay} />
-													</span>
-													<a className='text-[#F8F8F8]'>
-														GOOGLE PLAY STORE APP
-													</a>
-												</div>
-											</Link>
-										</li>
+										<div className='flex gap-x-4'>
+											<span
+												className='icon-globe'
+												role='img'
+												aria-label='globe'
+											>
+												<a
+													href='https://play.google.com/store/apps/details?id=com.echurchapps.celebrationchapp&hl=en_US&gl=US&pli=1
+'
+													target='_blank'
+													rel='noopener noreferrer'
+													className='flex gap-x-4 text-[#F8F8F8] text-[18px]'
+												>
+													<FontAwesomeIcon icon={faGooglePlay} />
+												</a>
+											</span>
+											<p className='text-[#F8F8F8]'>GOOGLE PLAY STORE APP</p>
+										</div>
 									</div>
 								</div>
 							</ul>

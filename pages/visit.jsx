@@ -354,7 +354,7 @@ function VisitTW(props) {
 												GOOD SHEPHERD CHURCH - PARIS,FRANCE{' '}
 											</a>
 										</li>
-										<li>
+										{/* <li>
 											<a
 												className='hover:bg-black hover:text-white ease-in cursor-pointer'
 												href=''
@@ -363,7 +363,7 @@ function VisitTW(props) {
 											>
 												CELEBRATION CHURCH AMELIA ISLAND{' '}
 											</a>
-										</li>
+										</li> */}
 									</ul>
 								</div>
 							</ul>
@@ -832,7 +832,7 @@ function VisitTW(props) {
 												GOOD SHEPHERD CHURCH - PARIS,FRANCE{' '}
 											</a>
 										</li>
-										<li>
+										{/* <li>
 											<a
 												className='hover:bg-black hover:text-white ease-in cursor-pointer'
 												href=''
@@ -841,7 +841,7 @@ function VisitTW(props) {
 											>
 												CELEBRATION CHURCH AMELIA ISLAND{' '}
 											</a>
-										</li>
+										</li> */}
 									</ul>
 								</div>
 							</ul>
@@ -849,8 +849,8 @@ function VisitTW(props) {
 					</div>
 				</div>
 
-				<div className='flex flex-col p-8 '>
-					<div className='flex mx-auto w-full justify-start mb-[150px]'>
+				<div className='flex flex-col p-8'>
+					<div className='flex mx-auto w-full justify-center mb-[150px]'>
 						<h1 className='font-display font-bold text-[#070707 text-[54px] md:text-[108px] lg:text-[192px]'>
 							REACH OUT&nbsp;
 							<br />
