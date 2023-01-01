@@ -12,9 +12,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAt } from '@fortawesome/free-solid-svg-icons';
 
 import React, { useEffect, useState } from 'react';
-import VisitDesktop from './visit-deprecated';
+// import VisitDesktop from './visit-deprecated';
 
 function VisitTW(props) {
+	console.log('props:', props);
 	const [usa, setUsa] = useState(false);
 	const [international, setInternational] = useState(false);
 	const [global, setGlobal] = useState(false);
@@ -182,7 +183,7 @@ function VisitTW(props) {
 												target='_blank'
 												rel='noopener noreferrer'
 											>
-												CHRISTIAN FAITH CENTER, NC
+												CFC CREEDMOOR
 											</a>
 										</li>
 									</ul>
@@ -246,7 +247,7 @@ function VisitTW(props) {
 												target='_blank'
 												rel='noopener noreferrer'
 											>
-												PARIS
+												FRANCE
 											</a>
 										</li>
 										<li>
@@ -256,7 +257,7 @@ function VisitTW(props) {
 												target='_blank'
 												rel='noopener noreferrer'
 											>
-												MOKAPANE SOUTH AFRICA
+												SOUTH AFRICA
 											</a>
 										</li>
 										<li>
@@ -269,101 +270,6 @@ function VisitTW(props) {
 												ZIMBABWE
 											</a>
 										</li>
-									</ul>
-								</div>
-								<ul
-									className='flex text-[28px] md:text-[56px]'
-									onClick={handleGlobal}
-								>
-									<div
-										className={
-											global
-												? 'flex underline underline-offset-2 font-semibold bg-[#070707] text-[#f8f8f8] p-2'
-												: 'flex underline-offset-2 p-2'
-										}
-									>
-										GLOBAL PARTNERS
-									</div>{' '}
-									&nbsp;
-									<li
-										className={global ? 'list-none hidden' : 'list-none block'}
-									>
-										&#43;
-									</li>
-									<li
-										className={global ? 'list-none block' : 'list-none hidden'}
-									>
-										&#45;
-									</li>
-								</ul>
-								<div
-									className={
-										global
-											? ' w-full delay-200 translate-y-0 opacity-100 duration-300 flex flex-col gap-x-20'
-											: ' w-full delay-0 translate-y-[-100vh] opacity-25 hidden'
-									}
-								>
-									<ul className='flex flex-col gap-y-4 ml-12'>
-										<li className='flex items-center'>
-											<a
-												className='flex relative hover:bg-black hover:text-white ease-in items-center cursor-pointer'
-												href=''
-												target='_blank'
-												rel='noopener noreferrer'
-											>
-												ST. JOHNS DISCIPLESHIP COMMUNITY CHURCH{' '}
-											</a>
-										</li>
-										<li>
-											<a
-												className='hover:bg-black hover:text-white ease-in cursor-pointer'
-												href=''
-												target='_blank'
-												rel='noopener noreferrer'
-											>
-												IGLESIA TIERRA DESEABLE - BOGOTA, COLUMBIA{' '}
-											</a>
-										</li>
-										<li>
-											<a
-												className='hover:bg-black hover:text-white ease-in cursor-pointer'
-												href=''
-												target='_blank'
-												rel='noopener noreferrer'
-											>
-												TIFERET YESHUA ISRAEL
-											</a>
-										</li>
-										<li>
-											<a
-												className='hover:bg-black hover:text-white ease-in cursor-pointer'
-												href=''
-												target='_blank'
-												rel='noopener noreferrer'
-											>
-												HIS CHURCH - DURBAN, SOUTH AFRICA{' '}
-											</a>
-										</li>
-										<li>
-											<a
-												className='hover:bg-black hover:text-white ease-in cursor-pointer'
-												href=''
-												target='_blank'
-												rel='noopener noreferrer'
-											>
-												GOOD SHEPHERD CHURCH - PARIS,FRANCE{' '}
-											</a>
-										</li>
-										{/* <li>
-											<a
-												className='hover:bg-black hover:text-white ease-in cursor-pointer'
-												href=''
-												target='_blank'
-												rel='noopener noreferrer'
-											>
-												CELEBRATION CHURCH AMELIA ISLAND{' '}
-											</a>
-										</li> */}
 									</ul>
 								</div>
 							</ul>
@@ -660,7 +566,7 @@ function VisitTW(props) {
 												target='_blank'
 												rel='noopener noreferrer'
 											>
-												CHRISTIAN FAITH CENTER, NC
+												CFC CREEDMOOR
 											</a>
 										</li>
 									</ul>
@@ -724,7 +630,7 @@ function VisitTW(props) {
 												target='_blank'
 												rel='noopener noreferrer'
 											>
-												PARIS
+												FRANCE
 											</a>
 										</li>
 										<li>
@@ -734,7 +640,7 @@ function VisitTW(props) {
 												target='_blank'
 												rel='noopener noreferrer'
 											>
-												MOKAPANE SOUTH AFRICA
+												SOUTH AFRICA
 											</a>
 										</li>
 										<li>
@@ -747,101 +653,6 @@ function VisitTW(props) {
 												ZIMBABWE
 											</a>
 										</li>
-									</ul>
-								</div>
-								<ul
-									className='flex text-[28px] md:text-[56px]'
-									onClick={handleGlobal}
-								>
-									<div
-										className={
-											global
-												? 'flex underline underline-offset-2 font-semibold bg-[#070707] text-[#f8f8f8] p-2'
-												: 'flex underline-offset-2 p-2'
-										}
-									>
-										GLOBAL PARTNERS
-									</div>{' '}
-									&nbsp;
-									<li
-										className={global ? 'list-none hidden' : 'list-none block'}
-									>
-										&#43;
-									</li>
-									<li
-										className={global ? 'list-none block' : 'list-none hidden'}
-									>
-										&#45;
-									</li>
-								</ul>
-								<div
-									className={
-										global
-											? ' w-full delay-200 translate-y-0 opacity-100 duration-300 flex flex-col gap-x-20'
-											: ' w-full delay-0 translate-y-[-100vh] opacity-25 hidden'
-									}
-								>
-									<ul className='flex flex-col gap-y-4 ml-12'>
-										<li className='flex items-center'>
-											<a
-												className='flex relative hover:bg-black hover:text-white ease-in items-center cursor-pointer'
-												href=''
-												target='_blank'
-												rel='noopener noreferrer'
-											>
-												ST. JOHNS DISCIPLESHIP COMMUNITY CHURCH{' '}
-											</a>
-										</li>
-										<li>
-											<a
-												className='hover:bg-black hover:text-white ease-in cursor-pointer'
-												href=''
-												target='_blank'
-												rel='noopener noreferrer'
-											>
-												IGLESIA TIERRA DESEABLE - BOGOTA, COLUMBIA{' '}
-											</a>
-										</li>
-										<li>
-											<a
-												className='hover:bg-black hover:text-white ease-in cursor-pointer'
-												href=''
-												target='_blank'
-												rel='noopener noreferrer'
-											>
-												TIFERET YESHUA ISRAEL
-											</a>
-										</li>
-										<li>
-											<a
-												className='hover:bg-black hover:text-white ease-in cursor-pointer'
-												href=''
-												target='_blank'
-												rel='noopener noreferrer'
-											>
-												HIS CHURCH - DURBAN, SOUTH AFRICA{' '}
-											</a>
-										</li>
-										<li>
-											<a
-												className='hover:bg-black hover:text-white ease-in cursor-pointer'
-												href=''
-												target='_blank'
-												rel='noopener noreferrer'
-											>
-												GOOD SHEPHERD CHURCH - PARIS,FRANCE{' '}
-											</a>
-										</li>
-										{/* <li>
-											<a
-												className='hover:bg-black hover:text-white ease-in cursor-pointer'
-												href=''
-												target='_blank'
-												rel='noopener noreferrer'
-											>
-												CELEBRATION CHURCH AMELIA ISLAND{' '}
-											</a>
-										</li> */}
 									</ul>
 								</div>
 							</ul>

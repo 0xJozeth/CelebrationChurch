@@ -373,7 +373,7 @@ export default function VisitDesktop(props) {
 									<Link href='#' passHref>
 										<li>
 											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
-												CHRISTIAN FAITH CENTER, NC
+												CFC CREEDMOOR
 											</a>
 										</li>
 									</Link>
@@ -423,14 +423,14 @@ export default function VisitDesktop(props) {
 									<Link href='#' passHref>
 										<li>
 											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
-												PARIS
+												FRANCE
 											</a>
 										</li>
 									</Link>
 									<Link href='#' passHref>
 										<li>
 											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
-												MOKAPANE SOUTH AFRICA
+												SOUTH AFRICA
 											</a>
 										</li>
 									</Link>
@@ -479,14 +479,14 @@ export default function VisitDesktop(props) {
 									<Link href='#' passHref>
 										<li>
 											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
-												PARIS
+												FRANCE
 											</a>
 										</li>
 									</Link>
 									<Link href='#' passHref>
 										<li>
 											<a className='hover:bg-black hover:text-white p-2 m-2 ease-in'>
-												MOKAPANE SOUTH AFRICA
+												SOUTH AFRICA
 											</a>
 										</li>
 									</Link>

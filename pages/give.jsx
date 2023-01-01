@@ -391,7 +391,7 @@ function Give(props) {
 														target='_blank'
 														rel='noopener noreferrer'
 													>
-														CHRISTIAN FAITH CENTER, NC
+														CFC CREEDMOOR
 													</a>
 												</li>
 											</ul>

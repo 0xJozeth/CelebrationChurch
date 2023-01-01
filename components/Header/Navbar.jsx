@@ -38,121 +38,27 @@ import { CSSTransition } from 'react-transition-group';
 import arrow from '/public/arrow@1x-white.svg';
 import pagination from '/public/slider-pagination.svg';
 
-// export const ToggleMenuWrapper = styled(motion.div)`
-// 	position: fixed;
-
-// 	top: 0px;
-// 	right: 0;
-// 	left: 0;
-// 	bottom: 0;
-
-// 	opacity: 99%;
-// 	min-height: 100%;
-
-// 	width: 100%;
-// 	background: #070707;
-// 	/* overflow-y: hidden; */
-
-// 	/* z-index: 9999999999; // IMPORTANT */
-
-// 	a {
-// 		text-decoration: none;
-// 		color: #f8f8f8;
-// 	}
-
-// 	div {
-// 		&.grid-container {
-// 			display: grid;
-// 			grid-template-columns: repeat(16, 6.25%);
-// 			grid-template-rows: repeat(16, 6.25%);
-// 			gap: 0.5em 0.5em;
-// 			min-height: 100vh;
-
-// 			font-family: 'neue-haas-grotesk-display';
-// 			li {
-// 				margin-block: 1em;
-// 				margin-inline: 0.5em;
-// 				color: #f8f8f8;
-// 				/* margin-block: 3em; */
-// 			}
-// 		}
-// 		&.close-button {
-// 			/* background: red; */
-// 			/* grid-column: 14 / span 1;
-// 			grid-row: 2 / span 1;
-// 			place-self: start; */
-// 		}
-// 		&.left-grid {
-// 			/* background: darkgoldenrod; */
-// 			grid-column: 2 / span 3;
-// 			grid-row: 4 / span 10;
-// 			font-size: 4.25em;
-// 			font-weight: 700;
-// 		}
-// 		&.right-grid {
-// 			/* background: red; */
-// 			grid-column: 5 / span 6;
-// 			grid-row: 4 / span 10;
-// 			font-size: 4.25em;
-// 			font-weight: 700;
-// 		}
-// 		&.side-grid {
-// 			/* background: red; */
-// 			grid-column: 11 / span 4;
-// 			grid-row: 4 / span 6;
-// 			/* margin-inline: 4em; */
-
-// 			li {
-// 				font-size: 1.5em;
-// 				font-weight: 500;
-// 				margin-block: 3.25em;
-// 				/* background: blue; */
-// 				display: flex;
-// 				flex-direction: row;
-// 				align-content: center;
-
-// 				span {
-// 					margin-inline: 0.5em;
-// 				}
-// 			}
-// 		}
-// 		&.social-icons {
-// 			color: #f8f8f8;
-// 			grid-column: 11 / span 3;
-// 			grid-row: 13 / span 1;
-// 			width: 100%;
-
-// 			display: flex;
-// 			place-items: center;
-
-// 			span {
-// 				margin-inline: 0.5em;
-// 				font-size: 2em;
-// 			}
-// 		}
-// 		section {
-// 			color: #f8f8f8;
-// 			place-self: center;
-// 		}
-// 	}
-// `;
-
 function Navbar(props) {
 	const [nav, setNav] = useState(false);
 	const [slide, setSlide] = useState(false);
 	const [logoMobile, setLogoMobile] = useState(false);
 
-	const handleToggle = () => {
+	function handleToggle() {
 		setNav(!nav);
-	};
+	}
 
-	const handleSlide = () => {
+	function handleSlide() {
 		setSlide(!slide);
-	};
+	}
 
-	const handleScroll = () => {
+	function handleScroll() {
 		console.log('scroll event', window.scrollY);
-	};
+	}
+
+	//CLOSES THE NAV MENU WHEN ANY OPTION IS SELECTED
+	function handleOptionClick() {
+		setNav(false);
+	}
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
@@ -293,7 +199,10 @@ function Navbar(props) {
 							}
 						>
 							<div className='relative flex flex-col font-bold text-[38px] mt-20 md:mt-24 gap-y-2 h-[256px]'>
-								<ul className='flex flex-col gap-y-4' onClick={handleToggle}>
+								<ul
+									className='flex flex-col gap-y-4'
+									onClick={handleOptionClick}
+								>
 									<li className='about'>
 										<Link href='/about' passHref={true}>
 											<a className='text-[#f8f8f8]'>ABOUT</a>
@@ -544,7 +453,7 @@ function Navbar(props) {
 							<div className='flex  items-center '>
 								<ul
 									className='flex flex-col gap-y-4 font-display font-bold text-[75px]'
-									onClick={handleToggle}
+									onClick={handleOptionClick}
 								>
 									<li className='about'>
 										<Link href='/about' passHref={true}>

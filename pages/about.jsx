@@ -12,6 +12,8 @@ import WeHaveAGrace from '../components/HomepageComponents/SectionWeHaveAGrace/W
 import PartnersCarousel from '../components/PartnersCarousel/partnersCarousel';
 import PartnersCarouselMobile from '../components/PartnersCarousel/partnersCarouselMobile';
 
+import { arc } from '/public/ARC.png';
+
 function about() {
 	return (
 		<>
@@ -245,10 +247,34 @@ function about() {
 					</h1>
 				</div>
 				<div className='hidden md:flex mx-auto justify-center items-center my-4'>
-					<PartnersCarousel />
+					{/* <PartnersCarousel /> */}
+					{/* <div className='flex w-full justify-center items-center'>
+						<Image src={arc} alt='' />
+					</div> */}
+					{/* <div className='flex w-full justify-center items-center'>
+						<Image src={conPasion} alt='' />
+					</div>
+					<div className='flex w-full justify-center items-center'>
+						<Image src={convoy} alt='' />
+					</div>
+					<div className='flex w-full justify-center items-center'>
+						<Image src={equip} alt='' />
+					</div>
+					<div className='flex w-full justify-center items-center'>
+						<Image src={nations} alt='' />
+					</div>
+					<div className='flex w-full justify-center items-center'>
+						<Image src={oneChild} alt='' />
+					</div>
+					<div className='flex w-full justify-center items-center'>
+						<Image src={p42} alt='' />
+					</div>
+					<div className='flex w-full justify-center items-center'>
+						<Image src={reaching} alt='' />
+					</div> */}
 				</div>
 				<div className='flex md:hidden mx-auto justify-center items-center my-4'>
-					<PartnersCarouselMobile />
+					{/* <PartnersCarouselMobile /> */}
 				</div>
 				<div
 					className='flex w-full min-h-[51px] lg:h-[200px]

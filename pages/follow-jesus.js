@@ -252,7 +252,7 @@ function followjesus() {
 						<div className='plugInButton'>
 							<Link href='visit'>
 								<div className='linkContainer'>
-									<a>PLUG IN</a>
+									<a>NEXT STEPS</a>
 									<Image src={longArrow} alt='' />
 								</div>
 							</Link>
