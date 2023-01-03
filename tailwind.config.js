@@ -29,6 +29,15 @@ module.exports = {
 			// => @media (min-width: 1536px) { ... }
 		},
 		extend: {
+			// typography: (theme) => ({
+			// 	DEFAULT: {
+			// 		css: {
+			// 			body: {
+			// 				fontFamily: ['neue-haas-grotesk-display', 'sans-serif'],
+			// 			},
+			// 		},
+			// 	},
+			// }),
 			fontFamily: {
 				body: ['neue-haas-grotesk-display', 'sans-serif'],
 				display: ['neue-haas-grotesk-display', 'sans-serif'],
@@ -52,5 +61,8 @@ module.exports = {
 			black: 900,
 		},
 	},
-	plugins: [require('tw-elements/dist/plugin')],
+	plugins: [
+		require('@tailwindcss/typography'),
+		require('tw-elements/dist/plugin'),
+	],
 };

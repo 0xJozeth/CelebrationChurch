@@ -15,8 +15,7 @@ const NavbarLogo = styled.a`
 `;
 
 const DesktopMenu = styled.div`
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	display: flex;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -44,8 +43,86 @@ const Path = (props) => (
 	/>
 );
 
+const Menu = (props) => {
+	console.log('Menu props:', props);
+
+	const closeMenu = () => {
+		props.setIsOpen(false);
+	};
+
+	const data = [
+		{
+			links: [
+				{ text: 'ABOUT', href: 'about' },
+				{ text: 'VISIT', href: 'visit' },
+				{ text: 'WATCH', href: 'watch' },
+				{ text: 'GIVE', href: 'give' },
+			],
+		},
+		{
+			links: [
+				{ text: 'MINISTRIES', href: 'ministries' },
+				{ text: 'CARE', href: 'care' },
+				{ text: 'FOLLOW JESUS', href: 'follow-jesus' },
+			],
+		},
+	];
+
+	const smallData = [
+		{
+			links: [
+				{ text: 'BIBLE READING PLAN', href: '#' },
+				{ text: 'CELEBRATION WORSHIP', href: '#' },
+				{ text: 'TV MINISTRY', href: '#' },
+				{ text: 'CKIDS ONLINE', href: '#' },
+			],
+		},
+	];
+
+	return (
+		<div className='flex justify-center items-center h-full w-full'>
+			{data.map((column, index) => (
+				<div key={index} className='col-span-1 w-full h-[75vh] m-4 p-10'>
+					<ul>
+						{column.links.map((link, index) => (
+							<li key={index}>
+								<Link href={link.href}>
+									<a
+										className='block my-4 font-display font-semibold text-[96px] leading-tight text-[#f8f8f8]'
+										onClick={closeMenu}
+									>
+										{link.text}
+									</a>
+								</Link>
+							</li>
+						))}
+					</ul>
+				</div>
+			))}
+			{smallData.map((column, index) => (
+				<div key={index} className='col-span-1 w-full h-[75vh] m-4 p-10'>
+					<ul>
+						{column.links.map((link, index) => (
+							<li key={index}>
+								<a
+									href={link.href}
+									className='block my-4 font-display font-semibold text-[34px] leading-tight text-[#f8f8f8]'
+									onClick={closeMenu}
+								>
+									{link.text}
+								</a>
+							</li>
+						))}
+					</ul>
+				</div>
+			))}
+		</div>
+	);
+};
+
 const Navbar = (props) => {
 	const [isOpen, setIsOpen] = useState(false);
+	console.log('Navbar props', props);
 
 	// Create a function that updates the state
 	const toggle = () => {
@@ -60,11 +137,6 @@ const Navbar = (props) => {
 
 	return (
 		<>
-			<DesktopMenu isOpen={isOpen}>
-				<div className='col-span-1 bg-red-300'>Column 1</div>
-				<div className='col-span-1 bg-red-300'>Column 2</div>
-				<div className='col-span-1 bg-red-300'>Column 3</div>
-			</DesktopMenu>
 			<nav className='p-2 flex items-center justify-between'>
 				<Link href='/'>
 					<NavbarLogo className='flex items-center p-2' isOpen={isOpen}>
@@ -100,7 +172,7 @@ const Navbar = (props) => {
 								open: { d: 'M 3 16.5 L 17 2.5', stroke: 'hsl(0, 0%, 18%)' },
 							}}
 							transition={transition}
-							isOpen={isOpen}
+							// isOpen={isOpen}
 						/>
 						<Path
 							d='M 2 9.423 L 20 9.423'
@@ -112,7 +184,7 @@ const Navbar = (props) => {
 								open: { opacity: 0 },
 							}}
 							transition={transition}
-							isOpen={isOpen}
+							// isOpen={isOpen}
 						/>
 						<Path
 							animate={isOpen ? 'open' : 'closed'}
@@ -125,24 +197,14 @@ const Navbar = (props) => {
 								open: { d: 'M 3 2.5 L 17 16.346', stroke: 'hsl(0, 0%, 18%)' },
 							}}
 							transition={transition}
-							isOpen={isOpen}
+							// isOpen={isOpen}
 						/>
 					</svg>
 				</Button>
-				<div
-					className={`${isOpen ? 'block' : 'hidden'} md:hidden bg-gray-800 p-2`}
-				>
-					<Link href='/'>
-						<a className='block px-2 py-1 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700'>
-							Home
-						</a>
-					</Link>
-					<Link href='/about'>
-						<a className='block px-2 py-1 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700'>
-							About
-						</a>
-					</Link>
-				</div>
+
+				<DesktopMenu isOpen={isOpen} className='px-8'>
+					<Menu setIsOpen={setIsOpen} />
+				</DesktopMenu>
 			</nav>
 		</>
 	);
