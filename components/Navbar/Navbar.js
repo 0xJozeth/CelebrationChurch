@@ -1,20 +1,44 @@
 import React, { useEffect, useState } from 'react';
+import {
+	AnimatePresence,
+	AnimateSharedLayout,
+	motion,
+	useAnimation,
+} from 'framer-motion';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
 import CCLogo from '/public/cc-logo@1x.png';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { motion } from 'framer-motion';
 
-const NavbarLogo = styled.a`
-	z-index: 100;
-	filter: ${(props) =>
-		props.isOpen
-			? 'invert(1)'
-			: 'none'}; /* invert the logo when the isOpen prop is true */
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+	faArrowUpRightFromSquare,
+	faBagShopping,
+	faBible,
+	faPrayingHands,
+	faTelevision,
+} from '@fortawesome/free-solid-svg-icons';
+
+import {
+	faAppStoreIos,
+	faGooglePlay,
+} from '@fortawesome/free-brands-svg-icons';
+
+import * as menuData from '/components/Navbar/data.js';
+import SocialMenubar from './socialMenubar';
+
+const NavbarLogoOpen = styled.a`
+	/* z-index: 100; */
+	filter: ${(props) => (props.isOpen ? 'invert(1)' : 'none')};
+	/* invert the logo when the isOpen prop is true */
+`;
+const NavbarLogoClosed = styled.a`
+	/* z-index: 100; */
 `;
 
-const DesktopMenu = styled.div`
+const DesktopMenu = styled(motion.div)`
 	display: flex;
 	position: fixed;
 	top: 0;
@@ -28,7 +52,7 @@ const DesktopMenu = styled.div`
 
 // TODO: EXPORT PATH & TRANSITION FOR BUTTON TO NEW FILE
 const Button = styled.div`
-	z-index: 100;
+	/* z-index: 100; */
 	cursor: pointer;
 	border: none;
 `;
@@ -50,70 +74,94 @@ const Menu = (props) => {
 		props.setIsOpen(false);
 	};
 
-	const data = [
-		{
-			links: [
-				{ text: 'ABOUT', href: 'about' },
-				{ text: 'VISIT', href: 'visit' },
-				{ text: 'WATCH', href: 'watch' },
-				{ text: 'GIVE', href: 'give' },
-			],
-		},
-		{
-			links: [
-				{ text: 'MINISTRIES', href: 'ministries' },
-				{ text: 'CARE', href: 'care' },
-				{ text: 'FOLLOW JESUS', href: 'follow-jesus' },
-			],
-		},
-	];
-
-	const smallData = [
-		{
-			links: [
-				{ text: 'BIBLE READING PLAN', href: '#' },
-				{ text: 'CELEBRATION WORSHIP', href: '#' },
-				{ text: 'TV MINISTRY', href: '#' },
-				{ text: 'CKIDS ONLINE', href: '#' },
-			],
-		},
-	];
-
 	return (
-		<div className='flex justify-center items-center h-full w-full'>
-			{data.map((column, index) => (
-				<div key={index} className='col-span-1 w-full h-[75vh] m-4 p-10'>
+		<div className='flex justify-center items-start h-full w-full'>
+			{menuData.columnLeftData.map((column, columnIndex) => (
+				<div
+					key={columnIndex}
+					className='col-span-1 w-min h-[75vh] m-4 p-10 cursor-pointer'
+				>
 					<ul>
-						{column.links.map((link, index) => (
-							<li key={index}>
+						{column.links.map((link, linkIndex) => (
+							<li key={linkIndex}>
 								<Link href={link.href}>
-									<a
+									<motion.a
 										className='block my-4 font-display font-semibold text-[96px] leading-tight text-[#f8f8f8]'
-										onClick={closeMenu}
+										initial='hidden'
+										whileHover={{ scale: 1.1 }}
+										whileTap={{ scale: 0.9 }}
+										onClick={() => {
+											closeMenu();
+										}}
 									>
 										{link.text}
-									</a>
+									</motion.a>
 								</Link>
 							</li>
 						))}
 					</ul>
 				</div>
 			))}
-			{smallData.map((column, index) => (
-				<div key={index} className='col-span-1 w-full h-[75vh] m-4 p-10'>
+			{menuData.columnRightData.map((column, columnIndex) => (
+				<div
+					key={columnIndex}
+					className='col-span-1 w-min h-[75vh] m-4 p-10 cursor-pointer'
+				>
 					<ul>
-						{column.links.map((link, index) => (
-							<li key={index}>
-								<a
-									href={link.href}
-									className='block my-4 font-display font-semibold text-[34px] leading-tight text-[#f8f8f8]'
-									onClick={closeMenu}
-								>
-									{link.text}
-								</a>
+						{column.links.map((link, linkIndex) => (
+							<li key={linkIndex}>
+								<Link href={link.href}>
+									<motion.a
+										className='block my-4 font-display font-semibold text-[96px] leading-tight text-[#f8f8f8]'
+										initial='hidden'
+										whileHover={{ scale: 1.1 }}
+										whileTap={{ scale: 0.9 }}
+										onClick={() => {
+											closeMenu();
+										}}
+									>
+										{link.text}
+									</motion.a>
+								</Link>
 							</li>
 						))}
 					</ul>
+				</div>
+			))}
+			{menuData.smallData.map((column, index) => (
+				<div key={index} className='col-span-1 w-full h-[55vh] m-4 p-10'>
+					<ul className='h-full'>
+						{column.links.map((link, index) => (
+							<li key={index} className=''>
+								<motion.a
+									whileHover={{ scale: 1.025 }}
+									whileTap={{ scale: 0.9 }}
+									href={link.href}
+									className='flex my-8 font-display font-semibold text-[34px] items-center leading-tight text-[#f8f8f8]'
+									onClick={closeMenu}
+								>
+									<span className='mr-4'>
+										<FontAwesomeIcon
+											className='items-center text-[24px]'
+											icon={
+												link.text === 'BIBLE READING PLAN'
+													? faBible
+													: link.text === 'CELEBRATION WORSHIP'
+													? faPrayingHands
+													: link.text === 'TV MINISTRY'
+													? faTelevision
+													: link.text === 'CKIDS ONLINE'
+													? faBagShopping
+													: null
+											}
+										/>
+									</span>
+									{link.text}
+								</motion.a>
+							</li>
+						))}
+					</ul>
+					<SocialMenubar />
 				</div>
 			))}
 		</div>
@@ -129,26 +177,35 @@ const Navbar = (props) => {
 		setIsOpen(!isOpen);
 	};
 
+	const closeMenu = () => {
+		setIsOpen(false);
+	};
+
 	const transition = {
 		duration: 0.15,
-		// ease: [0.17, 0.67, 0.83, 0.67],
 		ease: [0.43, 0.13, 0.23, 0.96],
 	};
 
+	console.log('Left:', menuData.columnLeftData);
+
 	return (
 		<>
-			<nav className='p-2 flex items-center justify-between'>
+			<nav className='py-2 px-6 flex items-center justify-between mx-auto'>
 				<Link href='/'>
-					<NavbarLogo className='flex items-center p-2' isOpen={isOpen}>
+					<NavbarLogoClosed className='flex items-center p-2' isOpen={isOpen}>
 						<Image
 							src={CCLogo}
 							alt='Logo'
 							width={144}
 							height={48}
 							objectFit='contain'
-							className={props.isOpen ? 'invert-100' : 'invert-0'}
+							className={
+								props.isOpen
+									? 'invert-100 transition-all'
+									: 'invert-0 transition-all'
+							}
 						/>
-					</NavbarLogo>
+					</NavbarLogoClosed>
 				</Link>
 				<div className='hidden md:flex items-center justify-center'>
 					<Link href='/'>
@@ -172,7 +229,6 @@ const Navbar = (props) => {
 								open: { d: 'M 3 16.5 L 17 2.5', stroke: 'hsl(0, 0%, 18%)' },
 							}}
 							transition={transition}
-							// isOpen={isOpen}
 						/>
 						<Path
 							d='M 2 9.423 L 20 9.423'
@@ -184,7 +240,6 @@ const Navbar = (props) => {
 								open: { opacity: 0 },
 							}}
 							transition={transition}
-							// isOpen={isOpen}
 						/>
 						<Path
 							animate={isOpen ? 'open' : 'closed'}
@@ -197,14 +252,92 @@ const Navbar = (props) => {
 								open: { d: 'M 3 2.5 L 17 16.346', stroke: 'hsl(0, 0%, 18%)' },
 							}}
 							transition={transition}
-							// isOpen={isOpen}
 						/>
 					</svg>
 				</Button>
+				<AnimatePresence>
+					{isOpen && (
+						<DesktopMenu
+							className='px-8'
+							initial={{ x: '100%' }}
+							animate={{ x: 0 }}
+							exit={{ x: '100%' }}
+							transition={{ duration: 1, ease: 'easeInOut' }}
+							variants={{
+								open: { x: 0 },
+								closed: { x: '100%' },
+							}}
+							{...props}
+							isOpen={isOpen}
+						>
+							<div className='py-2 flex items-center justify-between mx-auto'>
+								<Link href='/'>
+									<NavbarLogoOpen
+										className='flex items-center p-2'
+										isOpen={isOpen}
+									>
+										<Image
+											src={CCLogo}
+											alt='Logo'
+											width={144}
+											height={48}
+											objectFit='contain'
+											className={props.isOpen ? 'invert-100' : 'invert-0'}
+											onClick={closeMenu}
+										/>
+									</NavbarLogoOpen>
+								</Link>
 
-				<DesktopMenu isOpen={isOpen} className='px-8'>
-					<Menu setIsOpen={setIsOpen} />
-				</DesktopMenu>
+								<Button onClick={toggle} isOpen={isOpen}>
+									<svg width='38' height='38' viewBox='0 0 23 23'>
+										<Path
+											animate={isOpen ? 'open' : 'closed'}
+											initial={false}
+											variants={{
+												closed: {
+													d: 'M 2 2.5 L 20 2.5',
+													stroke: 'hsl(0, 0%, 18%)',
+												},
+												open: {
+													d: 'M 3 16.5 L 17 2.5',
+													stroke: 'hsl(0, 0%, 18%)',
+												},
+											}}
+											transition={transition}
+										/>
+										<Path
+											d='M 2 9.423 L 20 9.423'
+											stroke='hsl(0, 0%, 18%)'
+											animate={isOpen ? 'open' : 'closed'}
+											initial={false}
+											variants={{
+												closed: { opacity: 1 },
+												open: { opacity: 0 },
+											}}
+											transition={transition}
+										/>
+										<Path
+											animate={isOpen ? 'open' : 'closed'}
+											initial={false}
+											variants={{
+												closed: {
+													d: 'M 2 16.346 L 20 16.346',
+													stroke: 'hsl(0, 0%, 18%)',
+												},
+												open: {
+													d: 'M 3 2.5 L 17 16.346',
+													stroke: 'hsl(0, 0%, 18%)',
+												},
+											}}
+											transition={transition}
+										/>
+									</svg>
+								</Button>
+							</div>
+							<Menu setIsOpen={setIsOpen} />
+						</DesktopMenu>
+					)}
+				</AnimatePresence>
 			</nav>
 		</>
 	);
