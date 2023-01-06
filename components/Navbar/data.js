@@ -3,7 +3,10 @@ export const columnLeftData = [
 		links: [
 			{ text: 'ABOUT', href: 'about' },
 			{ text: 'VISIT', href: 'visit' },
-			{ text: 'WATCH', href: 'watch' },
+			{
+				text: 'WATCH',
+				href: 'https://www.youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I',
+			},
 			{ text: 'GIVE', href: 'give' },
 		],
 	},
@@ -22,11 +25,34 @@ export const columnRightData = [
 export const smallData = [
 	{
 		links: [
-			{ text: 'BIBLE READING PLAN', href: '#' },
-			{ text: 'CELEBRATION WORSHIP', href: '#' },
-			{ text: 'TV MINISTRY', href: '#' },
-			{ text: 'CKIDS ONLINE', href: '#' },
+			{
+				text: 'BIBLE READING PLAN',
+				href: 'https://celebration.learn.bible/courses/daily-reading-plan',
+			},
+			{ text: 'CELEBRATION WORSHIP', href: 'https://worship.celebration.org' },
+			{
+				text: 'TV MINISTRY',
+				href: 'https://www.daystar.com/shows/tim-timberlake/',
+			},
 		],
+	},
+];
+
+export const socialData = [
+	{
+		href: 'https://www.facebook.com/celebration.org',
+	},
+	{
+		href: 'https://www.instagram.com/celebration_org/',
+	},
+	{
+		href: 'https://twitter.com/celebration_org',
+	},
+	{
+		href: 'https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I ',
+	},
+	{
+		href: 'mailto:info@celebration.org',
 	},
 ];
 
