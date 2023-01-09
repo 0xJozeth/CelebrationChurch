@@ -343,7 +343,7 @@ const Navbar = (props) => {
 								initial={{ x: '100%' }}
 								animate={{ x: 0 }}
 								exit={{ x: '100%' }}
-								transition={{ duration: 1, ease: 'easeInOut' }}
+								transition={{ duration: 0.35, ease: 'easeInOut' }}
 								variants={{
 									open: { x: 0 },
 									closed: { x: '100%' },

@@ -21,36 +21,82 @@ import GiveHeroSection from '../components/GiveComponents/GiveHeroSection';
 import LegacyTeamSection from '../components/GiveComponents/LegacyTeamSection';
 
 export default function GiveDesktop() {
-	const [modalOpen, setModalOpen] = useState(false);
+	const [darken, setDarken] = useState(false);
 
-	const handleModalOpen = (icon, text, title, paragraph, linktitle, link) => {
-		setModalOpen({
-			icon: icon,
-			text: text,
-			title: title,
-			paragraph: paragraph,
-			linktitle: linktitle,
-			link: link,
-		});
+	const [modalOpen, setModalOpen] = useState(false);
+	const [modalIndex, setModalIndex] = useState(null);
+
+	const handleModalOpen = (index) => {
+		setModalOpen(!modalOpen);
+		setModalIndex(index);
+		setDarken(true);
+		document.body.classList.add('modal-open');
 	};
+
+	const handleModalClose = () => {
+		setModalOpen(false);
+		setDarken(false);
+		document.body.classList.remove('modal-open');
+	};
+
+	const modalData = [
+		{
+			icon: faMobile,
+			text: 'APP',
+			title: 'The Celebration App',
+			paragraph:
+				'This method is the easiest and most user friendly. To download the app text “Celebration” to (833) 399-7200 and follow the prompts OR you can search for “The Celebration App” in your iTunes or Google Play Store.',
+			linkOneTitle: 'linkOneTitle',
+			linkOne: 'https://apple.com',
+			linkTwoTitle: 'linkTwoTitle',
+			linkTwo: 'https://google.com',
+		},
+		{
+			icon: faBitcoin,
+			text: 'CRYPTO',
+			title: 'Cryptocurrency',
+			paragraph:
+				'You can use this method if you would like to make a donation of cryptocurrency to Celebration Church. To do this, simply click the button below and provide your donation details.',
+			linkOneTitle: 'linkOneTitle',
+			linkOne: 'https://apple.com',
+			linkTwoTitle: 'linkTwoTitle',
+			linkTwo: 'https://google.com',
+		},
+		{
+			icon: faPiggyBank,
+			text: 'BANK',
+			title: 'Personal Banking',
+			paragraph:
+				'To do this, log into your personal bank account and follow its instructions for adding Celebration Church as a new payee. Enter your donation amount and be sure to specify in the memo if you would like to give to a specific Celebration Church location.',
+			linkOneTitle: 'linkOneTitle',
+			linkOne: 'https://apple.com',
+			linkTwoTitle: 'linkTwoTitle',
+			linkTwo: 'https://google.com',
+		},
+		{
+			icon: faMoneyBillTrendUp,
+			text: 'GIVT',
+			title: 'GIVT',
+			paragraph:
+				'You can now give anonymously through Givt. Givt is a standard way of digital giving that you can access by simply clicking the button below.',
+			linkOneTitle: 'Give via GIVT',
+			linkOne:
+				'https://api.givt.app/givt?code=NjFmN2VkMDE1NTUzMDgyMmMwMDAuYzAwMDAwMDAwMDAx',
+			linkTwoTitle: null,
+			linkTwo: null,
+		},
+	];
 
 	return (
 		<>
-			<div className='flex justify-center w-[100vw] '>
+			{/* <div
+				className={`darken-background ${darken ? 'visible' : ''}`}
+				onClick={handleModalClose}
+			></div> */}
+			<div className='flex justify-center w-[100vw]'>
 				<div className='flex flex-col w-full max-w-[1440px] p-8 gap-y-[50px] mb-[80px] '>
-					{modalOpen && (
-						<GiveModal
-							setModalOpen={setModalOpen}
-							icon={modalOpen.icon}
-							text={modalOpen.text}
-							title={modalOpen.title}
-							paragraph={modalOpen.paragraph}
-							linktitle={modalOpen.linktitle}
-							link={modalOpen.link}
-						/>
-					)}
 					<GiveHeroSection />
-					<div className='flex flex-col items-center w-full overflow-hidden '>
+					<div className='flex flex-col items-center w-full overflow-hidden'>
 						<div className='flex justify-center items-center w-full'>
 							<h2 className='font-display font-bold text-center md:text-[126px] lg:text-[192px]'>
 								WHY&nbsp;WE{' '}
@@ -130,18 +176,20 @@ export default function GiveDesktop() {
 								</span>
 							</h2>
 						</div>
+						{modalOpen && (
+							<GiveModal
+								modalData={modalData}
+								setModalOpen={setModalOpen}
+								modalIndex={modalIndex}
+								setDarken={setDarken}
+								handleModalClose={handleModalClose}
+							/>
+						)}
 						<div className='flex justify-center items-center w-full'>
 							<div className='flex justify-center items-center p-4 gap-x-8 w-full'>
 								<div className='flex flex-col justify-center items-center w-full p-4'>
 									<div
-										onClick={() =>
-											handleModalOpen(
-												faMobile,
-												'APP',
-												'The Celebration App',
-												'This method is the easiest and most user friendly. To download the app text “Celebration” to (833) 399-7200 and follow the prompts OR you can search for “The Celebration App” in your iTunes or Google Play Store.'
-											)
-										}
+										onClick={() => handleModalOpen(0)}
 										className='flex bg-[#070707] m-4 justify-center items-center rounded-full text-[120px] text-[#f8f8f8] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'
 									>
 										<FontAwesomeIcon
@@ -155,14 +203,7 @@ export default function GiveDesktop() {
 								</div>
 								<div className='flex flex-col justify-center items-center w-full p-4'>
 									<div
-										onClick={() =>
-											handleModalOpen(
-												faBitcoin,
-												'CRYPTO',
-												'Cryptocurrency',
-												'You can use this method if you would like to make a donation of cryptocurrency to Celebration Church. To do this, simply click the button below and provide your donation details.'
-											)
-										}
+										onClick={() => handleModalOpen(1)}
 										className='flex bg-[#070707] m-4 justify-center items-center rounded-full text-[120px] text-[#f8f8f8] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'
 									>
 										<FontAwesomeIcon
@@ -176,14 +217,7 @@ export default function GiveDesktop() {
 								</div>
 								<div className='flex w-full flex-col justify-center items-center p-4'>
 									<div
-										onClick={() =>
-											handleModalOpen(
-												faPiggyBank,
-												'BANK',
-												'PERSONAL ONLINE BANKING',
-												'To do this, log into your personal bank account and follow its instructions for adding Celebration Church as a new payee. Enter your donation amount and be sure to specify in the memo if you would like to give to a specific Celebration Church location.'
-											)
-										}
+										onClick={() => handleModalOpen(2)}
 										className='flex bg-[#070707] m-4 justify-center items-center rounded-full text-[120px] text-[#f8f8f8] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'
 									>
 										<FontAwesomeIcon
@@ -197,16 +231,7 @@ export default function GiveDesktop() {
 								</div>
 								<div className='flex w-full flex-col justify-center items-center p-4'>
 									<div
-										onClick={() =>
-											handleModalOpen(
-												faMoneyBillTrendUp,
-												'GIVT',
-												'GIVT',
-												'You can now give anonymously through Givt. Givt is a standard way of digital giving that you can access by simply clicking the button below.',
-												'GIVE VIA GIVT',
-												'https://api.givt.app/givt?code=NjFmN2VkMDE1NTUzMDgyMmMwMDAuYzAwMDAwMDAwMDAx'
-											)
-										}
+										onClick={() => handleModalOpen(3)}
 										className='flex bg-[#070707] m-4 justify-center items-center rounded-full text-[120px] text-[#f8f8f8] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'
 									>
 										<FontAwesomeIcon
@@ -316,112 +341,122 @@ export default function GiveDesktop() {
 	);
 }
 
-const GiveModal = (props) => {
-	console.log('props:', props);
-
-	const [hideLinks, setHideLinks] = useState(props.hideLinks);
-
-	const handleLinkClick = () => {
-		setHideLinks(true);
-	};
-
-	GiveModal.defaultProps = {
-		hideLinks: false,
-	};
-
-	const handleModalClose = () => {
-		props.setModalOpen(false);
-	};
-	return (
-		<>
-			<div className='fixed flex mx-auto w-[85vw] h-[50vw] z-[999] p-16 bg-[#070707]'>
-				<div className='flex w-full h-full p-8'>
-					<div className='flex-col w-2/5 justify-center'>
-						<div
-							onClick={handleModalClose}
-							className='flex w-min h-min  p-4 items-center gap-4 cursor-pointer'
-						>
-							<div className='text-[18px] invert'>
-								<FontAwesomeIcon icon={faArrowLeft} className='' />
-							</div>
-							<p className='text-white font-display text-[22px] hover:text-[24px] transition-all'>
-								BACK
-							</p>
-						</div>
-						<div className='flex flex-col justify-center items-center w-full my-16 p-4'>
-							<div
-								// onClick={handleModalOpen}
-								className='flex bg-[#f8f8f8] m-4 justify-center items-center rounded-full text-[120px] text-[#070707] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'
-							>
-								<FontAwesomeIcon
-									icon={props.icon}
-									className='hover:-rotate-3 transition-all'
-								/>
-							</div>
-							<div className='flex justify-center w-full p-2 my-2'>
-								<p className='font-display font-bold text-[36px]'>
-									{props.text}
-								</p>
-							</div>
-						</div>
-					</div>
-					<div className='flex-col w-3/5'>
-						<div className='flex flex-col w-full h-full justify-evenly p-16'>
-							<h3 className='text-white uppercase font-bold font-display text-[40px] w-full'>
-								{props.title}
-							</h3>
-
-							<div>
-								<p className='text-white font-display text-[22px]'>
-									{props.paragraph}
-								</p>
-							</div>
-							{!props.hideLinks && (
-								<>
-									<div className='flex justify-start items-center '>
-										<a
-											href={props.link}
-											// href='https://apps.apple.com/us/app/the-celebration-app/id1210190693'
-											target='_blank'
-											rel='noopener noreferrer'
-										>
-											<div className='flex items-center py-2 gap-x-4'>
-												<div className='flex items-center'>
-													<p className='font-display font-normal text-[24px] text-white'>
-														{props.linktitle}
-														{/* APP&nbsp;STORE */}
+const GiveModal = ({
+	modalData,
+	setModalOpen,
+	modalIndex,
+	setDarken,
+	handleModalClose,
+}) => {
+	try {
+		return (
+			<>
+				{/* <div
+					className={`darken-background ${darken ? 'modal-open' : ''}`}
+					onClick={handleModalClose}
+				> */}
+				{/* <div className='flex justify-center items-center bg-red-300 mx-auto m-16'> */}
+				<div className='flex justify-center items-center bg-red-300 mx-auto m-16'>
+					{modalData.map(
+						(data, index) =>
+							index === modalIndex && (
+								<div
+									key={index}
+									className='fixed flex mx-auto w-[85vw] h-[50vw] z-[999] p-16 bg-[#070707]'
+								>
+									<div className='flex w-full h-full p-8'>
+										{/* BACK BUTTON AN ICON (LEFT COLUMN) */}
+										<div className='flex-col w-2/5 justify-center'>
+											<div
+												onClick={handleModalClose}
+												className='flex w-min h-min  p-4 items-center gap-4 cursor-pointer'
+											>
+												<div className='text-[18px] invert'>
+													<FontAwesomeIcon icon={faArrowLeft} className='' />
+												</div>
+												<p className='text-white font-display text-[22px] hover:text-[24px] transition-all'>
+													BACK
+												</p>
+											</div>
+											<div className='flex flex-col justify-center items-center w-full my-16 p-4'>
+												<div className='flex bg-[#f8f8f8] m-4 justify-center items-center rounded-full text-[120px] text-[#070707] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'>
+													<FontAwesomeIcon
+														icon={data.icon}
+														className='hover:-rotate-3 transition-all'
+													/>
+												</div>
+												<div className='flex justify-center w-full p-2 my-2'>
+													<p className='font-display font-bold text-[36px]'>
+														{data.text}
 													</p>
 												</div>
-												<div className='w-[88px]'>
-													<Image src={arrow} alt='' />
-												</div>
 											</div>
-										</a>
-									</div>
-									<div className='flex justify-start items-center '>
-										<a
-											href='https://apps.apple.com/us/app/the-celebration-app/id1210190693'
-											target='_blank'
-											rel='noopener noreferrer'
-										>
-											<div className='flex items-center py-2 gap-x-4'>
-												<div className='flex items-center'>
-													<p className='font-display font-normal text-[24px] text-white'>
-														GOOGLE&nbsp;PLAY&nbsp;STORE
+										</div>
+										{/* CONTENT (RIGHT COLUMN) */}
+										<div className='flex-col w-3/5'>
+											<div className='flex flex-col w-full h-full justify-evenly p-16'>
+												<h3 className='text-white uppercase font-bold font-display text-[40px] w-full'>
+													{data.title}
+												</h3>
+												<div>
+													<p className='text-white font-display text-[22px]'>
+														{data.paragraph}
 													</p>
 												</div>
-												<div className='w-[88px]'>
-													<Image src={arrow} alt='' />
-												</div>
+												{/* MODAL LINKS */}
+												<>
+													<div className='flex justify-start items-center '>
+														<a
+															href={data.linkOne}
+															target='_blank'
+															rel='noopener noreferrer'
+														>
+															<div className='flex items-center py-2 gap-x-4'>
+																<div className='flex items-center'>
+																	<p className='font-display font-normal text-[24px] text-white'>
+																		{data.linkOneTitle}
+																	</p>
+																</div>
+																<div className='w-[88px]'>
+																	<Image src={arrow} alt='' />
+																</div>
+															</div>
+														</a>
+													</div>
+													{data.linkTwo !== undefined &&
+														data.linkTwo !== null && (
+															<div className='flex justify-start items-center '>
+																<a
+																	href={data.linkTwo}
+																	target='_blank'
+																	rel='noopener noreferrer'
+																>
+																	<div className='flex items-center py-2 gap-x-4'>
+																		<div className='flex items-center'>
+																			<p className='font-display font-normal text-[24px] text-white'>
+																				{data.linkTwoTitle}
+																			</p>
+																		</div>
+																		<div className='w-[88px]'>
+																			<Image src={arrow} alt='' />
+																		</div>
+																	</div>
+																</a>
+															</div>
+														)}
+												</>
+												{/* END MODAL LINKS */}
 											</div>
-										</a>
+										</div>
 									</div>
-								</>
-							)}
-						</div>
-					</div>
+								</div>
+							)
+					)}
 				</div>
-			</div>
-		</>
-	);
+				{/* </div> */}
+			</>
+		);
+	} catch (error) {
+		console.error(error);
+	}
 };
