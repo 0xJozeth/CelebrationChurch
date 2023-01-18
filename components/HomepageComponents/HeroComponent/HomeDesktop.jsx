@@ -6,6 +6,7 @@ import longArrow from '/public/arrow-long.svg';
 import arrow from '/public/arrow@1x.png';
 import group from '/public/microsoftteams-image@1x.png';
 import GroupImage from '/public/microsoftteams-image@1x.png';
+// import heroVideo from '/public/heroVideo.mp4';
 
 // IMPORT ITERATIVE MAPPING DATA
 // import { linkText, vimeoHeroVideo } from './heroData';
@@ -76,14 +77,21 @@ function HomeDesktop() {
 						</div>
 						<div className='relative z-20'>
 							<div className='relative left-[108px]'>
-								<iframe
+								{/* <iframe
 									className=''
 									src='https://player.vimeo.com/video/744290982?h=26579d8c5a&controls=0&badge=0&autoplay=1&muted=1&loop=1&autopause=0&player_id=0&app_id=58479'
 									frameBorder='0'
 									placeholder={'blur'}
 									width={756}
 									height={1343}
-								></iframe>
+								></iframe> */}
+								<video
+									src='/heroVideo.mp4'
+									autoPlay
+									loop
+									muted
+									style={{ width: '756px', height: '1343px' }}
+								></video>
 							</div>
 						</div>
 					</div>

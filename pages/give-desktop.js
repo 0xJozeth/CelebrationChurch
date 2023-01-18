@@ -89,10 +89,6 @@ export default function GiveDesktop() {
 
 	return (
 		<>
-			{/* <div
-				className={`darken-background ${darken ? 'visible' : ''}`}
-				onClick={handleModalClose}
-			></div> */}
 			<div className='flex justify-center w-[100vw]'>
 				<div className='flex flex-col w-full max-w-[1440px] p-8 gap-y-[50px] mb-[80px] '>
 					<GiveHeroSection />
@@ -176,7 +172,7 @@ export default function GiveDesktop() {
 								</span>
 							</h2>
 						</div>
-						{modalOpen && (
+						{modalOpen ? (
 							<GiveModal
 								modalData={modalData}
 								setModalOpen={setModalOpen}
@@ -184,67 +180,70 @@ export default function GiveDesktop() {
 								setDarken={setDarken}
 								handleModalClose={handleModalClose}
 							/>
-						)}
-						<div className='flex justify-center items-center w-full'>
-							<div className='flex justify-center items-center p-4 gap-x-8 w-full'>
-								<div className='flex flex-col justify-center items-center w-full p-4'>
-									<div
-										onClick={() => handleModalOpen(0)}
-										className='flex bg-[#070707] m-4 justify-center items-center rounded-full text-[120px] text-[#f8f8f8] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'
-									>
-										<FontAwesomeIcon
-											icon={faMobile}
-											className='hover:-rotate-3 transition-all'
-										/>
+						) : (
+							<div className='flex justify-center items-center w-full'>
+								<div className='flex justify-center items-center p-4 gap-x-8 w-full'>
+									<div className='flex flex-col justify-center items-center w-full p-4'>
+										<div
+											onClick={() => handleModalOpen(0)}
+											className='flex bg-[#070707] m-4 justify-center items-center rounded-full text-[120px] text-[#f8f8f8] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'
+										>
+											<FontAwesomeIcon
+												icon={faMobile}
+												className='hover:-rotate-3 transition-all'
+											/>
+										</div>
+										<div className='flex justify-center w-full p-2 my-2'>
+											<p className='font-display font-bold text-[36px]'>APP</p>
+										</div>
 									</div>
-									<div className='flex justify-center w-full p-2 my-2'>
-										<p className='font-display font-bold text-[36px]'>APP</p>
+									<div className='flex flex-col justify-center items-center w-full p-4'>
+										<div
+											onClick={() => handleModalOpen(1)}
+											className='flex bg-[#070707] m-4 justify-center items-center rounded-full text-[120px] text-[#f8f8f8] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'
+										>
+											<FontAwesomeIcon
+												icon={faBitcoin}
+												className='hover:-rotate-3 transition-all'
+											/>
+										</div>
+										<div className='flex justify-center w-full p-2 my-2'>
+											<p className='font-display font-bold text-[36px]'>
+												CRYPTO
+											</p>
+										</div>
 									</div>
-								</div>
-								<div className='flex flex-col justify-center items-center w-full p-4'>
-									<div
-										onClick={() => handleModalOpen(1)}
-										className='flex bg-[#070707] m-4 justify-center items-center rounded-full text-[120px] text-[#f8f8f8] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'
-									>
-										<FontAwesomeIcon
-											icon={faBitcoin}
-											className='hover:-rotate-3 transition-all'
-										/>
+									<div className='flex w-full flex-col justify-center items-center p-4'>
+										<div
+											onClick={() => handleModalOpen(2)}
+											className='flex bg-[#070707] m-4 justify-center items-center rounded-full text-[120px] text-[#f8f8f8] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'
+										>
+											<FontAwesomeIcon
+												icon={faPiggyBank}
+												className='hover:-rotate-3 transition-all'
+											/>
+										</div>
+										<div className='flex justify-center w-full p-2 my-2'>
+											<p className='font-display font-bold text-[36px]'>BANK</p>
+										</div>
 									</div>
-									<div className='flex justify-center w-full p-2 my-2'>
-										<p className='font-display font-bold text-[36px]'>CRYPTO</p>
-									</div>
-								</div>
-								<div className='flex w-full flex-col justify-center items-center p-4'>
-									<div
-										onClick={() => handleModalOpen(2)}
-										className='flex bg-[#070707] m-4 justify-center items-center rounded-full text-[120px] text-[#f8f8f8] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'
-									>
-										<FontAwesomeIcon
-											icon={faPiggyBank}
-											className='hover:-rotate-3 transition-all'
-										/>
-									</div>
-									<div className='flex justify-center w-full p-2 my-2'>
-										<p className='font-display font-bold text-[36px]'>BANK</p>
-									</div>
-								</div>
-								<div className='flex w-full flex-col justify-center items-center p-4'>
-									<div
-										onClick={() => handleModalOpen(3)}
-										className='flex bg-[#070707] m-4 justify-center items-center rounded-full text-[120px] text-[#f8f8f8] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'
-									>
-										<FontAwesomeIcon
-											icon={faMoneyBillTrendUp}
-											className='hover:-rotate-3 transition-all'
-										/>
-									</div>
-									<div className='flex justify-center w-full p-2 my-2'>
-										<p className='font-display font-bold text-[36px]'>GIVT</p>
+									<div className='flex w-full flex-col justify-center items-center p-4'>
+										<div
+											onClick={() => handleModalOpen(3)}
+											className='flex bg-[#070707] m-4 justify-center items-center rounded-full text-[120px] text-[#f8f8f8] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'
+										>
+											<FontAwesomeIcon
+												icon={faMoneyBillTrendUp}
+												className='hover:-rotate-3 transition-all'
+											/>
+										</div>
+										<div className='flex justify-center w-full p-2 my-2'>
+											<p className='font-display font-bold text-[36px]'>GIVT</p>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+						)}
 					</div>
 
 					<LegacyTeamSection />
@@ -356,103 +355,103 @@ const GiveModal = ({
 					onClick={handleModalClose}
 				> */}
 				{/* <div className='flex justify-center items-center bg-red-300 mx-auto m-16'> */}
-				<div className='flex justify-center items-center bg-red-300 mx-auto m-16'>
-					{modalData.map(
-						(data, index) =>
-							index === modalIndex && (
-								<div
-									key={index}
-									className='fixed flex mx-auto w-[85vw] h-[50vw] z-[999] p-16 bg-[#070707]'
-								>
-									<div className='flex w-full h-full p-8'>
-										{/* BACK BUTTON AN ICON (LEFT COLUMN) */}
-										<div className='flex-col w-2/5 justify-center'>
-											<div
-												onClick={handleModalClose}
-												className='flex w-min h-min  p-4 items-center gap-4 cursor-pointer'
-											>
-												<div className='text-[18px] invert'>
-													<FontAwesomeIcon icon={faArrowLeft} className='' />
-												</div>
-												<p className='text-white font-display text-[22px] hover:text-[24px] transition-all'>
-													BACK
-												</p>
+				{/* <div className='flex justify-center items-center bg-red-300 mx-auto m-16'> */}
+				{modalData.map(
+					(data, index) =>
+						index === modalIndex && (
+							<div
+								key={index}
+								className='fixed flex mx-auto w-[85vw] h-[50vw] z-[999] p-16 bg-[#070707]'
+							>
+								<div className='flex w-full h-full p-8'>
+									{/* BACK BUTTON AN ICON (LEFT COLUMN) */}
+									<div className='flex-col w-2/5 justify-center'>
+										<div
+											onClick={handleModalClose}
+											className='flex w-min h-min  p-4 items-center gap-4 cursor-pointer'
+										>
+											<div className='text-[18px] invert'>
+												<FontAwesomeIcon icon={faArrowLeft} className='' />
 											</div>
-											<div className='flex flex-col justify-center items-center w-full my-16 p-4'>
-												<div className='flex bg-[#f8f8f8] m-4 justify-center items-center rounded-full text-[120px] text-[#070707] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'>
-													<FontAwesomeIcon
-														icon={data.icon}
-														className='hover:-rotate-3 transition-all'
-													/>
-												</div>
-												<div className='flex justify-center w-full p-2 my-2'>
-													<p className='font-display font-bold text-[36px]'>
-														{data.text}
-													</p>
-												</div>
-											</div>
+											<p className='text-white font-display text-[22px] hover:text-[24px] transition-all'>
+												BACK
+											</p>
 										</div>
-										{/* CONTENT (RIGHT COLUMN) */}
-										<div className='flex-col w-3/5'>
-											<div className='flex flex-col w-full h-full justify-evenly p-16'>
-												<h3 className='text-white uppercase font-bold font-display text-[40px] w-full'>
-													{data.title}
-												</h3>
-												<div>
-													<p className='text-white font-display text-[22px]'>
-														{data.paragraph}
-													</p>
-												</div>
-												{/* MODAL LINKS */}
-												<>
-													<div className='flex justify-start items-center '>
-														<a
-															href={data.linkOne}
-															target='_blank'
-															rel='noopener noreferrer'
-														>
-															<div className='flex items-center py-2 gap-x-4'>
-																<div className='flex items-center'>
-																	<p className='font-display font-normal text-[24px] text-white'>
-																		{data.linkOneTitle}
-																	</p>
-																</div>
-																<div className='w-[88px]'>
-																	<Image src={arrow} alt='' />
-																</div>
-															</div>
-														</a>
-													</div>
-													{data.linkTwo !== undefined &&
-														data.linkTwo !== null && (
-															<div className='flex justify-start items-center '>
-																<a
-																	href={data.linkTwo}
-																	target='_blank'
-																	rel='noopener noreferrer'
-																>
-																	<div className='flex items-center py-2 gap-x-4'>
-																		<div className='flex items-center'>
-																			<p className='font-display font-normal text-[24px] text-white'>
-																				{data.linkTwoTitle}
-																			</p>
-																		</div>
-																		<div className='w-[88px]'>
-																			<Image src={arrow} alt='' />
-																		</div>
-																	</div>
-																</a>
-															</div>
-														)}
-												</>
-												{/* END MODAL LINKS */}
+										<div className='flex flex-col justify-center items-center w-full my-16 p-4'>
+											<div className='flex bg-[#f8f8f8] m-4 justify-center items-center rounded-full text-[120px] text-[#070707] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'>
+												<FontAwesomeIcon
+													icon={data.icon}
+													className='hover:-rotate-3 transition-all'
+												/>
+											</div>
+											<div className='flex justify-center w-full p-2 my-2'>
+												<p className='font-display font-bold text-[36px]'>
+													{data.text}
+												</p>
 											</div>
 										</div>
 									</div>
+									{/* CONTENT (RIGHT COLUMN) */}
+									<div className='flex-col w-3/5'>
+										<div className='flex flex-col w-full h-full justify-evenly p-16'>
+											<h3 className='text-white uppercase font-bold font-display text-[40px] w-full'>
+												{data.title}
+											</h3>
+											<div>
+												<p className='text-white font-display text-[22px]'>
+													{data.paragraph}
+												</p>
+											</div>
+											{/* MODAL LINKS */}
+											<>
+												<div className='flex justify-start items-center '>
+													<a
+														href={data.linkOne}
+														target='_blank'
+														rel='noopener noreferrer'
+													>
+														<div className='flex items-center py-2 gap-x-4'>
+															<div className='flex items-center'>
+																<p className='font-display font-normal text-[24px] text-white'>
+																	{data.linkOneTitle}
+																</p>
+															</div>
+															<div className='w-[88px]'>
+																<Image src={arrow} alt='' />
+															</div>
+														</div>
+													</a>
+												</div>
+												{data.linkTwo !== undefined &&
+													data.linkTwo !== null && (
+														<div className='flex justify-start items-center '>
+															<a
+																href={data.linkTwo}
+																target='_blank'
+																rel='noopener noreferrer'
+															>
+																<div className='flex items-center py-2 gap-x-4'>
+																	<div className='flex items-center'>
+																		<p className='font-display font-normal text-[24px] text-white'>
+																			{data.linkTwoTitle}
+																		</p>
+																	</div>
+																	<div className='w-[88px]'>
+																		<Image src={arrow} alt='' />
+																	</div>
+																</div>
+															</a>
+														</div>
+													)}
+											</>
+											{/* END MODAL LINKS */}
+										</div>
+									</div>
 								</div>
-							)
-					)}
-				</div>
+							</div>
+						)
+				)}
+				{/* </div> */}
 				{/* </div> */}
 			</>
 		);

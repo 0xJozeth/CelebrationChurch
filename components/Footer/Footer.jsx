@@ -5,6 +5,7 @@ import cclogo from '/public/celebration-logo@1x.png';
 import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
 import arrow from '/public/arrow@1x.png';
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 
 //IMPORT REACT COOKIE CONSENT PLUGIN
 import CookieConsent from 'react-cookie-consent';
@@ -50,9 +51,9 @@ export default function Footer() {
 						<h6 className='font-bold text-[12px] my-4'>MEDIA</h6>
 						<ul className='flex flex-col text-[16px] gap-y-2'>
 							<li>
-								<Link href='/watch' passHref>
-									<a>Watch</a>
-								</Link>
+								<a href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'>
+									Watch
+								</a>
 							</li>
 							<li>
 								<Link href='/celebration-everywhere' passHref>
@@ -117,7 +118,7 @@ export default function Footer() {
 					<div className='columns-2'>
 						<div className='flex justify-start items-centerh-[20px]'>
 							<ul className='flex flex-col text-[14px] gap-y-1'>
-								<li>
+								<li className='cursor-pointer'>
 									<Link
 										href='https://apps.apple.com/us/app/the-celebration-app/id1210190693'
 										passHref
@@ -136,7 +137,7 @@ export default function Footer() {
 						</div>
 						<div className='flex justify-start items-center h-[20px]'>
 							<ul className='flex flex-col text-[14px] gap-y-1'>
-								<li>
+								<li className='cursor-pointer'>
 									<Link
 										href='https://play.google.com/store/apps/details?id=com.echurchapps.celebrationchapp&hl=en_US&gl=US'
 										passHref
@@ -185,9 +186,9 @@ export default function Footer() {
 						<h6 className='font-bold text-[12px] my-4'>MEDIA</h6>
 						<ul className='flex flex-col text-[16px] gap-y-2'>
 							<li>
-								<Link href='/watch' passHref>
-									<a>Watch</a>
-								</Link>
+								<a href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'>
+									Watch
+								</a>
 							</li>
 							<li>
 								<Link href='/celebration-everywhere' passHref>
@@ -244,7 +245,7 @@ export default function Footer() {
 					<div className='flex flex-col font-display'>
 						<h6 className='font-bold text-[12px] my-4'>DOWNLOAD OUR APP</h6>
 						<ul className='flex flex-col text-[16px] gap-y-2'>
-							<li>
+							<li className='cursor-pointer'>
 								<Link
 									href='https://apps.apple.com/us/app/the-celebration-app/id1210190693'
 									passHref
@@ -265,7 +266,7 @@ export default function Footer() {
 									</div>
 								</Link>
 							</li>
-							<li>
+							<li className='cursor-pointer'>
 								<Link
 									href='https://play.google.com/store/apps/details?id=com.echurchapps.celebrationchapp&hl=en_US&gl=US'
 									passHref

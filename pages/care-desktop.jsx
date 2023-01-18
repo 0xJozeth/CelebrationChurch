@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import stage from '/public/care-images/care_stage.png';
+import embrace from '/public/care-page.jpg';
 import telecare from '/public/care-images/care_telecare.png';
 import arrow from '/public/arrow@1x.png';
 import longArrow from '/public/ministries-images/arrow-long.svg';
@@ -180,7 +180,7 @@ function CareDesktop() {
 				<div className='flex flex-col  h-[1600px] max-w-[1440px]'>
 					<div className='flex w-full'>
 						<div className='absolute top-[300px] w-full z-20'>
-							<Image src={stage} alt='' />
+							<Image src={embrace} alt='' width={750} height={1118} />
 						</div>
 						<div className='flex relative flex-col items-center w-full'>
 							<div className='absolute right-0 mix-blend-overlay z-30'>

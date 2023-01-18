@@ -183,7 +183,15 @@ function followjesus() {
 				<div className='mainContainer'>
 					<div className='imageContainer'>
 						<div className='imageWrapper'>
-							<Image src={pastorTim} alt='pastor-tim-sitting-in-a-chair' />
+							{/* <Image src={pastorTim} alt='pastor-tim-sitting-in-a-chair' /> */}
+							<video
+								src='/followJesus.mp4'
+								controls
+								autoPlay
+								loop
+								muted
+								style={{ width: '1343px', height: '756px' }}
+							></video>
 						</div>
 						<div className='blockQuote'>
 							<q>
