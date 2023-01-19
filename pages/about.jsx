@@ -14,7 +14,13 @@ import PartnersCarouselMobile from '../components/PartnersCarousel/partnersCarou
 
 import { arc } from '/public/ARC.png';
 
-function about() {
+function About() {
+	const [isMuted, setIsMuted] = useState(false);
+
+	const handleIsMuted = () => {
+		setIsMuted(!isMuted);
+	};
+
 	return (
 		<>
 			<div
@@ -24,6 +30,7 @@ function about() {
 				lg:gap-y-20'
 			>
 				<div
+					onClick={handleIsMuted}
 					className='relative 
                 w-[350px] h-[280px]
                 md:w-[575px] md:h-[323px]
@@ -34,21 +41,17 @@ function about() {
                 items-center justify-center 
                 overflow-hidden'
 				>
-					<iframe
-						className='absolute top-0 left-0 right-0 bottom-0
-                        w-[350px] h-[280px]
-                        md:w-[575px] md:h-[323px]
-                        lg:w-[1024px] lg:h-[575px]
-                        xl:w-[1440px] xl:h-[810px]
-
-
-'
-						src='https://player.vimeo.com/video/690554345?h=da3c6ace3a&controls=1&badge=0&autoplay=0&muted=1&loop=1&autopause=0&player_id=0&app_id=58479'
-						frameBorder='0'
-						// width='1280'
-						// height='720'
-						placeholder='blur'
-					></iframe>
+					<video
+						src='/welcome-comp.webm'
+						autoPlay
+						loop
+						muted={isMuted ? false : true}
+						style={{
+							width: '1440px',
+							height: '806px',
+							border: '4px solid black',
+						}}
+					></video>
 				</div>
 				<div className='flex flex-col md:flex-row mx-auto items-center'>
 					<h1 className='font-display text-[54px] md:text-[110px] lg:text-[192px] font-bold'>
@@ -273,4 +276,4 @@ function about() {
 	);
 }
 
-export default about;
+export default About;

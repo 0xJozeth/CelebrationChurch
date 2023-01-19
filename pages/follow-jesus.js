@@ -7,6 +7,7 @@ import telecare from '/public/care-images/care_telecare.png';
 import pastorTim from '/public/care-images/follow-jesus-images/pastorTim.png';
 import arrow from '/public/arrow@1x.png';
 import longArrow from '/public/ministries-images/arrow-long.svg';
+import { useState } from 'react';
 
 const Grid = styled.div`
 	display: none;
@@ -176,21 +177,25 @@ const Grid = styled.div`
 	}
 `;
 
-function followjesus() {
+function Followjesus() {
+	const [isMuted, setIsMuted] = useState(false);
+
+	const handleIsMuted = () => {
+		setIsMuted(!isMuted);
+	};
 	return (
 		<>
 			<Grid>
 				<div className='mainContainer'>
 					<div className='imageContainer'>
-						<div className='imageWrapper'>
+						<div onClick={handleIsMuted} className='imageWrapper'>
 							{/* <Image src={pastorTim} alt='pastor-tim-sitting-in-a-chair' /> */}
 							<video
-								src='/followJesus.mp4'
-								controls
+								src='/followJesus-comp.webm'
 								autoPlay
 								loop
-								muted
-								style={{ width: '1343px', height: '756px' }}
+								muted={isMuted ? false : true}
+								style={{ width: '1080px', height: '998px' }}
 							></video>
 						</div>
 						<div className='blockQuote'>
@@ -421,4 +426,4 @@ function followjesus() {
 	);
 }
 
-export default followjesus;
+export default Followjesus;

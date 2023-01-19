@@ -18,6 +18,11 @@ import TimAndJen from '/public/pastor-tim-and-jen-timberlake@1x.png';
 import whatsnew from '/public/home-whatsnew@1x.png';
 
 function HomeDesktop() {
+	const [isMuted, setIsMuted] = useState(false);
+
+	const handleIsMuted = () => {
+		setIsMuted(!isMuted);
+	};
 	return (
 		<>
 			<div className='flex justify-center items-center w-[100vw]'>
@@ -75,21 +80,13 @@ function HomeDesktop() {
 								</a>
 							</div>
 						</div>
-						<div className='relative z-20'>
+						<div onClick={handleIsMuted} className='relative z-20'>
 							<div className='relative left-[108px]'>
-								{/* <iframe
-									className=''
-									src='https://player.vimeo.com/video/744290982?h=26579d8c5a&controls=0&badge=0&autoplay=1&muted=1&loop=1&autopause=0&player_id=0&app_id=58479'
-									frameBorder='0'
-									placeholder={'blur'}
-									width={756}
-									height={1343}
-								></iframe> */}
 								<video
-									src='/heroVideo.mp4'
+									src='/heroVideo-comp.webm'
 									autoPlay
 									loop
-									muted
+									muted={isMuted ? false : true}
 									style={{ width: '756px', height: '1343px' }}
 								></video>
 							</div>
