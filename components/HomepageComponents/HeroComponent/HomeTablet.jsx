@@ -5,8 +5,6 @@ import Image from 'next/image';
 import arrow from '/public/arrow@1x.png';
 import group from '/public/microsoftteams-image@1x.png';
 
-import { handleToggle, handleSlide } from '/components/Header/Navbar.jsx';
-
 // IMPORT ITERATIVE MAPPING DATA
 import { linkText, vimeoHeroVideo } from './heroData';
 
