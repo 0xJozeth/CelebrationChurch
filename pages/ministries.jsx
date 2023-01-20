@@ -22,10 +22,39 @@ import celebrationWorship from '/public/ministries-images/ministries_worship.png
 import containerData from '../components/CarePageComponents/data';
 
 import React from 'react';
+import { data } from 'autoprefixer';
 
+const ministriesData = [
+	{
+		id: 1,
+		image: ckids,
+		heading: 'pls complile',
+		description: 'TEST TEXT LALALALA',
+		linkText: 'STUFF OoOo LOOK CLICK HERE',
+		href: 'https://google.com',
+	},
+	{
+		id: 2,
+		image: ckids,
+		heading: 'NEW',
+		description: 'AHHHHHH',
+		linkText: 'Bye buddy I hope you find your dad!',
+		href: 'https://google.com',
+	},
+	{
+		id: 3,
+		image: celebrationYouth,
+		heading: 'NEW',
+		description: 'AHHHHHH',
+		linkText: 'Bye buddy I hope you find your dad!',
+		href: 'https://google.com',
+	},
+];
 function ministries() {
+	console.log('ministriesData', ministriesData);
 	return (
 		<>
+			{/* MOBILE START */}
 			<div className='flex md:hidden justify-center w-[100vw]'>
 				<div className='flex flex-col items-center w-full max-w-[475px] p-8 mb-12 gap-y-4'>
 					<div className='relative w-full h-[486px] mb-[64px]'>
@@ -199,6 +228,8 @@ function ministries() {
 					</div>
 				</div>
 			</div>
+			{/* MOBILE END */}
+			{/* DESKTOP START */}
 			<div className='hidden md:flex flex-col items-center w-[100vw]'>
 				<div className='flex flex-col items-center w-full max-w-[1728px] mx-auto'>
 					<div className='flex w-full'>
@@ -273,54 +304,68 @@ function ministries() {
 							</div>
 						</div>
 					</div>
+
+					{/* MAPPING SECTION */}
 					<div className='flex gap-x-16 w-full py-[100px]'>
 						<div className='flex flex-col w-full gap-y-16 my-4 '>
-							<div className='flex w-full gap-8'>
-								<div className='flex'>
-									<Image src={ckids} alt='' objectFit='cover' />
-								</div>
-								<div className='flex flex-col gap-y-8 px-16 max-w-[905px]'>
-									<div className='font-display font-bold text-[48px]'>
-										CKIDS
+							{ministriesData.map((minsitryData, index) => (
+								<div key={index} className='flex w-full gap-8'>
+									<div className='flex'>
+										<Image
+											// src={ckids}
+											src={minsitryData.image}
+											alt=''
+											objectFit='cover'
+											width={600}
+											height={500}
+										/>
 									</div>
-									<div className='flex justify-center '>
-										<p className='font-display text-[24px] text-[#7c7c7c]'>
-											At Celebration, we believe that children are a heritage
-											from the Lord and should be trained to be “Like arrows in
-											the hand of a warrior…” (Psalms 127:4). Because of that,
-											our cKids services utilize curriculums that will teach
-											your kids the Word of God in a creative, fun, and
-											age-appropriate way. <br />
-											<br />
-											We value safety as a top priority and have crafted
-											engaging environments that will help your child grow in
-											wisdom, stature, and in favor with both God and man.
-											<br />
-											<br /> If you are a new parent to Celebration and would
-											like more additional information about the cKids services
-											at your specific location{' '}
-											<a href='' className='font-semibold text-[#7c7c7c]'>
-												download our app.
-											</a>
-										</p>
-									</div>
-									<div>
-										<Link href=''>
-											<div className='flex justify-start items-center gap-x-4'>
-												<div>
-													<a className='cursor-pointer font-display font-normal text-[26px] uppercase'>
-														Find ckids near you
-													</a>
+									<div className='flex flex-col gap-y-8 px-16 max-w-[905px]'>
+										<div className='font-display font-bold text-[48px]'>
+											{minsitryData.heading}
+											{/* CKIDS */}
+										</div>
+										<div className='flex justify-center '>
+											{minsitryData.description}
+											{/* <p className='font-display text-[24px] text-[#7c7c7c]'>
+												At Celebration, we believe that children are a heritage
+												from the Lord and should be trained to be “Like arrows
+												in the hand of a warrior…” (Psalms 127:4). Because of
+												that, our cKids services utilize curriculums that will
+												teach your kids the Word of God in a creative, fun, and
+												age-appropriate way. <br />
+												<br />
+												We value safety as a top priority and have crafted
+												engaging environments that will help your child grow in
+												wisdom, stature, and in favor with both God and man.
+												<br />
+												<br /> If you are a new parent to Celebration and would
+												like more additional information about the cKids
+												services at your specific location{' '}
+												<a href='' className='font-semibold text-[#7c7c7c]'>
+													download our app.
+												</a>
+											</p> */}
+										</div>
+										<div>
+											<Link href={'minsitryData.href'}>
+												<div className='flex justify-start items-center gap-x-4'>
+													<div>
+														<a className='cursor-pointer font-display font-normal text-[26px] uppercase'>
+															{/* Find ckids near you */}
+															{minsitryData.linkText}
+														</a>
+													</div>
+													<div className='w-16'>
+														<Image src={arrow} alt='' />
+													</div>
 												</div>
-												<div className='w-16'>
-													<Image src={arrow} alt='' />
-												</div>
-											</div>
-										</Link>
+											</Link>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div className='flex w-full gap-8'>
+							))}
+							{/* <div className='flex w-full gap-8'>
 								<div className='flex'>
 									<Image src={celebrationYouth} alt='' objectFit='cover' />
 								</div>
@@ -432,7 +477,7 @@ function ministries() {
 										</Link>
 									</div>
 								</div>
-							</div>
+							</div> */}
 							{/* <div className='flex w-full gap-x-16 container '>
 								<div className='flex w-[1050px]'>
 									<Image src={celebrationYouth} alt='' />
@@ -560,6 +605,7 @@ function ministries() {
 					</div>
 				</div>
 			</div>
+			{/* DESKTOP END */}
 		</>
 	);
 }
