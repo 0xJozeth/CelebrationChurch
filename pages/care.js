@@ -17,8 +17,8 @@ function care() {
 					<div className='relative w-full'>
 						<div className='absolute top-[20px] left-[20px] mix-blend-overlay z-30 '>
 							<h1 className='font-display font-bold text-[#f8f8f8]   text-[44px]'>
-								SUPPORTING
-								<br />
+								{/* SUPPORTING
+								<br /> */}
 								YOU&nbsp;ON&nbsp;YOUR
 								<br />
 								PATH&nbsp;TO
@@ -30,8 +30,8 @@ function care() {
 						</div>
 						<div className='absolute top-[20px] left-[20px] z-0'>
 							<h1 className='font-display font-bold text-[#070707] text-[44px]'>
-								SUPPORTING
-								<br />
+								{/* SUPPORTING
+								<br /> */}
 								YOU&nbsp;ON&nbsp;YOUR
 								<br />
 								PATH&nbsp;TO

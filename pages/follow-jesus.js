@@ -219,7 +219,7 @@ function Followjesus() {
 							<h3>WHO IS JESUS?</h3>
 						</div>
 						<div>
-							<p>
+							<p className='font-display text-[24px] text-[#7C7C7C]'>
 								The gospel centers around the incredible truth that Jesus came
 								to earth as Immanuel, our King among us. The “good news” of this
 								story is that the life and work of our King not only atoned for
@@ -299,7 +299,7 @@ function Followjesus() {
 							<Image src={pastorTim} alt='pastor-tim-sitting-in-a-chair' />
 						</div>
 					</div>
-					<div className='flex flex-col w-full p-4'>
+					<div className='flex flex-col w-full p-4 font-display text-[24px] text-[#7C7C7C]'>
 						<div className='flex flex-col'>
 							<div>
 								<h1 className='font-display font-bold text-[48px] text-[#070707]'>
@@ -319,7 +319,7 @@ function Followjesus() {
 						</div>
 
 						<div className='flex'>
-							<p className='font-display text-[18px] text-[#7C7C7C]'>
+							<p className=''>
 								The gospel centers around the incredible truth that Jesus came
 								to earth as Immanuel, our King among us. The “good news” of this
 								story is that the life and work of our King not only atoned for

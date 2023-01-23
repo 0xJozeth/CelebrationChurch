@@ -176,35 +176,33 @@ const Grid = styled.div`
 function CareDesktop() {
 	return (
 		<>
-			<div className='flex flex-col items-center '>
-				<div className='flex flex-col  h-[1600px] max-w-[1440px]'>
-					<div className='flex w-full'>
+			<div className='flex flex-col items-center'>
+				<div className='flex flex-col h-[1600px] max-w-[1440px] w-full'>
+					<div className='flex w-full mx-auto'>
 						<div className='absolute top-[300px] w-full z-20'>
 							<Image src={embrace} alt='' width={750} height={1118} />
 						</div>
 						<div className='flex relative flex-col items-center w-full'>
-							<div className='absolute right-0 mix-blend-overlay z-30'>
+							<div className='absolute left-0 mix-blend-overlay z-30'>
 								<h1 className='font-display font-bold text-[192px] text-[#f8f8f8]'>
-									SUPPORTING <br />
-									YOU ON YOUR <br />
+									YOUR <br />
 									PATH TO <br />
 									<span className='font-kepler italic text-[1.1em]'>
 										WHOLENESS
 									</span>
 								</h1>
 							</div>
-							<div className='flex justify-end w-full z-10'>
+							<div className='flex justify-start w-full z-10'>
 								<h1 className='font-display font-bold text-[192px]'>
-									SUPPORTING <br />
-									YOU ON YOUR <br />
+									YOUR <br />
 									PATH TO <br />
 									<span className='font-kepler italic text-[1.1em]'>
 										WHOLENESS
 									</span>
 								</h1>
 							</div>
-							<div className='flex flex-col relative left-[500px] w-[550px] mt-8 my-[80px]'>
-								<p className='font-display text-[34px]'>
+							<div className='flex flex-col relative left-[375px] w-[550px] mt-8 my-[80px]'>
+								<p className='font-display text-[24px] leading-relaxed text-[#7c7c7c]'>
 									Our Care Ministry supports and guides individuals, couples,
 									and families with life-giving care as they navigate through
 									change in every season of life. Our experienced pastors and
@@ -252,7 +250,7 @@ function CareDesktop() {
 					<div className='flex flex-col gap-y-8 px-16 max-w-[905px]'>
 						<div className='font-display font-bold text-[48px]'>TELECARE</div>
 						<div className='flex justify-center '>
-							<p className='font-display text-[24px] leading-7 text-[#7c7c7c]'>
+							<p className='font-display text-[24px] leading-relaxed text-[#7c7c7c]'>
 								We partner with Honey Lake Clinic to provide individual and
 								group therapy with licensed Christian therapists for those that
 								are struggling to reclaim their lives and achieve their God

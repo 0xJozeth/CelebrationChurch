@@ -260,7 +260,7 @@ export default function GiveDesktop() {
 						</div>
 						<div className='relative lg:absolute flex flex-col items-center right-0 lg:right-5 top-[0] lg:top-[225px] p-8 w-full lg:w-1/2 justify-end gap-y-8 '>
 							<div className='flex w-full'>
-								<p className='flex font-display font-normal text-left text-[20px] leading-7 text-[#7c7c7c]'>
+								<p className='flex font-display font-normal text-left text-[24px] leading-relaxed text-[#7c7c7c]'>
 									If tithing is new to you and you’re not sure where to get
 									started, we’ve got you covered! We’re here to help set you up
 									with a plan, and be a source of encouragement as you seek to
@@ -296,7 +296,7 @@ export default function GiveDesktop() {
 								</h3>
 							</div>
 							<div>
-								<p className='flex font-display font-normal text-left text-[22px] leading-7 text-[#7c7c7c]'>
+								<p className='flex font-display text-left text-[24px] leading-relaxed text-[#7c7c7c]'>
 									If you have additional questions concerning giving or
 									donations, please call Celebration Church Giving Office at
 									(904) 737-1121 or contact us.

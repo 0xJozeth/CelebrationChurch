@@ -57,6 +57,53 @@ const ministriesData = [
 		linkText: 'GET CONNECTED',
 		href: 'https://google.com',
 	},
+	{
+		image: celebrationWorship,
+		heading: 'FREEDOM',
+		description:
+			'Our freedom group ministry is designed to help you find freedom through Biblical truth and community support with guidance from the Holy Spirit. These groups provide a safe and confidential space to share struggles, receive prayer, and learn practical tools to overcome obstacles. We believe in the power of community and the truth of the Word of God to bring true and lasting freedom. Join a group today and start your journey to freedom.',
+		linkText: 'GET CONNECTED',
+		href: 'https://google.com',
+	},
+	{
+		image: celebrationWorship,
+		heading: 'SMALL GROUPS',
+		description:
+			'Our groups ministry offers an opportunity for you to connect and grow in your faith through fellowship, Bible study, and prayer. Groups meet regularly for a time of sharing, learning, and encouragement in a supportive environment. Groups are also opportunities to build deeper relationships with others in the church and to serve the community. Join a group today and take the next step in your spiritual journey.',
+		linkText: 'GET CONNECTED',
+		href: 'https://google.com',
+	},
+	{
+		image: celebrationWorship,
+		heading: 'SERVING TEAMS',
+		description:
+			'Our serve teams ministry provides an opportunity for you to put your faith into action by serving others in the church and the community. With a variety of teams to choose from, such as connect teams, greeting teams, children’s ministry, and outreach, there is something for everyone. Not only do these teams provide a way to serve others, but they also offer opportunities for growth, leadership, and building relationships within the church. Join a serve team today!',
+		linkText: 'GET CONNECTED',
+		href: 'https://google.com',
+	},
+	{
+		image: celebrationWorship,
+		heading: 'SISTERHOOD',
+		description:
+			'Sisterhood is a community where women can come together to share their lives and support one another as they navigate through the joys and challenges of everyday life with the power of the Holy Spirit. We offer various opportunities for fellowship, Bible study, and mentorship. In the Fall of each year, we also gather at Sisterhood Conference to preach the gospel and gather as women to seek after God together. Join us today and take the next step in your spiritual journey.',
+		linkText: 'GET CONNECTED',
+		href: 'https://google.com',
+	},
+];
+
+const smallLabel = [
+	{
+		heading: 'CKIDS',
+	},
+	{
+		heading: 'YOUTH',
+	},
+	{
+		heading: 'YOUNG ADULTS',
+	},
+	{
+		heading: 'WORSHIP',
+	},
 ];
 function ministries() {
 	console.log('ministriesData', ministriesData);
@@ -247,14 +294,18 @@ function ministries() {
 							</div>
 							<div className='flex items-center justify-end my-2'>
 								<div className='flex w-[584px] justify-between'>
-									<div className='flex p-2 mx-2'>
-										<p className='font-display font-normal text-[#070707] text-[16px]'>
-											CKIDS
-										</p>
-									</div>
-									<div className='flex mx-2 w-[8px]'>
-										<Image src={circle} alt='' />
-									</div>
+									{smallLabel.map((data, index) => (
+										<div key={index} className='flex p-2 mx-2'>
+											<p className='font-display font-normal text-[#070707] text-[16px]'>
+												{data.heading}
+											</p>
+											<div className='flex mx-2 w-[8px]'>
+												<Image src={circle} alt='' />
+											</div>
+										</div>
+									))}
+
+									{/* 
 									<div className='flex p-2 mx-2'>
 										<p className='font-display font-normal text-[#070707] text-[16px]'>
 											YOUTH
@@ -275,7 +326,7 @@ function ministries() {
 										<p className='font-display font-normal text-[#070707] text-[16px]'>
 											WORSHIP
 										</p>
-									</div>
+									</div> */}
 								</div>
 							</div>
 						</div>
@@ -299,7 +350,7 @@ function ministries() {
 								</span>
 							</div>
 							<div className='flex relative left-[200px] p-8 w-[579px]'>
-								<p className='font-display font-normal text-[30px] text-[#7c7c7c]'>
+								<p className='font-display font-normal text-[26px] text-[#7c7c7c] leading-relaxed'>
 									Here at Celebration, our heart is to equip you and your family
 									with a safe space to grow your relationship with Jesus while
 									cultivating the type of community that stewards God’s
@@ -327,21 +378,20 @@ function ministries() {
 											height={500}
 										/>
 									</div>
-									<div className='flex flex-col px-16 max-w-[900px]'>
+									<div className='flex flex-col px-16 gap-y-16 max-w-[900px]'>
 										<div className='font-display font-bold text-[48px]'>
 											{minsitryData.heading}
 										</div>
 										<div className='flex justify-center '>
-											<p className='font-display text-[24px] text-[#7c7c7c] leading-relaxed'>
+											<p className='font-display font-normal text-[26px] text-[#7c7c7c] leading-relaxed'>
 												{minsitryData.description}
 											</p>
 										</div>
 										<div>
-											<Link href={'minsitryData.href'}>
+											<Link href={minsitryData.href} passHref>
 												<div className='flex justify-start items-center gap-x-4'>
 													<div>
 														<a className='cursor-pointer font-display font-normal text-[26px] uppercase'>
-															{/* Find ckids near you */}
 															{minsitryData.linkText}
 														</a>
 													</div>
