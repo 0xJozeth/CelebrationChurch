@@ -2,20 +2,19 @@ import React, { useState, useffect, useRef } from 'react';
 import Banner from '/components/Banner/Banner.js';
 import Link from 'next/link';
 import Image from 'next/image';
-import longArrow from '/public/arrow-long.svg';
 import arrow from '/public/arrow@1x.png';
-import group from '/public/microsoftteams-image@1x.png';
 import GroupImage from '/public/microsoftteams-image@1x.png';
-// import heroVideo from '/public/heroVideo.mp4';
 
-// IMPORT ITERATIVE MAPPING DATA
-// import { linkText, vimeoHeroVideo } from './heroData';
-
-import { IoPlayCircleOutline } from 'react-icons/io5';
 import WeHaveAGrace from '../SectionWeHaveAGrace/WeHaveAGrace';
-import place from '/public/ministries-homepage@1x.png';
+import youngadults from '/public/youngadults.png';
 import TimAndJen from '/public/pastor-tim-and-jen-timberlake@1x.png';
 import whatsnew from '/public/home-whatsnew@1x.png';
+
+// IMPORT IMAGES
+import followprayer from '/public/follow-prayer.png';
+import followstage from '/public/follow-stage.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCross, faPrayingHands } from '@fortawesome/free-solid-svg-icons';
 
 function HomeDesktop() {
 	const [isMuted, setIsMuted] = useState(false);
@@ -23,10 +22,20 @@ function HomeDesktop() {
 	const handleIsMuted = () => {
 		setIsMuted(!isMuted);
 	};
+
+	const followData = [
+		{
+			imageLeft: followstage,
+			imageRight: followprayer,
+			width: 825,
+			height: 634,
+		},
+	];
+
 	return (
 		<>
 			<div className='flex justify-center items-center w-[100vw]'>
-				<div className='flex flex-col w-full max-w-[1728px] gap-y-16 items-center '>
+				<div className='flex flex-col w-full max-w-[1728px] gap-y-16 items-center'>
 					<div className='grid grid-cols-2 overflow-hidden '>
 						<div className='relative '>
 							<div className='relative top-0 left-0 font-display font-extra-bold text-[#f8f8f8] mix-blend-overlay text-[88px] md:text-[112px] lg:text-[152px] xl:text-[240px]  p-8 z-30'>
@@ -52,7 +61,7 @@ function HomeDesktop() {
 								</h1>
 							</div>
 							<div className='flex p-16'>
-								<p className='font-display md:text-[26px]  lg:text-[34px] text-[#7C7C7C]'>
+								<p className='font-display md:text-[24px] lg:text-[24px] leading-relaxed text-[#7C7C7C]'>
 									We’re so glad you’re here! At Celebration Church, we
 									prioritize Jesus’ mission to spread the gospel. We are a
 									global house comprised of many rooms around the world, with
@@ -150,7 +159,7 @@ function HomeDesktop() {
 					<div className='flex flex-col w-full '>
 						<div className='relative flex justify-start w-full z-20 '>
 							<div className='left-0 w-full'>
-								<Image src={place} alt='' />
+								<Image src={youngadults} alt='' />
 							</div>
 						</div>
 						<div className='relative flex flex-col -mt-[125px]'>
@@ -231,7 +240,7 @@ function HomeDesktop() {
 								top-[450px] md:top-[250px] lg:top-[350px] xl:top-[450px]
 								 h-min w-full flex items-center p-8'
 								>
-									<p className='font-display text-[12px] md:text-[24px] lg:text-[28px] xl:text-[34px]  w-full text-[#7c7c7c]'>
+									<p className='font-display text-[12px] md:text-[24px] lg:text-[24px] xl:text-[24px] leading-relaxed w-full text-[#7c7c7c]'>
 										<strong>
 											Tim and Jen Timberlake serve as the Senior Pastors of
 											Celebration Church in Jacksonville, Florida.
@@ -254,21 +263,88 @@ function HomeDesktop() {
 						</div>
 					</div>
 
-					<div className='flex justify-center items-center w-full mx-auto'>
-						<div className='flex min-h-[152px] max-w-[256px] md:max-w-full w-full justify-center items-center mx-auto my-4 overflow-hidden '>
-							<Link href={'follow-jesus'}>
-								<button className='flex h-[152px] w-full justify-around items-center border-2 border-solid border-[#070707] p-4 gap-x-4 mx-[80px]'>
-									<div className='flex min-w-[126px]'>
-										<a className='font-display text-[36px] md:text-[44px] lg:text-[64px] xl:text-[88px] '>
-											FOLLOW JESUS
+					{/* PRAYER REQUEST SECTION */}
+					<div className='flex bg-black h-[645px] w-full justify-center items-center'>
+						{followData.map((follow, index) => (
+							<div key={index} className='flex justify-between items-center'>
+								<div className='flex group relative bg-red p-16 justify-center items-center'>
+									<button className='absolute justify-center items-center z-20 '>
+										<Link href='follow-jesus' passHref>
+											<div className='relative group'>
+												<div className='text-white text-[44px] py-2'>
+													<FontAwesomeIcon icon={faCross} className='z-50' />
+												</div>
+												<div className='my-2 group-hover:my-8 transition-all'>
+													<a className='font-display text-white text-[44px]'>
+														I WANT TO
+														<br />
+														FOLLOW
+														<br />
+														JESUS
+														<br />
+													</a>
+												</div>
+												<div className='justify-center opacity-0 group-hover:opacity-100 transition-all w-full'>
+													<Image src={arrow} alt='arrow' className='invert' />
+												</div>
+											</div>
+										</Link>
+									</button>
+									<Link href='/follow-jesus' passHref>
+										<button>
+											<Image
+												src={follow.imageLeft}
+												alt='prayer request button'
+												width={follow.width}
+												height={follow.height}
+												className='saturate-0 opacity-20 group-hover:saturate-[85%] group-hover:opacity-75 group-hover:scale-[99.5%] group-hover:-skew-y-[0.5deg] transition-all'
+											/>
+										</button>
+									</Link>
+								</div>
+								<div className='flex relative group bg-red p-16 justify-center items-center'>
+									<button className='absolute justify-center items-center z-50'>
+										<Link href='prayer-request' passHref alt='follow jesus'>
+											<div className='relative group'>
+												<div className='text-white text-[44px] py-2'>
+													<FontAwesomeIcon
+														icon={faPrayingHands}
+														className='z-50'
+													/>
+												</div>
+												<div className='my-2 group-hover:my-8 transition-all'>
+													<a className='font-display  text-white text-[44px]'>
+														SUBMIT A<br />
+														PRAYER
+														<br />
+														REQUEST
+														<br />
+													</a>
+												</div>
+												<div className='justify-center opacity-0 group-hover:opacity-100 transition-all w-full'>
+													<Image src={arrow} alt='arrow' className='invert' />
+												</div>
+											</div>
+										</Link>
+									</button>
+									<button>
+										<a
+											href='https://my.celebration.org/portal/get_form.aspx?ID=6bc5f420-26f8-41f1-8149-9344dd2676e6&template=campus-jax&remembertemplate=true'
+											target='_blank'
+											rel='noreferrer'
+										>
+											<Image
+												src={follow.imageRight}
+												alt='prayer request button'
+												width={follow.width}
+												height={follow.height}
+												className='saturate-0 opacity-20 group-hover:saturate-[85%] group-hover:opacity-75 group-hover:scale-[99.5%] group-hover:skew-y-[0.5deg] transition-all'
+											/>
 										</a>
-									</div>
-									<div className='flex min-h-[36px] max-w-[150px] md:max-w-[150px] lg:max-w-[250px] xl:max-w-[350px]'>
-										<Image src={longArrow} alt='' />
-									</div>
-								</button>
-							</Link>
-						</div>
+									</button>
+								</div>
+							</div>
+						))}
 					</div>
 
 					<div className='flex h-[900px] w-full mt-[100px]'>

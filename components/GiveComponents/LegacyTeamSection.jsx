@@ -24,7 +24,7 @@ const LegacyTeamSection = () => {
 			<div className='relative flex justify-between mt-[150px] z-20 h-600px lg:h-[400px] '>
 				<div className='flex flex-col items-start mt-8 p-8 gap-y-8 w-1/2'>
 					<div>
-						<p className='flex justify-center font-display font-normal text-left text-[20px] leading-7 text-[#7c7c7c] '>
+						<p className='flex justify-center font-display font-normal text-left text-[24px] leading-relaxed text-[#7c7c7c] '>
 							Our Legacy Team gives influence, resources, and time as a local
 							church ministry expression to advance the cause of Christ. Each
 							member prayerfully commits to give over and above their tithe to

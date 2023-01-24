@@ -46,10 +46,11 @@ export default function GiveDesktop() {
 			title: 'The Celebration App',
 			paragraph:
 				'This method is the easiest and most user friendly. To download the app text “Celebration” to (833) 399-7200 and follow the prompts OR you can search for “The Celebration App” in your iTunes or Google Play Store.',
-			linkOneTitle: 'linkOneTitle',
-			linkOne: 'https://apple.com',
-			linkTwoTitle: 'linkTwoTitle',
-			linkTwo: 'https://google.com',
+			linkOneTitle: 'Download via the App Store',
+			linkOne: 'https://apps.apple.com/us/app/the-celebration-app/id1210190693',
+			linkTwoTitle: 'Download via the Google Playstore',
+			linkTwo:
+				'https://play.google.com/store/apps/details?id=com.echurchapps.celebrationchapp&hl=en_US&gl=US&pli=1',
 		},
 		{
 			icon: faBitcoin,
@@ -57,21 +58,21 @@ export default function GiveDesktop() {
 			title: 'Cryptocurrency',
 			paragraph:
 				'You can use this method if you would like to make a donation of cryptocurrency to Celebration Church. To do this, simply click the button below and provide your donation details.',
-			linkOneTitle: 'linkOneTitle',
-			linkOne: 'https://apple.com',
-			linkTwoTitle: 'linkTwoTitle',
-			linkTwo: 'https://google.com',
+			linkOneTitle: 'Give via Cryptocurrency',
+			linkOne: 'https://platform.engiven.com/give/97/widget/88',
+			linkTwoTitle: null,
+			linkTwo: null,
 		},
 		{
 			icon: faPiggyBank,
 			text: 'BANK',
 			title: 'Personal Banking',
 			paragraph:
-				'To do this, log into your personal bank account and follow its instructions for adding Celebration Church as a new payee. Enter your donation amount and be sure to specify in the memo if you would like to give to a specific Celebration Church location.',
-			linkOneTitle: 'linkOneTitle',
-			linkOne: 'https://apple.com',
-			linkTwoTitle: 'linkTwoTitle',
-			linkTwo: 'https://google.com',
+				'Give using your bank’s bill payment feature to issue donations directly to Celebration Church. To do this, log into your personal bank account and follow its instructions for adding Celebration Church as a new payee. Enter your donation amount and be sure to specify in the memo if you would like to give to a specific Celebration Church location.',
+			linkOneTitle: null,
+			linkOne: null,
+			linkTwoTitle: null,
+			linkTwo: null,
 		},
 		{
 			icon: faMoneyBillTrendUp,
@@ -101,7 +102,7 @@ export default function GiveDesktop() {
 								</span>
 							</h2>
 						</div>
-						<div className='flex justify-center  p-8 mx-8 my-16'>
+						<div className='flex justify-center p-8 mx-8 my-16'>
 							<p className='font-display md:text-[18px] lg:text-[24px] leading-relaxed'>
 								Here at Celebration, we believe that God calls us to partake in
 								the act of generosity, and that tithing is an act of worship and
@@ -350,12 +351,6 @@ const GiveModal = ({
 	try {
 		return (
 			<>
-				{/* <div
-					className={`darken-background ${darken ? 'modal-open' : ''}`}
-					onClick={handleModalClose}
-				> */}
-				{/* <div className='flex justify-center items-center bg-red-300 mx-auto m-16'> */}
-				{/* <div className='flex justify-center items-center bg-red-300 mx-auto m-16'> */}
 				{modalData.map(
 					(data, index) =>
 						index === modalIndex && (
@@ -365,12 +360,12 @@ const GiveModal = ({
 							>
 								<div className='flex w-full h-full p-8'>
 									{/* BACK BUTTON AN ICON (LEFT COLUMN) */}
-									<div className='flex-col w-2/5 justify-center'>
+									<div className='flex-col w-2/5 justify-between items-center'>
 										<div
 											onClick={handleModalClose}
-											className='flex w-min h-min  p-4 items-center gap-4 cursor-pointer'
+											className='flex w-min h-min  p-4 justify-center items-center gap-4 cursor-pointer'
 										>
-											<div className='text-[18px] invert'>
+											<div className='flex justify-center items-center text-[18px] invert'>
 												<FontAwesomeIcon icon={faArrowLeft} className='' />
 											</div>
 											<p className='text-white font-display text-[22px] hover:text-[24px] transition-all'>
@@ -397,8 +392,8 @@ const GiveModal = ({
 											<h3 className='text-white uppercase font-bold font-display text-[40px] w-full'>
 												{data.title}
 											</h3>
-											<div>
-												<p className='text-white font-display text-[22px]'>
+											<div className='flex w-full justify-start items-center'>
+												<p className='text-white font-display text-[24px] leading-relaxed'>
 													{data.paragraph}
 												</p>
 											</div>
@@ -422,6 +417,8 @@ const GiveModal = ({
 														</div>
 													</a>
 												</div>
+
+												{/* THIS IS A CONDITIONALLY RENDERED SECOND LINK IF THERES CONTENT */}
 												{data.linkTwo !== undefined &&
 													data.linkTwo !== null && (
 														<div className='flex justify-start items-center '>
@@ -451,8 +448,6 @@ const GiveModal = ({
 							</div>
 						)
 				)}
-				{/* </div> */}
-				{/* </div> */}
 			</>
 		);
 	} catch (error) {

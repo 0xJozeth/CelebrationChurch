@@ -254,7 +254,7 @@ function HeroTW() {
 					</div>
 				</div>
 
-				<div className='flex justify-center items-center w-full min-w-full'>
+				{/* <div className='flex justify-center items-center w-full min-w-full'>
 					<div className='flex min-w-[355px] justify-center items-center my-4 '>
 						<Link href={'follow-jesus'}>
 							<button className='flex w-full items-center border-2 border-solid border-[#070707] gap-x-4 p-4 mx-8'>
@@ -269,7 +269,7 @@ function HeroTW() {
 							</button>
 						</Link>
 					</div>
-				</div>
+				</div> */}
 
 				<div className='relative flex flex-col mt-8 max-w-[355px] h-[500px]'>
 					<div className='flex flex-col'>

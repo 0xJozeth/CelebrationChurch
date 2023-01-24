@@ -12,7 +12,6 @@ import CookieConsent from 'react-cookie-consent';
 
 ///
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSquareArrowUpRight } from '@fortawesome/free-solid-svg-icons';
 import {
 	faAppStoreIos,
 	faGooglePlay,
@@ -83,11 +82,6 @@ export default function Footer() {
 									<a>Bible Reading Plan</a>
 								</Link>
 							</li>
-							{/* <li>
-								<Link href='/cKids-Online' passHref>
-									<a>cKids Online</a>
-								</Link>
-							</li> */}
 							<li>
 								<Link href='/shop' passHref>
 									<a>Shop</a>
@@ -100,9 +94,13 @@ export default function Footer() {
 						<h6 className='font-bold text-[12px] my-4'>OPPORTUNITIES</h6>
 						<ul className='flex flex-col text-[16px] gap-y-2'>
 							<li>
-								<Link href='/jobs' passHref>
+								<a
+									href='https://www.linkedin.com/company/celebration-church/jobs/'
+									target='_blank'
+									rel='noreferrer'
+								>
 									<a>Jobs</a>
-								</Link>
+								</a>
 							</li>
 							<li>
 								<Link href='/seu-jacksonville' passHref>
@@ -119,9 +117,10 @@ export default function Footer() {
 						<div className='flex justify-start items-centerh-[20px]'>
 							<ul className='flex flex-col text-[14px] gap-y-1'>
 								<li className='cursor-pointer'>
-									<Link
+									<a
 										href='https://apps.apple.com/us/app/the-celebration-app/id1210190693'
-										passHref
+										target='_blank'
+										rel='noreferrer'
 									>
 										<div className='flex justify-between'>
 											<div className='flex h-full'>
@@ -131,16 +130,17 @@ export default function Footer() {
 												<FontAwesomeIcon icon={faAppStoreIos} />
 											</div>
 										</div>
-									</Link>
+									</a>
 								</li>
 							</ul>
 						</div>
 						<div className='flex justify-start items-center h-[20px]'>
 							<ul className='flex flex-col text-[14px] gap-y-1'>
 								<li className='cursor-pointer'>
-									<Link
+									<a
 										href='https://play.google.com/store/apps/details?id=com.echurchapps.celebrationchapp&hl=en_US&gl=US'
-										passHref
+										target='_blank'
+										rel='noreferrer'
 									>
 										<div className='flex justify-between h-full'>
 											<div className='flex'>
@@ -150,7 +150,7 @@ export default function Footer() {
 												<FontAwesomeIcon icon={faGooglePlay} />
 											</div>
 										</div>
-									</Link>
+									</a>
 								</li>
 							</ul>
 						</div>
@@ -231,14 +231,22 @@ export default function Footer() {
 						<h6 className='font-bold text-[12px] my-4'>OPPORTUNITIES</h6>
 						<ul className='flex flex-col text-[16px] gap-y-2'>
 							<li>
-								<Link href='/jobs' passHref>
+								<a
+									href='https://www.linkedin.com/company/celebration-church/jobs/'
+									target='_blank'
+									rel='noreferrer'
+								>
 									<a>Jobs</a>
-								</Link>
+								</a>
 							</li>
 							<li>
-								<Link href='/seu-jacksonville' passHref>
+								<a
+									href='https://seujacksonville.org'
+									target='_blank'
+									rel='noreferrer'
+								>
 									<a>SEU Jacksonville</a>
-								</Link>
+								</a>
 							</li>
 						</ul>
 					</div>
@@ -246,9 +254,10 @@ export default function Footer() {
 						<h6 className='font-bold text-[12px] my-4'>DOWNLOAD OUR APP</h6>
 						<ul className='flex flex-col text-[16px] gap-y-2'>
 							<li className='cursor-pointer'>
-								<Link
+								<a
 									href='https://apps.apple.com/us/app/the-celebration-app/id1210190693'
-									passHref
+									target='_blank'
+									rel='noreferrer'
 								>
 									<div className='flex justify-start items-center'>
 										<div className='flex'>
@@ -264,12 +273,13 @@ export default function Footer() {
 											/>
 										</div>
 									</div>
-								</Link>
+								</a>
 							</li>
 							<li className='cursor-pointer'>
-								<Link
+								<a
 									href='https://play.google.com/store/apps/details?id=com.echurchapps.celebrationchapp&hl=en_US&gl=US'
-									passHref
+									target='_blank'
+									rel='noreferrer'
 								>
 									<div className='flex justify-start'>
 										<div className='flex'>
@@ -284,7 +294,7 @@ export default function Footer() {
 											/>
 										</div>
 									</div>
-								</Link>
+								</a>
 							</li>
 						</ul>
 					</div>
@@ -359,11 +369,15 @@ export default function Footer() {
 					</div>
 					<div>
 						<p className='uppercase text-[10px] font-display'>
-							<Link href={'#'}>
-								<a className='text-[#7C7C7C] hover:text-[#070707]'>
+							<a
+								href='https://s3.amazonaws.com/downloads.celebration.org/2018/downloads/Privacy+Policy+Final+2018.pdf'
+								target='_blank'
+								rel='noreferrer'
+							>
+								<p className='text-[#7C7C7C] hover:text-[#070707]'>
 									Privacy Policy
-								</a>
-							</Link>
+								</p>
+							</a>
 						</p>
 					</div>
 				</div>

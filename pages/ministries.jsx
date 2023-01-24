@@ -91,20 +91,6 @@ const ministriesData = [
 	},
 ];
 
-const smallLabel = [
-	{
-		heading: 'CKIDS',
-	},
-	{
-		heading: 'YOUTH',
-	},
-	{
-		heading: 'YOUNG ADULTS',
-	},
-	{
-		heading: 'WORSHIP',
-	},
-];
 function ministries() {
 	console.log('ministriesData', ministriesData);
 	return (
@@ -292,20 +278,17 @@ function ministries() {
 							<div className='relative w-full z-20'>
 								<Image src={collage} alt='' />
 							</div>
+
 							<div className='flex items-center justify-end my-2'>
 								<div className='flex w-[584px] justify-between'>
-									{smallLabel.map((data, index) => (
-										<div key={index} className='flex p-2 mx-2'>
-											<p className='font-display font-normal text-[#070707] text-[16px]'>
-												{data.heading}
-											</p>
-											<div className='flex mx-2 w-[8px]'>
-												<Image src={circle} alt='' />
-											</div>
-										</div>
-									))}
-
-									{/* 
+									<div className='flex p-2 mx-2'>
+										<p className='font-display font-normal text-[#070707] text-[16px]'>
+											CKIDS
+										</p>
+									</div>
+									<div className='flex mx-2 w-[8px]'>
+										<Image src={circle} alt='' />
+									</div>
 									<div className='flex p-2 mx-2'>
 										<p className='font-display font-normal text-[#070707] text-[16px]'>
 											YOUTH
@@ -326,7 +309,7 @@ function ministries() {
 										<p className='font-display font-normal text-[#070707] text-[16px]'>
 											WORSHIP
 										</p>
-									</div> */}
+									</div>
 								</div>
 							</div>
 						</div>

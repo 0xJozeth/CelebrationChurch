@@ -174,14 +174,14 @@ const OnlineGivingDropdown = () => {
 								className='flex text-[28px] md:text-[56px]'
 								onClick={handleGlobal}
 							>
-								<div
-									className={
-										global
-											? 'flex underline underline-offset-2 font-semibold bg-[#070707] text-[#f8f8f8] p-2 cursor-pointer'
-											: 'flex underline-offset-2 p-2 cursor-pointer'
-									}
-								>
-									TV&nbsp;MINISTRY
+								<div className='flex underline-offset-2 p-2 cursor-pointer'>
+									<a
+										href='https://timtimberlake.tv/partner/'
+										target='_blank'
+										rel='noreferrer'
+									>
+										TV&nbsp;MINISTRY
+									</a>
 								</div>{' '}
 							</ul>
 						</ul>
