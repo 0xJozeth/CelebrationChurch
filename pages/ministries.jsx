@@ -354,20 +354,7 @@ function ministries() {
 												{minsitryData.description}
 											</p>
 										</div>
-										<div>
-											<Link href={minsitryData.href} passHref>
-												<div className='flex justify-start items-center gap-x-4'>
-													<div>
-														<a className='cursor-pointer font-display font-normal text-[26px] uppercase'>
-															{minsitryData.linkText}
-														</a>
-													</div>
-													<div className='w-16'>
-														<Image src={arrow} alt='' />
-													</div>
-												</div>
-											</Link>
-										</div>
+										
 									</div>
 								</div>
 							))}
