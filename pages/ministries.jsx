@@ -30,64 +30,48 @@ const ministriesData = [
 		heading: 'CKIDS',
 		description:
 			'At Celebration, we believe that children are a heritage from the Lord and should be trained to be “Like arrows in the hand of a warrior…” (Psalms 127:4). Because of that, our cKids services utilize curriculums that will teach your kids the Word of God in a creative, fun, and age-appropriate way. We value safety as a top priority and have craftedengaging environments that will help your child grow inwisdom, stature, and in favor with both God and man. If you are a new parent to Celebration and wouldlike more additional information about the cKidsservices at your specific location',
-		linkText: 'GET CONNECTED',
-		href: 'https://google.com',
 	},
 	{
 		image: celebrationYouth,
 		heading: 'CELEBRATION YOUTH',
 		description:
 			'Celebration Youth is our Middle and High School ministry for students! With weekly gatherings and events happening throughout the year, Celebration Youth’s heart is to steward and sow into the next generation through relationship and community. For more specific information on the events happening at your local location, visit the Celebration App.',
-		linkText: 'GET CONNECTED',
-		href: 'https://google.com',
 	},
 	{
 		image: youngAdults,
 		heading: 'CELEBRATION YOUNG ADULTS',
 		description:
 			'Celebration Young Adults is designed to serve the YoungAdults community of Celebration Church through worship gatherings, small communities, and other fellowship opportunities. At CYA, we believe that we can go further together! If you’d like to get more information on events, small groups, and more for your Celebration location, download our other Celebration App.',
-		linkText: 'GET CONNECTED',
-		href: 'https://google.com',
 	},
 	{
 		image: celebrationWorship,
 		heading: 'CELEBRATION WORSHIP',
 		description:
 			'At Celebration, we believe that children are a heritage from the Lord and should be trained to be “Like arrows in the hand of a warrior…” (Psalms 127:4). Because of that,our cKids services utilize curriculums that will teach your kids the Word of God in a creative, fun, and age-appropriate way. We value safety as a top priority and have crafted engaging environments that will help your child grow in wisdom, stature, and in favor with both God and man. If you are a new parent to Celebration and wouldlike more additional information about the cKids servicesat your specific location download our app.',
-		linkText: 'GET CONNECTED',
-		href: 'https://google.com',
 	},
 	{
 		image: celebrationWorship,
 		heading: 'FREEDOM',
 		description:
 			'Our freedom group ministry is designed to help you find freedom through Biblical truth and community support with guidance from the Holy Spirit. These groups provide a safe and confidential space to share struggles, receive prayer, and learn practical tools to overcome obstacles. We believe in the power of community and the truth of the Word of God to bring true and lasting freedom. Join a group today and start your journey to freedom.',
-		linkText: 'GET CONNECTED',
-		href: 'https://google.com',
 	},
 	{
 		image: celebrationWorship,
 		heading: 'SMALL GROUPS',
 		description:
 			'Our groups ministry offers an opportunity for you to connect and grow in your faith through fellowship, Bible study, and prayer. Groups meet regularly for a time of sharing, learning, and encouragement in a supportive environment. Groups are also opportunities to build deeper relationships with others in the church and to serve the community. Join a group today and take the next step in your spiritual journey.',
-		linkText: 'GET CONNECTED',
-		href: 'https://google.com',
 	},
 	{
 		image: celebrationWorship,
 		heading: 'SERVING TEAMS',
 		description:
 			'Our serve teams ministry provides an opportunity for you to put your faith into action by serving others in the church and the community. With a variety of teams to choose from, such as connect teams, greeting teams, children’s ministry, and outreach, there is something for everyone. Not only do these teams provide a way to serve others, but they also offer opportunities for growth, leadership, and building relationships within the church. Join a serve team today!',
-		linkText: 'GET CONNECTED',
-		href: 'https://google.com',
 	},
 	{
 		image: celebrationWorship,
 		heading: 'SISTERHOOD',
 		description:
 			'Sisterhood is a community where women can come together to share their lives and support one another as they navigate through the joys and challenges of everyday life with the power of the Holy Spirit. We offer various opportunities for fellowship, Bible study, and mentorship. In the Fall of each year, we also gather at Sisterhood Conference to preach the gospel and gather as women to seek after God together. Join us today and take the next step in your spiritual journey.',
-		linkText: 'GET CONNECTED',
-		href: 'https://google.com',
 	},
 ];
 
