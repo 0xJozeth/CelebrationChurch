@@ -62,7 +62,7 @@ function care() {
 							<div className='flex items-center'>
 								<a
 									className='font-display font-semibold text-[20px]'
-									href='https://podio.com/webforms/25046911/1842022'
+									href='https://celebration.wufoo.com/forms/r1y73bnj1r5g2sn/'
 									target='_blank'
 									rel='noopener noreferrer'
 								>
@@ -77,7 +77,7 @@ function care() {
 							<div className='flex justify-center items-center'>
 								<a
 									className='font-display font-semibold text-[20px]'
-									href='https://podio.com/webforms/25046911/1842022'
+									href='https://s3.amazonaws.com/downloads.celebration.org/2022/webdownloads/care_guide_dec.2021.pdf'
 									target='_blank'
 									rel='noopener noreferrer'
 								>
