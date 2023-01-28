@@ -347,7 +347,7 @@ function Give(props) {
 												<li className='flex items-center'>
 													<a
 														className='flex relative hover:bg-black hover:text-white ease-in items-center cursor-pointer'
-														href='https://celebrationjax.org/'
+														href='https://pushpay.com/g/celebrationarena'
 														target='_blank'
 														rel='noopener noreferrer'
 													>
@@ -357,7 +357,17 @@ function Give(props) {
 												<li>
 													<a
 														className='hover:bg-black hover:text-white ease-in cursor-pointer'
-														href='https://celebrationsfl.org/'
+														href='https://pushpay.com/g/celebrationorangepark'
+														target='_blank'
+														rel='noopener noreferrer'
+													>
+														ORANGE PARK
+													</a>
+												</li>
+												<li>
+													<a
+														className='hover:bg-black hover:text-white ease-in cursor-pointer'
+														href='https://pushpay.com/g/celebrationftl'
 														target='_blank'
 														rel='noopener noreferrer'
 													>
@@ -367,7 +377,7 @@ function Give(props) {
 												<li>
 													<a
 														className='hover:bg-black hover:text-white ease-in cursor-pointer'
-														href='http://celebrationorl.org/'
+														href='https://celebrationorl.org/celebrationorl-give/'
 														target='_blank'
 														rel='noopener noreferrer'
 													>
@@ -377,23 +387,14 @@ function Give(props) {
 												<li>
 													<a
 														className='hover:bg-black hover:text-white ease-in cursor-pointer'
-														href='http://metrochurch.com/'
+														href='https://pushpay.com/g/celebrationchurchdc'
 														target='_blank'
 														rel='noopener noreferrer'
 													>
 														WASHINGTON, D.C.
 													</a>
 												</li>
-												<li>
-													<a
-														className='hover:bg-black hover:text-white ease-in cursor-pointer'
-														href='http://www.christianfaithcenternc.com/'
-														target='_blank'
-														rel='noopener noreferrer'
-													>
-														CFC CREEDMOOR
-													</a>
-												</li>
+												
 											</ul>
 										</div>
 										<ul className='flex items-center text-[28px] md:text-[56px]'>
