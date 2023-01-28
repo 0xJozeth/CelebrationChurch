@@ -9,10 +9,9 @@ import baptism from '/public/baptism.png';
 
 import React, { useState, useEffect } from 'react';
 import WeHaveAGrace from '../components/HomepageComponents/SectionWeHaveAGrace/WeHaveAGrace';
-import PartnersCarousel from '../components/PartnersCarousel/partnersCarousel';
+import PartnersCarousel from '../components/PartnersCarousel.js';
 import PartnersCarouselMobile from '../components/PartnersCarousel/partnersCarouselMobile';
-
-import { arc } from '/public/ARC.png';
+import { motion } from 'framer-motion';
 
 function About() {
 	const [isMuted, setIsMuted] = useState(false);
@@ -256,29 +255,29 @@ function About() {
 						</span>
 					</h1>
 				</div>
-				<div className='hidden md:flex mx-auto justify-center items-center my-4'></div>
-				<div className='flex md:hidden mx-auto justify-center items-center my-4'>
-					{/* <PartnersCarouselMobile /> */}
-				</div>
-				<div
-					className='flex w-full min-h-[51px] lg:h-[200px]
-				max-w-[256px] md:max-w-[1440px]
-				 justify-center items-center mx-auto my-8 mb-[200px] overflow-hidden'
-				>
-					<Link href={'visit'}>
-						<button className='flex justify-center items-center border-2 border-solid border-[#070707] w-full h-full p-4 gap-x-4 lg:gap-x-[140px] md:px-[50px] mx-auto'>
-							<div className='flex min-w-[126px]'>
-								<a className='font-display text-[18px] md:text-[44px] lg:text-[90px]'>
-									COME&nbsp;VISIT&nbsp;US
-								</a>
-							</div>
-							<div className='flex min-h-[36px] max-w-[144px] w-[300px] lg:max-w-[444px]'>
-								<Image src={longArrow} alt='' />
-							</div>
-						</button>
-					</Link>
+				<div className='hidden md:flex mx-auto justify-center items-center gap-16 mb-20'>
+					<PartnersCarousel />
 				</div>
 			</div>
+			<motion.div
+				whileHover={{ scale: 1.1 }}
+				className='flex w-full min-h-[51px] lg:h-[200px]
+				max-w-[256px] md:max-w-[1440px]
+				 justify-center items-center mx-auto my-8 mb-[200px] overflow-hidden'
+			>
+				<Link href={'visit'}>
+					<button className='flex justify-center items-center border-2 border-solid border-[#070707] w-full h-full p-4 gap-x-4 lg:gap-x-[140px] md:px-[50px] mx-auto'>
+						<div className='flex min-w-[126px]'>
+							<a className='font-display text-[18px] md:text-[44px] lg:text-[90px]'>
+								COME&nbsp;VISIT&nbsp;US
+							</a>
+						</div>
+						<div className='flex min-h-[36px] max-w-[144px] w-[300px] lg:max-w-[444px]'>
+							<Image src={longArrow} alt='' />
+						</div>
+					</button>
+				</Link>
+			</motion.div>
 		</>
 	);
 }
