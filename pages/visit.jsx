@@ -9,7 +9,7 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import { BsFillArrowRightCircleFill, BsClockFill } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAt } from '@fortawesome/free-solid-svg-icons';
+import { faAt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 
 import React, { useEffect, useState } from 'react';
 // import VisitDesktop from './visit-deprecated';
@@ -438,20 +438,6 @@ function VisitTW(props) {
 								YOU’RE&nbsp;HERE
 							</h1>
 						</div>
-						<div className='absolute bottom-[50px] left-[150px]'>
-							<div>
-								<Link href='#select'>
-									<div className='flex flex-col gap-4 items-center'>
-										<div>
-											<a className='font-display text-[26px]'>COME VISIT US</a>
-										</div>
-										<div className='flex rotate-90 w-8 '>
-											<Image src={arrow} alt='' />
-										</div>
-									</div>
-								</Link>
-							</div>
-						</div>
 						<div className='absolute top-0 right-0 z-20'>
 							<div className='container'>
 								<iframe
@@ -469,9 +455,7 @@ function VisitTW(props) {
 					className='
 				flex flex-col gap-4
 				max-w-[298px!important] md:max-w-[1024px!important]
-				mx-auto
-				my-12 lg:my-24
-				'
+				mx-auto'
 				>
 					<div className='flex flex-col justify-start max-w-[298px!important] md:max-w-[1024px!important] md:mx-auto'>
 						<h2 className='font-display text-[24px] md:text-[48px] lg:text-[82px] font-bold my-4 p-4'>
@@ -688,7 +672,7 @@ function VisitTW(props) {
 									<div className='hidden md:flex items-start mt-4'>
 										<MdEmail size={44} />
 									</div>
-									<h4 className='flex font-display text-[24px] md:text-[48px] font-light my-4'>
+									<h4 className='flex font-display text-[24px] md:text-[24px] leading-relaxed font-light my-4'>
 										Celebration Church&nbsp;
 										<br />
 										P. O. Box 551341&nbsp;
@@ -717,10 +701,10 @@ function VisitTW(props) {
 										<div className='flex md:hidden items-start mt-4'>
 											<IoLocationSharp size={30} />
 										</div>
-										<div className='hidden md:flex items-start mt-4'>
-											<IoLocationSharp size={52} />
+										<div className='hidden md:flex items-start mt-6'>
+											<IoLocationSharp size={30} />
 										</div>
-										<h4 className='flex font-display text-[24px] md:text-[48px] md:w-[496px] md:max-w-[575px] font-light my-4 cursor-pointer'>
+										<h4 className='flex font-display text-[24px] md:text-[24px] leading-relaxed md:w-[496px] md:max-w-[575px] font-light my-4 cursor-pointer'>
 											<a
 												href='https://www.google.com/search?q=celebration+church&oq=celebration+church&aqs=chrome..69i57j69i61j69i60.3396j0j1&sourceid=chrome&ie=UTF-8#'
 												target='_blank'
@@ -738,13 +722,15 @@ function VisitTW(props) {
 									</div>
 								</div>
 								<div className='flex gap-x-4 items-center'>
-									<div className='flex flex-col gap-y-8 font-display text-[24px] md:text-[48px] font-light my-4'>
+									<div className='flex flex-col gap-y-8 font-display text-[24px] md:text-[24px] font-light my-4'>
 										<div className='flex items-center'>
-											<div className='flex md:hidden items-start mt-4'>
-												<FaPhoneAlt size={22} />
+											<div className='flex md:hidden items-start mt-4 rotate-90'>
+												{/* <FaPhoneAlt size={22} /> */}
+												<FontAwesomeIcon size={36} icon={faPhoneAlt} />
 											</div>
-											<div className='hidden md:flex items-start p-4'>
-												<FaPhoneAlt size={36} />
+											<div className='hidden md:flex items-start p-4 rotate-90'>
+												{/* <FaPhoneAlt size={36} /> */}
+												<FontAwesomeIcon size={36} icon={faPhoneAlt} />
 											</div>
 											<h4 className='cursor-pointer'>
 												<a href='tel:+9047371121'>(904) 737-1121</a>
@@ -796,10 +782,10 @@ function VisitTW(props) {
 								<div className='flex md:hidden items-start mt-4'>
 									<BsClockFill size={30} />
 								</div>
-								<div className='hidden md:flex items-start mt-4'>
-									<BsClockFill size={44} />
+								<div className='hidden md:flex items-start mt-6'>
+									<BsClockFill size={30} />
 								</div>
-								<h4 className='flex flex-col font-display text-[24px] md:text-[48px] font-light my-4'>
+								<h4 className='flex flex-col font-display text-[24px] md:text-[24px] leading-relaxed font-light my-4'>
 									<ul className='flex flex-col gap-y-4'>
 										<div>
 											<li className='font-semibold'>Monday–Thursday</li>

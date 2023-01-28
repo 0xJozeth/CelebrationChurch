@@ -99,13 +99,11 @@ export default function Footer() {
 									target='_blank'
 									rel='noreferrer'
 								>
-									<a>Jobs</a>
+									Jobs
 								</a>
 							</li>
 							<li>
-								<Link href='/seu-jacksonville' passHref>
-									<a>SEU Jacksonville</a>
-								</Link>
+								<a href='/seu-jacksonville'>SEU Jacksonville</a>
 							</li>
 						</ul>
 					</div>
@@ -123,9 +121,7 @@ export default function Footer() {
 										rel='noreferrer'
 									>
 										<div className='flex justify-between'>
-											<div className='flex h-full'>
-												<a>Apple App Store</a>
-											</div>
+											<div className='flex h-full'>Apple App Store</div>
 											<div className='flex px-4 h-full'>
 												<FontAwesomeIcon icon={faAppStoreIos} />
 											</div>
@@ -143,9 +139,7 @@ export default function Footer() {
 										rel='noreferrer'
 									>
 										<div className='flex justify-between h-full'>
-											<div className='flex'>
-												<a>Google Play Store</a>
-											</div>
+											<div className='flex'>Google Play Store</div>
 											<div className='flex px-4 h-full'>
 												<FontAwesomeIcon icon={faGooglePlay} />
 											</div>
@@ -236,7 +230,7 @@ export default function Footer() {
 									target='_blank'
 									rel='noreferrer'
 								>
-									<a>Jobs</a>
+									Jobs
 								</a>
 							</li>
 							<li>
@@ -245,7 +239,7 @@ export default function Footer() {
 									target='_blank'
 									rel='noreferrer'
 								>
-									<a>SEU Jacksonville</a>
+									SEU Jacksonville
 								</a>
 							</li>
 						</ul>
@@ -260,9 +254,7 @@ export default function Footer() {
 									rel='noreferrer'
 								>
 									<div className='flex justify-start items-center'>
-										<div className='flex'>
-											<a>Apple App Store</a>
-										</div>
+										<div className='flex'>Apple App Store</div>
 
 										<div className='flex mx-4 h-6 w-14'>
 											<Image
@@ -282,9 +274,7 @@ export default function Footer() {
 									rel='noreferrer'
 								>
 									<div className='flex justify-start'>
-										<div className='flex'>
-											<a>Google Play Store</a>
-										</div>
+										<div className='flex'>Google Play Store</div>
 										<div className='flex mx-4 h-6 w-14'>
 											<Image
 												src={arrow}
@@ -368,7 +358,7 @@ export default function Footer() {
 						<p className='flex'>•</p>
 					</div>
 					<div>
-						<p className='uppercase text-[10px] font-display'>
+						<div className='uppercase text-[10px] font-display'>
 							<a
 								href='https://s3.amazonaws.com/downloads.celebration.org/2018/downloads/Privacy+Policy+Final+2018.pdf'
 								target='_blank'
@@ -378,7 +368,7 @@ export default function Footer() {
 									Privacy Policy
 								</p>
 							</a>
-						</p>
+						</div>
 					</div>
 				</div>
 			</div>

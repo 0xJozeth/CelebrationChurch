@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import arrow from '/public/arrow@1x-white.svg';
 import legacy from '/public/give-legacy.png';
+import { motion } from 'framer-motion';
 
 const LegacyTeamSection = () => {
 	return (
@@ -23,7 +24,7 @@ const LegacyTeamSection = () => {
 
 			<div className='relative flex justify-between mt-[150px] z-20 h-600px lg:h-[400px] '>
 				<div className='flex flex-col items-start mt-8 p-8 gap-y-8 w-1/2'>
-					<div>
+					<div className='mt-14'>
 						<p className='flex justify-center font-display font-normal text-left text-[24px] leading-relaxed text-[#7c7c7c] '>
 							Our Legacy Team gives influence, resources, and time as a local
 							church ministry expression to advance the cause of Christ. Each
@@ -34,8 +35,11 @@ const LegacyTeamSection = () => {
 						</p>
 					</div>
 					<div className='flex justify-start items-center '>
-						<Link href='/'>
-							<div className='flex items-center py-2 gap-x-4'>
+						<a href='mailto:dking@celebration.org'>
+							<motion.div
+								whileHover={{ scale: 1.1 }}
+								className='flex items-center py-2 gap-x-4'
+							>
 								<div className='flex items-center'>
 									<p className='font-display font-normal text-[24px]'>
 										CONTACT&nbsp;US
@@ -44,8 +48,8 @@ const LegacyTeamSection = () => {
 								<div className='invert w-[88px]'>
 									<Image src={arrow} alt='' />
 								</div>
-							</div>
-						</Link>
+							</motion.div>
+						</a>
 					</div>
 				</div>
 				<div className='flex justify-end w-1/2'>

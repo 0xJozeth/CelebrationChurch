@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import arrow from '/public/arrow@1x-white.svg';
 import arrowdown from '/public/arrow-down.svg';
+import { motion } from 'framer-motion';
 
 import { faBitcoin } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -97,12 +98,12 @@ export default function GiveDesktop() {
 						<div className='flex justify-center items-center w-full'>
 							<h2 className='font-display font-bold text-center md:text-[126px] lg:text-[192px]'>
 								WHY&nbsp;WE{' '}
-								<span className='font-kepler font-thin italic  text-[1.1em]'>
+								<span className='font-kepler font-thin italic text-[1.1em]'>
 									GIVE
 								</span>
 							</h2>
 						</div>
-						<div className='flex justify-center p-8 mx-8 my-16'>
+						<div className='flex justify-center p-8 mx-8'>
 							<p className='font-display md:text-[18px] lg:text-[24px] leading-relaxed'>
 								Here at Celebration, we believe that God calls us to partake in
 								the act of generosity, and that tithing is an act of worship and
@@ -306,8 +307,11 @@ export default function GiveDesktop() {
 						</div>
 						<div className='flex flex-col w-2/5 gap-y-8 p-4 '>
 							<div className='flex w-full justify-start items-center '>
-								<Link href='/'>
-									<div className='flex items-center py-2 gap-x-4'>
+								<Link href='givingfaqs' passHref>
+									<motion.button
+										whileHover={{ scale: 1.1 }}
+										className='flex items-center py-2 gap-x-4'
+									>
 										<div className='flex items-center'>
 											<p className='font-display font-normal text-[24px]'>
 												GIVING&nbsp;FAQs
@@ -316,12 +320,15 @@ export default function GiveDesktop() {
 										<div className='invert w-[88px]'>
 											<Image src={arrow} alt='' />
 										</div>
-									</div>
+									</motion.button>
 								</Link>
 							</div>
 							<div className='flex w-full justify-start items-center '>
-								<Link href='/'>
-									<div className='flex items-center py-2 gap-x-4'>
+								<a href='mailto:giving@celebration.org'>
+									<motion.button
+										whileHover={{ scale: 1.1 }}
+										className='flex items-center py-2 gap-x-4'
+									>
 										<div className='flex items-center'>
 											<p className='font-display font-normal text-[24px]'>
 												CONTACT
@@ -330,8 +337,8 @@ export default function GiveDesktop() {
 										<div className='invert w-[88px]'>
 											<Image src={arrow} alt='' />
 										</div>
-									</div>
-								</Link>
+									</motion.button>
+								</a>
 							</div>
 						</div>
 					</div>

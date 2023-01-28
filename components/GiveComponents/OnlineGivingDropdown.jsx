@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
 import arrow from '/public/arrow@1x-white.svg';
+import { motion } from 'framer-motion';
 
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
@@ -57,7 +58,8 @@ const OnlineGivingDropdown = () => {
 				
 							font-display text-[20px] md:text-[40px] lg:text-[68px] gap-y-4'
 						>
-							<ul
+							<motion.ul
+								whileHover={{ scale: 1.1 }}
 								className='flex text-[28px] md:text-[56px] items-center'
 								onClick={handleUsa}
 							>
@@ -77,8 +79,9 @@ const OnlineGivingDropdown = () => {
 								<li className={usa ? 'list-none block' : 'list-none hidden'}>
 									&#45;
 								</li>
-							</ul>
+							</motion.ul>
 							<div
+								whileHover={{ scale: 1.1 }}
 								className={
 									usa
 										? ' w-full delay-200 translate-y-0 opacity-100 duration-300 flex flex-col gap-x-20'
@@ -138,7 +141,10 @@ const OnlineGivingDropdown = () => {
 									</li>
 								</ul>
 							</div>
-							<div className='flex items-center text-[28px] md:text-[56px]'>
+							<motion.div
+								whileHover={{ scale: 1.1 }}
+								className='flex items-center text-[28px] md:text-[56px]'
+							>
 								<a
 									href='https://pushpay.com/g/ccglobal?src=hpp'
 									target='_blank'
@@ -149,12 +155,15 @@ const OnlineGivingDropdown = () => {
 										INTERNATIONAL
 									</div>{' '}
 									&nbsp;
-									<li className='text-[24px]'>
+									{/* <li className='text-[24px]'>
 										<FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-									</li>
+									</li> */}
 								</a>
-							</div>
-							<div className='flex items-center text-[28px] md:text-[56px]'>
+							</motion.div>
+							<motion.div
+								whileHover={{ scale: 1.1 }}
+								className='flex items-center text-[28px] md:text-[56px]'
+							>
 								<a
 									href='https://pushpay.com/g/cconline?r=monthly'
 									target='_blank'
@@ -165,16 +174,19 @@ const OnlineGivingDropdown = () => {
 										CHURCH ONLINE
 									</div>{' '}
 									&nbsp;
-									<li className='text-[24px]'>
+									{/* <li className='text-[24px]'>
 										<FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-									</li>
+									</li> */}
 								</a>
-							</div>
+							</motion.div>
 							<ul
 								className='flex text-[28px] md:text-[56px]'
 								onClick={handleGlobal}
 							>
-								<div className='flex underline-offset-2 p-2 cursor-pointer'>
+								<motion.div
+									whileHover={{ scale: 1.1 }}
+									className='flex items-center underline-offset-2 p-2 cursor-pointer'
+								>
 									<a
 										href='https://timtimberlake.tv/partner/'
 										target='_blank'
@@ -182,13 +194,20 @@ const OnlineGivingDropdown = () => {
 									>
 										TV&nbsp;MINISTRY
 									</a>
-								</div>{' '}
+									&nbsp;
+									<li className='text-[24px]'>
+										<FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+									</li>
+								</motion.div>{' '}
 							</ul>
 						</ul>
 					</div>
 				</div>
 			</div>
-			<div className='flex justify-start items-center '>
+			<motion.div
+				whileHover={{ scale: 1.1 }}
+				className='flex justify-start items-center '
+			>
 				<Link href='/'>
 					<div className='flex items-center py-2 gap-x-4'>
 						<div className='flex items-center'>
@@ -201,7 +220,7 @@ const OnlineGivingDropdown = () => {
 						</div>
 					</div>
 				</Link>
-			</div>
+			</motion.div>
 		</div>
 	);
 };

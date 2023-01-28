@@ -1,4 +1,5 @@
 import React, { useState, useffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import Banner from '/components/Banner/Banner.js';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -32,12 +33,22 @@ function HomeDesktop() {
 		},
 	];
 
+	//Link/Image/Mouse hover function
+	const [isHovered, setIsHovered] = useState(false);
+	const [cursorX, setCursorX] = useState(0);
+	const [cursorY, setCursorY] = useState(0);
+
+	const handleMouseMove = (event) => {
+		setCursorX(event.pageX);
+		setCursorY(event.pageY);
+	};
+
 	return (
 		<>
 			<div className='flex justify-center items-center w-[100vw]'>
 				<div className='flex flex-col w-full max-w-[1728px] gap-y-16 items-center'>
 					<div className='grid grid-cols-2 overflow-hidden '>
-						<div className='relative '>
+						<div className='relative w-full'>
 							<div className='relative top-0 left-0 font-display font-extra-bold text-[#f8f8f8] mix-blend-overlay text-[88px] md:text-[112px] lg:text-[152px] xl:text-[240px]  p-8 z-30'>
 								<h1 className=''>
 									WELCOME
@@ -69,7 +80,10 @@ function HomeDesktop() {
 									connect with you online or at a location near you!
 								</p>
 							</div>
-							<div className='flex px-16 my-8 gap-x-4 z-40'>
+							<motion.div
+								whileHover={{ scale: 1.1 }}
+								className='flex justify-start px-16 my-8 gap-x-4 z-40'
+							>
 								<a
 									href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
 									target='_blank'
@@ -87,7 +101,7 @@ function HomeDesktop() {
 										</div>
 									</div>
 								</a>
-							</div>
+							</motion.div>
 						</div>
 						<div onClick={handleIsMuted} className='relative z-20'>
 							<div className='relative left-[108px]'>
@@ -188,7 +202,7 @@ function HomeDesktop() {
 								</div>
 							</div>
 							<div className='flex  justify-end px-16 cursor-pointer z-40 '>
-								<Link href='visit'>
+								<Link href='ministries' passHref>
 									<div
 										className='flex justify-center items-center
 									text-[22px] md:text-[24px] lg:text-[28px] xl:text-[36px]
@@ -291,13 +305,13 @@ function HomeDesktop() {
 										</Link>
 									</button>
 									<Link href='/follow-jesus' passHref>
-										<button>
+										<button className='flex justify-center items-center border-2 border-white opacity-50 hover:opacity-100 hover:-skew-y-[0.5deg] transition-all'>
 											<Image
 												src={follow.imageLeft}
 												alt='prayer request button'
 												width={follow.width}
 												height={follow.height}
-												className='saturate-0 opacity-20 group-hover:saturate-[85%] group-hover:opacity-75 group-hover:scale-[99.5%] group-hover:-skew-y-[0.5deg] transition-all'
+												className='saturate-0 opacity-20 group-hover:saturate-[85%] group-hover:opacity-75 group-hover:scale-[105%] group-hover:-skew-y-[0.5deg] transition-all border-2 border-white'
 											/>
 										</button>
 									</Link>
@@ -327,7 +341,7 @@ function HomeDesktop() {
 											</div>
 										</Link>
 									</button>
-									<button>
+									<button className='flex justify-center items-center border-2 border-white opacity-50 hover:opacity-100 hover:skew-y-[0.5deg] transition-all'>
 										<a
 											href='https://my.celebration.org/portal/get_form.aspx?ID=6bc5f420-26f8-41f1-8149-9344dd2676e6&template=campus-jax&remembertemplate=true'
 											target='_blank'
@@ -338,7 +352,7 @@ function HomeDesktop() {
 												alt='prayer request button'
 												width={follow.width}
 												height={follow.height}
-												className='saturate-0 opacity-20 group-hover:saturate-[85%] group-hover:opacity-75 group-hover:scale-[99.5%] group-hover:skew-y-[0.5deg] transition-all'
+												className='saturate-0 opacity-20 group-hover:saturate-[85%] group-hover:opacity-75 group-hover:scale-[105%] group-hover:skew-y-[0.5deg] transition-all'
 											/>
 										</a>
 									</button>
@@ -379,39 +393,39 @@ function HomeDesktop() {
 								top-[100px] md:top-[175px] lg:top-[175px] xl:top-[250px]
 								 h-min w-full flex items-center p-16'
 								>
-									<div className='font-display text-[12px] md:text-[32px] lg:text-[48px] xl:text-[54px]  w-full text-[#070707]'>
-										<ul className='flex flex-col gap-y-8'>
+									<div className='font-display text-[38px] w-full text-green-400'>
+										<div className='flex flex-col gap-y-24'>
 											<div className='cursor-pointer'>
-												<Link href='new-series'>
-													<li className='flex gap-x-4'>
-														NEW SERIES&nbsp;
-														<div className='flex w-20 items-center'>
-															<Image src={arrow} alt='' />
-														</div>
-													</li>
-												</Link>
+												<li className='flex gap-x-4'>
+													<motion.a
+														whileHover={{ scale: 1.1 }}
+														href='https://celebration.brushfire.com/futureconference2023/535257'
+														target='blank'
+														rel='noreferrer'
+													>
+														FUTURE&nbsp;CONFERENCE 2023
+													</motion.a>
+													<div className='flex w-20 items-center'>
+														<Image src={arrow} alt='' />
+													</div>
+												</li>
 											</div>
 											<div className='cursor-pointer'>
-												<Link href='conferences'>
-													<li className='flex gap-x-4'>
-														CONFERENCES&nbsp;
-														<div className='flex w-20 items-center'>
-															<Image src={arrow} alt='' />
-														</div>
-													</li>
-												</Link>
+												<li className='flex gap-x-4'>
+													<motion.a
+														whileHover={{ scale: 1.1 }}
+														href='https://celebration.brushfire.com/sisterhoodtwenty23/543024'
+														target='blank'
+														rel='noreferrer'
+													>
+														SISTERHOOD TWENTY23&nbsp;
+													</motion.a>
+													<div className='flex w-20 items-center'>
+														<Image src={arrow} alt='' />
+													</div>
+												</li>
 											</div>
-											<div className='cursor-pointer'>
-												<Link href='groups'>
-													<li className='flex gap-x-4'>
-														GROUPS&nbsp;
-														<div className='flex w-20 items-center'>
-															<Image src={arrow} alt='' />
-														</div>
-													</li>
-												</Link>
-											</div>
-										</ul>
+										</div>
 									</div>
 								</div>
 							</div>
