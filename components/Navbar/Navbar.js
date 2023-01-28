@@ -426,7 +426,7 @@ const Navbar = (props) => {
 								/>
 
 								<div>
-									<h1 className='text-white'>WHAT THE ABSOLUTE FUCK</h1>
+									<h1 className='text-white'> </h1>
 								</div>
 							</DesktopMenu>
 						</>
