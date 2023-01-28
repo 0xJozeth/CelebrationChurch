@@ -153,7 +153,7 @@ const Menu = (props) => {
 				</div>
 			))}
 			{menuData.smallData.map((column, index) => (
-				<div key={index} className='col-span-1 w-full h-[55vh] m-4 p-10'>
+				<div key={index} className='col-span-1 h-[55vh] m-4 p-10'>
 					<ul className='h-full'>
 						{column.links.map((link, index) => (
 							<li key={index} className=''>
@@ -426,7 +426,7 @@ const Navbar = (props) => {
 								/>
 
 								<div>
-									<h1 className='text-white'>WHAT THE ABSOLUTE FUCK</h1>
+									<h1 className='text-white'> </h1>
 								</div>
 							</DesktopMenu>
 						</>

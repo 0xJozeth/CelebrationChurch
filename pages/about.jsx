@@ -16,9 +16,14 @@ import { arc } from '/public/ARC.png';
 
 function About() {
 	const [isMuted, setIsMuted] = useState(false);
+	const [isToggle, setIsToggle] = useState(false);
 
 	const handleIsMuted = () => {
 		setIsMuted(!isMuted);
+	};
+
+	const toggleControls = () => {
+		setIsToggle(!isToggle);
 	};
 
 	return (
@@ -30,7 +35,7 @@ function About() {
 				lg:gap-y-20'
 			>
 				<div
-					onClick={handleIsMuted}
+					onClick={(handleIsMuted, toggleControls)}
 					className='relative 
                 w-[350px] h-[280px]
                 md:w-[575px] md:h-[323px]
@@ -46,6 +51,7 @@ function About() {
 						autoPlay
 						loop
 						muted={isMuted ? false : true}
+						controls={isToggle ? false : true}
 						style={{
 							width: '1440px',
 							height: '806px',
@@ -180,7 +186,7 @@ function About() {
 											</div>
 										</div>
 									</Link>
-									<Link href='/' passHref>
+									<Link href='follow-jesus' passHref>
 										<div className='flex gap-x-4'>
 											<a className='font-display capitalize text-[36px] gap-x-2'>
 												FOLLOW JESUS

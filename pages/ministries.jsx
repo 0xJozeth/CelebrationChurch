@@ -316,7 +316,7 @@ function ministries() {
 									FOR&nbsp;YOU
 								</span>
 							</div>
-							<div className='flex relative left-[200px] p-8 w-[579px]'>
+							<div className='flex relative left-[200px] p-8 w-[579px] mb-32'>
 								<p className='font-display font-normal text-[26px] text-[#7c7c7c] leading-relaxed'>
 									Here at Celebration, our heart is to equip you and your family
 									with a safe space to grow your relationship with Jesus while
