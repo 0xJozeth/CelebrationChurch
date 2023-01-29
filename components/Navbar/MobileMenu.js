@@ -234,7 +234,7 @@ const MobileMenu = (props) => {
 											<FontAwesomeIcon icon={faAppStoreIos} />
 										</a>
 									</span>
-									<p className='text-[#F8F8F8]'>APPLE APP STORE APP</p>
+									<p className='text-[#F8F8F8]'>APP STORE APP</p>
 								</div>
 							</div>
 							<div>
@@ -250,7 +250,7 @@ const MobileMenu = (props) => {
 											<FontAwesomeIcon icon={faGooglePlay} />
 										</a>
 									</span>
-									<p className='text-[#F8F8F8]'>GOOGLE PLAY STORE APP</p>
+									<p className='text-[#F8F8F8]'>GOOGLE PLAY STORE</p>
 								</div>
 							</div>
 						</div>

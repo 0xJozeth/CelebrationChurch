@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import collage from '/public/ministries-collage.png';
+import collage from '/public/ministries-hero.png';
 import circle from '/public/small-black-circle.svg';
 
 import image1 from '/public/ministries-images/image1.png';
@@ -18,18 +18,20 @@ import ckids from '/public/ministries-images/ministries_ckids.png';
 import celebrationYouth from '/public/ministries-images/ministries_celebration_youth.png';
 import youngAdults from '/public/ministries-images/ministries_cya.png';
 import celebrationWorship from '/public/ministries-images/ministries_worship.png';
-
-import containerData from '../components/CarePageComponents/data';
+import freedom from '/public/ministries_freedom.png';
+import serving from '/public/ministries_serving.png';
+import sisterhood from '/public/ministries_sisterhood.png';
+import smallgroups from '/public/ministries_smallgroups.png';
 
 import React from 'react';
-import { data } from 'autoprefixer';
+import FullWidthButton from '../components/FullWidthButton';
 
 const ministriesData = [
 	{
 		image: ckids,
 		heading: 'CKIDS',
 		description:
-			'At Celebration, we believe that children are a heritage from the Lord and should be trained to be “Like arrows in the hand of a warrior…” (Psalms 127:4). Because of that, our cKids services utilize curriculums that will teach your kids the Word of God in a creative, fun, and age-appropriate way. We value safety as a top priority and have craftedengaging environments that will help your child grow inwisdom, stature, and in favor with both God and man. If you are a new parent to Celebration and wouldlike more additional information about the cKidsservices at your specific location',
+			'At Celebration, we believe that children are a heritage from the Lord and should be trained to be “Like arrows in the hand of a warrior…” (Psalms 127:4). Because of that, our cKids services utilize curriculums that will teach your kids the Word of God in a creative, fun, and age-appropriate way. We value safety as a top priority and have crafted engaging environments that will help your child grow in wisdom, stature, and in favor with both God and man. If you are a new parent to Celebration and would like more additional information about the cKids services at your specific location',
 	},
 	{
 		image: celebrationYouth,
@@ -47,28 +49,28 @@ const ministriesData = [
 		image: celebrationWorship,
 		heading: 'CELEBRATION WORSHIP',
 		description:
-			'At Celebration, we believe that children are a heritage from the Lord and should be trained to be “Like arrows in the hand of a warrior…” (Psalms 127:4). Because of that,our cKids services utilize curriculums that will teach your kids the Word of God in a creative, fun, and age-appropriate way. We value safety as a top priority and have crafted engaging environments that will help your child grow in wisdom, stature, and in favor with both God and man. If you are a new parent to Celebration and wouldlike more additional information about the cKids servicesat your specific location download our app.',
+			'At Celebration, we believe that children are a heritage from the Lord and should be trained to be “Like arrows in the hand of a warrior…” (Psalms 127:4). Because of that,our cKids services utilize curriculums that will teach your kids the Word of God in a creative, fun, and age-appropriate way. We value safety as a top priority and have crafted engaging environments that will help your child grow in wisdom, stature, and in favor with both God and man. If you are a new parent to Celebration and would like more additional information about the cKids services at your specific location download our app.',
 	},
 	{
-		image: celebrationWorship,
+		image: freedom,
 		heading: 'FREEDOM',
 		description:
 			'Our freedom group ministry is designed to help you find freedom through Biblical truth and community support with guidance from the Holy Spirit. These groups provide a safe and confidential space to share struggles, receive prayer, and learn practical tools to overcome obstacles. We believe in the power of community and the truth of the Word of God to bring true and lasting freedom. Join a group today and start your journey to freedom.',
 	},
 	{
-		image: celebrationWorship,
+		image: smallgroups,
 		heading: 'SMALL GROUPS',
 		description:
 			'Our groups ministry offers an opportunity for you to connect and grow in your faith through fellowship, Bible study, and prayer. Groups meet regularly for a time of sharing, learning, and encouragement in a supportive environment. Groups are also opportunities to build deeper relationships with others in the church and to serve the community. Join a group today and take the next step in your spiritual journey.',
 	},
 	{
-		image: celebrationWorship,
+		image: serving,
 		heading: 'SERVING TEAMS',
 		description:
 			'Our serve teams ministry provides an opportunity for you to put your faith into action by serving others in the church and the community. With a variety of teams to choose from, such as connect teams, greeting teams, children’s ministry, and outreach, there is something for everyone. Not only do these teams provide a way to serve others, but they also offer opportunities for growth, leadership, and building relationships within the church. Join a serve team today!',
 	},
 	{
-		image: celebrationWorship,
+		image: sisterhood,
 		heading: 'SISTERHOOD',
 		description:
 			'Sisterhood is a community where women can come together to share their lives and support one another as they navigate through the joys and challenges of everyday life with the power of the Holy Spirit. We offer various opportunities for fellowship, Bible study, and mentorship. In the Fall of each year, we also gather at Sisterhood Conference to preach the gospel and gather as women to seek after God together. Join us today and take the next step in your spiritual journey.',
@@ -332,11 +334,11 @@ function ministries() {
 					</div>
 
 					{/* MAPPING SECTION */}
-					<div className='flex w-full'>
-						<div className='flex flex-col w-full gap-y-16 my-4 '>
+					<div className='flex w-full '>
+						<div className='flex flex-col w-full gap-36  mx-auto'>
 							{ministriesData.map((minsitryData, index) => (
-								<div key={index} className='flex w-full gap-8'>
-									<div className='flex'>
+								<div key={index} className='flex w-full  mx-auto'>
+									<div className='flex pl-24'>
 										<Image
 											src={minsitryData.image}
 											alt=''
@@ -345,20 +347,22 @@ function ministries() {
 											height={500}
 										/>
 									</div>
-									<div className='flex flex-col px-16 gap-y-16 max-w-[900px]'>
+									<div className='flex flex-col px-16 gap-y-4 max-w-[900px] mx-auto'>
 										<div className='font-display font-bold text-[48px]'>
 											{minsitryData.heading}
 										</div>
-										<div className='flex justify-center '>
+										<div className='flex justify-center pr-16'>
 											<p className='font-display font-normal text-[26px] text-[#7c7c7c] leading-relaxed'>
 												{minsitryData.description}
 											</p>
 										</div>
-										
 									</div>
 								</div>
 							))}
 						</div>
+					</div>
+					<div>
+						<FullWidthButton />
 					</div>
 				</div>
 			</div>

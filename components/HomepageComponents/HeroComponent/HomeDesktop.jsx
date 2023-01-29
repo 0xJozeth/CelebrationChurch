@@ -1,5 +1,5 @@
-import React, { useState, useffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import Banner from '/components/Banner/Banner.js';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -42,6 +42,17 @@ function HomeDesktop() {
 		setCursorX(event.pageX);
 		setCursorY(event.pageY);
 	};
+
+	// Create an animation
+	const controls = useAnimation();
+
+	useEffect(() => {
+		// Start the animation once the component has mounted
+		controls.start({
+			x: 0,
+			transition: { duration: 1.5 },
+		});
+	}, [controls]);
 
 	return (
 		<>
@@ -103,7 +114,12 @@ function HomeDesktop() {
 								</a>
 							</motion.div>
 						</div>
-						<div onClick={handleIsMuted} className='relative z-20'>
+						<motion.div
+							animate={controls}
+							initial={{ x: '-100%' }}
+							onClick={handleIsMuted}
+							className='relative z-20'
+						>
 							<div className='relative left-[108px]'>
 								<video
 									src='/heroVideo-comp.webm'
@@ -113,7 +129,7 @@ function HomeDesktop() {
 									style={{ width: '756px', height: '1343px' }}
 								></video>
 							</div>
-						</div>
+						</motion.div>
 					</div>
 
 					<div className='flex flex-col w-full h-[796px] '>
@@ -150,7 +166,8 @@ function HomeDesktop() {
 						</div>
 						<div className='flex  justify-end px-16 cursor-pointer z-40 '>
 							<Link href='visit'>
-								<div
+								<motion.div
+									whileHover={{ scale: 1.1 }}
 									className='flex justify-center items-center 
 								text-[22px] md:text-[24px] lg:text-[28px] xl:text-[36px]
 								my-8 mr-32 gap-x-4'
@@ -159,7 +176,7 @@ function HomeDesktop() {
 									<div className='flex w-20 items-center'>
 										<Image src={arrow} alt='' />
 									</div>
-								</div>
+								</motion.div>
 							</Link>
 						</div>
 					</div>
@@ -203,7 +220,8 @@ function HomeDesktop() {
 							</div>
 							<div className='flex  justify-end px-16 cursor-pointer z-40 '>
 								<Link href='ministries' passHref>
-									<div
+									<motion.div
+										whileHover={{ scale: 1.1 }}
 										className='flex justify-center items-center
 									text-[22px] md:text-[24px] lg:text-[28px] xl:text-[36px]
 									my-8 mr-32 gap-x-4'
@@ -214,7 +232,7 @@ function HomeDesktop() {
 										<div className='flex w-20 items-center'>
 											<Image src={arrow} alt='' />
 										</div>
-									</div>
+									</motion.div>
 								</Link>
 							</div>
 						</div>

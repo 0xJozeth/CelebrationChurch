@@ -6,6 +6,7 @@ import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
 import arrow from '/public/arrow@1x.png';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
+import { motion } from 'framer-motion';
 
 //IMPORT REACT COOKIE CONSENT PLUGIN
 import CookieConsent from 'react-cookie-consent';
@@ -17,10 +18,151 @@ import {
 	faGooglePlay,
 } from '@fortawesome/free-brands-svg-icons';
 
+const sections = [
+	{
+		title: 'CONNECT',
+		links: [
+			{ text: 'About', href: '/about' },
+			{ text: 'Visit', href: '/visit' },
+			{ text: 'Care', href: '/care' },
+			{
+				text: 'Prayer Request',
+				href: 'https://my.celebration.org/portal/get_form.aspx?ID=6bc5f420-26f8-41f1-8149-9344dd2676e6&template=campus-jax&remembertemplate=true ',
+			},
+		],
+	},
+	{
+		title: 'MEDIA',
+		links: [
+			{
+				text: 'Watch',
+				href: 'https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I',
+			},
+			{ text: 'Celebration Everywhere', href: '/celebration-everywhere' },
+			{ text: 'Worship', href: '/worship' },
+		],
+	},
+	{
+		title: 'RESOURCES',
+		links: [
+			{ text: 'Give', href: '/give' },
+			{ text: 'Bible Reading Plan', href: '/bible-reading-plan' },
+			// { text: 'Shop', href: '/shop' },
+		],
+	},
+	{
+		title: 'OPPORTUNITIES',
+		links: [
+			{
+				text: 'Jobs',
+				href: 'https://www.linkedin.com/company/celebration-church/jobs/',
+			},
+			{ text: 'SEU Jacksonville', href: 'https://seujacksonville.org' },
+		],
+	},
+	{
+		title: 'DOWNLOAD OUR APP',
+		links: [
+			{
+				text: 'Apple Store',
+				href: 'https://apps.apple.com/us/app/the-celebration-app/id1210190693',
+			},
+			{
+				text: 'Google Play Store',
+				href: 'https://play.google.com/store/apps/details?id=com.echurchapps.celebrationchapp&hl=en_US&gl=US',
+			},
+		],
+	},
+];
+
+const copyright = [
+	{
+		text: `© ${new Date().getFullYear()} Celebration Church. All Rights Reserved`,
+		href: '',
+	},
+	{
+		text: 'Terms Of Use',
+		href: '',
+	},
+	{
+		text: 'Privacy Policy',
+		href: '',
+	},
+];
+
+const social = [
+	{ type: 'facebook', href: 'https://www.facebook.com/celebration.org' },
+	{ type: 'instagram', href: 'https://www.instagram.com/celebration_org/' },
+	{ type: 'twitter', href: 'https://twitter.com/celebration_org' },
+	{
+		type: 'youtube',
+		href: 'https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I',
+	},
+	{ type: 'email', href: 'mailto:info@celebration.org' },
+];
+
 export default function Footer() {
 	return (
 		<>
-			<div className='flex md:hidden flex-col mx-auto pt-12 p-8 gap-y-8 border border-solid border-[#070707]'>
+			<div className='hidden md:flex w-full justify-center mx-auto border-solid border-t-[1px] border-[#080808] font-display'>
+				<div className='flex w-full justify-between px-36 py-24'>
+					<div className='flex h-full justify-center items-center'>
+						<Image src={cclogo} alt='' width={84} height={84} />
+					</div>
+					{sections.map((section, i) => (
+						<div key={i} className='flex font-display justify-between'>
+							<div className='flex flex-col relative group'>
+								<h6 className='font-bold text-[12px] my-4 text-[#080808] group-hover:opacity-40 transition-all'>
+									{section.title}
+								</h6>
+								<ul className='flex flex-col text-[16px] gap-y-6'>
+									{section.links.map((link, i) => (
+										<motion.li key={i} whileHover={{ scale: 1.1 }}>
+											<Link href={link.href} passHref>
+												<a>{link.text}</a>
+											</Link>
+										</motion.li>
+									))}
+								</ul>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+			<div className='hidden md:flex w-full border-solid border-t-[1px] border-[#070707] font-display '>
+				<div className='flex w-full justify-start px-36 items-center py-2'>
+					{copyright.map((data, i) => (
+						<div key={i} className='flex p-2'>
+							<p className='uppercase text-[10px] font-display'>{data.text}</p>
+						</div>
+					))}
+				</div>
+				<div className='flex w-full justify-end px-36 py-2'>
+					{social.map((data, i) => (
+						<motion.button
+							whileHover={{ scale: 1.1 }}
+							key={i}
+							className='flex items-center bg-[#070707] p-2 rounded-[50%] mx-2'
+						>
+							<a href={data.href} target='_blank' rel='noopener noreferrer'>
+								{data.type === 'facebook' ? (
+									<BsFacebook className='text-[#f8f8f8] h-5 w-5' />
+								) : data.type === 'instagram' ? (
+									<BsInstagram className='text-[#f8f8f8] h-5 w-5' />
+								) : data.type === 'twitter' ? (
+									<BsTwitter className='text-[#f8f8f8] h-5 w-5' />
+								) : data.type === 'youtube' ? (
+									<BsYoutube className='text-[#f8f8f8] h-5 w-5' />
+								) : data.type === 'email' ? (
+									<MdEmail className='text-[#f8f8f8] h-5 w-5' />
+								) : null}
+							</a>
+						</motion.button>
+					))}
+				</div>
+			</div>
+
+			{/* <div className='flex md:hidden flex-col mx-auto pt-12 p-8 gap-y-8 border border-solid border-[#070707]'>
 				<div className='max-w-[58px] max-h-[58px]'>
 					<Image src={cclogo} alt='' />
 				</div>
@@ -213,7 +355,7 @@ export default function Footer() {
 								<Link href='/cKids-Online' passHref>
 									<a>cKids Online</a>
 								</Link>
-							</li> */}
+							</li> 
 							<li>
 								<Link href='/shop' passHref>
 									<a>Shop</a>
@@ -371,8 +513,8 @@ export default function Footer() {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div>
+			</div> */}
+			{/* <div>
 				<CookieConsent
 					// enableDeclineButton
 					flipButtons
@@ -421,7 +563,7 @@ export default function Footer() {
 						</p>
 					</div>
 				</CookieConsent>
-			</div>
+			</div> */}
 		</>
 	);
 }
