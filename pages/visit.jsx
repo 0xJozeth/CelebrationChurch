@@ -15,7 +15,6 @@ import React, { useEffect, useState } from 'react';
 // import VisitDesktop from './visit-deprecated';
 
 function VisitTW(props) {
-	console.log('props:', props);
 	const [usa, setUsa] = useState(false);
 	const [international, setInternational] = useState(false);
 	const [global, setGlobal] = useState(false);

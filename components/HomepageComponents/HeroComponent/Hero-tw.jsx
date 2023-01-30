@@ -16,6 +16,7 @@ import longArrow from '/public/arrow-long.svg';
 import whatsnew from '/public/home-whatsnew@1x.png';
 
 import { IoPlayCircleOutline } from 'react-icons/io5';
+import { motion } from 'framer-motion';
 
 function HeroTW() {
 	return (
@@ -192,7 +193,8 @@ function HeroTW() {
 					</div>
 					<div className='flex w-full justify-around  p-2 mt-4 cursor-pointer z-40 '>
 						<Link href='visit'>
-							<div
+							<motion.div
+								whileHover={{ scale: 1.1 }}
 								className='flex gap-x-4
 									text-[18px] md:text-[24px] lg:text-[28px] xl:text-[36px]'
 							>
@@ -206,7 +208,7 @@ function HeroTW() {
 								<div className='flex w-16 items-center '>
 									<Image src={arrow} alt='' />
 								</div>
-							</div>
+							</motion.div>
 						</Link>
 					</div>
 				</div>

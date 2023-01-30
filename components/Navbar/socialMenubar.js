@@ -19,8 +19,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 const SocialMenubar = (props) => {
-	console.log('props', props);
-
 	const [nav, setNav] = useState(false);
 
 	function handleToggle() {
