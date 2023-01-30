@@ -318,7 +318,12 @@ function HomeDesktop() {
 								</div>
 								<div className='flex relative group bg-red p-16 justify-center items-center'>
 									<button className='absolute justify-center items-center z-50'>
-										<Link href='prayer-request' passHref alt='follow jesus'>
+										<a
+											href='https://my.celebration.org/portal/get_form.aspx?ID=6bc5f420-26f8-41f1-8149-9344dd2676e6&template=campus-jax&remembertemplate=true'
+											target='_blank'
+											rel='noreferrer'
+											alt='follow jesus'
+										>
 											<div className='relative group'>
 												<div className='text-white text-[44px] py-2'>
 													<FontAwesomeIcon
@@ -339,7 +344,7 @@ function HomeDesktop() {
 													<Image src={arrow} alt='arrow' className='invert' />
 												</div>
 											</div>
-										</Link>
+										</a>
 									</button>
 									<button className='flex justify-center items-center border-2 border-white opacity-50 hover:opacity-100 hover:skew-y-[0.5deg] transition-all'>
 										<a
