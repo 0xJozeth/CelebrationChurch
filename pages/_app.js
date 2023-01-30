@@ -1,9 +1,7 @@
-import { useEffect } from 'react';
 import Head from 'next/head';
 import App, { Container } from 'next/app';
 import Layout from '/components/Layout/layout.js';
 import '../styles/globals.css';
-import Script from 'next/script';
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion';
 //IMPORT FORTAWESOME
 import '/components/FontAwesome/fontawesome.js';
@@ -28,12 +26,12 @@ class MyApp extends App {
 		return { pageProps };
 	}
 	// NOTE: This useEffect is essential for tw-elements to run properly.
-	componentDidMount() {
-		const use = async () => {
-			(await import('tw-elements')).default;
-		};
-		use();
-	}
+	// componentDidMount() {
+	// 	const use = async () => {
+	// 		(await import('tw-elements')).default;
+	// 	};
+	// 	use();
+	// }
 
 	render() {
 		const { Component, pageProps, router } = this.props;

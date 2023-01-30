@@ -10,7 +10,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 // IMPORT SECTION MODULES
-import Hero from '/components/HomepageComponents/HeroComponent/Hero2.js';
+
 import FindALocation from '/components/HomepageComponents/SectionFindALocation/FindALocation2.js';
 import TheresAPlace from '/components/HomepageComponents/SectionTheresAPlace/TheresAPlace2.js';
 import MeetPastors from '/components/HomepageComponents/SectionMeetOurPastors/MeetPastorsSection2.js';
@@ -19,22 +19,16 @@ import WhatsNewSection from '/components/HomepageComponents/SectionWhatsNew/What
 import WeHaveAGrace from '/components/HomepageComponents/SectionWeHaveAGrace/WeHaveAGrace.js';
 
 // TAILWIND STUFF
-import HeroTW from '/components/HomepageComponents/HeroComponent/Hero-tw.jsx';
+
 import HomeDesktop from '../components/HomepageComponents/HeroComponent/HomeDesktop';
-import HomeTablet from '../components/HomepageComponents/HeroComponent/HomeTablet';
 
 const Home = () => {
 	return (
 		<>
-			<div className='block md:hidden'>
-				<HeroTW />
-			</div>
 			{/* <div className='hidden md:block lg:hidden'>
 				<HomeTablet />
 			</div> */}
-			<div className='hidden md:block'>
-				<HomeDesktop />
-			</div>
+			<HomeDesktop />
 		</>
 	);
 };

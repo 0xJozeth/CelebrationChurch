@@ -16,6 +16,7 @@ import followprayer from '/public/follow-prayer.png';
 import followstage from '/public/follow-stage.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCross, faPrayingHands } from '@fortawesome/free-solid-svg-icons';
+import HomeHero from './HomeHero';
 
 function HomeDesktop() {
 	const [isMuted, setIsMuted] = useState(false);
@@ -56,8 +57,9 @@ function HomeDesktop() {
 
 	return (
 		<>
-			<div className='flex justify-center items-center w-[100vw]'>
-				<div className='flex flex-col w-full max-w-[1728px] gap-y-16 items-center'>
+			{/* <HomeHero /> */}
+			{/* <div className='flex justify-center items-center w-[100vw]'>
+				 <div className='flex flex-col w-full max-w-[1728px] gap-y-16 items-center'>
 					<div className='grid grid-cols-2 overflow-hidden '>
 						<div className='relative w-full'>
 							<div className='relative top-0 left-0 font-display font-extra-bold text-[#f8f8f8] mix-blend-overlay text-[88px] md:text-[112px] lg:text-[152px] xl:text-[240px]  p-8 z-30'>
@@ -295,7 +297,7 @@ function HomeDesktop() {
 						</div>
 					</div>
 
-					{/* PRAYER REQUEST SECTION */}
+					
 					<div className='flex bg-black h-[645px] w-full justify-center items-center'>
 						{followData.map((follow, index) => (
 							<div key={index} className='flex justify-between items-center'>
@@ -454,8 +456,8 @@ function HomeDesktop() {
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
+				</div> 
+						</div> */}
 		</>
 	);
 }

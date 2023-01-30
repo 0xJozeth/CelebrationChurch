@@ -394,7 +394,6 @@ function Give(props) {
 														WASHINGTON, D.C.
 													</a>
 												</li>
-												
 											</ul>
 										</div>
 										<ul className='flex items-center text-[28px] md:text-[56px]'>

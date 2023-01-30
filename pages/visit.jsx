@@ -535,7 +535,7 @@ function VisitTW(props) {
 										<li>
 											<a
 												className='hover:bg-black hover:text-white ease-in cursor-pointer'
-												href='http://metrochurch.com/'
+												href='https://celebrationchurchdc.org/ '
 												target='_blank'
 												rel='noopener noreferrer'
 											>
@@ -599,7 +599,7 @@ function VisitTW(props) {
 										<li>
 											<a
 												className='hover:bg-black hover:text-white ease-in'
-												href=''
+												href='https://www.celebrationchurch.nl/'
 												target='_blank'
 												rel='noopener noreferrer'
 											>
@@ -609,7 +609,7 @@ function VisitTW(props) {
 										<li>
 											<a
 												className='hover:bg-black hover:text-white ease-in cursor-pointer'
-												href=''
+												href='https://celebrationparis.org/'
 												target='_blank'
 												rel='noopener noreferrer'
 											>
@@ -619,7 +619,7 @@ function VisitTW(props) {
 										<li>
 											<a
 												className='hover:bg-black hover:text-white ease-in cursor-pointer'
-												href=''
+												href='https://celebrationmokopane.org/'
 												target='_blank'
 												rel='noopener noreferrer'
 											>
