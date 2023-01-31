@@ -4,18 +4,6 @@ import Banner from '/components/Banner/Banner.js';
 import Link from 'next/link';
 import Image from 'next/image';
 import arrow from '/public/arrow@1x.png';
-import GroupImage from '/public/microsoftteams-image@1x.png';
-
-import WeHaveAGrace from '../SectionWeHaveAGrace/WeHaveAGrace';
-import youngadults from '/public/youngadults.png';
-import TimAndJen from '/public/pastor-tim-and-jen-timberlake@1x.png';
-import whatsnew from '/public/home-whatsnew@1x.png';
-
-// IMPORT IMAGES
-import followprayer from '/public/follow-prayer.png';
-import followstage from '/public/follow-stage.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCross, faPrayingHands } from '@fortawesome/free-solid-svg-icons';
 
 function HomeHero() {
 	const [isMuted, setIsMuted] = useState(false);
@@ -23,15 +11,6 @@ function HomeHero() {
 	const handleIsMuted = () => {
 		setIsMuted(!isMuted);
 	};
-
-	const followData = [
-		{
-			imageLeft: followstage,
-			imageRight: followprayer,
-			width: 825,
-			height: 634,
-		},
-	];
 
 	//Link/Image/Mouse hover function
 	const [isHovered, setIsHovered] = useState(false);
@@ -61,7 +40,8 @@ function HomeHero() {
 					<div className='flex relative'>
 						<div className='flex-col relative'>
 							<div className='absolute top-0 font-display font-extra-bold text-[#f8f8f8] mix-blend-overlay text-[88px] md:text-[212px] p-8 z-30'>
-								<h1>
+								<Banner />
+								{/* <h1>
 									WELCOME
 									<br />
 									<span className='font-kepler italic font-thin text-[1.1em] '>
@@ -69,10 +49,11 @@ function HomeHero() {
 									</span>
 									<br />
 									CELEBRATION
-								</h1>
+								</h1> */}
 							</div>
 							<div className='absolute top-0 font-display font-extra-bold text-[#070707] text-[88px] md:text-[212px] p-8 z-0'>
-								<h1>
+								<Banner />
+								{/* <h1>
 									WELCOME
 									<br />
 									<span className='font-kepler italic font-thin text-[1.1em] '>
@@ -80,7 +61,7 @@ function HomeHero() {
 									</span>
 									<br />
 									CELEBRATION
-								</h1>
+								</h1> */}
 							</div>
 							<div className='flex flex-col relative top-1/2 p-16 max-w-3xl'>
 								<p className='font-display md:text-[24px] lg:text-[24px] leading-relaxed text-[#7C7C7C]'>
