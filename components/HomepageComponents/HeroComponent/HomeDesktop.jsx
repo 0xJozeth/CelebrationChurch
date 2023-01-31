@@ -60,7 +60,7 @@ function HomeDesktop() {
 				<div className='flex flex-col w-full max-w-[1728px] gap-y-16 items-center'>
 					<div className='grid grid-cols-2 overflow-hidden '>
 						<div className='relative w-full'>
-							<div className='relative top-0 left-0 font-display font-extra-bold text-[#f8f8f8] mix-blend-overlay text-[88px] md:text-[112px] lg:text-[152px] xl:text-[240px]  p-8 z-30'>
+							<div className='relative top-0 left-0 font-display font-extra-bold text-[#f8f8f8] mix-blend-overlay text-[88px] md:text-[112px] lg:text-[152px] xl:text-[226px]  p-8 z-30'>
 								<h1 className=''>
 									WELCOME
 									<br />
@@ -71,7 +71,7 @@ function HomeDesktop() {
 									CELEBRATION
 								</h1>
 							</div>
-							<div className='absolute top-0 left-0 font-display font-extra-bold text-[#070707] text-[88px] md:text-[112px] lg:text-[152px] xl:text-[240px] p-8 z-0'>
+							<div className='absolute top-0 left-0 font-display font-extra-bold text-[#070707] text-[88px] md:text-[112px] lg:text-[152px] xl:text-[226px] p-8 z-0'>
 								<h1 className=''>
 									WELCOME
 									<br />
@@ -93,7 +93,7 @@ function HomeDesktop() {
 							</div>
 							<motion.div
 								whileHover={{ scale: 1.1 }}
-								className='flex justify-start px-16 my-8 gap-x-4 z-40'
+								className='flex justify-start w-max ml-16 my-8 gap-x-4 z-40'
 							>
 								<a
 									href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
@@ -101,7 +101,7 @@ function HomeDesktop() {
 									rel='noopener noreferrer'
 									className='flex items-center gap-x-4 '
 								>
-									<div className='flex justify-end items-center '>
+									<div className='flex justify-end items-center'>
 										<p className='font-display font-normal text-[28px]'>
 											WATCH&nbsp;THE LATEST&nbsp;MESSAGE
 										</p>
@@ -116,7 +116,7 @@ function HomeDesktop() {
 						</div>
 						<motion.div
 							animate={controls}
-							initial={{ x: '-100%' }}
+							initial={{ x: '100%' }}
 							onClick={handleIsMuted}
 							className='relative z-20'
 						>
@@ -323,7 +323,7 @@ function HomeDesktop() {
 										</Link>
 									</button>
 									<Link href='/follow-jesus' passHref>
-										<button className='flex justify-center items-center border-2 border-white opacity-50 hover:opacity-100 hover:-skew-y-[0.5deg] transition-all'>
+										<button className='flex justify-center items-center border-2 border-white opacity-50 group-hover:opacity-100 group-hover:-skew-y-[0.5deg] transition-all'>
 											<Image
 												src={follow.imageLeft}
 												alt='prayer request button'
@@ -336,30 +336,33 @@ function HomeDesktop() {
 								</div>
 								<div className='flex relative group bg-red p-16 justify-center items-center'>
 									<button className='absolute justify-center items-center z-50'>
-										<Link href='prayer-request' passHref alt='follow jesus'>
-											<div className='relative group'>
-												<div className='text-white text-[44px] py-2'>
-													<FontAwesomeIcon
-														icon={faPrayingHands}
-														className='z-50'
-													/>
-												</div>
-												<div className='my-2 group-hover:my-8 transition-all'>
-													<a className='font-display  text-white text-[44px]'>
-														SUBMIT A<br />
-														PRAYER
-														<br />
-														REQUEST
-														<br />
-													</a>
-												</div>
-												<div className='justify-center opacity-0 group-hover:opacity-100 transition-all w-full'>
-													<Image src={arrow} alt='arrow' className='invert' />
-												</div>
+										<div className='relative group'>
+											<div className='text-white text-[44px] py-2'>
+												<FontAwesomeIcon
+													icon={faPrayingHands}
+													className='z-50'
+												/>
 											</div>
-										</Link>
+											<div className='my-2 group-hover:my-8 transition-all'>
+												<a
+													href='https://my.celebration.org/portal/get_form.aspx?ID=6bc5f420-26f8-41f1-8149-9344dd2676e6&template=campus-jax&remembertemplate=true'
+													target='_blank'
+													rel='noopener noreferrer'
+													className='font-display  text-white text-[44px]'
+												>
+													SUBMIT A<br />
+													PRAYER
+													<br />
+													REQUEST
+													<br />
+												</a>
+											</div>
+											<div className='justify-center opacity-0 group-hover:opacity-100 transition-all w-full'>
+												<Image src={arrow} alt='arrow' className='invert' />
+											</div>
+										</div>
 									</button>
-									<button className='flex justify-center items-center border-2 border-white opacity-50 hover:opacity-100 hover:skew-y-[0.5deg] transition-all'>
+									<button className='flex justify-center items-center border-2 border-white opacity-50 group-hover:opacity-100 group-hover:skew-y-[0.5deg] transition-all'>
 										<a
 											href='https://my.celebration.org/portal/get_form.aspx?ID=6bc5f420-26f8-41f1-8149-9344dd2676e6&template=campus-jax&remembertemplate=true'
 											target='_blank'
@@ -413,36 +416,41 @@ function HomeDesktop() {
 								>
 									<div className='font-display text-[38px] w-full text-green-400'>
 										<div className='flex flex-col gap-y-24'>
-											<div className='cursor-pointer'>
+											<motion.div
+												whileHover={{ scale: 1.1 }}
+												className='cursor-pointer'
+											>
 												<li className='flex gap-x-4'>
-													<motion.a
-														whileHover={{ scale: 1.1 }}
+													<a
 														href='https://celebration.brushfire.com/futureconference2023/535257'
 														target='blank'
 														rel='noreferrer'
+														className='whitespace-nowrap'
 													>
 														FUTURE&nbsp;CONFERENCE 2023
-													</motion.a>
+													</a>
 													<div className='flex w-20 items-center'>
 														<Image src={arrow} alt='' />
 													</div>
 												</li>
-											</div>
-											<div className='cursor-pointer'>
+											</motion.div>
+											<motion.div
+												whileHover={{ scale: 1.1 }}
+												className='cursor-pointer'
+											>
 												<li className='flex gap-x-4'>
-													<motion.a
-														whileHover={{ scale: 1.1 }}
+													<a
 														href='https://celebration.brushfire.com/sisterhoodtwenty23/543024'
 														target='blank'
 														rel='noreferrer'
 													>
 														SISTERHOOD TWENTY23&nbsp;
-													</motion.a>
+													</a>
 													<div className='flex w-20 items-center'>
 														<Image src={arrow} alt='' />
 													</div>
 												</li>
-											</div>
+											</motion.div>
 										</div>
 									</div>
 								</div>
