@@ -16,7 +16,7 @@ import followprayer from '/public/follow-prayer.png';
 import followstage from '/public/follow-stage.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCross, faPrayingHands } from '@fortawesome/free-solid-svg-icons';
-import HomeHero from './HomeHero';
+import HomeHero from './HomeHero.js';
 
 function HomeDesktop() {
 	const [isMuted, setIsMuted] = useState(false);
@@ -57,7 +57,9 @@ function HomeDesktop() {
 
 	return (
 		<>
-			{/* <HomeHero /> */}
+			<section className='flex relative justify-center overflow-hidden mx-auto'>
+				<HomeHero />
+			</section>
 			{/* <div className='flex justify-center items-center w-[100vw]'>
 				 <div className='flex flex-col w-full max-w-[1728px] gap-y-16 items-center'>
 					<div className='grid grid-cols-2 overflow-hidden '>
