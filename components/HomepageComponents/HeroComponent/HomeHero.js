@@ -38,30 +38,12 @@ function HomeHero() {
 			<div className='flex relative '>
 				<div className='flex relative justify-between mx-auto'>
 					<div className='flex relative'>
-						<div className='flex-col relative'>
-							<div className='absolute top-0 font-display font-extra-bold text-[#f8f8f8] mix-blend-overlay text-[88px] md:text-[212px] p-8 z-30'>
+						<div className='flex-col relative -left-10'>
+							<div className='absolute top-0 -left-10 font-display font-extra-bold text-[#f8f8f8] mix-blend-overlay text-[88px] md:text-[212px] p-8 z-30'>
 								<Banner />
-								{/* <h1>
-									WELCOME
-									<br />
-									<span className='font-kepler italic font-thin text-[1.1em] '>
-										TO
-									</span>
-									<br />
-									CELEBRATION
-								</h1> */}
 							</div>
-							<div className='absolute top-0 font-display font-extra-bold text-[#070707] text-[88px] md:text-[212px] p-8 z-0'>
+							<div className='absolute top-0 -left-10 font-display font-extra-bold text-[#070707] text-[88px] md:text-[212px] p-8 z-0'>
 								<Banner />
-								{/* <h1>
-									WELCOME
-									<br />
-									<span className='font-kepler italic font-thin text-[1.1em] '>
-										TO
-									</span>
-									<br />
-									CELEBRATION
-								</h1> */}
 							</div>
 							<div className='flex flex-col relative top-1/2 p-16 max-w-3xl'>
 								<p className='font-display md:text-[24px] lg:text-[24px] leading-relaxed text-[#7C7C7C]'>
