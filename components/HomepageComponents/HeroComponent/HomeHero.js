@@ -100,17 +100,18 @@ function HomeHero() {
 			</div>
 
 			{/* MOBILE VERSION */}
-			<div className='flex flex-col relative -top-6 md:hidden w-screen h-screen mx-auto'>
-				<div className='flex relative top-6	 text-6xl font-bold uppercase font-display text-[#f8f8f8] mix-blend-overlay mx-auto z-50'>
-					<h1 className='w-screen mx-auto text-center z-50'>
+			<div className='flex flex-col relative top-4 md:hidden w-screen h-screen mx-auto'>
+				<div className='flex relative -top-4 p-2 font-bold uppercase font-display text-[#f8f8f8] mix-blend-overlay mx-auto z-50'>
+					<h1 className='w-screen mx-auto text-5xl text-center z-50'>
 						Welcome&nbsp;
 						<span className='text-[1.1em] italic font-kepler'>To</span>
 						<br />
 						Celebration
 					</h1>
 				</div>
-				<div className='absolute flex top-6	 text-6xl font-bold uppercase font-display mx-auto z-0'>
-					<h1 className='w-screen mx-auto text-center z-0'>
+				`{' '}
+				<div className='absolute flex -top-4 p-2 font-bold uppercase font-display mx-auto z-0'>
+					<h1 className='w-screen mx-auto text-5xl text-center text-[#070707] z-0'>
 						Welcome&nbsp;
 						<span className='text-[1.1em] italic font-kepler'>To</span>
 						<br />
@@ -123,7 +124,7 @@ function HomeHero() {
 					onClick={handleIsMuted}
 					className='relative w-screen -top-24 mx-auto z-0'
 				>
-					<button className='z-[101]'>
+					{/* <button className='z-[101]'>
 						<a
 							href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
 							target='_blank'
@@ -135,7 +136,7 @@ function HomeHero() {
 								size={100}
 							/>
 						</a>
-					</button>
+					</button> */}
 					<video
 						src='/heroVideo-comp.webm'
 						autoPlay
