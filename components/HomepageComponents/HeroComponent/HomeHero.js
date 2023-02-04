@@ -100,8 +100,8 @@ function HomeHero() {
 			</div>
 
 			{/* MOBILE VERSION */}
-			<div className='flex flex-col relative top-4 md:hidden w-screen h-screen mx-auto'>
-				<div className='flex relative -top-4 p-2 font-bold uppercase font-display text-[#f8f8f8] mix-blend-overlay mx-auto z-50'>
+			<div className='flex flex-col relative top-0 md:hidden w-screen h-screen mx-auto'>
+				<div className='flex relative top-0 p-2 font-bold uppercase font-display text-[#f8f8f8] mix-blend-overlay mx-auto z-50'>
 					<h1 className='w-screen mx-auto text-5xl text-center z-50'>
 						Welcome&nbsp;
 						<span className='text-[1.1em] italic font-kepler'>To</span>
@@ -110,7 +110,7 @@ function HomeHero() {
 					</h1>
 				</div>
 				`{' '}
-				<div className='absolute flex -top-4 p-2 font-bold uppercase font-display mx-auto z-0'>
+				<div className='absolute flex top-0 p-2 font-bold uppercase font-display mx-auto z-0'>
 					<h1 className='w-screen mx-auto text-5xl text-center text-[#070707] z-0'>
 						Welcome&nbsp;
 						<span className='text-[1.1em] italic font-kepler'>To</span>
