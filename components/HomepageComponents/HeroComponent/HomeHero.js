@@ -4,6 +4,7 @@ import Banner from '/components/Banner/Banner.js';
 import Link from 'next/link';
 import Image from 'next/image';
 import arrow from '/public/arrow@1x.png';
+import { IoPlayCircleOutline } from 'react-icons/io5';
 
 function HomeHero() {
 	const [isMuted, setIsMuted] = useState(false);
@@ -35,7 +36,7 @@ function HomeHero() {
 
 	return (
 		<>
-			<div className='flex relative '>
+			<div className='hidden md:flex relative'>
 				<div className='flex relative justify-between mx-auto'>
 					<div className='flex relative'>
 						<div className='flex-col relative -left-10'>
@@ -96,6 +97,54 @@ function HomeHero() {
 						</div>
 					</motion.div>
 				</div>
+			</div>
+
+			{/* MOBILE VERSION */}
+			<div className='flex flex-col relative -top-6 md:hidden w-screen h-screen mx-auto'>
+				<div className='flex relative top-6	 text-6xl font-bold uppercase font-display text-[#f8f8f8] mix-blend-overlay mx-auto z-50'>
+					<h1 className='w-screen mx-auto text-center z-50'>
+						Welcome&nbsp;
+						<span className='text-[1.1em] italic font-kepler'>To</span>
+						<br />
+						Celebration
+					</h1>
+				</div>
+				<div className='absolute flex top-6	 text-6xl font-bold uppercase font-display mx-auto z-0'>
+					<h1 className='w-screen mx-auto text-center z-0'>
+						Welcome&nbsp;
+						<span className='text-[1.1em] italic font-kepler'>To</span>
+						<br />
+						Celebration
+					</h1>
+				</div>
+				<motion.div
+					animate={controls}
+					initial={{ x: '100%' }}
+					onClick={handleIsMuted}
+					className='relative w-screen -top-24 mx-auto z-0'
+				>
+					<button className='z-[101]'>
+						<a
+							href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 mix-blend-overlay'
+						>
+							<IoPlayCircleOutline
+								className='flex z-100 cursor-pointer text-[#f8f8f8] m-auto'
+								size={100}
+							/>
+						</a>
+					</button>
+					<video
+						src='/heroVideo-comp.webm'
+						autoPlay
+						loop
+						muted={isMuted ? false : true}
+						style={{ width: '100%', height: '100%' }}
+						className=''
+					/>
+				</motion.div>
 			</div>
 		</>
 	);
