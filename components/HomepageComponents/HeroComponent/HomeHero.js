@@ -7,7 +7,7 @@ import arrow from '/public/arrow@1x.png';
 import { IoPlayCircleOutline } from 'react-icons/io5';
 
 function HomeHero() {
-	const [isMuted, setIsMuted] = useState(false);
+	const [isMuted, setIsMuted] = useState(true);
 
 	const handleIsMuted = () => {
 		setIsMuted(!isMuted);
@@ -118,10 +118,10 @@ function HomeHero() {
 						Celebration
 					</h1>
 				</div>
-				<motion.div
-					animate={controls}
-					initial={{ x: '100%' }}
-					onClick={handleIsMuted}
+				<div
+					// animate={controls}
+					// initial={{ x: '100%' }}
+					// onClick={handleIsMuted}
 					className='relative w-screen -top-24 mx-auto z-0'
 				>
 					{/* <button className='z-[101]'>
@@ -139,13 +139,12 @@ function HomeHero() {
 					</button> */}
 					<video
 						src='/heroVideo-comp.webm'
-						autoPlay
+						autoPlay={isMuted ? true : false}
 						loop
-						muted={isMuted ? false : true}
+						muted={true}
 						style={{ width: '100%', height: '100%' }}
-						className=''
 					/>
-				</motion.div>
+				</div>
 			</div>
 		</>
 	);
