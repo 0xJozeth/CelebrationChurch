@@ -139,7 +139,7 @@ function HomeHero() {
 					</button> */}
 					<video
 						src='/heroVideo-comp-2-hd.mp4'
-						autoPlay={isMuted ? true : false}
+						autoPlay
 						loop
 						muted={true}
 						style={{ width: '100%', height: '100%' }}
