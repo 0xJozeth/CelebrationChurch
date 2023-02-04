@@ -138,7 +138,7 @@ function HomeHero() {
 						</a>
 					</button> */}
 					<video
-						src='/heroVideo-comp.webm'
+						src='/heroVideo-comp-2-hd.mp4'
 						autoPlay={isMuted ? true : false}
 						loop
 						muted={true}
