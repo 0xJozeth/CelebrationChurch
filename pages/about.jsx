@@ -59,9 +59,18 @@ function About() {
 							border: '4px solid black',
 						}}
 					></video> */}
-					<div style={{}}>
+					<div
+						style={{
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+							padding: '56.25% 0 0 0',
+							position: 'relative',
+							border: '2px solid #080808',
+						}}
+					>
 						<iframe
-							src='https://player.vimeo.com/video/690554345?h=da3c6ace3a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+							src='https://player.vimeo.com/video/796388076?h=7ed44a05b5&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
 							allow='autoplay; fullscreen; picture-in-picture'
 							allowFullScreen
 							style={{
@@ -71,7 +80,7 @@ function About() {
 								width: '100%',
 								height: '100%',
 							}}
-							title='About Page'
+							title='Welcome To Celebration'
 						></iframe>
 					</div>
 				</div>
