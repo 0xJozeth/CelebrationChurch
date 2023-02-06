@@ -102,7 +102,7 @@ function HomeDesktop() {
 									className='flex items-center gap-x-4 '
 								>
 									<div className='flex justify-end items-center'>
-										<p className='font-display font-normal text-[28px]'>
+										<p className='font-display font-normal text-[36px]'>
 											WATCH&nbsp;THE LATEST&nbsp;MESSAGE
 										</p>
 									</div>
@@ -296,10 +296,13 @@ function HomeDesktop() {
 					</div>
 
 					{/* PRAYER REQUEST SECTION */}
-					<div className='flex bg-black h-[645px] w-full justify-center items-center'>
+					<div className='flex bg-[#080808] h-[645px] w-full justify-between items-center'>
 						{followData.map((follow, index) => (
-							<div key={index} className='flex justify-between items-center'>
-								<div className='flex group relative bg-red p-16 justify-center items-center'>
+							<div
+								key={index}
+								className='flex w-full px-8 justify-between items-center'
+							>
+								<div className='flex group relative justify-center items-center'>
 									<button className='absolute justify-center items-center z-20 '>
 										<Link href='follow-jesus' passHref>
 											<div className='relative group'>
@@ -323,18 +326,18 @@ function HomeDesktop() {
 										</Link>
 									</button>
 									<Link href='/follow-jesus' passHref>
-										<button className='flex justify-center items-center border-2 border-white opacity-50 group-hover:opacity-100 group-hover:-skew-y-[0.5deg] transition-all'>
+										<button className='p-16 w-[800px] h-[600px] relative flex justify-center items-center border-2 border-white opacity-50 group-hover:opacity-100 group-hover:-skew-y-[0.5deg] transition-all'>
 											<Image
 												src={follow.imageLeft}
 												alt='prayer request button'
-												width={follow.width}
-												height={follow.height}
-												className='saturate-0 opacity-20 group-hover:saturate-[85%] group-hover:opacity-75 group-hover:scale-[105%] group-hover:-skew-y-[0.5deg] transition-all border-2 border-white'
+												className='w-full h-full saturate-0 opacity-20 group-hover:saturate-[85%] group-hover:opacity-75 group-hover:scale-[105%] group-hover:-skew-y-[0.5deg] transition-all border-2 border-white'
+												layout='fill'
+												objectFit='cover'
 											/>
 										</button>
 									</Link>
 								</div>
-								<div className='flex relative group bg-red p-16 justify-center items-center'>
+								<div className='flex relative group justify-center items-center'>
 									<button className='absolute justify-center items-center z-50'>
 										<div className='relative group'>
 											<div className='text-white text-[44px] py-2'>
@@ -362,7 +365,7 @@ function HomeDesktop() {
 											</div>
 										</div>
 									</button>
-									<button className='flex justify-center items-center border-2 border-white opacity-50 group-hover:opacity-100 group-hover:skew-y-[0.5deg] transition-all'>
+									<button className='p-16 w-[800px] h-[600px] relative flex justify-center items-center border-2 border-white opacity-50 group-hover:opacity-100 group-hover:skew-y-[0.5deg] transition-all'>
 										<a
 											href='https://my.celebration.org/portal/get_form.aspx?ID=6bc5f420-26f8-41f1-8149-9344dd2676e6&template=campus-jax&remembertemplate=true'
 											target='_blank'
@@ -371,8 +374,10 @@ function HomeDesktop() {
 											<Image
 												src={follow.imageRight}
 												alt='prayer request button'
-												width={follow.width}
-												height={follow.height}
+												// width={follow.width}
+												// height={follow.height}
+												layout='fill'
+												objectFit='cover'
 												className='saturate-0 opacity-20 group-hover:saturate-[85%] group-hover:opacity-75 group-hover:scale-[105%] group-hover:skew-y-[0.5deg] transition-all'
 											/>
 										</a>

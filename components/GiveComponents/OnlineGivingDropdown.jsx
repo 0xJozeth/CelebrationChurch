@@ -92,7 +92,7 @@ const OnlineGivingDropdown = () => {
 									<li className='flex items-center'>
 										<a
 											className='flex relative hover:bg-black hover:text-white ease-in items-center cursor-pointer'
-											href='https://celebrationjax.org/'
+											href='https://pushpay.com/g/celebrationarena'
 											target='_blank'
 											rel='noopener noreferrer'
 										>
@@ -102,7 +102,7 @@ const OnlineGivingDropdown = () => {
 									<li>
 										<a
 											className='hover:bg-black hover:text-white ease-in cursor-pointer'
-											href='https://celebrationsfl.org/'
+											href='https://pushpay.com/g/celebrationftl'
 											target='_blank'
 											rel='noopener noreferrer'
 										>
@@ -112,7 +112,7 @@ const OnlineGivingDropdown = () => {
 									<li>
 										<a
 											className='hover:bg-black hover:text-white ease-in cursor-pointer'
-											href='http://celebrationorl.org/'
+											href='https://celebrationorl.org/celebrationorl-give/'
 											target='_blank'
 											rel='noopener noreferrer'
 										>
@@ -122,7 +122,7 @@ const OnlineGivingDropdown = () => {
 									<li>
 										<a
 											className='hover:bg-black hover:text-white ease-in cursor-pointer'
-											href='http://metrochurch.com/'
+											href='https://pushpay.com/g/celebrationchurchdc'
 											target='_blank'
 											rel='noopener noreferrer'
 										>
@@ -132,7 +132,7 @@ const OnlineGivingDropdown = () => {
 									<li>
 										<a
 											className='hover:bg-black hover:text-white ease-in cursor-pointer'
-											href='http://www.christianfaithcenternc.com/'
+											href='http://www.christianfaithcenternc.com/give'
 											target='_blank'
 											rel='noopener noreferrer'
 										>

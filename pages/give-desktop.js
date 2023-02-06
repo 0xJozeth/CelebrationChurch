@@ -5,6 +5,7 @@ import Image from 'next/image';
 import arrow from '/public/arrow@1x-white.svg';
 import arrowdown from '/public/arrow-down.svg';
 import { motion } from 'framer-motion';
+import GiveHero from '/public/give-hero.png';
 
 import { faBitcoin } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -21,7 +22,7 @@ import OnlineGivingDropdown from '../components/GiveComponents/OnlineGivingDropd
 import GiveHeroSection from '../components/GiveComponents/GiveHeroSection';
 import LegacyTeamSection from '../components/GiveComponents/LegacyTeamSection';
 
-export default function GiveDesktop() {
+export default function GiveDesktop({ id }) {
 	const [darken, setDarken] = useState(false);
 
 	const [modalOpen, setModalOpen] = useState(false);
@@ -93,7 +94,49 @@ export default function GiveDesktop() {
 		<>
 			<div className='flex justify-center w-[100vw]'>
 				<div className='flex flex-col w-full max-w-[1440px] p-8 gap-y-[50px] mb-[80px] '>
-					<GiveHeroSection />
+					{/* <GiveHeroSection /> */}
+					<div className='w-full md:h-[500px] lg:h-[700px] overflow-hidden '>
+						<div className='relative w-full'>
+							<div className='absolute top-[20px] left-[20px] mix-blend-overlay z-30 '>
+								<h1 className='font-display font-bold text-[#f8f8f8] md:text-[126px] lg:text-[192px]'>
+									WE&nbsp;LOVE
+									<br />
+									<span className='font-kepler italic text-[1.1em]'>
+										SO&nbsp;WE&nbsp;GIVE
+									</span>
+								</h1>
+							</div>
+							<div className='absolute top-[20px] left-[20px] z-0'>
+								<h1 className='font-display font-bold text-[#070707] md:text-[126px] lg:text-[192px]'>
+									WE&nbsp;LOVE
+									<br />
+									<span className='font-kepler italic text-[1.1em]'>
+										SO&nbsp;WE&nbsp;GIVE
+									</span>
+								</h1>
+							</div>
+						</div>
+						<div className='relative flex justify-end items-end mt-[100px] z-20 '>
+							<div className='flex w-3/4'>
+								<Image src={GiveHero} alt='' />
+							</div>
+							<div className='absolute flex bottom-8 right-8 z-100 border-2 border-solid border-[#f8f8f8] p-4 md:w-[275px] lg:w-[350px] gap-x-2 cursor-pointer'>
+								<div className='flex justify-center items-center'>
+									<div className='flex justify-center items-center p-2'>
+										<a
+											className='font-display md:text-[24px] lg:text-[44px] text-[#f8f8f8]'
+											href='#onlineGiving'
+										>
+											GIVE&nbsp;NOW
+										</a>
+									</div>
+									<div className='flex w-[80px]'>
+										<Image src={arrow} alt='' />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 					<div className='flex flex-col items-center w-full overflow-hidden'>
 						<div className='flex justify-center items-center w-full'>
 							<h2 className='font-display font-bold text-center md:text-[126px] lg:text-[192px]'>
@@ -113,7 +156,7 @@ export default function GiveDesktop() {
 								transformative power of the Gospel all around the world.
 							</p>
 						</div>
-						<div className='flex'>
+						{/* <div className='flex'>
 							<Link href={'#onlinegiving'}>
 								<div className='flex p-2 '>
 									<button className='flex flex-col w-auto items-center gap-2'>
@@ -143,11 +186,11 @@ export default function GiveDesktop() {
 									</button>
 								</div>
 							</Link>
-						</div>
+						</div> */}
 					</div>
-					<div className='flex flex-col items-center w-full overflow-hidden '>
-						<div className='relative flex flex-col items-center justify-start w-full '>
-							<div className='flex justify-center items-center w-full'>
+					<div className='flex flex-col items-center w-full overflow-hidden mb-16 '>
+						<div className='relative flex flex-col items-center justify-start w-full gap-16 '>
+							<div className='flex justify-center items-center w-full my-16'>
 								<h2 className='font-display font-bold text-center md:text-[126px] lg:text-[192px]'>
 									YOUR{' '}
 									<span className='font-kepler font-thin italic  text-[1.1em]'>
@@ -162,7 +205,9 @@ export default function GiveDesktop() {
 					</div>
 
 					{/* ONLINE GIVING SECTION */}
-					<OnlineGivingDropdown />
+					<div id='onlineGiving'>
+						<OnlineGivingDropdown />
+					</div>
 
 					<div className='flex flex-col items-center w-full overflow-hidden z-[997] '>
 						<div className='flex justify-center items-center w-full'>
@@ -290,7 +335,7 @@ export default function GiveDesktop() {
 						</div>
 					</div>
 
-					<div className='relative flex items-center w-full overflow-hidden gap-x-16 '>
+					<div className='relative flex items-center w-full overflow-hidden gap-x-16'>
 						<div className='flex flex-col w-3/5 gap-y-8 p-4 '>
 							<div>
 								<h3 className='font-display font-bold text-[44px]'>
@@ -324,7 +369,11 @@ export default function GiveDesktop() {
 								</Link>
 							</div>
 							<div className='flex w-full justify-start items-center '>
-								<a href='mailto:giving@celebration.org'>
+								<a
+									href='mailto:giving@celebration.org'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
 									<motion.button
 										whileHover={{ scale: 1.1 }}
 										className='flex items-center py-2 gap-x-4'

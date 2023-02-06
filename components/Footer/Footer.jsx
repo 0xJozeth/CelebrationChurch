@@ -47,6 +47,7 @@ const sections = [
 		links: [
 			{ text: 'Give', href: '/give' },
 			{ text: 'Bible Reading Plan', href: '/bible-reading-plan' },
+			{ text: 'FAQs', href: '/faqs' },
 			// { text: 'Shop', href: '/shop' },
 		],
 	},
