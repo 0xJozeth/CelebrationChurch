@@ -31,18 +31,19 @@ const GiveHeroSection = () => {
 					<Image src={GiveHero} alt='' />
 				</div>
 				<div className='absolute flex bottom-8 right-8 z-100 border-2 border-solid border-[#f8f8f8] p-4 md:w-[275px] lg:w-[350px] gap-x-2 cursor-pointer'>
-					<Link href='give'>
-						<div className='flex justify-center items-center'>
-							<div className='flex justify-center items-center p-2'>
-								<a className='font-display md:text-[24px] lg:text-[44px] text-[#f8f8f8]'>
-									GIVE&nbsp;NOW
-								</a>
-							</div>
-							<div className='flex w-[80px]'>
-								<Image src={arrow} alt='' />
-							</div>
+					<div className='flex justify-center items-center'>
+						<div className='flex justify-center items-center p-2'>
+							<a
+								className='font-display md:text-[24px] lg:text-[44px] text-[#f8f8f8]'
+								href='#onlineGiving'
+							>
+								GIVE&nbsp;NOW
+							</a>
 						</div>
-					</Link>
+						<div className='flex w-[80px]'>
+							<Image src={arrow} alt='' />
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

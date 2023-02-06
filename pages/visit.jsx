@@ -599,7 +599,7 @@ function VisitTW(props) {
 										<li>
 											<a
 												className='hover:bg-black hover:text-white ease-in'
-												href=''
+												href='https://www.celebrationchurch.nl/'
 												target='_blank'
 												rel='noopener noreferrer'
 											>
@@ -609,7 +609,7 @@ function VisitTW(props) {
 										<li>
 											<a
 												className='hover:bg-black hover:text-white ease-in cursor-pointer'
-												href=''
+												href='https://celebrationparis.org/'
 												target='_blank'
 												rel='noopener noreferrer'
 											>
@@ -619,7 +619,7 @@ function VisitTW(props) {
 										<li>
 											<a
 												className='hover:bg-black hover:text-white ease-in cursor-pointer'
-												href=''
+												href='https://celebrationmokopane.org/'
 												target='_blank'
 												rel='noopener noreferrer'
 											>
@@ -643,7 +643,7 @@ function VisitTW(props) {
 					</div>
 				</div>
 
-				<div className='flex flex-col p-8'>
+				<div className='flex flex-col p-8 mt-32'>
 					<div className='flex mx-auto w-full justify-center mb-[150px]'>
 						<h1 className='font-display font-bold text-[#070707 text-[54px] md:text-[108px] lg:text-[192px]'>
 							REACH OUT&nbsp;

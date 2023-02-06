@@ -35,7 +35,11 @@ const LegacyTeamSection = () => {
 						</p>
 					</div>
 					<div className='flex justify-start items-center '>
-						<a href='mailto:dking@celebration.org'>
+						<a
+							href='mailto:dking@celebration.org'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
 							<motion.div
 								whileHover={{ scale: 1.1 }}
 								className='flex items-center py-2 gap-x-4'

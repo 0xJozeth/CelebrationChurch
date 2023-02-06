@@ -188,25 +188,32 @@ function Followjesus() {
 			<Grid>
 				<div className='mainContainer'>
 					<div className='imageContainer'>
-						<div onClick={handleIsMuted} className='imageWrapper'>
-							{/* <Image src={pastorTim} alt='pastor-tim-sitting-in-a-chair' /> */}
-							<video
+						<div style={{ padding: '125% 0 0 0', position: 'relative' }}>
+							<iframe
+								src='https://player.vimeo.com/video/796387628?h=0c9d927a0a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+								frameBorder='0'
+								allow='autoplay; fullscreen; picture-in-picture'
+								allowFullScreen
+								style={{
+									position: 'absolute',
+									top: '0',
+									left: '0',
+									width: '100%',
+									height: '100%',
+								}}
+								title='Celebration - Follow Jesus'
+							></iframe>
+						</div>
+						{/* <div onClick={handleIsMuted} className='imageWrapper'> */}
+						{/* <Image src={pastorTim} alt='pastor-tim-sitting-in-a-chair' /> */}
+						{/* <video
 								src='/followJesus-comp.webm'
 								autoPlay
 								loop
 								muted={isMuted ? false : true}
 								style={{ width: '1080px', height: '998px' }}
-							></video>
-						</div>
-						<div className='blockQuote'>
-							<q>
-								“If anyone would come after me, let him deny himself and take up
-								his cross and follow me.”
-							</q>
-						</div>
-						<div className='quoteAttribution'>
-							<p>- MATTHEW 16:24</p>
-						</div>
+							></video> */}
+						{/* </div> */}
 					</div>
 					<div className='followJesusContent'>
 						<div>
@@ -218,6 +225,7 @@ function Followjesus() {
 						<div>
 							<h3>WHO IS JESUS?</h3>
 						</div>
+
 						<div>
 							<p className='font-display text-[24px] text-[#7C7C7C]'>
 								The gospel centers around the incredible truth that Jesus came
@@ -246,6 +254,15 @@ function Followjesus() {
 								we can step into this incredible way of life offered by King
 								Jesus as expressions of the kingdom of God.
 							</p>
+						</div>
+						<div className='blockQuote'>
+							<q>
+								“If anyone would come after me, let him deny himself and take up
+								his cross and follow me.”
+							</q>
+						</div>
+						<div className='quoteAttribution'>
+							<p>- MATTHEW 16:24</p>
 						</div>
 						<div>
 							<Link href='https://worship.celebration.org/'>

@@ -14,7 +14,7 @@ import PartnersCarouselMobile from '../components/PartnersCarousel/partnersCarou
 import { motion } from 'framer-motion';
 
 function About() {
-	const [isMuted, setIsMuted] = useState(false);
+	const [isMuted, setIsMuted] = useState(true);
 	const [isToggle, setIsToggle] = useState(false);
 
 	const handleIsMuted = () => {
@@ -45,18 +45,35 @@ function About() {
                 items-center justify-center 
                 overflow-hidden'
 				>
-					<video
+					{/* <video
 						src='/welcome-comp.webm'
 						autoPlay
 						loop
-						muted={isMuted ? false : true}
+						// muted={isMuted ? false : true}
+						muted={() => handleIsMuted()}
+						// controls={true}
 						controls={isToggle ? false : true}
 						style={{
 							width: '1440px',
 							height: '806px',
 							border: '4px solid black',
 						}}
-					></video>
+					></video> */}
+					<div style={{}}>
+						<iframe
+							src='https://player.vimeo.com/video/690554345?h=da3c6ace3a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+							allow='autoplay; fullscreen; picture-in-picture'
+							allowFullScreen
+							style={{
+								position: 'absolute',
+								top: '0',
+								left: '0',
+								width: '100%',
+								height: '100%',
+							}}
+							title='About Page'
+						></iframe>
+					</div>
 				</div>
 				<div className='flex flex-col md:flex-row mx-auto items-center'>
 					<h1 className='font-display text-[54px] md:text-[110px] lg:text-[192px] font-bold'>
@@ -255,7 +272,7 @@ function About() {
 						</span>
 					</h1>
 				</div>
-				<div className='hidden md:flex mx-auto justify-center items-center gap-16 mb-20'>
+				<div className='hidden md:flex justify-center items-center gap-8 mb-20'>
 					<PartnersCarousel />
 				</div>
 			</div>
