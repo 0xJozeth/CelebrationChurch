@@ -326,7 +326,7 @@ const Navbar = (props) => {
 								{router.pathname.substring(1)}
 							</div>
 						) : null}
-						<Button onClick={toggle} isOpen={isOpen}>
+						<Button onClick={toggle} isOpen={isOpen} className='z-[1000]'>
 							<motion.svg
 								whileHover={{ scale: 1.1 }}
 								width='38'

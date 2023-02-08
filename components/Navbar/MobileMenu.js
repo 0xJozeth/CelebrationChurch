@@ -21,7 +21,7 @@ import pagination from '/public/slider-pagination.svg';
 
 const MobileMenu = (props) => {
 	return (
-		<div className='block md:hidden z-[9999]'>
+		<div className='block md:hidden z-[9999] h-screen'>
 			<div className='fixed p-4 top-0 bottom-[-40px] left-0 right-0 bg-[#070707] font-display opacity-[100%] z-[1003] overflow-y-scroll'>
 				<div
 					className={
