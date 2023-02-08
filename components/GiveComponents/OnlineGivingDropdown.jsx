@@ -112,7 +112,7 @@ const OnlineGivingDropdown = () => {
 									<li>
 										<a
 											className='hover:bg-black hover:text-white ease-in cursor-pointer'
-											href='https://celebrationorl.org/celebrationorl-give/'
+											href='https://pushpay.com/g/celebrationdt?src=hpp'
 											target='_blank'
 											rel='noopener noreferrer'
 										>

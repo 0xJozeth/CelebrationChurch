@@ -66,7 +66,10 @@ function About() {
 							alignItems: 'center',
 							padding: '56.25% 0 0 0',
 							position: 'relative',
-							border: '2px solid #080808',
+							borderBottom: '2px solid #080808',
+							position: 'relative',
+							top: '-40px',
+							marginTop: '34px',
 						}}
 					>
 						<iframe
@@ -81,6 +84,7 @@ function About() {
 								height: '100%',
 							}}
 							title='Welcome To Celebration'
+							priority
 						></iframe>
 					</div>
 				</div>
