@@ -31,6 +31,9 @@ const Carousel = () => {
 			image: Equip,
 			href: 'https://iequip.org/',
 		},
+	];
+
+	const partnersTwo = [
 		{
 			image: GoToNations,
 			href: 'https://gotonations.org/',
@@ -50,22 +53,56 @@ const Carousel = () => {
 	];
 
 	return (
-		<AnimatePresence>
-			{partnersOne.map((image, index) => (
-				<motion.div
-					key={index}
-					initial={{ x: '100%' }}
-					animate={{ x: 0 }}
-					exit={{ x: '-100%' }}
-					whileHover={{ scale: 1.1 }}
-					className='flex justify-center items-center h-20 w-44 mx-auto'
-				>
-					<a href={image.link} target='_blank' rel='noopener noreferrer'>
-						<Image src={image.image} alt='' objectFit='contain' layout='fill' />
-					</a>
-				</motion.div>
-			))}
-		</AnimatePresence>
+		<>
+			<div className='flex flex-wrap gap-16'>
+				<div className='flex gap-8 mx-auto'>
+					<AnimatePresence>
+						{partnersOne.map((image, index) => (
+							<motion.div
+								key={index}
+								initial={{ x: '100%' }}
+								animate={{ x: 0 }}
+								exit={{ x: '-100%' }}
+								whileHover={{ scale: 1.1 }}
+								className='flex justify-center items-center h-44 w-64 mx-auto'
+							>
+								<a href={image.href} target='_blank' rel='noopener noreferrer'>
+									<Image
+										src={image.image}
+										alt=''
+										objectFit='contain'
+										layout='fill'
+									/>
+								</a>
+							</motion.div>
+						))}
+					</AnimatePresence>
+				</div>
+				<div className='flex gap-8 mx-auto'>
+					<AnimatePresence>
+						{partnersTwo.map((image, index) => (
+							<motion.div
+								key={index}
+								initial={{ x: '100%' }}
+								animate={{ x: 0 }}
+								exit={{ x: '-100%' }}
+								whileHover={{ scale: 1.1 }}
+								className='flex justify-center items-center h-44 w-64 mx-auto'
+							>
+								<a href={image.href} target='_blank' rel='noopener noreferrer'>
+									<Image
+										src={image.image}
+										alt=''
+										objectFit='contain'
+										layout='fill'
+									/>
+								</a>
+							</motion.div>
+						))}
+					</AnimatePresence>
+				</div>
+			</div>
+		</>
 	);
 };
 
