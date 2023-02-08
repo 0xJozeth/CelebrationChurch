@@ -220,6 +220,10 @@ const Navbar = (props) => {
 		setIsOpen(false);
 	};
 
+	const handleSlide = () => {
+		setSlide(!slide);
+	};
+
 	const transition = {
 		duration: 0.15,
 		ease: [0.43, 0.13, 0.23, 0.96],
@@ -251,7 +255,7 @@ const Navbar = (props) => {
 										objectFit='contain'
 										className={
 											props.isOpen
-												? 'invert-100 transition-all'
+												? 'invert-100 transition-all z-[1000]'
 												: 'invert-0 transition-all'
 										}
 									/>
@@ -453,14 +457,14 @@ const Navbar = (props) => {
 									<MobileMenu
 										nav={nav}
 										slide={slide}
+										handleSlide={handleSlide}
+										setSlide={setSlide}
 										handleOptionClick={handleOptionClick}
 										handleToggle={handleToggle}
 										isOpen={isOpen}
 										setIsOpen={setIsOpen}
+										className='z-50'
 									/>
-									<div>
-										<h1 className='text-white'> </h1>
-									</div>
 								</DesktopMenu>
 							</>
 						)}
