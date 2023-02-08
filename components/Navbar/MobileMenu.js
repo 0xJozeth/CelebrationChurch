@@ -37,7 +37,7 @@ const MobileMenu = (props) => {
 								: 'flex relative -left-28 w-full gap-20 px-16 transform -translate-x-1/3 duration-300 transition-all'
 						}
 					>
-						<div className='relative flex flex-col font-bold text-[38px] mt-20 md:mt-24 gap-y-2 h-[256px]'>
+						<div className='relative -left-8 flex flex-col font-bold text-[38px] mt-20 md:mt-24 gap-y-2 h-[256px]'>
 							<ul
 								className='flex flex-col gap-y-4'
 								onClick={props.handleOptionClick}
@@ -141,9 +141,14 @@ const MobileMenu = (props) => {
 						</div>
 					</div>
 				</div>
-				<div className='flex items-center justify-between my-2'>
+				<div className='flex items-center justify-between my-2 w-full'>
 					<div className='flex items-center justify-end ml-12'>
-						<div className={'flex rotate-180 w-14'} onClick={props.handleSlide}>
+						<div
+							className={
+								props.slide ? 'invisible w-14' : 'flex rotate-180 w-14 h-8'
+							}
+							onClick={props.handleSlide}
+						>
 							<Image src={arrow} alt='' />
 						</div>
 					</div>
@@ -157,7 +162,10 @@ const MobileMenu = (props) => {
 						<Image src={pagination} alt='' />
 					</div>
 					<div className='flex items-center justify-center mr-12'>
-						<div className={'flex  w-14'} onClick={props.handleSlide}>
+						<div
+							className={props.slide ? 'flex w-14 h-8' : 'invisible w-14'}
+							onClick={props.handleSlide}
+						>
 							<Image src={arrow} alt='' />
 						</div>
 					</div>
