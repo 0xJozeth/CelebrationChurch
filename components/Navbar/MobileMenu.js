@@ -33,8 +33,8 @@ const MobileMenu = (props) => {
 					<div
 						className={
 							props.slide
-								? 'flex relative -left-28 w-full gap-20 px-16 transform translate-x-1/3 duration-300 transition-all'
-								: 'flex relative -left-28 w-full gap-20 px-16 transform -translate-x-1/3 duration-300 transition-all'
+								? 'flex relative -left-28 w-full gap-20 px-16 transform translate-x-1/3 transition-all'
+								: 'flex relative -left-28 w-full gap-20 px-16 transform -translate-x-1/3 transition-all'
 						}
 					>
 						<div className='relative -left-8 flex flex-col font-bold text-[38px] mt-20 md:mt-24 gap-y-2 h-[256px]'>
@@ -154,9 +154,7 @@ const MobileMenu = (props) => {
 					</div>
 					<div
 						className={
-							props.slide
-								? 'flex justify-center rotate-180'
-								: 'flex justify-center'
+							props.slide ? 'flex justify-center' : 'flex justify-center'
 						}
 					>
 						<Image src={pagination} alt='' />
