@@ -86,23 +86,29 @@ function HeroTW() {
 							CELEBRATION
 						</h1>
 					</div>
-					<a
+					{/* <a
 						href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
 						alt=''
-					>
-						<div className='relative z-20 max-w-[355px] mx-auto'>
-							<motion.video
-								animate={controls}
-								initial={{ y: '35%', opacity: '0' }}
-								onClick={handleIsMuted}
-								src='/heroVideo-comp.webm'
-								autoPlay
-								loop
-								muted={isMuted ? false : true}
-								style={{ width: '756px', marginTop: '23px' }}
-							></motion.video>
-						</div>
-					</a>
+					> */}
+					{/* <div className='relative z-20 max-w-[355px] mx-auto'> */}
+					<motion.video
+						animate={controls}
+						initial={{ y: '35%', opacity: '0' }}
+						onClick={handleIsMuted}
+						src='/heroVideo-comp.webm'
+						autoPlay
+						loop
+						muted={isMuted ? false : true}
+						style={{
+							width: '355px',
+							top: '23px',
+							margin: 'auto',
+							zIndex: '20',
+							position: 'relative',
+						}}
+					></motion.video>
+					{/* </div> */}
+					{/* </a> */}
 					<div className='absolute top-0 left-0 right-0 z-0 max-w-min mx-auto '>
 						<h1 className='font-display font-bold text-[44px]'>
 							WELCOME&nbsp;
