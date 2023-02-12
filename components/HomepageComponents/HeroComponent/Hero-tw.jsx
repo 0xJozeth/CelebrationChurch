@@ -87,29 +87,48 @@ function HeroTW() {
 								CELEBRATION
 							</h1>
 						</div>
-						{/* <a
+						<a
 							href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
 							alt=''
-						> */}
-						{/* <div className='relative z-20 max-w-[355px] mx-auto'> */}
-						<motion.video
+						>
+							{/* <div className='relative z-20 max-w-[355px] mx-auto'> */}
+							<motion.div
+								animate={controls}
+								initial={{ y: '35%', opacity: '0' }}
+								style={{
+									top: '-38px',
+									margin: 'auto',
+									zIndex: '20',
+									position: 'relative',
+								}}
+							>
+								<iframe
+									src='https://player.vimeo.com/video/744290982?h=26579d8c5a&controls=0&badge=0&autoplay=1&muted=1&loop=1&autopause=0&player_id=0&app_id=58479'
+									width={355}
+									height={748}
+									placeholder={'blur'}
+									priority
+								></iframe>
+							</motion.div>
+							{/* <motion.video
+							playsInline
 							animate={controls}
 							initial={{ y: '35%', opacity: '0' }}
 							onClick={handleIsMuted}
 							src='/heroVideo-comp.webm'
-							autoPlay
 							loop
 							muted={isMuted ? false : true}
 							style={{
 								width: '355px',
 								top: '23px',
+
 								margin: 'auto',
 								zIndex: '20',
 								position: 'relative',
 							}}
-						></motion.video>
-						{/* </div> */}
-						{/* </a> */}
+						></motion.video> */}
+							{/* </div> */}
+						</a>
 						<div className='absolute top-0 left-0 right-0 z-0 max-w-min mx-auto '>
 							<h1 className='font-display font-bold text-[44px]'>
 								WELCOME&nbsp;
