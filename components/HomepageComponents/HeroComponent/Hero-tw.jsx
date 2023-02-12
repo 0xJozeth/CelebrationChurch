@@ -61,64 +61,66 @@ function HeroTW() {
 						  w-[100vw] gap-y-4 mx-auto'
 			>
 				<div className='flex flex-col relative justify-center items-center max-w-[355px] w-full'>
-					<div className='playButtton absolute flex justify-center items-center top-[180px]  mix-blend-overlay z-40'>
-						<motion.div animate={playArrow} initial={{ opacity: '0' }}>
-							<a
-								href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								<IoPlayCircleOutline
-									className='z-100 cursor-pointer text-[#f8f8f8]'
-									size={100}
-								/>
-							</a>
-						</motion.div>
-					</div>
-					<div className='absolute top-0 left-0 right-0 z-30 mix-blend-overlay text-[#f8f8f8] max-w-min mx-auto'>
-						<h1 className='font-display font-bold text-[44px]'>
-							WELCOME&nbsp;
-							<span className='font-kepler italic text-[1.1em] font-light'>
-								TO
-							</span>
-							&nbsp;
-							<br />
-							CELEBRATION
-						</h1>
-					</div>
-					{/* <a
-						href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
-						alt=''
-					> */}
-					{/* <div className='relative z-20 max-w-[355px] mx-auto'> */}
-					<motion.video
-						animate={controls}
-						initial={{ y: '35%', opacity: '0' }}
-						onClick={handleIsMuted}
-						src='/heroVideo-comp.webm'
-						autoPlay
-						loop
-						muted={isMuted ? false : true}
-						style={{
-							width: '355px',
-							top: '23px',
-							margin: 'auto',
-							zIndex: '20',
-							position: 'relative',
-						}}
-					></motion.video>
-					{/* </div> */}
-					{/* </a> */}
-					<div className='absolute top-0 left-0 right-0 z-0 max-w-min mx-auto '>
-						<h1 className='font-display font-bold text-[44px]'>
-							WELCOME&nbsp;
-							<span className=' font-kepler italic text-[1.1em] font-light'>
-								TO
-							</span>
-							&nbsp;
-							<br />
-							CELEBRATION
-						</h1>
+					<div className='flex justify-center items-center max-w-[355px] w-screen'>
+						<div className='playButtton absolute flex justify-center items-center top-[180px]  mix-blend-overlay z-40'>
+							<motion.div animate={playArrow} initial={{ opacity: '0' }}>
+								<a
+									href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<IoPlayCircleOutline
+										className='z-100 cursor-pointer text-[#f8f8f8]'
+										size={100}
+									/>
+								</a>
+							</motion.div>
+						</div>
+						<div className='absolute top-0 left-0 right-0 z-30 mix-blend-overlay text-[#f8f8f8] max-w-min mx-auto'>
+							<h1 className='font-display font-bold text-[44px]'>
+								WELCOME&nbsp;
+								<span className='font-kepler italic text-[1.1em] font-light'>
+									TO
+								</span>
+								&nbsp;
+								<br />
+								CELEBRATION
+							</h1>
+						</div>
+						{/* <a
+							href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
+							alt=''
+						> */}
+						{/* <div className='relative z-20 max-w-[355px] mx-auto'> */}
+						<motion.video
+							animate={controls}
+							initial={{ y: '35%', opacity: '0' }}
+							onClick={handleIsMuted}
+							src='/heroVideo-comp.webm'
+							autoPlay
+							loop
+							muted={isMuted ? false : true}
+							style={{
+								width: '355px',
+								top: '23px',
+								margin: 'auto',
+								zIndex: '20',
+								position: 'relative',
+							}}
+						></motion.video>
+						{/* </div> */}
+						{/* </a> */}
+						<div className='absolute top-0 left-0 right-0 z-0 max-w-min mx-auto '>
+							<h1 className='font-display font-bold text-[44px]'>
+								WELCOME&nbsp;
+								<span className=' font-kepler italic text-[1.1em] font-light'>
+									TO
+								</span>
+								&nbsp;
+								<br />
+								CELEBRATION
+							</h1>
+						</div>
 					</div>
 				</div>
 				<div className='flex flex-col p-4 bg-[#f8f8f8] mt-[-225px] h-full z-30 justify-center items-center'>
