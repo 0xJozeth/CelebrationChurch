@@ -1,4 +1,4 @@
-import React, { useState, useffect, useRef } from 'react';
+import React, { useState, useffect, useRef, useEffect } from 'react';
 import Banner from '/components/Banner/Banner.js';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -16,22 +16,53 @@ import longArrow from '/public/arrow-long.svg';
 import whatsnew from '/public/home-whatsnew@1x.png';
 
 import { IoPlayCircleOutline } from 'react-icons/io5';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 
 function HeroTW() {
+	const [isMuted, setIsMuted] = useState(false);
+
+	// Create an animation
+	const linkText = useAnimation();
+	const playArrow = useAnimation();
+	const controls = useAnimation();
+	const textControls = useAnimation();
+
+	const handleIsMuted = () => {
+		setIsMuted(!isMuted);
+	};
+
+	useEffect(() => {
+		// Start the animation once the component has mounted
+		playArrow.start({
+			opacity: '100%',
+			transition: { duration: 1.75, delay: 2 },
+		});
+		controls.start({
+			y: 0,
+			opacity: '100%',
+			transition: { duration: 1.75 },
+		});
+		textControls.start({
+			y: 0,
+			opacity: '100%',
+			transition: { duration: 1.75, delay: 1 },
+		});
+		linkText.start({
+			x: 0,
+			opacity: '100%',
+			transition: { duration: 1.75, delay: 2.25 },
+		});
+	}, [linkText, playArrow, controls, textControls]);
+
 	return (
 		<>
 			<div
 				className='flex flex-col items-center
-						  w-[100vw] gap-y-4 mx-auto
-
-				md:bg-purple-300 md:max-w-[768px] md:w-[768px]
-				lg:bg-green-300 lg:max-w-[1024px] lg:w-[1024px]
-				xl:bg-red-300 xl:max-w-[1440px] xl:w-[1440px]'
+						  w-[100vw] gap-y-4 mx-auto'
 			>
 				<div className='flex flex-col relative justify-center items-center max-w-[355px] w-full'>
 					<div className='playButtton absolute flex justify-center items-center top-[180px]  mix-blend-overlay z-40'>
-						<div>
+						<motion.div animate={playArrow} initial={{ opacity: '0' }}>
 							<a
 								href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
 								target='_blank'
@@ -42,7 +73,7 @@ function HeroTW() {
 									size={100}
 								/>
 							</a>
-						</div>
+						</motion.div>
 					</div>
 					<div className='absolute top-0 left-0 right-0 z-30 mix-blend-overlay text-[#f8f8f8] max-w-min mx-auto'>
 						<h1 className='font-display font-bold text-[44px]'>
@@ -59,15 +90,17 @@ function HeroTW() {
 						href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
 						alt=''
 					>
-						<div className='relative z-20 mt-[-10px] max-w-[355px] mx-auto'>
-							<iframe
-								className='mx-auto p-4'
-								src='https://player.vimeo.com/video/744290982?h=26579d8c5a&controls=0&badge=0&autoplay=1&muted=1&loop=1&autopause=0&player_id=0&app_id=58479'
-								frameBorder='0'
-								width={355}
-								height={631}
-								placeholder={'blur'}
-							></iframe>
+						<div className='relative z-20 max-w-[355px] mx-auto'>
+							<motion.video
+								animate={controls}
+								initial={{ y: '35%', opacity: '0' }}
+								onClick={handleIsMuted}
+								src='/heroVideo-comp.webm'
+								autoPlay
+								loop
+								muted={isMuted ? false : true}
+								style={{ width: '756px', marginTop: '23px' }}
+							></motion.video>
 						</div>
 					</a>
 					<div className='absolute top-0 left-0 right-0 z-0 max-w-min mx-auto '>
@@ -84,7 +117,11 @@ function HeroTW() {
 				</div>
 				<div className='flex flex-col p-4 bg-[#f8f8f8] mt-[-225px] h-full z-30 justify-center items-center'>
 					<div className='flex justify-center pt-4'>
-						<p className=' font-display text-[18px] lg:text-4xl text-[#7C7C7C] px-4 max-w-[355px] lg:max-w-2xl z-10'>
+						<motion.p
+							animate={textControls}
+							initial={{ y: '35%', opacity: '0' }}
+							className=' font-display text-[18px] lg:text-4xl text-[#7C7C7C] px-4 max-w-[355px] lg:max-w-2xl z-10'
+						>
 							We’re so glad you’re here!&nbsp;
 							<strong>
 								At Celebration Church, we prioritize Jesus’ mission to spread
@@ -95,9 +132,13 @@ function HeroTW() {
 								with headquarters residing in Jacksonville, Florida.
 							</strong>{' '}
 							We’d love to connect with you online or at a location near you!
-						</p>
+						</motion.p>
 					</div>
-					<div className='block my-4 lg:hidden'>
+					<motion.div
+						animate={linkText}
+						initial={{ x: '-15vw', opacity: 0 }}
+						className='block my-4 lg:hidden'
+					>
 						<button className='flex mx-auto py-4 items-center font-display text-[16px] font-medium cursor-pointer z-10 lg:text-[1.5vw] col-span-2 place-self-center'>
 							WATCH THE LATEST MESSAGE
 							<div className='flex mx-4 h-6 w-14'>
@@ -109,7 +150,7 @@ function HeroTW() {
 								/>
 							</div>
 						</button>
-					</div>
+					</motion.div>
 				</div>
 
 				<div className='flex flex-col p-4 w-full'>
