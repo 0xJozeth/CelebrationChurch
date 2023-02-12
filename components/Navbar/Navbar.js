@@ -199,7 +199,7 @@ const Menu = (props) => {
 const Navbar = (props) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [nav, setNav] = useState(false);
-	const [slide, setSlide] = useState(false);
+	const [slide, setSlide] = useState(true);
 
 	const router = useRouter();
 	console.log('router.pathname', router);

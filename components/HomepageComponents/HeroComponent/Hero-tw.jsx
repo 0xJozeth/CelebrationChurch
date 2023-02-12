@@ -35,22 +35,23 @@ function HeroTW() {
 		// Start the animation once the component has mounted
 		playArrow.start({
 			opacity: '100%',
-			transition: { duration: 1.75, delay: 2 },
+			transition: { duration: 1.75, delay: 2, type: 'easeInOut' },
 		});
+		222;
 		controls.start({
 			y: 0,
 			opacity: '100%',
-			transition: { duration: 1.75 },
+			transition: { duration: 1.75, type: 'easeInOut' },
 		});
 		textControls.start({
 			y: 0,
 			opacity: '100%',
-			transition: { duration: 1.75, delay: 1 },
+			transition: { duration: 1.75, delay: 1, type: 'easeInOut' },
 		});
 		linkText.start({
 			x: 0,
 			opacity: '100%',
-			transition: { duration: 1.75, delay: 2.25 },
+			transition: { duration: 1.75, delay: 2.25, type: 'easeInOut' },
 		});
 	}, [linkText, playArrow, controls, textControls]);
 
