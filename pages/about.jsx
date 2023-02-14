@@ -45,31 +45,18 @@ function About() {
                 items-center justify-center 
                 overflow-hidden'
 				>
-					{/* <video
-						src='/welcome-comp.webm'
-						autoPlay
-						loop
-						// muted={isMuted ? false : true}
-						muted={() => handleIsMuted()}
-						// controls={true}
-						controls={isToggle ? false : true}
-						style={{
-							width: '1440px',
-							height: '806px',
-							border: '4px solid black',
-						}}
-					></video> */}
 					<div
+						className='mx-auto'
 						style={{
 							display: 'flex',
 							justifyContent: 'center',
 							alignItems: 'center',
 							padding: '56.25% 0 0 0',
 							position: 'relative',
-							borderBottom: '2px solid #080808',
+							// borderBottom: '2px solid #080808',
 							position: 'relative',
-							top: '-40px',
-							marginTop: '34px',
+							// top: '-40px',
+							// marginTop: '34px',
 						}}
 					>
 						<iframe
@@ -82,10 +69,11 @@ function About() {
 								left: '0',
 								width: '100%',
 								height: '100%',
+								// borderBottom: '2px solid #080808',
 							}}
-							title='Welcome To Celebration'
+							title='about-page'
 							priority
-						></iframe>
+						/>
 					</div>
 				</div>
 				<div className='flex flex-col md:flex-row mx-auto items-center'>

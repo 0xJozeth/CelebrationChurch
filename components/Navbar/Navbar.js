@@ -203,8 +203,9 @@ const Navbar = (props) => {
 
 	const router = useRouter();
 	console.log('router.pathname', router);
+
 	function handleOptionClick() {
-		setNav(false);
+		setIsOpen(!isOpen);
 	}
 
 	function handleToggle() {
@@ -267,9 +268,7 @@ const Navbar = (props) => {
 										height={48}
 										objectFit='contain'
 										className={
-											props.isOpen
-												? 'invert-100 transition-all'
-												: 'invert-0 transition-all'
+											props.isOpen ? 'transition-all invert' : 'transition-all'
 										}
 									/>
 								)}
@@ -290,7 +289,7 @@ const Navbar = (props) => {
 										<a
 											href={data.href}
 											target='_blank'
-											rel='noreferrer'
+											rel='noopener noreferrer'
 											className='uppercase'
 										>
 											{data.label}

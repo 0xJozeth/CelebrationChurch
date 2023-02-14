@@ -43,24 +43,29 @@ const MobileMenu = (props) => {
 								onClick={props.handleOptionClick}
 							>
 								<li className='about'>
-									<Link href='/about' passHref={true}>
+									<Link href='/about' passHref>
 										<a className='text-[#f8f8f8]'>ABOUT</a>
 									</Link>
 								</li>
 								<li className='visit'>
-									<Link href='/visit' passHref={true}>
+									<Link href='/visit' passHref>
 										<a className='text-[#f8f8f8]'>VISIT</a>
 									</Link>
 								</li>
 								<li className='give'>
-									<Link href='/give' passHref={true}>
+									<Link href='/give' passHref>
 										<a className='text-[#f8f8f8]'>GIVE</a>
 									</Link>
 								</li>
 								<li className='watch'>
-									<Link href='/watch' passHref>
-										<a className='text-[#f8f8f8]'>WATCH</a>
-									</Link>
+									<a
+										href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
+										target='_blank'
+										rel='noopener noreferrer'
+										className='text-[#f8f8f8]'
+									>
+										WATCH
+									</a>
 								</li>
 							</ul>
 						</div>
@@ -71,7 +76,7 @@ const MobileMenu = (props) => {
 										? 'font-light flex flex-col gap-y-4'
 										: 'font-light flex flex-col gap-y-4'
 								}
-								onClick={props.handleToggle}
+								onClick={props.handleOptionClick}
 							>
 								<li className='ministries'>
 									<Link href='/ministries' passHref>
@@ -95,47 +100,57 @@ const MobileMenu = (props) => {
 										? 'flex items-center h-20 gap-x-8 text-[#f8f8f8] text-[24px] z-100'
 										: 'flex items-center h-20 gap-x-8 text-[#f8f8f8] text-[24px] z-100'
 								}
-								onClick={props.handleToggle}
+								onClick={props.handleOptionClick}
 							>
 								<span className='icon'>
-									<Link href='/' passHref>
-										<a className=' text-[#f8f8f8]'>
-											<BsFacebook />
-											{/* <FaFacebook /> */}
-										</a>
-									</Link>
+									<a
+										className=' text-[#f8f8f8]'
+										href='https://www.facebook.com/celebration.org'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										<BsFacebook />
+									</a>
 								</span>
 								<span className='flex'>
-									<Link href='/' passHref>
-										<a className='text-[#f8f8f8] '>
-											<BsInstagram />
-											{/* <FaInstagram /> */}
-										</a>
-									</Link>
+									<a
+										className='text-[#f8f8f8] '
+										href='https://www.instagram.com/celebration_org/'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										<BsInstagram />
+									</a>
 								</span>
 								<span className='flex'>
-									<Link href='/' passHref>
-										<a className='text-[#f8f8f8]'>
-											<BsTwitter />
-											{/* <FaTwitter /> */}
-										</a>
-									</Link>
+									<a
+										className='text-[#f8f8f8]'
+										href='https://twitter.com/celebration_org'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										<BsTwitter />
+									</a>
 								</span>
 								<span className='flex'>
-									<Link href='/' passHref>
-										<a className='text-[#f8f8f8]'>
-											<BsYoutube />
-											{/* <FaYoutube /> */}
-										</a>
-									</Link>
+									<a
+										className='text-[#f8f8f8]'
+										href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										<BsYoutube />
+									</a>
 								</span>
 								<span className='flex'>
-									<Link href='/' passHref>
-										<a className='text-[#f8f8f8]'>
-											<MdEmail />
-											{/* <FaRegEnvelope /> */}
-										</a>
-									</Link>
+									<a
+										className='text-[#f8f8f8]'
+										href='info@celebration.org'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										<MdEmail />
+									</a>
 								</span>
 							</div>
 						</div>
@@ -171,25 +186,13 @@ const MobileMenu = (props) => {
 				<div className='flex justify-center items-center pt-12 p-4 mt-10 bg-[#0D0D0D] min-w-full min-h-[290px] z-[1002] '>
 					<ul className='flex flex-col' onClick={props.handleToggle}>
 						<div className='flex flex-col gap-10'>
-							{/* <div>
-										<li>
-											<Link href='/shop' passHref>
-												<div className='flex gap-x-2 text-[#F8F8F8]  text-[18px]'>
-													<span
-														className='icon-shopping-bag'
-														role='img'
-														aria-label='shopping-bag'
-													>
-														<FontAwesomeIcon icon={faBagShopping} />
-													</span>
-													<a className='text-[#F8F8F8]'>SHOP</a>
-												</div>
-											</Link>
-										</li>
-									</div> */}
 							<div>
-								<li>
-									<Link href='bible-reading-plan' passHref>
+								<li onClick={props.handleOptionClick}>
+									<a
+										href='https://celebration.learn.bible/courses/daily-reading-plan'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
 										<div className='flex gap-x-4 text-[#F8F8F8] text-[18px]'>
 											<span
 												className='icon-bible'
@@ -200,13 +203,16 @@ const MobileMenu = (props) => {
 											</span>
 											<a className='text-[#F8F8F8]'>BIBLE READING PLAN</a>
 										</div>
-									</Link>
+									</a>
 								</li>
 							</div>
 							<div>
 								<li className='flex gap-x-4'>
-									<Link href='/celebration-worship' passHref>
-										<div className='flex gap-x-4 text-[#F8F8F8] text-[18px]'>
+									<a>
+										<div
+											className='flex gap-x-4 text-[#F8F8F8] text-[18px]'
+											onClick={props.handleOptionClick}
+										>
 											<span
 												className='icon-praying-hands'
 												role='img'
@@ -214,14 +220,25 @@ const MobileMenu = (props) => {
 											>
 												<FontAwesomeIcon icon={faPrayingHands} />
 											</span>
-											<a className='text-[#F8F8F8]'>CELEBRATION WORSHIP</a>
+											<a
+												className='text-[#F8F8F8]'
+												href='https://celebration.learn.bible/courses/daily-reading-plan'
+												target='_blank'
+												rel='noopener noreferrer'
+											>
+												CELEBRATION WORSHIP
+											</a>
 										</div>
-									</Link>
+									</a>
 								</li>
 							</div>
 							<div>
-								<li className='flex gap-x-4'>
-									<Link href='tv-ministry' passHref>
+								<li className='flex gap-x-4' onClick={props.handleOptionClick}>
+									<a
+										href='https://www.daystar.com/shows/tim-timberlake/'
+										target='_blank'
+										rel='noopener noreferrer'
+									>
 										<div className='flex gap-x-4 text-[#F8F8F8] text-[18px]'>
 											<span
 												className='icon-screen'
@@ -232,11 +249,14 @@ const MobileMenu = (props) => {
 											</span>
 											<a className='text-[#F8F8F8]'>TV MINISTRY</a>
 										</div>
-									</Link>
+									</a>
 								</li>
 							</div>
 							<div>
-								<div className='flex w-full justify-center items-center gap-x-4 mt-4'>
+								<div
+									className='flex w-full justify-center items-center gap-x-4 mt-4'
+									onClick={props.handleOptionClick}
+								>
 									<span className='icon-globe' role='img' aria-label='globe'>
 										<a
 											href='https://apps.apple.com/us/app/the-celebration-app/id1210190693

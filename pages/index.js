@@ -19,7 +19,7 @@ import WhatsNewSection from '/components/HomepageComponents/SectionWhatsNew/What
 import WeHaveAGrace from '/components/HomepageComponents/SectionWeHaveAGrace/WeHaveAGrace.js';
 
 // TAILWIND STUFF
-import HeroTW from '/components/HomepageComponents/HeroComponent/Hero-tw.jsx';
+import HeroMobile from '/components/HomepageComponents/HeroComponent/Hero-mobile.jsx';
 import HomeDesktop from '../components/HomepageComponents/HeroComponent/HomeDesktop';
 import HomeTablet from '../components/HomepageComponents/HeroComponent/HomeTablet';
 
@@ -27,7 +27,7 @@ const Home = () => {
 	return (
 		<>
 			<div className='block md:hidden'>
-				<HeroTW />
+				<HeroMobile />
 			</div>
 			{/* <div className='hidden md:block lg:hidden'>
 				<HomeTablet />

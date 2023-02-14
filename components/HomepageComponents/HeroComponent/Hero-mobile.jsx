@@ -10,15 +10,22 @@ import { linkText, vimeoHeroVideo } from './heroData';
 
 import WeHaveAGrace from '../SectionWeHaveAGrace/WeHaveAGrace';
 import ministries from '/public/ministries-homepage@1x.png';
+import hug from '/public/place-hug.png';
 import TimAndJen from '/public/pastor-tim-and-jen-timberlake@1x.png';
+import youngadults from '/public/youngadults.png';
+import followprayer from '/public/follow-prayer.png';
+import followstage from '/public/follow-stage.png';
+import { faCross, faPrayingHands } from '@fortawesome/free-solid-svg-icons';
+
 import longArrow from '/public/arrow-long.svg';
 
 import whatsnew from '/public/home-whatsnew@1x.png';
 
 import { IoPlayCircleOutline } from 'react-icons/io5';
 import { motion, useAnimation } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function HeroTW() {
+function HeroMobile() {
 	const [isMuted, setIsMuted] = useState(false);
 
 	// Create an animation
@@ -37,7 +44,6 @@ function HeroTW() {
 			opacity: '100%',
 			transition: { duration: 1.75, delay: 2, type: 'easeInOut' },
 		});
-		222;
 		controls.start({
 			y: 0,
 			opacity: '100%',
@@ -54,6 +60,15 @@ function HeroTW() {
 			transition: { duration: 1.75, delay: 2.25, type: 'easeInOut' },
 		});
 	}, [linkText, playArrow, controls, textControls]);
+
+	const followData = [
+		{
+			imageLeft: followstage,
+			imageRight: followprayer,
+			width: 825,
+			height: 634,
+		},
+	];
 
 	return (
 		<>
@@ -92,7 +107,6 @@ function HeroTW() {
 							href='https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I'
 							alt=''
 						>
-							{/* <div className='relative z-20 max-w-[355px] mx-auto'> */}
 							<motion.div
 								animate={controls}
 								initial={{ y: '35%', opacity: '0' }}
@@ -111,24 +125,6 @@ function HeroTW() {
 									priority
 								></iframe>
 							</motion.div>
-							{/* <motion.video
-							playsInline
-							animate={controls}
-							initial={{ y: '35%', opacity: '0' }}
-							onClick={handleIsMuted}
-							src='/heroVideo-comp.webm'
-							loop
-							muted={isMuted ? false : true}
-							style={{
-								width: '355px',
-								top: '23px',
-
-								margin: 'auto',
-								zIndex: '20',
-								position: 'relative',
-							}}
-						></motion.video> */}
-							{/* </div> */}
 						</a>
 						<div className='absolute top-0 left-0 right-0 z-0 max-w-min mx-auto '>
 							<h1 className='font-display font-bold text-[44px]'>
@@ -148,7 +144,7 @@ function HeroTW() {
 						<motion.p
 							animate={textControls}
 							initial={{ y: '35%', opacity: '0' }}
-							className=' font-display text-[18px] lg:text-4xl text-[#7C7C7C] px-4 max-w-[355px] lg:max-w-2xl z-10'
+							className=' font-display text-[16px] lg:text-4xl text-[#7C7C7C] max-w-[355px] z-10 leading-6 text-justify'
 						>
 							We’re so glad you’re here!&nbsp;
 							<strong>
@@ -165,25 +161,31 @@ function HeroTW() {
 					<motion.div
 						animate={linkText}
 						initial={{ x: '-15vw', opacity: 0 }}
-						className='block my-4 lg:hidden'
+						className='block my-4 lg:hidden w-full'
 					>
-						<button className='flex mx-auto py-4 items-center font-display text-[16px] font-medium cursor-pointer z-10 lg:text-[1.5vw] col-span-2 place-self-center'>
-							WATCH THE LATEST MESSAGE
-							<div className='flex mx-4 h-6 w-14'>
-								<Image
-									src={arrow}
-									// height={22}
-									// width={50}
-									alt='watch-the-latest-message'
-								/>
-							</div>
-						</button>
+						<a
+							href='https://www.youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I '
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							<button className='flex py-4 justify-start items-center font-display text-[19px] cursor-pointer z-10 col-span-2 w-full whitespace-nowrap '>
+								WATCH THE LATEST MESSAGE
+								<div className='flex mx-4 h-6 w-14'>
+									<Image
+										src={arrow}
+										// height={22}
+										// width={50}
+										alt='watch-the-latest-message'
+									/>
+								</div>
+							</button>
+						</a>
 					</motion.div>
 				</div>
 
 				<div className='flex flex-col p-4 w-full'>
 					<div className='relative flex flex-col w-full h-[350px]'>
-						<div className='relative top-0 left-0 right-0 flex font-bold font-display text-[56px] justify-end text-[#f8f8f8] mix-blend-overlay z-30'>
+						<div className='relative -top-10 left-0 right-0 flex font-bold font-display text-[56px] justify-end text-[#f8f8f8] mix-blend-overlay z-30'>
 							<h2 className=''>
 								FIND A&nbsp;
 								<br />
@@ -193,7 +195,7 @@ function HeroTW() {
 								NEAR YOU
 							</h2>
 						</div>
-						<div className='absolute top-0 left-0 right-0 flex font-bold font-display text-[56px] justify-end z-20'>
+						<div className='absolute -top-10 left-0 right-0 flex font-bold font-display text-[56px] justify-end z-20'>
 							<h2 className=''>
 								FIND A&nbsp;
 								<br />
@@ -210,7 +212,7 @@ function HeroTW() {
 							<div className='flex my-4 px-4 justify-end'>
 								<Link href='visit'>
 									<button className='flex items-center cursor-pointer z-10'>
-										<p className='font-display text-[16px] font-medium'>
+										<p className='font-display text-[19px] font-medium'>
 											COME VISIT US
 										</p>
 										<div className='flex mx-4 h-6 w-14'>
@@ -231,12 +233,12 @@ function HeroTW() {
 					<WeHaveAGrace />
 				</div>
 				<div className='relative flex flex-col justify-between p-4 w-full max-w-[355px] h-[400px] '>
-					<div className='flex flex-col'>
-						<div className='flex justify-center items-center z-10'>
-							<Image src={ministries} alt='' />
+					<div className='flex flex-col relative '>
+						<div className='flex justify-center items-center z-10 relative -top-12'>
+							<Image src={hug} alt='' />
 						</div>
 						<div className='flex justify-center'>
-							<div className='absolute top-[150px] mix-blend-overlay text-[#f8f8f8] max-w-min justify-center z-30'>
+							<div className='absolute top-[150px] mix-blend-color-dodge text-[#f8f8f8] max-w-min justify-center z-30'>
 								<h1 className='font-display font-bold text-[56px]'>
 									THERE’S
 									<br />
@@ -260,18 +262,17 @@ function HeroTW() {
 							</div>
 						</div>
 					</div>
-					<div className='flex w-full justify-around  p-2 mt-4 cursor-pointer z-40 '>
-						<Link href='visit'>
+					<div className='flex w-full p-2 mt-8 cursor-pointer z-40 '>
+						<Link href='ministries' passHref>
 							<motion.div
 								whileHover={{ scale: 1.1 }}
-								className='flex gap-x-4
-									text-[18px] md:text-[24px] lg:text-[28px] xl:text-[36px]'
+								className='flex relative top-4 justify-end w-full gap-x-4'
 							>
-								<div className='flex '>
-									<a className='font-display'>
-										LEARN&nbsp;MORE&nbsp;ABOUT
+								<div className='flex'>
+									<a className='font-display text-[19px]'>
+										LEARN MORE ABOUT
 										<br />
-										OUR&nbsp;MINISTRIES
+										OUR MINISTRIES
 									</a>
 								</div>
 								<div className='flex w-16 items-center '>
@@ -303,12 +304,12 @@ function HeroTW() {
 							</h2>
 						</div>
 						<div className='flex justify-end items-center mt-16 z-20'>
-							<div className='w-[268px] h-auto'>
+							<div className='w-[268px] h-auto mt-6'>
 								<Image src={TimAndJen} alt='' />
 							</div>
 						</div>
 						<div className='flex w-full mx-auto pt-8'>
-							<p className=' font-display text-[18px] lg:text-4xl text-[#7C7C7C] px-4 max-w-[355px] lg:max-w-2xl z-10'>
+							<p className=' font-display text-[16px] lg:text-4xl text-[#7C7C7C] max-w-[355px] lg:max-w-2xl z-10 leading-6 text-justify'>
 								<strong>
 									Tim and Jen Timberlake serve as the Senior Pastors of
 									Celebration Church in Jacksonville, Florida.
@@ -342,7 +343,96 @@ function HeroTW() {
 					</div>
 				</div> */}
 
-				<div className='relative flex flex-col mt-8 max-w-[355px] h-[500px]'>
+				{/* PRAYER REQUEST SECTION */}
+				<div className='flex bg-[#080808] h-[645px] w-full max-w-[355px] justify-between items-center'>
+					{followData.map((follow, index) => (
+						<div
+							key={index}
+							className='flex flex-col w-full m-16 justify-between items-center gap-16 mx-auto'
+						>
+							<div className='flex group relative justify-center items-center'>
+								<button className='absolute justify-center items-center z-20 '>
+									<Link href='follow-jesus' passHref>
+										<div className='flex flex-col relative group my-auto nx-auto'>
+											<div className='text-white text-[24px] py-2'>
+												<FontAwesomeIcon icon={faCross} className='z-50' />
+											</div>
+											<div className='transition-all'>
+												<a className='font-display text-white text-[34px]'>
+													I WANT TO
+													<br />
+													FOLLOW
+													<br />
+													JESUS
+													<br />
+												</a>
+											</div>
+											{/* <div className='justify-center opacity-0 group-hover:opacity-100 transition-all w-full'>
+												<Image src={arrow} alt='arrow' className='invert' />
+											</div> */}
+										</div>
+									</Link>
+								</button>
+								<Link href='/follow-jesus' passHref>
+									<button className='p-16 w-[316px] h-[273px] relative flex justify-center items-center border-2 border-white transition-all'>
+										<Image
+											src={follow.imageLeft}
+											alt='prayer request button'
+											className='w-full h-full saturate-[100%] opacity-75 transition-all border-2 border-white'
+											layout='fill'
+											objectFit='cover'
+										/>
+									</button>
+								</Link>
+							</div>
+							<div className='flex relative group justify-center items-center'>
+								<button className='absolute justify-center items-center z-50'>
+									<div className='relative group'>
+										<div className='text-white text-[24px] py-2'>
+											<FontAwesomeIcon icon={faPrayingHands} className='z-50' />
+										</div>
+										<div className='flex flex-col relative group my-auto nx-auto'>
+											<a
+												href='https://my.celebration.org/portal/get_form.aspx?ID=6bc5f420-26f8-41f1-8149-9344dd2676e6&template=campus-jax&remembertemplate=true'
+												target='_blank'
+												rel='noopener noreferrer'
+												className='font-display  text-white text-[34px]'
+											>
+												SUBMIT A<br />
+												PRAYER
+												<br />
+												REQUEST
+												<br />
+											</a>
+										</div>
+										{/* <div className='justify-center opacity-0 group-hover:opacity-100 transition-all w-8'>
+											<Image src={arrow} alt='arrow' className='invert' />
+										</div> */}
+									</div>
+								</button>
+								<button className='p-16 w-[316px] h-[243px] relative flex justify-center items-center border-2 border-white opacity-50 transition-all'>
+									<a
+										href='https://my.celebration.org/portal/get_form.aspx?ID=6bc5f420-26f8-41f1-8149-9344dd2676e6&template=campus-jax&remembertemplate=true'
+										target='_blank'
+										rel='noreferrer'
+									>
+										<Image
+											src={follow.imageRight}
+											alt='prayer request button'
+											// width={follow.width}
+											// height={follow.height}
+											layout='fill'
+											objectFit='cover'
+											className='saturate-[100%] opacity-75 transition-all'
+										/>
+									</a>
+								</button>
+							</div>
+						</div>
+					))}
+				</div>
+
+				<div className='relative flex flex-col mt-8 max-w-[316px] h-[500px]'>
 					<div className='flex flex-col'>
 						<div className='flex flex-col justify-center items-center'>
 							<div className='absolute top-[-20px] mix-blend-overlay text-[#f8f8f8] max-w-min justify-center z-30'>
@@ -361,41 +451,37 @@ function HeroTW() {
 									</span>
 								</h1>
 							</div>
-							<div className='items-center w-[273px] mt-4 mb-2'>
+							<div className='items-center w-[243px] mt-4 mb-2'>
 								<Image src={whatsnew} alt='' />
 							</div>
 							<div className='flex flex-col my-4 justify-center items-start'>
-								<ul className='flex flex-col justify-center items-start gap-y-4 w-full'>
-									<div className=''>
-										<Link href='new-series'>
-											<li className='flex uppercase font-display text-[16px] gap-x-2 items-center'>
-												New Series
-												<div className='flex mx-auto h-6 w-14'>
-													<Image src={arrow} alt='watch-the-latest-message' />
-												</div>
-											</li>
-										</Link>
-									</div>
-									<div className=''>
-										<Link href='future-conference'>
-											<li className='flex uppercase font-display text-[16px] gap-x-2 items-center'>
-												Future Conference 2022
-												<div className='flex mx-auto h-6 w-14'>
-													<Image src={arrow} alt='watch-the-latest-message' />
-												</div>
-											</li>
-										</Link>
-									</div>
-									<div className=''>
-										<Link href='groups'>
-											<li className='flex uppercase font-display text-[16px] gap-x-2 items-center'>
-												Groups
-												<div className='flex mx-auto h-6 w-14'>
-													<Image src={arrow} alt='watch-the-latest-message' />
-												</div>
-											</li>
-										</Link>
-									</div>
+								<ul className='flex flex-col justify-center items-start w-full gap-y-4 uppercase font-display text-[19px]'>
+									<li className='flex py-4 gap-x-2 items-center'>
+										<a
+											href='https://celebration.brushfire.com/futureconference2023/535257'
+											target='blank'
+											rel='noreferrer'
+											className='whitespace-nowrap'
+										>
+											FUTURE&nbsp;CONFERENCE 2023
+										</a>
+										<div className='flex mx-auto h-6 w-14'>
+											<Image src={arrow} alt='watch-the-latest-message' />
+										</div>
+									</li>
+
+									<li className='flex py-4 gap-x-2 items-center'>
+										<a
+											href='https://celebration.brushfire.com/sisterhoodtwenty23/543024'
+											target='blank'
+											rel='noreferrer'
+										>
+											SISTERHOOD TWENTY23&nbsp;
+										</a>
+										<div className='flex mx-auto h-6 w-14'>
+											<Image src={arrow} alt='watch-the-latest-message' />
+										</div>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -406,4 +492,4 @@ function HeroTW() {
 	);
 }
 
-export default HeroTW;
+export default HeroMobile;

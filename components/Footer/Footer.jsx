@@ -48,6 +48,8 @@ const sections = [
 			{ text: 'Give', href: '/give' },
 			{ text: 'Bible Reading Plan', href: '/bible-reading-plan' },
 			{ text: 'FAQs', href: '/faqs' },
+			{ text: '', href: '' },
+
 			// { text: 'Shop', href: '/shop' },
 		],
 	},
@@ -105,6 +107,8 @@ const social = [
 export default function Footer() {
 	return (
 		<>
+			{/* DESKTOP FOOTER */}
+
 			<div className='hidden md:flex w-full justify-center mx-auto border-solid border-t-[1px] border-[#080808] font-display'>
 				<div className='flex w-full justify-between px-36 py-24'>
 					<div className='flex h-full justify-center items-center'>
@@ -159,6 +163,131 @@ export default function Footer() {
 								) : null}
 							</a>
 						</motion.button>
+					))}
+				</div>
+			</div>
+
+			{/* MOBILE MENU FOOTER */}
+			<div className='flex flex-col md:hidden w-screen mx-auto border-solid border-t-[1px] border-[#080808] font-display mb-16'>
+				<div className='flex flex-col w-full max-w-[355px] mx-auto'>
+					<div className='flex h-full justify-start py-4 items-center'>
+						<Image src={cclogo} alt='' width={64} height={64} />
+					</div>
+					<div className='flex w-full justify-between'>
+						<div className='flex flex-col justify-start w-full'>
+							{sections.map((section, i) => (
+								<div
+									key={i}
+									className='flex flex-col w-full font-display justify-between'
+								>
+									{section.title == 'CONNECT' || section.title == 'MEDIA' ? (
+										<div className='flex flex-col w-full py-4 relative group'>
+											<h6 className='font-bold text-[12px] my-4 text-[#080808] transition-all'>
+												{section.title}
+												{console.log('section', section)}
+											</h6>
+											<ul className='flex flex-col text-[16px] gap-y-6'>
+												{section.links.map((link, i) => (
+													<motion.li key={i} whileHover={{ scale: 1.1 }}>
+														{console.log('link', section.links)}
+														<Link href={link.href} passHref>
+															<a>{link.text}</a>
+														</Link>
+													</motion.li>
+												))}
+											</ul>
+										</div>
+									) : null}
+								</div>
+							))}
+						</div>
+						<div className='flex flex-col justify-start w-full'>
+							{sections.map((section, i) => (
+								<div key={i} className='flex font-display justify-between'>
+									{section.title == 'RESOURCES' ||
+									section.title == 'OPPORTUNITIES' ? (
+										<div className='flex flex-col py-4 relative group'>
+											<h6 className='font-bold text-[12px] my-4 text-[#080808] transition-all'>
+												{section.title}
+												{console.log('section', section)}
+											</h6>
+											<ul className='flex flex-col text-[16px] gap-y-6'>
+												{section.links.map((link, i) => (
+													<motion.li key={i} whileHover={{ scale: 1.1 }}>
+														{console.log('link', section.links)}
+														<Link href={link.href} passHref>
+															<a>{link.text}</a>
+														</Link>
+													</motion.li>
+												))}
+											</ul>
+										</div>
+									) : null}
+								</div>
+							))}
+						</div>
+					</div>
+					<div className='flex flex-col'>
+						{sections.map((section, i) => (
+							<div key={i} className='flex w-full font-display justify-between'>
+								{section.title == 'DOWNLOAD OUR APP' ? (
+									<div className='flex flex-col w-full py-4 relative group'>
+										<h6 className='font-bold text-[12px] my-4 text-[#080808] transition-all'>
+											{section.title}
+											{console.log('section', section)}
+										</h6>
+										<ul className='flex justify-between w-full text-[16px] gap-y-6'>
+											{section.links.map((link, i) => (
+												<motion.li
+													className='flex justify-between w-full mx-auto'
+													key={i}
+													whileHover={{ scale: 1.1 }}
+												>
+													{console.log('link', section.links)}
+													<Link href={link.href} passHref>
+														<a>{link.text}</a>
+													</Link>
+												</motion.li>
+											))}
+										</ul>
+									</div>
+								) : null}
+							</div>
+						))}
+					</div>
+				</div>
+				<div className='flex flex-col md:hidden w-full border-solid border-t-[1px] border-[#070707] font-display '>
+					<div className='flex w-full justify-center py-8'>
+						{social.map((data, i) => (
+							<motion.button
+								whileHover={{ scale: 1.1 }}
+								key={i}
+								className='flex items-center bg-[#070707] p-2 rounded-[50%] mx-4 h-9'
+							>
+								<a href={data.href} target='_blank' rel='noopener noreferrer'>
+									{data.type === 'facebook' ? (
+										<BsFacebook className='text-[#f8f8f8] h-5 w-5' />
+									) : data.type === 'instagram' ? (
+										<BsInstagram className='text-[#f8f8f8] h-5 w-5' />
+									) : data.type === 'twitter' ? (
+										<BsTwitter className='text-[#f8f8f8] h-5 w-5' />
+									) : data.type === 'youtube' ? (
+										<BsYoutube className='text-[#f8f8f8] h-5 w-5' />
+									) : data.type === 'email' ? (
+										<MdEmail className='text-[#f8f8f8] h-5 w-5' />
+									) : null}
+								</a>
+							</motion.button>
+						))}
+					</div>
+				</div>
+				<div className='flex w-full justify-start items-center py-2'>
+					{copyright.map((data, i) => (
+						<div key={i} className='flex p-2'>
+							<p className='uppercase text-[10px] text-center font-display'>
+								{data.text}
+							</p>
+						</div>
 					))}
 				</div>
 			</div>
