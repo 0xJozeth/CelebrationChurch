@@ -36,7 +36,7 @@ function About() {
 				<div
 					onClick={(handleIsMuted, toggleControls)}
 					className='relative 
-                w-[350px] h-[280px]
+                w-[350px] 
                 md:w-[575px] md:h-[323px]
                 lg:w-[1024px] lg:h-[575px]
                 xl:w-[1440px] xl:h-[806px]
@@ -55,13 +55,13 @@ function About() {
 							position: 'relative',
 							// borderBottom: '2px solid #080808',
 							position: 'relative',
-							// top: '-40px',
+							// top: '80px',
 							// marginTop: '34px',
 						}}
 					>
 						<iframe
-							src='https://player.vimeo.com/video/796388076?h=7ed44a05b5&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
-							allow='autoplay; fullscreen; picture-in-picture'
+							// src='https://player.vimeo.com/video/796388076?h=7ed44a05b5&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+							src='https://player.vimeo.com/video/796388076?h=7ed44a05b5&amp;&controls=1&badge=0&autoplay=0&&loop=1&autopause=1&amp;player_id=0&amp;app_id=58479'
 							allowFullScreen
 							style={{
 								position: 'absolute',
@@ -71,8 +71,8 @@ function About() {
 								height: '100%',
 								// borderBottom: '2px solid #080808',
 							}}
-							title='about-page'
-							priority
+							// title='about-page'
+							// priority
 						/>
 					</div>
 				</div>
@@ -120,26 +120,22 @@ function About() {
 				<div className='flex mx-auto -mt-[80px] md:-mt-[0px]'>
 					<WeHaveAGrace />
 				</div>
-				<div className='relative flex lg:hidden flex-col items-start min-w-[326px] min-h-[396px] px-4'>
+				<div className='relative flex lg:hidden flex-col items-start min-w-[326px] min-h-[396px] px-4 w-screen'>
 					<div className='flex absolute top-0 right-0 z-[3] mix-blend-overlay'>
-						<h2 className='font-display font-bold text-[48px] text-[#f8f8f8]'>
+						<h2 className='font-display font-bold text-[54px] text-[#f8f8f8]'>
 							WHAT WE&nbsp;
 							<br />
-							<span className='font-kepler text-[50px] md:text-[110px] lg:text-[196px] italic'>
-								BELIEVE
-							</span>
+							<span className='font-kepler text-[1.1em] italic'>BELIEVE</span>
 						</h2>
 					</div>
 					<div className='absolute top-8 left-0 w-[264px] h-[275px] z-[2]'>
 						<Image className='' src={baptism} alt='' />
 					</div>
 					<div className='flex absolute top-0 right-0 z-[1]'>
-						<h2 className='font-display font-bold text-[48px]'>
+						<h2 className='font-display font-bold text-[54px]'>
 							WHAT WE&nbsp;
 							<br />
-							<span className='font-kepler text-[50px] md:text-[110px] lg:text-[196px] italic'>
-								BELIEVE
-							</span>
+							<span className='font-kepler text-[1.1em] italic'>BELIEVE</span>
 						</h2>
 					</div>
 				</div>
@@ -171,7 +167,7 @@ function About() {
 							</div>
 							<div
 								className='relative flex flex-col mx-auto my-12 mb-12 max-w-[375px] md:max-w-[575px] font-display text-[#7C7C7C] 
-                                text-[18px] md:text-[24px] lg:text-[24px] leading-relaxed'
+                                text-[16px] md:text-[24px] lg:text-[24px] leading-relaxed'
 							>
 								<div className='flex flex-col px-8 mx-auto gap-y-4'>
 									<p>
@@ -220,7 +216,7 @@ function About() {
 				</div>
 				<div
 					className='relative flex md:hidden flex-col mx-auto my-12 mb-12 -mt-[15px] max-w-[375px] md:max-w-[575px] font-display text-[#7C7C7C] 
-                                text-[18px] md:text-[24px] lg:text-[24px]'
+                                text-[16px] leading-relaxed md:text-[24px] lg:text-[24px]'
 				>
 					<div className='flex flex-col px-8 mx-auto gap-y-4'>
 						<p>
@@ -241,19 +237,19 @@ function About() {
 					</div>
 				</div>
 				<div className='flex md:hidden flex-col px-8 items-start min-w-[375px] gap-y-12'>
-					<Link href='/' passHref>
+					{/* <Link href='' passHref>
 						<div className='flex gap-x-4'>
-							<a className='font-display capitalize text-[22px] gap-x-2'>
+							<a className='font-display capitalize text-[19px] gap-x-2'>
 								READ MORE
 							</a>
 							<div className='flex w-[49px] h-[20] '>
 								<Image src={arrow} alt='arrow' />
 							</div>
 						</div>
-					</Link>
-					<Link href='/' passHref>
+					</Link> */}
+					<Link href='follow-jesus' passHref>
 						<div className='flex gap-x-4'>
-							<a className='font-display capitalize text-[22px] gap-x-2'>
+							<a className='font-display capitalize text-[19px] gap-x-2'>
 								FOLLOW JESUS
 							</a>
 							<div className='flex w-[49px] h-[20] '>
@@ -280,13 +276,12 @@ function About() {
 			<motion.div
 				whileHover={{ scale: 1.1 }}
 				className='flex w-full min-h-[51px] lg:h-[200px]
-				max-w-[256px] md:max-w-[1440px]
-				 justify-center items-center mx-auto my-8 mb-[200px] overflow-hidden'
+				max-w-[355px] md:max-w-[1440px] justify-center items-center mx-auto my-16 md:mb-[200px] overflow-hidden'
 			>
 				<Link href={'visit'}>
 					<button className='flex justify-center items-center border-2 border-solid border-[#070707] w-full h-full p-4 gap-x-4 lg:gap-x-[140px] md:px-[50px] mx-auto'>
 						<div className='flex min-w-[126px]'>
-							<a className='font-display text-[18px] md:text-[44px] lg:text-[90px]'>
+							<a className='font-display text-[24px] md:text-[44px] lg:text-[90px]'>
 								COME&nbsp;VISIT&nbsp;US
 							</a>
 						</div>

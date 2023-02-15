@@ -12,7 +12,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 
 import React, { useEffect, useState } from 'react';
-// import VisitDesktop from './visit-deprecated';
 
 function VisitTW(props) {
 	const [usa, setUsa] = useState(false);
@@ -43,29 +42,22 @@ function VisitTW(props) {
 		<>
 			<div className='block md:hidden'>
 				<div className='flex flex-col md:flex-row gap-4 sm:max-w-[768px!important] md:max-w-[1990px!important] mx-auto items-center md:justify-start px-12'>
-					{/* <div style='padding:81.82% 0 0 0;position:relative;'>
-						<iframe
-							src='https://player.vimeo.com/video/796408538?h=063288ad56&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
-
-							allow='autoplay; fullscreen; picture-in-picture'
-
-							style='position:absolute;top:0;left:0;width:100%;height:100%;'
-							title='visit-page'
-						></iframe>
-					</div>
-					<script src='https://player.vimeo.com/api/player.js'></script> */}
 					<div
-						className='md:flex md:relative z-[2] md:order-1 md:w-full md:min-h-[626px]
-					lg:min-h-[900px]'
+						className='relative z-20'
+						// className='padding:81.82% 0 0 0;position:relative;'
 					>
 						<iframe
 							className='md:absolute h-[307px] w-[375px]
 							md:h-[626px] md:w-[665px]
 							lg:h-[900px] lg:w-[1100px]
 							md:right-0'
-							src='https://player.vimeo.com/video/688965998?h=9fc6981331&amp;&controls=0&badge=0&autoplay=1&muted=1&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479'
-							frameBorder='0'
-							allowFullScreen
+							src='https://player.vimeo.com/video/796408538?h=063288ad56&amp;badge=0&amp;autopause=0&amp;&controls=0&badge=0&autoplay=1&muted=1&loop=1&autopause=0&player_id=0&amp;app_id=58479'
+							// src='https://player.vimeo.com/video/796408538?h=063288ad56&amp;&controls=0&badge=0&autoplay=1&muted=1&loop=1&autopause=0&amp;player_id=0&amp;app_id=58479'
+							width='100%'
+							max-width='355px'
+							height='200'
+							// frameBorder='0'
+							allowFullcreen
 							priority
 						></iframe>
 					</div>
@@ -87,7 +79,7 @@ function VisitTW(props) {
 						></iframe>
 					</div> */}
 					<div className='relative md:absolute flex flex-col mx-auto mt-[-40px] md:mt-0'>
-						<div className='top-0 left-0 z-[1]'>
+						<div className='top-0 left-0 z-10'>
 							<h1 className='font-display text-[54px] md:text-[110px] lg:text-[196px] font-bold'>
 								WE’RE SO <br />
 								<span className='font-kepler italic text-[62px] md:text-[126px] lg:text-[252px] font-semibold'>
@@ -97,7 +89,7 @@ function VisitTW(props) {
 								YOU’RE HERE
 							</h1>
 						</div>
-						<div className='absolute top-0 left-0 mix-blend-overlay text-[white] z-[3]'>
+						<div className='absolute top-0 left-0 mix-blend-overlay text-[white] z-30'>
 							<h1 className='font-display text-[54px] md:text-[110px] lg:text-[196px] font-bold'>
 								WE’RE SO <br />
 								<span className='font-kepler italic text-[62px] md:text-[126px] lg:text-[252px] font-semibold'>
@@ -267,7 +259,7 @@ function VisitTW(props) {
 												NETHERLANDS
 											</a>
 										</li>
-										<li>
+										{/* <li>
 											<a
 												className='hover:bg-black hover:text-white ease-in cursor-pointer'
 												href='https://celebrationparis.org/'
@@ -276,7 +268,7 @@ function VisitTW(props) {
 											>
 												FRANCE
 											</a>
-										</li>
+										</li> */}
 										<li>
 											<a
 												className='hover:bg-black hover:text-white ease-in cursor-pointer'
@@ -388,7 +380,7 @@ function VisitTW(props) {
 								</div>
 								<div className='flex font-display text-[24px] md:text-[48px] font-light my-4'>
 									<h4 className='cursor-pointer'>
-										<a href='tel:+9047371121'>(904) 737-1121</a>
+										<a href='tel:9047371121'>(904) 737-1121</a>
 									</h4>
 								</div>
 							</div>
@@ -427,11 +419,11 @@ function VisitTW(props) {
 							<h4 className='flex flex-col font-display text-[24px] md:text-[48px] font-light my-4'>
 								<ul className='flex flex-col gap-y-4'>
 									<div>
-										<li className='font-semibold'>Monday–Thursday</li>
+										<li className='font-semibold'>Monday – Thursday</li>
 										<li>9AM to 5PM</li>
 									</div>
 									<div>
-										<li className='font-semibold'>Friday</li>
+										<li className='font-semibold'>Friday - Saturday</li>
 										Closed
 									</div>
 									<div>
@@ -634,7 +626,7 @@ function VisitTW(props) {
 												NETHERLANDS
 											</a>
 										</li>
-										<li>
+										{/* <li>
 											<a
 												className='hover:bg-black hover:text-white ease-in cursor-pointer'
 												href='https://celebrationparis.org/'
@@ -643,7 +635,7 @@ function VisitTW(props) {
 											>
 												FRANCE
 											</a>
-										</li>
+										</li> */}
 										<li>
 											<a
 												className='hover:bg-black hover:text-white ease-in cursor-pointer'
@@ -760,7 +752,7 @@ function VisitTW(props) {
 												<FontAwesomeIcon size={36} icon={faPhoneAlt} />
 											</div>
 											<h4 className='cursor-pointer'>
-												<a href='tel:+9047371121'>(904) 737-1121</a>
+												<a href='tel:9047371121'>(904) 737-1121</a>
 											</h4>
 										</div>
 										<div className='flex items-center'>
@@ -815,11 +807,11 @@ function VisitTW(props) {
 								<h4 className='flex flex-col font-display text-[24px] md:text-[24px] leading-relaxed font-light my-4'>
 									<ul className='flex flex-col gap-y-4'>
 										<div>
-											<li className='font-semibold'>Monday–Thursday</li>
+											<li className='font-semibold'>Monday – Thursday</li>
 											<li>9AM to 5PM</li>
 										</div>
 										<div>
-											<li className='font-semibold'>Friday</li>
+											<li className='font-semibold'>Friday - Saturday</li>
 											Closed
 										</div>
 										<div>

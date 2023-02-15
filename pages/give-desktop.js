@@ -6,6 +6,7 @@ import arrow from '/public/arrow@1x-white.svg';
 import arrowdown from '/public/arrow-down.svg';
 import { motion } from 'framer-motion';
 import GiveHero from '/public/give-hero.png';
+import givt from '/public/Givt_Logo.png';
 
 import { faBitcoin } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -277,10 +278,11 @@ export default function GiveDesktop({ id }) {
 									<div className='flex w-full flex-col justify-center items-center p-4'>
 										<div
 											onClick={() => handleModalOpen(3)}
-											className='flex bg-[#070707] m-4 justify-center items-center rounded-full text-[120px] text-[#f8f8f8] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'
+											className='flex bg-[#070707] m-4 p-4 justify-center items-center rounded-full text-[120px] text-[#f8f8f8] w-[200px] h-[200px] cursor-pointer hover:scale-110 transition-all'
 										>
-											<FontAwesomeIcon
-												icon={faMoneyBillTrendUp}
+											<Image
+												src={givt}
+												alt=''
 												className='hover:-rotate-3 transition-all'
 											/>
 										</div>

@@ -23,9 +23,11 @@ import piggyBank from '/public/give-images/piggy-bank.svg';
 import { MdOutlinePhoneAndroid } from 'react-icons/md';
 
 import { motion } from 'framer-motion';
-import GiveHeroMobile from '/public/GiveHeroMobile.png';
+// import GiveHeroMobile from '/public/GiveHeroMobile.png';
+import GiveHeroMobile from '/public/give-mobile-1.png';
 
 import longArrow from '/public/arrow-long.svg';
+import givt from '/public/Givt_Logo.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBitcoin } from '@fortawesome/free-brands-svg-icons';
@@ -37,7 +39,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import GiveDesktop from './give-desktop';
-import WaysToGiveModal from '../components/GiveComponents/WaysToGiveModal';
 
 // import 'tw-elements';
 
@@ -63,7 +64,7 @@ function Give(props) {
 		<>
 			<div className='md:hidden flex w-[100vw] p-2'>
 				<div className='relative flex flex-col items-center w-full mx-auto -mt-[75px]'>
-					<div className='flex relative top-[80px] justify-center w-full  z-30 mix-blend-overlay'>
+					<div className='flex relative top-[80px] justify-center w-full  z-30 mix-blend-color-dodge'>
 						<h1 className='font-display font-bold text-[52px] text-[#f8f8f8]'>
 							WE&nbsp;LOVE&nbsp;
 							<br />
@@ -87,18 +88,21 @@ function Give(props) {
 						</div>
 					</div>
 
-					<div className='relative -top-[225px] left-[50px] flex justify-center items-center z-40 border-2 border-solid border-[#f8f8f8] p-2 w-[200px] gap-x-2'>
-						<div className='flex justify-center items-center p-2'>
-							<button className='font-display text-[16px] text-[#f8f8f8]'>
+					<div className='relative -top-[150px] left-[50px] flex justify-center items-center z-40 border-2 border-solid bg-[#00000031] border-[#f8f8f8bc] p-2 w-[200px] gap-x-2'>
+						<button className='flex justify-center items-center p-2'>
+							<a
+								href='#onlinegiving'
+								className='font-display text-[19px] text-[#f8f8f8] whitespace-nowrap'
+							>
 								GIVE NOW
-							</button>
-						</div>
+							</a>
+						</button>
 						<div className='flex w-[80px]'>
 							<Image src={arrow} alt='' />
 						</div>
 					</div>
 
-					<div className='relative flex flex-col items-center justify-start w-full max-w-[375px]'>
+					<div className='relative flex flex-col items-center justify-start mb-8 w-full max-w-[375px]'>
 						<div className='font-display font-bold text-[52px] text-center'>
 							WHY&nbsp;WE&nbsp;
 							<br />
@@ -106,14 +110,14 @@ function Give(props) {
 						</div>
 						<div className='flex flex-col p-2 gap-y-4'>
 							<div>
-								<p className='font-display text-[18px] text-[#7C7C7C]'>
+								<p className='font-display text-[16px] leading-relaxed text-[#7C7C7C]'>
 									Here at Celebration, we believe that God calls us to partake
 									in the act of generosity, and that tithing is an act of
 									worship and obedience to Jesus.
 								</p>
 							</div>
 							<div>
-								<p className='font-display text-[18px] text-[#7C7C7C]'>
+								<p className='font-display text-[16px] leading-relaxed text-[#7C7C7C]'>
 									When you give back to the Lord through Celebration Church, we
 									commit to you that your offering will sow into the expansion
 									of His Kingdom as we seek to share the transformative power of
@@ -121,7 +125,7 @@ function Give(props) {
 								</p>
 							</div>
 						</div>
-						<div className='flex flex-col items-center justify-center h-20 w-full my-2 mb-[60px]'>
+						{/* <div className='flex flex-col items-center justify-center h-20 w-full my-2 mb-[60px]'>
 							<div className='flex flex-col items-center gap-y-4'>
 								<div className='text-[19px]'>
 									<button className='font-display uppercase'>Learn More</button>
@@ -130,10 +134,10 @@ function Give(props) {
 									<Image src={arrowdown} alt='' />
 								</div>
 							</div>
-						</div>
+						</div> */}
 					</div>
 
-					<div className='relative flex flex-col items-center justify-start w-full '>
+					<div className='relative flex flex-col items-center justify-start w-full'>
 						<div className='font-display font-bold text-[64px] text-center'>
 							YOUR
 							<br />
@@ -144,7 +148,7 @@ function Give(props) {
 							className='carousel slide relative h-[775px] py-8 carousel-dark'
 							data-bs-ride='carousel'
 						>
-							<div className='carousel-indicators absolute right-0 bottom-5 left-0 flex justify-center p-0 mb-4'>
+							<div className='carousel-indicators absolute right-0 -bottom-16 left-0 flex justify-center p-0 mb-4'>
 								<button
 									type='button'
 									data-bs-target='#carouselExampleCaptions'
@@ -166,7 +170,7 @@ function Give(props) {
 									aria-label='Slide 3'
 								></button>
 							</div>
-							<div className='carousel-inner relative w-full overflow-hidden'>
+							<div className='carousel-inner relative w-full mx-auto h-[900px]'>
 								<div className='carousel-item active relative float-left w-full'>
 									<div className='flex relative justify-center w-full '>
 										<div className='flex justify-center '>
@@ -184,7 +188,7 @@ function Give(props) {
 											Orange Park Food Pantry
 										</h5>
 										<div className='flex justify-center w-[375px]'>
-											<p className='flex justify-center font-display font-normal text-[18px] text-[#070707]'>
+											<p className='flex justify-center font-display font-normal px-8 text-[16px] text-[#7C7C7C] leading-relaxed'>
 												Our Orange Park location is making a tremendous impact
 												in their local community through their weekly food
 												pantry ministry – which served 95,312 Clay County
@@ -212,7 +216,7 @@ function Give(props) {
 											OneChild
 										</h5>
 										<div className='w-[375px]'>
-											<p className='font-display font-normal text-[18px] text-[#070707]'>
+											<p className='font-display font-normal px-8 text-[16px] text-[#7C7C7C] leading-relaxed'>
 												Your generosity is helping the lives of thousands of
 												children from our Celebration Zimbabwe location! Through
 												partnership with OneChild, our congregation is
@@ -239,7 +243,7 @@ function Give(props) {
 											Disaster Relief Efforts
 										</h5>
 										<div className='flex w-[375px] justify-center'>
-											<p className='font-display font-normal text-[18px] text-[#070707]'>
+											<p className='font-display font-normal px-8 text-[16px] text-[#7C7C7C] leading-relaxed'>
 												One of Celebration’s deepest desires is to operate as
 												the hands and feet of Jesus, especially when people are
 												in need the most. We partner with&nbsp;
@@ -284,7 +288,10 @@ function Give(props) {
 						</div>
 					</div>
 
-					<div className='relative flex flex-col items-center justify-start w-full'>
+					<div
+						id='onlinegiving'
+						className='relative flex flex-col items-center justify-start w-full top-[200px]'
+					>
 						<div className='font-display font-bold text-[52px] text-center w-full'>
 							ONLINE <br />
 							<span className='font-kepler italic text-[1.1em]'>GIVING</span>
@@ -394,42 +401,53 @@ function Give(props) {
 														WASHINGTON, D.C.
 													</a>
 												</li>
-												
 											</ul>
 										</div>
 										<ul className='flex items-center text-[28px] md:text-[56px]'>
-											<Link
+											<a
 												href='https://pushpay.com/g/ccglobal?src=hpp'
-												passHref
+												target='_blank'
+												rel='noopener noreferrer'
+												className='flex items-center'
 											>
-												<a className='flex items-center'>
-													<div className='flex text-[#070707] p-2'>
-														INTERNATIONAL
-													</div>
-													&nbsp;
-													<li className='text-[16px]'>
-														<FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-													</li>
-												</a>
-											</Link>
+												<div className='flex text-[#070707] p-2'>
+													INTERNATIONAL
+												</div>
+											</a>
 										</ul>
 
 										<ul className='flex text-[28px] md:text-[56px]'>
 											<a
 												className='p-2 hover:bg-black hover:text-white ease-in cursor-pointer'
-												href='' //WAITING ON HYPERLINK
+												href='https://pushpay.com/g/cconline?r=monthly'
 												target='_blank'
 												rel='noopener noreferrer'
 											>
-												TV MINISTRIES
+												CHURCH ONLINE
 											</a>
+										</ul>
+
+										<ul className='flex items-center text-[28px] md:text-[56px]'>
+											<li>
+												<a
+													className='p-2 hover:bg-black hover:text-white ease-in cursor-pointer'
+													href='https://timtimberlake.tv/partner/'
+													target='_blank'
+													rel='noopener noreferrer'
+												>
+													TV MINISTRIES&nbsp;
+												</a>
+											</li>
+											<li className='text-[16px]'>
+												<FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+											</li>
 										</ul>
 									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div className='relative flex flex-col items-center justify-start w-full gap-y-8'>
+					<div className='relative top-[200px] flex flex-col items-center justify-start w-full gap-y-8'>
 						<div className='font-display font-bold text-[52px] text-center'>
 							OTHER WAYS
 							<br />
@@ -440,8 +458,6 @@ function Give(props) {
 						<div
 							className='flex flex-col justify-center items-center w-full gap-y-8'
 							type='button'
-							data-bs-toggle='modal'
-							data-bs-target='#exampleModal'
 						>
 							<div className='flex justify-center items-center p-4 gap-x-8 w-full'>
 								<div className='flex flex-col justify-center items-center w-full p-4'>
@@ -452,9 +468,6 @@ function Give(props) {
 										<p className='font-display font-semibold text-[22px]'>
 											APP
 										</p>
-									</div>
-									<div className='fixed top-0 left-0'>
-										<WaysToGiveModal />
 									</div>
 								</div>
 								<div className='flex flex-col justify-center items-center w-full p-4'>
@@ -481,18 +494,18 @@ function Give(props) {
 								</div>
 								<div className='flex w-full flex-col justify-center items-center p-4'>
 									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
-										<FontAwesomeIcon icon={faMoneyBillTrendUp} className='' />
+										<Image src={givt} alt='' className='' />
 									</div>
 									<div className='flex justify-center w-full p-2 my-2'>
 										<p className='font-display font-semibold text-[22px]'>
-											STOCK
+											GIVT
 										</p>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div className='relative flex flex-col w-full max-w-[425px] my-[60px]'>
+					<div className='relative top-[200px] flex flex-col w-full max-w-[425px] my-[60px]'>
 						<div className='relative flex flex-col w-full'>
 							<div className='font-display font-bold text-[52px] text-left mix-blend-overlay w-full z-30'>
 								<h1 className='text-[#f8f8f8]'>
@@ -515,7 +528,7 @@ function Give(props) {
 							</div>
 							<div className='flex flex-col  p-4'>
 								<div className='flex justify-center items-center'>
-									<p className='font-display font-normal text-[18px] text-[#070707]'>
+									<p className='font-display font-normal text-[16px] text-[#7C7C7C] leading-relaxed'>
 										Our Legacy Team gives influence, resources, and time as a
 										local church ministry expression to advance the cause of
 										Christ. Each member prayerfully commits to give over and
@@ -538,7 +551,7 @@ function Give(props) {
 							</div>
 						</div>
 					</div>
-					<div className='relative flex flex-col items-center justify-start w-full'>
+					<div className='relative top-[200px] flex flex-col items-center justify-start w-full'>
 						<div className='font-display font-bold text-[52px] text-center'>
 							<h1 className=''>
 								BEGIN&nbsp;TO <br />
@@ -546,40 +559,50 @@ function Give(props) {
 							</h1>
 						</div>
 					</div>
-					<div className='relative flex flex-col items-center justify-start w-full p-8 my-2'>
+					<div className='relative top-[200px] mb-[200px] flex flex-col items-center justify-start w-full p-4 my-2'>
 						<div className=''>
 							<h3 className='font-display font-semibold text-[26px]'>
 								HAVE QUESTIONS?
 							</h3>
 						</div>
-						<div className='py-4'>
-							<p className='font-display  text-[#070707]'>
+						<div className='flex w-full py-4'>
+							<p className='font-display text-[16px] text-[#7C7C7C] leading-relaxed'>
 								If you have additional questions concerning giving or donations,
 								please call Celebration Church Giving Office at (904) 737-1121
 								or contact us.
 							</p>
 						</div>
-						<div className='flex flex-col w-full max-w-[425px] justify-center items-center'>
-							<div className='flex w-full justify-between'>
-								<div className='flex w-full justify-between items-center'>
-									<p className='font-display font-semibold text-[20px]'>
-										GIVING&nbsp;FAQs
-									</p>
-								</div>
-								<div className='invert w-8 '>
-									<Image src={arrow} alt='' />
-								</div>
-							</div>
-							<div className='flex w-full justify-between'>
-								<div className='flex w-full justify-between items-center'>
-									<p className='font-display font-semibold text-[20px]'>
-										CONTACT&nbsp;US
-									</p>
-								</div>
-								<div className='invert w-8 '>
-									<Image src={arrow} alt='' />
-								</div>
-							</div>
+
+						<div className='flex flex-col w-full max-w-screen my-4 gap-y-8 justify-center items-center'>
+							<button className='flex w-full'>
+								<Link href='/givingfaqs'>
+									<div className='flex justify-start items-center gap-x-4 w-full'>
+										<div className='flex items-center'>
+											<a className='font-display font-semibold text-[19px]'>
+												GIVING&nbsp;FAQs
+											</a>
+										</div>
+										<div className='invert w-16 '>
+											<Image src={arrow} alt='' />
+										</div>
+									</div>
+								</Link>
+							</button>
+
+							<button className='flex w-full'>
+								<a href='mailto:giving@celebration.org'>
+									<div className='flex justify-start items-center gap-x-4 w-full'>
+										<div className='flex items-center'>
+											<p className='font-display font-semibold text-[19px]'>
+												CONTACT&nbsp;US
+											</p>
+										</div>
+										<div className='invert w-16 '>
+											<Image src={arrow} alt='' />
+										</div>
+									</div>
+								</a>
+							</button>
 						</div>
 					</div>
 				</div>
