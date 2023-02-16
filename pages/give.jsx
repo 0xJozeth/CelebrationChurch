@@ -36,6 +36,7 @@ import {
 	faMobile,
 	faMoneyBillTrendUp,
 	faArrowUpRightFromSquare,
+	faArrowLeft,
 } from '@fortawesome/free-solid-svg-icons';
 
 import GiveDesktop from './give-desktop';
@@ -53,13 +54,71 @@ function Give(props) {
 		setInternational(!international);
 	};
 
-	useEffect(() => {
-		console.log('The usa useState is set to:', usa);
-	});
-	useEffect(() => {
-		console.log('The international useState is set to:', international);
-	});
+	//GIVE MODAL
+	const [modalOpen, setModalOpen] = useState(false);
+	const [modalIndex, setModalIndex] = useState(null);
 
+	const handleModal = (index) => {
+		setModalOpen(!modalOpen);
+		setModalIndex(index);
+	};
+
+	const handleModalClose = () => {
+		setModalOpen(false);
+	};
+
+	const modalData = [
+		{
+			id: 0,
+			icon: faMobile,
+			text: 'APP',
+			title: 'The Celebration App',
+			paragraph:
+				'This method is the easiest and most user friendly. To download the app text “Celebration” to (833) 399-7200 and follow the prompts OR you can search for “The Celebration App” in your iTunes or Google Play Store.',
+			linkOneTitle: 'Visit the App Store',
+			linkOne: 'https://apps.apple.com/us/app/the-celebration-app/id1210190693',
+			linkTwoTitle: 'Visit Google Playstore',
+			linkTwo:
+				'https://play.google.com/store/apps/details?id=com.echurchapps.celebrationchapp&hl=en_US&gl=US&pli=1',
+		},
+		{
+			id: 1,
+			icon: faBitcoin,
+			text: 'CRYPTO',
+			title: 'Cryptocurrency',
+			paragraph:
+				'You can use this method if you would like to make a donation of cryptocurrency to Celebration Church. To do this, simply click the button below and provide your donation details.',
+			linkOneTitle: 'Give via Cryptocurrency',
+			linkOne: 'https://platform.engiven.com/give/97/widget/88',
+			linkTwoTitle: null,
+			linkTwo: null,
+		},
+		{
+			id: 2,
+			icon: faPiggyBank,
+			text: 'BANK',
+			title: 'Personal Banking',
+			paragraph:
+				'Give using your bank’s bill payment feature to issue donations directly to Celebration Church. To do this, log into your personal bank account and follow its instructions for adding Celebration Church as a new payee. Enter your donation amount and be sure to specify in the memo if you would like to give to a specific Celebration Church location.',
+			linkOneTitle: null,
+			linkOne: null,
+			linkTwoTitle: null,
+			linkTwo: null,
+		},
+		{
+			id: 3,
+			icon: faMoneyBillTrendUp,
+			text: 'GIVT',
+			title: 'Give Via GIVT',
+			paragraph:
+				'You can now give anonymously through Givt. Givt is a standard way of digital giving that you can access by simply clicking the button below.',
+			linkOneTitle: 'Give via GIVT',
+			linkOne:
+				'https://api.givt.app/givt?code=NjFmN2VkMDE1NTUzMDgyMmMwMDAuYzAwMDAwMDAwMDAx',
+			linkTwoTitle: null,
+			linkTwo: null,
+		},
+	];
 	return (
 		<>
 			<div className='md:hidden flex w-[100vw] p-2'>
@@ -455,56 +514,164 @@ function Give(props) {
 								TO&nbsp;GIVE
 							</span>
 						</div>
-						<div
-							className='flex flex-col justify-center items-center w-full gap-y-8'
-							type='button'
-						>
-							<div className='flex justify-center items-center p-4 gap-x-8 w-full'>
-								<div className='flex flex-col justify-center items-center w-full p-4'>
-									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
-										<FontAwesomeIcon icon={faMobile} className='' />
+						{modalOpen ? (
+							<div className='flex flex-col justify-center items-center w-full gap-y-8'>
+								<div className='flex justify-center items-center p-4 gap-x-8 w-full'>
+									<div
+										onClick={() => handleModal(0)}
+										className='flex flex-col justify-center items-center w-full p-4'
+									>
+										<div className='flex bg-[#070707] p-8 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
+											<FontAwesomeIcon icon={faMobile} className='' />
+										</div>
+										<div className='flex justify-center w-full p-2 my-2'>
+											<p className='font-display font-semibold text-[22px]'>
+												APP
+											</p>
+										</div>
 									</div>
-									<div className='flex justify-center w-full p-2 my-2'>
-										<p className='font-display font-semibold text-[22px]'>
-											APP
-										</p>
+									<div
+										onClick={() => handleModal(1)}
+										className='flex flex-col justify-center items-center w-full p-4'
+									>
+										<div className='flex bg-[#070707] p-8 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
+											<FontAwesomeIcon icon={faBitcoin} className='' />
+										</div>
+										<div className='flex justify-center w-full p-2 my-2'>
+											<p className='font-display font-semibold text-[22px]'>
+												CRYPTO
+											</p>
+										</div>
 									</div>
 								</div>
-								<div className='flex flex-col justify-center items-center w-full p-4'>
-									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
-										<FontAwesomeIcon icon={faBitcoin} className='' />
+								<div className='flex justify-center items-center p-4 gap-x-8 w-full'>
+									<div
+										onClick={() => handleModal(2)}
+										className='flex w-full flex-col justify-center items-center p-4'
+									>
+										<div className='flex bg-[#070707] p-8 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
+											<FontAwesomeIcon icon={faPiggyBank} className='' />
+										</div>
+										<div className='flex justify-center w-full p-2 my-2'>
+											<p className='font-display font-semibold text-[22px]'>
+												BANK
+											</p>
+										</div>
 									</div>
-									<div className='flex justify-center w-full p-2 my-2'>
-										<p className='font-display font-semibold text-[22px]'>
-											CRYPTO
-										</p>
+									<div
+										onClick={() => handleModal(3)}
+										className='flex w-full flex-col justify-center items-center p-4'
+									>
+										<div className='flex bg-[#070707] p-4 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
+											<Image src={givt} alt='' className='' />
+										</div>
+										<div className='flex justify-center w-full p-2 my-2'>
+											<p className='font-display font-semibold text-[22px]'>
+												GIVT
+											</p>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div className='flex justify-center items-center p-4 gap-x-8 w-full'>
-								<div className='flex w-full flex-col justify-center items-center p-4'>
-									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
-										<FontAwesomeIcon icon={faPiggyBank} className='' />
-									</div>
-									<div className='flex justify-center w-full p-2 my-2'>
-										<p className='font-display font-semibold text-[22px]'>
-											BANK
-										</p>
-									</div>
-								</div>
-								<div className='flex w-full flex-col justify-center items-center p-4'>
-									<div className='flex bg-[#070707] p-8 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
-										<Image src={givt} alt='' className='' />
-									</div>
-									<div className='flex justify-center w-full p-2 my-2'>
-										<p className='font-display font-semibold text-[22px]'>
-											GIVT
-										</p>
-									</div>
-								</div>
+						) : (
+							<div
+								className='flex flex-col justify-center items-center w-full p-4 h-auto bg-[#070707]'
+								onClick={handleModal}
+							>
+								{modalData.map(
+									(data, i) =>
+										i === modalIndex && (
+											<div key={i} className='flex-col w-full mb-8'>
+												<div
+													onClick={handleModalClose}
+													className='flex w-min h-min justify-center items-center gap-4 cursor-pointer my-4'
+												>
+													<div className='flex justify-center items-center text-[18px] invert'>
+														<FontAwesomeIcon icon={faArrowLeft} className='' />
+													</div>
+													<p className='text-white font-display text-[16px] transition-all'>
+														BACK
+													</p>
+												</div>
+												<div className='flex flex-col justify-center items-center w-full my-4'>
+													<div className='flex bg-[#f8f8f8] m-4 justify-center items-center rounded-full text-[64px] text-[#070707] w-[100px] h-[100px] cursor-pointer hover:scale-110 transition-all'>
+														{data.text != 'GIVT' ? (
+															<FontAwesomeIcon
+																icon={data.icon}
+																className='hover:-rotate-3 transition-all'
+															/>
+														) : (
+															<div className='flex bg-[#f8f8f8] p-4 justify-center items-center rounded-full text-[40px] text-[#f8f8f8] w-[100px] h-[100px]'>
+																<Image src={givt} alt='' className='invert' />
+															</div>
+														)}
+													</div>
+													<div className='flex justify-center w-full my-4'>
+														<p className='font-display font-bold text-[44px] text-[#f8f8f8]'>
+															{data.text}
+														</p>
+													</div>
+												</div>
+												<div className='flex justify-center w-full my-4'>
+													<p className='font-display font-bold text-center text-[#f8f8f8] text-[19px]'>
+														{data.title}
+													</p>
+												</div>
+												<div className='flex justify-center w-full my-4'>
+													<p className='font-display font-regular text-center text-[#f8f8f8] text-[16px] leading-relaxed'>
+														{data.paragraph}
+													</p>
+												</div>
+												<div className='flex w-full justify-start items-center '>
+													<a
+														href={data.linkOne}
+														target='_blank'
+														rel='noopener noreferrer'
+													>
+														<div className='flex items-center py-2 gap-x-4'>
+															<div className='flex items-center'>
+																<p className='font-display font-normal text-[19px] text-white'>
+																	{data.linkOneTitle}
+																</p>
+															</div>
+															{data.linkOneTitle !== undefined &&
+																data.linkOneTitle !== null && (
+																	<div className='w-[88px]'>
+																		<Image src={arrow} alt='' />
+																	</div>
+																)}
+														</div>
+													</a>
+												</div>
+												{/* THIS IS A CONDITIONALLY RENDERED SECOND LINK IF THERES CONTENT */}
+												{data.linkTwo !== undefined &&
+													data.linkTwo !== null && (
+														<div className='flex justify-start items-center '>
+															<a
+																href={data.linkTwo}
+																target='_blank'
+																rel='noopener noreferrer'
+															>
+																<div className='flex items-center py-2 gap-x-4'>
+																	<div className='flex items-center'>
+																		<p className='font-display font-normal text-[19px] text-white'>
+																			{data.linkTwoTitle}
+																		</p>
+																	</div>
+																	<div className='w-[88px]'>
+																		<Image src={arrow} alt='' />
+																	</div>
+																</div>
+															</a>
+														</div>
+													)}
+											</div>
+										)
+								)}
 							</div>
-						</div>
+						)}
 					</div>
+
 					<div className='relative top-[200px] flex flex-col w-full max-w-[425px] my-[60px]'>
 						<div className='relative flex flex-col w-full'>
 							<div className='font-display font-bold text-[52px] text-left mix-blend-overlay w-full z-30'>
