@@ -189,7 +189,7 @@ function About() {
 									</p>
 								</div>
 								<div className='flex flex-col px-8 items-start min-w-[375px] my-12 gap-y-12'>
-									<Link href='/' passHref>
+									{/* <Link href='/' passHref>
 										<div className='flex gap-x-4 cursor-pointer'>
 											<a className='font-display capitalize text-[36px] gap-x-2'>
 												READ MORE
@@ -198,7 +198,7 @@ function About() {
 												<Image src={arrow} alt='arrow' />
 											</div>
 										</div>
-									</Link>
+									</Link> */}
 									<Link href='follow-jesus' passHref>
 										<div className='flex gap-x-4'>
 											<a className='font-display capitalize text-[36px] gap-x-2'>

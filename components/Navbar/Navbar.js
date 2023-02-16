@@ -45,7 +45,7 @@ const NavbarLogoOpen = styled.a`
 	filter: ${(props) => (props.isOpen ? 'invert(1)' : 'none')};
 	/* invert the logo when the isOpen prop is true */
 `;
-const NavbarLogoClosed = styled.a`
+const div = styled.a`
 	/* z-index: 100; */
 `;
 
@@ -243,9 +243,9 @@ const Navbar = (props) => {
 	return (
 		<>
 			<nav className='py-2 px-6 flex justify-between items-center w-full mx-auto'>
-				<div className='flex justify-between items-center w-full max-w-[1728px] mx-auto'>
-					<Link href='/'>
-						<NavbarLogoClosed className='flex items-center p-2' isOpen={isOpen}>
+				<div className='flex relative justify-between items-center w-full max-w-[1728px] mx-auto'>
+					<div className='flex w-full items-center' isOpen={isOpen}>
+						<Link href='/'>
 							<motion.button whileHover={{ scale: 1.1 }}>
 								{router.pathname === '/' ? (
 									<Image
@@ -273,10 +273,10 @@ const Navbar = (props) => {
 									/>
 								)}
 							</motion.button>
-						</NavbarLogoClosed>
-					</Link>
+						</Link>
+					</div>
 					{/* Navigation Links */}
-					<div className='flex'>
+					<div className='flex justify-center w-full mx-auto'>
 						{navlinks.map((data, i) => (
 							<ul
 								key={i}
@@ -316,7 +316,7 @@ const Navbar = (props) => {
 							</ul>
 						))}
 					</div>
-					<div className='flex justify-center items-center'>
+					<div className='flex w-full justify-end items-center'>
 						{(router.pathname !== '/') &
 						(router.pathname !== '/about') &
 						(router.pathname !== '/visit') &
