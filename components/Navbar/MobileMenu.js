@@ -169,7 +169,9 @@ const MobileMenu = (props) => {
 					</div>
 					<div
 						className={
-							props.slide ? 'flex justify-center' : 'flex justify-center'
+							props.slide
+								? 'flex justify-center rotate-180'
+								: 'flex justify-center'
 						}
 					>
 						<Image src={pagination} alt='' />
