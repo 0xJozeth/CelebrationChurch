@@ -25,6 +25,7 @@ import smallgroups from '/public/ministries_smallgroups.png';
 
 import React from 'react';
 import FullWidthButton from '../components/FullWidthButton';
+import { motion } from 'framer-motion';
 
 const ministriesData = [
 	{
@@ -78,34 +79,33 @@ const ministriesData = [
 ];
 
 function ministries() {
-	console.log('ministriesData', ministriesData);
 	return (
 		<>
 			{/* MOBILE START */}
-			<div className='flex md:hidden justify-center w-[100vw]'>
-				<div className='flex flex-col items-center w-full max-w-[475px] p-8 mb-12 gap-y-4'>
-					<div className='relative w-full h-[486px] mb-[64px]'>
-						<div className='absolute top-[20px] left-[20px] mix-blend-overlay z-30 '>
-							<h1 className='font-display font-bold text-[#f8f8f8]   text-[44px]'>
-								THERES A PLACE&nbsp;
+			<div className='flex md:hidden justify-center w-screen'>
+				<div className='flex flex-col items-center w-full max-w-[355px] p-4 gap-y-12'>
+					<div className='relative w-full h-auto pt-16'>
+						<div className='absolute -top-2 left-0 mix-blend-overlay z-30 '>
+							<h1 className='font-display font-bold text-[#f8f8f8] text-[48px]'>
+								THERES
+								<br />A PLACE
 								<br />
 								<span className='font-kepler italic text-[1.1em]'>FOR YOU</span>
 							</h1>
 						</div>
-						<div className='absolute top-[20px] left-[20px] z-0'>
-							<h1 className='font-display font-bold text-[#070707] text-[44px]'>
-								THERES A PLACE&nbsp;
+						<div className='absolute -top-2 left-0 z-0'>
+							<h1 className='font-display font-bold text-[#070707] text-[48px]'>
+								THERES
+								<br />A PLACE
 								<br />
 								<span className='font-kepler italic text-[1.1em]'>FOR YOU</span>
 							</h1>
 						</div>
-						<div className='flex justify-end items-end h-[275px] w-full  p-4 z-20'>
-							<div className='flex w-[280px]'>
-								<Image src={image2} alt='' />
-							</div>
+						<div className='flex justify-end z-20'>
+							<Image src={image2} width={266} height={143} alt='' />
 						</div>
-						<div className='flex w-full'>
-							<p className='font-display text-[16px] text-[#7c7c7c]'>
+						<div className='flex w-full py-4'>
+							<p className='font-display text-[16px] text-[#7c7c7c] leading-relaxed'>
 								At Celebration, we believe that children are a heritage from the
 								Lord and should be trained to be “Like arrows in the hand of a
 								warrior…” (Psalms 127:4). Because of that, our cKids services
@@ -130,7 +130,7 @@ function ministries() {
 								</h4>
 							</div>
 							<div className='flex w-full'>
-								<p className='font-display text-[16px] text-[#7c7c7c]'>
+								<p className='font-display text-[16px] text-[#7c7c7c] leading-relaxed'>
 									At Celebration, we believe that children are a heritage from
 									the Lord and should be trained to be “Like arrows in the hand
 									of a warrior…” (Psalms 127:4). Because of that, our cKids
@@ -167,7 +167,7 @@ function ministries() {
 								</h4>
 							</div>
 							<div className='flex w-full'>
-								<p className='font-display text-[16px] text-[#7c7c7c]'>
+								<p className='font-display text-[16px] text-[#7c7c7c] leading-relaxed'>
 									Celebration Youth is our Middle and High School ministry for
 									students! With weekly gatherings and events happening
 									throughout the year, Celebration Youth’s heart is to steward
@@ -176,7 +176,7 @@ function ministries() {
 									happening at your local location, visit the Celebration App.
 								</p>
 							</div>
-							<div className='flex justify-start items-center gap-x-4'>
+							{/* <div className='flex justify-start items-center gap-x-4'>
 								<div className='flex justify-start items-center'>
 									<p className='font-display font-normal text-[19px]'>
 										GET&nbsp;CONNECTED
@@ -185,7 +185,7 @@ function ministries() {
 								<div className='flex w-14 items-center'>
 									<Image src={arrow} alt='' />
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</div>
 					<div className='flex justify-center w-full'>
@@ -199,7 +199,7 @@ function ministries() {
 								</h4>
 							</div>
 							<div className='flex w-full'>
-								<p className='font-display text-[16px] text-[#7c7c7c]'>
+								<p className='font-display text-[16px] text-[#7c7c7c] leading-relaxed'>
 									Celebration Young Adults is designed to serve the Young Adults
 									community of Celebration Church through worship gatherings,
 									small communities, and other fellowship opportunities. At CYA,
@@ -208,7 +208,7 @@ function ministries() {
 									your Celebration location download other Celebration App.
 								</p>
 							</div>
-							<div className='flex justify-start items-center gap-x-4'>
+							{/* <div className='flex justify-start items-center gap-x-4'>
 								<div className='flex justify-start items-center'>
 									<p className='font-display font-normal text-[19px]'>
 										GET&nbsp;CONNECTED
@@ -217,7 +217,7 @@ function ministries() {
 								<div className='flex w-14 items-center'>
 									<Image src={arrow} alt='' />
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</div>
 					<div className='flex justify-center w-full'>
@@ -231,7 +231,7 @@ function ministries() {
 								</h4>
 							</div>
 							<div className='flex w-full'>
-								<p className='font-display text-[16px] text-[#7c7c7c]'>
+								<p className='font-display text-[16px] text-[#7c7c7c] leading-relaxed'>
 									Celebration Worship is the worship expression of Celebration
 									Church. It’s made up of a dedicated team of worshippers whose
 									heart and desire is to usher in the presence of God so that
@@ -241,7 +241,7 @@ function ministries() {
 									pivotal part in this.
 								</p>
 							</div>
-							<div className='flex justify-start items-center gap-x-4'>
+							{/* <div className='flex justify-start items-center gap-x-4'>
 								<div className='flex justify-start items-center'>
 									<p className='font-display font-normal text-[19px]'>
 										GET&nbsp;CONNECTED
@@ -250,9 +250,156 @@ function ministries() {
 								<div className='flex w-14 items-center'>
 									<Image src={arrow} alt='' />
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</div>
+					<div className='flex justify-center w-full'>
+						<div className='flex flex-col gap-y-4 w-full'>
+							<div className='flex w-full'>
+								<Image src={freedom} alt='' />
+							</div>
+							<div className='flex w-full'>
+								<h4 className='font-display font-semibold text-[24px] text-[#070707]'>
+									FREEDOM
+								</h4>
+							</div>
+							<div className='flex w-full'>
+								<p className='font-display text-[16px] text-[#7c7c7c] leading-relaxed'>
+									Our freedom group ministry is designed to help you find
+									freedom through Biblical truth and community support with
+									guidance from the Holy Spirit. These groups provide a safe and
+									confidential space to share struggles, receive prayer, and
+									learn practical tools to overcome obstacles. We believe in the
+									power of community and the truth of the Word of God to bring
+									true and lasting freedom. Join a group today and start your
+									journey to freedom.
+								</p>
+							</div>
+							{/* <div className='flex justify-start items-center gap-x-4'>
+								<div className='flex justify-start items-center'>
+									<p className='font-display font-normal text-[19px]'>
+										GET&nbsp;CONNECTED
+									</p>
+								</div>
+								<div className='flex w-14 items-center'>
+									<Image src={arrow} alt='' />
+								</div>
+							</div> */}
+						</div>
+					</div>
+					<div className='flex justify-center w-full'>
+						<div className='flex flex-col gap-y-4 w-full'>
+							<div className='flex w-full'>
+								<Image src={smallgroups} alt='' />
+							</div>
+							<div className='flex w-full'>
+								<h4 className='font-display font-semibold text-[24px] text-[#070707]'>
+									SMALL GROUPS
+								</h4>
+							</div>
+							<div className='flex w-full'>
+								<p className='font-display text-[16px] text-[#7c7c7c] leading-relaxed'>
+									Our groups ministry offers an opportunity for you to connect
+									and grow in your faith through fellowship, Bible study, and
+									prayer. Groups meet regularly for a time of sharing, learning,
+									and encouragement in a supportive environment. Groups are also
+									opportunities to build deeper relationships with others in the
+									church and to serve the community. Join a group today and take
+									the next step in your spiritual journey.
+								</p>
+							</div>
+							{/* <div className='flex justify-start items-center gap-x-4'>
+								<div className='flex justify-start items-center'>
+									<p className='font-display font-normal text-[19px]'>
+										GET&nbsp;CONNECTED
+									</p>
+								</div>
+								<div className='flex w-14 items-center'>
+									<Image src={arrow} alt='' />
+								</div>
+							</div> */}
+						</div>
+					</div>
+					<div className='flex justify-center w-full'>
+						<div className='flex flex-col gap-y-4 w-full'>
+							<div className='flex w-full'>
+								<Image src={serving} alt='' />
+							</div>
+							<div className='flex w-full'>
+								<h4 className='font-display font-semibold text-[24px] text-[#070707]'>
+									SERVING TEAMS
+								</h4>
+							</div>
+							<div className='flex w-full'>
+								<p className='font-display text-[16px] text-[#7c7c7c] leading-relaxed'>
+									Our serve teams ministry provides an opportunity for you to
+									put your faith into action by serving others in the church and
+									the community. With a variety of teams to choose from, such as
+									connect teams, greeting teams, children’s ministry, and
+									outreach, there is something for everyone. Not only do these
+									teams provide a way to serve others, but they also offer
+									opportunities for growth, leadership, and building
+									relationships within the church. Join a serve team today!
+								</p>
+							</div>
+							{/* <div className='flex justify-start items-center gap-x-4'>
+								<div className='flex justify-start items-center'>
+									<p className='font-display font-normal text-[19px]'>
+										GET&nbsp;CONNECTED
+									</p>
+								</div>
+								<div className='flex w-14 items-center'>
+									<Image src={arrow} alt='' />
+								</div>
+							</div> */}
+						</div>
+					</div>
+					<div className='flex justify-center w-full'>
+						<div className='flex flex-col gap-y-4 w-full'>
+							<div className='flex w-full'>
+								<Image src={sisterhood} alt='' />
+							</div>
+							<div className='flex w-full'>
+								<h4 className='font-display font-semibold text-[24px] text-[#070707]'>
+									SISTERHOOD
+								</h4>
+							</div>
+							<div className='flex w-full'>
+								<p className='font-display text-[16px] text-[#7c7c7c] leading-relaxed'>
+									Sisterhood is a community where women can come together to
+									share their lives and support one another as they navigate
+									through the joys and challenges of everyday life with the
+									power of the Holy Spirit. We offer various opportunities for
+									fellowship, Bible study, and mentorship. In the Fall of each
+									year, we also gather at Sisterhood Conference to preach the
+									gospel and gather as women to seek after God together. Join us
+									today and take the next step in your spiritual journey.
+								</p>
+							</div>
+							{/* <div className='flex justify-start items-center gap-x-4'>
+								<div className='flex justify-start items-center'>
+									<p className='font-display font-normal text-[19px]'>
+										GET&nbsp;CONNECTED
+									</p>
+								</div>
+								<div className='flex w-14 items-center'>
+									<Image src={arrow} alt='' />
+								</div>
+							</div> */}
+						</div>
+					</div>
+					<Link href='visit'>
+						<button className='flex justify-center items-center border-2 border-solid border-[#070707] w-full h-full p-4 gap-x-4 lg:gap-x-[140px] md:px-[50px] mx-auto'>
+							<div className='flex min-w-[126px]'>
+								<a className='font-display text-[24px] md:text-[44px] lg:text-[90px]'>
+									FIND&nbsp;A&nbsp;LOCATION
+								</a>
+							</div>
+							<div className='flex min-h-[36px]'>
+								<Image src={longArrow} width={90} alt='' />
+							</div>
+						</button>
+					</Link>
 				</div>
 			</div>
 			{/* MOBILE END */}

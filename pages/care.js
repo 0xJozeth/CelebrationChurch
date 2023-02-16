@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
+import embrace from '/public/care-page.jpg';
 
 import stage from '/public/care-images/care_stage.png';
 import telecare from '/public/care-images/care_telecare.png';
@@ -13,7 +14,7 @@ function care() {
 	return (
 		<>
 			<div className='md:hidden flex justify-center w-[100vw]'>
-				<div className='flex flex-col items-center w-full gap-y-4 mb-16'>
+				<div className='flex flex-col items-center w-full gap-y-4 mb-16 px-4 '>
 					<div className='relative w-full'>
 						<div className='absolute top-[20px] left-[20px] mix-blend-overlay z-30 '>
 							<h1 className='font-display font-bold text-[#f8f8f8]   text-[44px]'>
@@ -43,12 +44,12 @@ function care() {
 						</div>
 						<div className='flex justify-end items-end p-4 mt-16 z-20'>
 							<div className='flex w-[187.5px]'>
-								<Image src={stage} alt='' />
+								<Image src={embrace} alt='' />
 							</div>
 						</div>
 					</div>
 					<div className='flex p-4'>
-						<p className='font-display text-[18px] text-[#7c7c7c]'>
+						<p className='font-display text-[16px] text-[#7c7c7c] leading-relaxed'>
 							Our Care Ministry supports and guides individuals, couples, and
 							families with life-giving care as they navigate through change in
 							every season of life. Our experienced pastors and highly-trained
@@ -95,7 +96,7 @@ function care() {
 						</div>
 						<div className='flex flex-col gap-y-4 mt-4'>
 							<h3 className='font-display text-[20px] font-bold'>TELECARE</h3>
-							<p className='font-display text-[18px] text-[#7c7c7c]'>
+							<p className='font-display text-[16px] text-[#7c7c7c] leading-relaxed'>
 								We partner with Honey Lake Clinic to provide individual and
 								group therapy with licensed Christian therapists for those that
 								are struggling to reclaim their lives and achieve their God
@@ -107,7 +108,7 @@ function care() {
 							<div className='flex items-center justify-start gap-x-4'>
 								<div>
 									<a
-										className='font-display font-semibold text-[20px]'
+										className='font-display text-[19px]'
 										href='https://podio.com/webforms/25046911/1842022'
 										target='_blank'
 										rel='noopener noreferrer'
@@ -115,12 +116,24 @@ function care() {
 										INDIVIDUAL THERAPY
 									</a>
 								</div>
-								<div className='w-16'>
+								<div className='w-14'>
 									<Image src={arrow} alt='' />
 								</div>
 							</div>
 						</div>
 					</div>
+					<Link href='follow-jesus'>
+						<button className='flex justify-center items-center border-2 border-solid border-[#070707] w-full h-full p-4 gap-x-4 lg:gap-x-[140px] md:px-[50px] mx-auto'>
+							<div className='flex min-w-[126px]'>
+								<a className='font-display text-[24px] md:text-[44px] lg:text-[90px]'>
+									FOLLOW&nbsp;JESUS
+								</a>
+							</div>
+							<div className='flex min-h-[36px]'>
+								<Image src={longArrow} width={90} alt='' />
+							</div>
+						</button>
+					</Link>
 				</div>
 			</div>
 			<div className='hidden md:block'>

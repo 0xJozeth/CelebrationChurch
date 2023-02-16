@@ -311,10 +311,21 @@ function Followjesus() {
 
 			<div className='block md:hidden w-[100vw]'>
 				<div className='grid grid-cols-1 w-full p-2 mx-auto'>
-					<div className=''>
-						<div className=''>
-							<Image src={pastorTim} alt='pastor-tim-sitting-in-a-chair' />
-						</div>
+					<div style={{ padding: '125% 0 0 0', position: 'relative' }}>
+						<iframe
+							src='https://player.vimeo.com/video/796387628?h=0c9d927a0a&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
+							frameBorder='0'
+							allow='autoplay; fullscreen; picture-in-picture'
+							allowFullScreen
+							style={{
+								position: 'absolute',
+								top: '0',
+								left: '0',
+								width: '100%',
+								height: '100%',
+							}}
+							title='Celebration - Follow Jesus'
+						></iframe>
 					</div>
 					<div className='flex flex-col w-full p-4 font-display text-[24px] text-[#7C7C7C]'>
 						<div className='flex flex-col'>
@@ -336,7 +347,7 @@ function Followjesus() {
 						</div>
 
 						<div className='flex'>
-							<p className=''>
+							<p className='text-[18px] text-[#7C7C7C] leading-relaxed'>
 								The gospel centers around the incredible truth that Jesus came
 								to earth as Immanuel, our King among us. The “good news” of this
 								story is that the life and work of our King not only atoned for
@@ -379,7 +390,7 @@ function Followjesus() {
 							</Link>
 						</div>
 						<div className='flex justify-center items-center my-4 py-2'>
-							<q className='font-kepler italic text-[32px]'>
+							<q className='font-kepler italic text-[24px] leading-relaxed'>
 								“If anyone would come after me, let him deny himself and take up
 								his cross and follow me.”{' '}
 								<span className='font-display font-thin text-[16px]'>
@@ -396,7 +407,9 @@ function Followjesus() {
 									<Link href='visit'>
 										<div className='flex w-full justify-start items-center gap-x-2'>
 											<div>
-												<a className='font-display text-[24px]'>PLUG&nbsp;IN</a>
+												<a className='font-display text-[24px] whitespace-nowrap'>
+													NEXT STEPS
+												</a>
 											</div>
 											<div className='flex w-full h-full'>
 												<Image src={longArrow} alt='' />
