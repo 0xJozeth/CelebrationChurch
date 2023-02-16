@@ -94,7 +94,7 @@ function About() {
                 text-[18px] md:text-[24px] lg:text-[24px]
                 '
 				>
-					<div className='flex flex-col px-8 mx-auto gap-y-4'>
+					<div className='flex flex-col px-8 mx-auto gap-y-4 text-[16px]'>
 						<p>
 							<strong>
 								Pastors Tim and Jen Timberlake serve as the Senior Pastors of

@@ -321,7 +321,12 @@ const Navbar = (props) => {
 						(router.pathname !== '/about') &
 						(router.pathname !== '/visit') &
 						(router.pathname !== '/give') ? (
-							<div className='text-[16px] font-display uppercase font-bold underline underline-offset-2 mx-4'>
+							<div className='hidden md:block text-[16px] font-display uppercase font-bold underline underline-offset-2 mx-4'>
+								{router.pathname.substring(1)}
+							</div>
+						) : null}
+						{router.pathname !== '/' ? (
+							<div className='block md:hidden text-[16px] font-display uppercase font-bold underline underline-offset-2 mx-4'>
 								{router.pathname.substring(1)}
 							</div>
 						) : null}
@@ -406,7 +411,7 @@ const Navbar = (props) => {
 												/>
 											</NavbarLogoOpen>
 										</Link>
-										<Button onClick={toggle} isOpen={isOpen}>
+										{/* <Button onClick={toggle} isOpen={isOpen}>
 											<svg width='38' height='38' viewBox='0 0 23 23'>
 												<Path
 													animate={isOpen ? 'open' : 'closed'}
@@ -450,7 +455,7 @@ const Navbar = (props) => {
 													transition={transition}
 												/>
 											</svg>
-										</Button>
+										</Button> */}
 									</div>
 									<Menu setIsOpen={setIsOpen} />
 									<MobileMenu
