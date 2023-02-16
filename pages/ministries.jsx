@@ -412,7 +412,7 @@ function ministries() {
 								<Image src={collage} alt='' />
 							</div>
 
-							<div className='flex items-center justify-end my-2'>
+							{/* <div className='flex items-center justify-end my-2'>
 								<div className='flex w-[584px] justify-between'>
 									<div className='flex p-2 mx-2'>
 										<p className='font-display font-normal text-[#070707] text-[16px]'>
@@ -444,7 +444,7 @@ function ministries() {
 										</p>
 									</div>
 								</div>
-							</div>
+							</div> */}
 						</div>
 						<div className='relative flex flex-col top-[0px] -left-[150px] font-display font-bold text-[192px]'>
 							<div className='absolute top-0 left-0 text-[#f8f8f8] mix-blend-overlay z-30'>

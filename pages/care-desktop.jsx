@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import embrace from '/public/care-page.jpg';
+import embrace from '/public/embrace.png';
 import telecare from '/public/care-images/care_telecare.png';
 import arrow from '/public/arrow@1x.png';
 import longArrow from '/public/ministries-images/arrow-long.svg';
@@ -53,7 +53,7 @@ function CareDesktop() {
 												href='https://celebration.wufoo.com/forms/r1y73bnj1r5g2sn/'
 												target='_blank'
 												rel='noopener noreferrer'
-												className='font-display text-[38px]'
+												className='font-display font-normal text-[36px]'
 											>
 												CONTACT CARE
 											</a>
@@ -71,7 +71,7 @@ function CareDesktop() {
 												href='https://s3.amazonaws.com/downloads.celebration.org/2022/webdownloads/care_guide_dec.2021.pdf'
 												target='_blank'
 												rel='noopener noreferrer'
-												className='font-display text-[38px]'
+												className='font-display font-normal text-[36px]'
 											>
 												CARE GUIDE
 											</a>
@@ -107,7 +107,7 @@ function CareDesktop() {
 							<div>
 								<a
 									href='https://podio.com/webforms/25046911/1842022'
-									className='cursor-pointer font-display font-normal text-[26px] uppercase'
+									className='cursor-pointer font-display font-normal text-[36px] uppercase'
 								>
 									INDIVIDUAL THERAPY{' '}
 								</a>

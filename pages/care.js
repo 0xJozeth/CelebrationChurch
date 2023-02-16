@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
-import embrace from '/public/care-page.jpg';
+import embrace from '/public/embrace.png';
 
 import stage from '/public/care-images/care_stage.png';
 import telecare from '/public/care-images/care_telecare.png';

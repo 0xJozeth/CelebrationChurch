@@ -50,7 +50,8 @@ function HomeDesktop() {
 		// Start the animation once the component has mounted
 		controls.start({
 			x: 0,
-			transition: { duration: 1.5 },
+			opacity: '100%',
+			transition: { duration: 1.75, ease: 'easeInOut' },
 		});
 	}, [controls]);
 
@@ -116,7 +117,7 @@ function HomeDesktop() {
 						</div>
 						<motion.div
 							animate={controls}
-							initial={{ x: '100%' }}
+							initial={{ opacity: '50%', x: '15vw' }}
 							onClick={handleIsMuted}
 							className='relative z-20'
 						>

@@ -354,21 +354,23 @@ export default function GiveDesktop({ id }) {
 						</div>
 						<div className='flex flex-col w-2/5 gap-y-8 p-4 '>
 							<div className='flex w-full justify-start items-center '>
-								<Link href='givingfaqs' passHref>
-									<motion.button
-										whileHover={{ scale: 1.1 }}
-										className='flex items-center py-2 gap-x-4'
-									>
-										<div className='flex items-center'>
-											<p className='font-display font-normal text-[24px]'>
-												GIVING&nbsp;FAQs
-											</p>
+								<motion.button
+									whileHover={{ scale: 1.1 }}
+									className='flex items-center py-2 gap-x-4'
+								>
+									<Link href='givingfaqs' passHref>
+										<div className='flex items-center py-2 gap-x-4'>
+											<div className='flex items-center'>
+												<a className='font-display font-normal text-[24px]'>
+													GIVING&nbsp;FAQs
+												</a>
+											</div>
+											<div className='invert w-[88px]'>
+												<Image src={arrow} alt='' />
+											</div>
 										</div>
-										<div className='invert w-[88px]'>
-											<Image src={arrow} alt='' />
-										</div>
-									</motion.button>
-								</Link>
+									</Link>
+								</motion.button>
 							</div>
 							<div className='flex w-full justify-start items-center '>
 								<a
@@ -469,9 +471,12 @@ const GiveModal = ({
 																	{data.linkOneTitle}
 																</p>
 															</div>
-															<div className='w-[88px]'>
-																<Image src={arrow} alt='' />
-															</div>
+															{data.linkOneTitle !== undefined &&
+																data.linkOneTitle !== null && (
+																	<div className='w-[88px]'>
+																		<Image src={arrow} alt='' />
+																	</div>
+																)}
 														</div>
 													</a>
 												</div>

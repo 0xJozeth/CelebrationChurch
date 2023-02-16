@@ -11,7 +11,6 @@ import { motion } from 'framer-motion';
 //IMPORT REACT COOKIE CONSENT PLUGIN
 import CookieConsent from 'react-cookie-consent';
 
-///
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faAppStoreIos,
@@ -38,8 +37,12 @@ const sections = [
 				text: 'Watch',
 				href: 'https://youtube.com/playlist?list=PL_rUYhs8Fc5KUuzbEc6pqA1IsAtoM6Z1I',
 			},
-			{ text: 'Celebration Everywhere', href: '/celebration-everywhere' },
-			{ text: 'Worship', href: '/worship' },
+			// { text: 'Celebration Everywhere', href: '/celebration-everywhere' },
+			// { text: 'Worship', href: 'worship.147.135.1.224' },
+			{
+				text: 'TV Ministry',
+				href: 'https://www.daystar.com/shows/tim-timberlake',
+			},
 		],
 	},
 	{

@@ -8,6 +8,7 @@ import pastorTim from '/public/care-images/follow-jesus-images/pastorTim.png';
 import arrow from '/public/arrow@1x.png';
 import longArrow from '/public/ministries-images/arrow-long.svg';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Grid = styled.div`
 	display: none;
@@ -264,17 +265,21 @@ function Followjesus() {
 						<div className='quoteAttribution'>
 							<p>- MATTHEW 16:24</p>
 						</div>
-						<div>
-							<Link href='https://worship.celebration.org/'>
-								<div className='linkContainer'>
-									<a>I GAVE MY LIFE TO JESUS</a>
-									<Image src={arrow} alt='' />
-								</div>
-							</Link>
-						</div>
+						{/* <div>
+							<motion.div whileHover={{ scale: 1.1 }} className='linkContainer'>
+								<a
+									href='https://my.celebration.org/portal/Opportunity_detail.aspx?ID=8971&template=campus-jax&remembertemplate=true'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									I GAVE MY LIFE TO JESUS
+								</a>
+								<Image src={arrow} alt='' />
+							</motion.div>
+						</div> */}
 					</div>
 				</div>
-				<div className='buttonSectionGrid'>
+				{/* <div className='buttonSectionGrid'>
 					<div className='whatNow'>
 						<h3>WHAT NOW?</h3>
 					</div>
@@ -306,7 +311,7 @@ function Followjesus() {
 							</Link>
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</Grid>
 
 			<div className='block md:hidden w-[100vw]'>
@@ -375,7 +380,7 @@ function Followjesus() {
 								Jesus as expressions of the kingdom of God.
 							</p>
 						</div>
-						<div className='flex my-4 py-2'>
+						{/* <div className='flex my-4 py-2'>
 							<Link href='https://worship.celebration.org/'>
 								<div className='flex w-full items-center gap-x-2'>
 									<div className='flex w-auto'>
@@ -387,8 +392,8 @@ function Followjesus() {
 										<Image src={arrow} alt='' />
 									</div>
 								</div>
-							</Link>
-						</div>
+							</Link>	
+						</div> */}
 						<div className='flex justify-center items-center my-4 py-2'>
 							<q className='font-kepler italic text-[24px] leading-relaxed'>
 								“If anyone would come after me, let him deny himself and take up
@@ -398,7 +403,7 @@ function Followjesus() {
 								</span>
 							</q>
 						</div>
-						<div className='flex w-full justify-start items-center my-2 py-2'>
+						{/* <div className='flex w-full justify-start items-center my-2 py-2'>
 							<h3 className='font-display font-bold text-[20px]'>WHAT NOW?</h3>
 						</div>
 						<div className=''>
@@ -448,7 +453,7 @@ function Followjesus() {
 									</Link>
 								</div>
 							</div>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>
