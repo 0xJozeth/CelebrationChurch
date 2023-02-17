@@ -121,14 +121,23 @@ function HomeDesktop() {
 							onClick={handleIsMuted}
 							className='relative z-20'
 						>
-							<div className='relative left-[108px]'>
-								<video
-									src='/heroVideo-comp.webm'
+							<div className='relative top-0 left-0 w-full h-full'>
+								<iframe
+									className='absolute top-0 left-0 w-full h-full'
+									src='https://player.vimeo.com/video/799170954?h=67d0cf9e15&controls=0&amp;badge=0&amp;autopause=0&amp;autoplay=1&muted=1&loop=1&autopause=0&player_id=0&amp;app_id=58479'
+									placeholder={'blur'}
+									priority
+								></iframe>
+								{/* <video
 									autoPlay
 									loop
-									muted={isMuted ? false : true}
+									muted
+									playsinline
 									style={{ width: '756px', height: '1343px' }}
-								></video>
+								>
+									<source src='/heroVideo-comp.webm'></source>
+									<source src='/heroVideo-comp-2.mp4'></source>
+								</video> */}
 							</div>
 						</motion.div>
 					</div>
