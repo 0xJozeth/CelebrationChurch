@@ -49,7 +49,10 @@ const sections = [
 		title: 'RESOURCES',
 		links: [
 			{ text: 'Give', href: '/give' },
-			{ text: 'Bible Reading Plan', href: '/bible-reading-plan' },
+			{
+				text: 'Bible Reading Plan',
+				href: 'https://celebration.learn.bible/courses/daily-reading-plan/287',
+			},
 			{ text: 'FAQs', href: '/faqs' },
 			{ text: '', href: '' },
 

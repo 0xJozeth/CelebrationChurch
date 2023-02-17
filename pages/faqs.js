@@ -24,7 +24,7 @@ function FAQs() {
 			question: 'Are visitors welcome?',
 			paragraph: (
 				<>
-					Absolutely! We would love for you to visit! Whether youre new to the
+					Absolutely! We would love for you to visit! Whether you’re new to the
 					area or just looking for a new church home, we would be honored to
 					have you.
 				</>
