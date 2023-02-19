@@ -55,7 +55,7 @@ function Give(props) {
 	};
 
 	//GIVE MODAL
-	const [modalOpen, setModalOpen] = useState(false);
+	const [modalOpen, setModalOpen] = useState(true);
 	const [modalIndex, setModalIndex] = useState(null);
 
 	const handleModal = (index) => {
@@ -575,7 +575,7 @@ function Give(props) {
 							</div>
 						) : (
 							<div
-								className='flex flex-col justify-center items-center w-full p-4 h-auto bg-[#070707]'
+								className='flex flex-col justify-center items-center w-full p-4 bg-[#070707]'
 								onClick={handleModal}
 							>
 								{modalData.map(
