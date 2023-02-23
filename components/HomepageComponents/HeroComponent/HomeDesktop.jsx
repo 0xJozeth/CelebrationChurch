@@ -358,7 +358,7 @@ function HomeDesktop() {
 											</div>
 											<div className='my-2 group-hover:my-8 transition-all'>
 												<a
-													href='https://my.celebration.org/portal/get_form.aspx?ID=6bc5f420-26f8-41f1-8149-9344dd2676e6&template=campus-jax&remembertemplate=true'
+													href='https://celebrationjax.org/jaxform/?g=6bc5f420-26f8-41f1-8149-9344dd2676e6'
 													target='_blank'
 													rel='noopener noreferrer'
 													className='font-display  text-white text-[44px]'
@@ -377,7 +377,7 @@ function HomeDesktop() {
 									</button>
 									<button className='p-16 w-[800px] h-[600px] relative flex justify-center items-center border-2 border-white opacity-50 group-hover:opacity-100 group-hover:skew-y-[0.5deg] transition-all'>
 										<a
-											href='https://my.celebration.org/portal/get_form.aspx?ID=6bc5f420-26f8-41f1-8149-9344dd2676e6&template=campus-jax&remembertemplate=true'
+											href='https://celebrationjax.org/jaxform/?g=6bc5f420-26f8-41f1-8149-9344dd2676e6'
 											target='_blank'
 											rel='noreferrer'
 										>

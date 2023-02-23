@@ -26,7 +26,7 @@ const sections = [
 			{ text: 'Care', href: '/care' },
 			{
 				text: 'Prayer Request',
-				href: 'https://my.celebration.org/portal/get_form.aspx?ID=6bc5f420-26f8-41f1-8149-9344dd2676e6&template=campus-jax&remembertemplate=true ',
+				href: 'https://celebrationjax.org/jaxform/?g=6bc5f420-26f8-41f1-8149-9344dd2676e6',
 			},
 		],
 	},

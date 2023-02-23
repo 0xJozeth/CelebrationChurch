@@ -393,7 +393,7 @@ function HeroMobile() {
 										</div>
 										<div className='flex flex-col relative group my-auto nx-auto'>
 											<a
-												href='https://my.celebration.org/portal/get_form.aspx?ID=6bc5f420-26f8-41f1-8149-9344dd2676e6&template=campus-jax&remembertemplate=true'
+												href='https://celebrationjax.org/jaxform/?g=6bc5f420-26f8-41f1-8149-9344dd2676e6'
 												target='_blank'
 												rel='noopener noreferrer'
 												className='font-display  text-white text-[34px]'
@@ -412,7 +412,7 @@ function HeroMobile() {
 								</button>
 								<button className='p-16 w-[316px] h-[243px] relative flex justify-center items-center border-2 border-white opacity-50 transition-all'>
 									<a
-										href='https://my.celebration.org/portal/get_form.aspx?ID=6bc5f420-26f8-41f1-8149-9344dd2676e6&template=campus-jax&remembertemplate=true'
+										href='https://celebrationjax.org/jaxform/?g=6bc5f420-26f8-41f1-8149-9344dd2676e6'
 										target='_blank'
 										rel='noreferrer'
 									>

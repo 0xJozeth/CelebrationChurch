@@ -102,6 +102,16 @@ const OnlineGivingDropdown = () => {
 									<li>
 										<a
 											className='hover:bg-black hover:text-white ease-in cursor-pointer'
+											href='https://pushpay.com/g/celebrationorangepark'
+											target='_blank'
+											rel='noopener noreferrer'
+										>
+											ORANGE PARK
+										</a>
+									</li>
+									<li>
+										<a
+											className='hover:bg-black hover:text-white ease-in cursor-pointer'
 											href='https://pushpay.com/g/celebrationftl'
 											target='_blank'
 											rel='noopener noreferrer'

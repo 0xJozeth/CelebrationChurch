@@ -161,7 +161,7 @@ function FAQs() {
 					at any of our locations. You can also submit a prayer request online
 					by clicking{' '}
 					<button className='inline-block'>
-						<a href='https://my.celebration.org/portal/get_form.aspx?ID=6bc5f420-26f8-41f1-8149-9344dd2676e6&template=campus-jax&remembertemplate=true'>
+						<a href='https://celebrationjax.org/jaxform/?g=6bc5f420-26f8-41f1-8149-9344dd2676e6'>
 							here
 						</a>
 					</button>{' '}
