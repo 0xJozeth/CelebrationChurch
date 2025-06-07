@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import Script from 'next/script';
-import { render } from 'node-sass';
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
